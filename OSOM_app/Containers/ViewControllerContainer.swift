@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import UIKit
 
 class ViewControllerContainer {
     
-    func getWelcome() -> ViewController {
-        return ViewController()
+    func getWelcome() -> UIViewController {
+        return WelcomeScreenViewController(viewModel: WelcomeScreenViewModelImpl(), mainView: WelcomeView())
     }
     
 }

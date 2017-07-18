@@ -23,6 +23,15 @@
 		3572CF6E1F1DFDCD004FC883 /* SerializerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3572CF6D1F1DFDCD004FC883 /* SerializerContainer.swift */; };
 		3572CF701F1DFDEB004FC883 /* CellManagerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3572CF6F1F1DFDEB004FC883 /* CellManagerContainer.swift */; };
 		3572CF771F1E036E004FC883 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3572CF761F1E036E004FC883 /* WelcomeView.swift */; };
+		35EB19491F1E2BBE00DD3AA5 /* WelcomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB19481F1E2BBE00DD3AA5 /* WelcomeScreenViewModel.swift */; };
+		35EB194C1F1E32DA00DD3AA5 /* CutomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB194B1F1E32DA00DD3AA5 /* CutomButton.swift */; };
+		35EB194F1F1E34C100DD3AA5 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB194E1F1E34C100DD3AA5 /* String+Localized.swift */; };
+		35EB19521F1E371200DD3AA5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35EB19541F1E371200DD3AA5 /* Localizable.strings */; };
+		35EB19571F1E3D0800DD3AA5 /* UIViewController+CellAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB19561F1E3D0800DD3AA5 /* UIViewController+CellAnimations.swift */; };
+		35EB19591F1E3D3E00DD3AA5 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB19581F1E3D3E00DD3AA5 /* TitleCell.swift */; };
+		35EB195C1F1E3D7C00DD3AA5 /* TitleCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB195B1F1E3D7C00DD3AA5 /* TitleCellView.swift */; };
+		35EB195E1F1E3DAD00DD3AA5 /* Int+ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB195D1F1E3DAD00DD3AA5 /* Int+ConstraintMaker.swift */; };
+		35EB19601F1E3DE200DD3AA5 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB195F1F1E3DE200DD3AA5 /* Fonts.swift */; };
 		5698354B51170AEE864DCE29 /* Pods_OSOM_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BF1DBED7E1A0F18EC7F324 /* Pods_OSOM_appUITests.framework */; };
 		69245883FDBBC27DE19A67BB /* Pods_OSOM_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2330CA05BBE27C8240531B06 /* Pods_OSOM_app.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +76,16 @@
 		3572CF6D1F1DFDCD004FC883 /* SerializerContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializerContainer.swift; sourceTree = "<group>"; };
 		3572CF6F1F1DFDEB004FC883 /* CellManagerContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellManagerContainer.swift; sourceTree = "<group>"; };
 		3572CF761F1E036E004FC883 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		35EB19481F1E2BBE00DD3AA5 /* WelcomeScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewModel.swift; sourceTree = "<group>"; };
+		35EB194B1F1E32DA00DD3AA5 /* CutomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CutomButton.swift; sourceTree = "<group>"; };
+		35EB194E1F1E34C100DD3AA5 /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		35EB19531F1E371200DD3AA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		35EB19551F1E37A000DD3AA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		35EB19561F1E3D0800DD3AA5 /* UIViewController+CellAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+CellAnimations.swift"; sourceTree = "<group>"; };
+		35EB19581F1E3D3E00DD3AA5 /* TitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitleCell.swift; path = OSOM_app/CustomUI/TitleCell.swift; sourceTree = SOURCE_ROOT; };
+		35EB195B1F1E3D7C00DD3AA5 /* TitleCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleCellView.swift; sourceTree = "<group>"; };
+		35EB195D1F1E3DAD00DD3AA5 /* Int+ConstraintMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+ConstraintMaker.swift"; sourceTree = "<group>"; };
+		35EB195F1F1E3DE200DD3AA5 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		49BF1DBED7E1A0F18EC7F324 /* Pods_OSOM_appUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OSOM_appUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E9155BD58BDDF7CBF6E62F /* Pods-OSOM_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSOM_app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OSOM_app/Pods-OSOM_app.debug.xcconfig"; sourceTree = "<group>"; };
 		81B1F8EC51FDDC79EFDBEE63 /* Pods-OSOM_appUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSOM_appUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OSOM_appUITests/Pods-OSOM_appUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +149,9 @@
 		3572CF281F1DEAF9004FC883 /* OSOM_app */ = {
 			isa = PBXGroup;
 			children = (
+				35EB194D1F1E34A000DD3AA5 /* Helpers */,
+				35EB194A1F1E329B00DD3AA5 /* CustomUI */,
+				3572CF7B1F1E06FB004FC883 /* Services */,
 				3572CF7A1F1E0495004FC883 /* SupportingFiles */,
 				3572CF791F1E0467004FC883 /* Repository */,
 				3572CF781F1E03FF004FC883 /* Model */,
@@ -203,6 +225,7 @@
 		3572CF741F1E031B004FC883 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				35EB19481F1E2BBE00DD3AA5 /* WelcomeScreenViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -225,6 +248,7 @@
 		3572CF791F1E0467004FC883 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				35EB19541F1E371200DD3AA5 /* Localizable.strings */,
 				3572CF331F1DEAF9004FC883 /* Assets.xcassets */,
 				3572CF351F1DEAF9004FC883 /* LaunchScreen.storyboard */,
 			);
@@ -237,6 +261,50 @@
 				3572CF381F1DEAF9004FC883 /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		3572CF7B1F1E06FB004FC883 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3572CF7C1F1E0712004FC883 /* Serializers */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3572CF7C1F1E0712004FC883 /* Serializers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Serializers;
+			sourceTree = "<group>";
+		};
+		35EB194A1F1E329B00DD3AA5 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				35EB195A1F1E3D5C00DD3AA5 /* TitleCell */,
+				35EB194B1F1E32DA00DD3AA5 /* CutomButton.swift */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		35EB194D1F1E34A000DD3AA5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				35EB194E1F1E34C100DD3AA5 /* String+Localized.swift */,
+				35EB19561F1E3D0800DD3AA5 /* UIViewController+CellAnimations.swift */,
+				35EB195D1F1E3DAD00DD3AA5 /* Int+ConstraintMaker.swift */,
+				35EB195F1F1E3DE200DD3AA5 /* Fonts.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		35EB195A1F1E3D5C00DD3AA5 /* TitleCell */ = {
+			isa = PBXGroup;
+			children = (
+				35EB19581F1E3D3E00DD3AA5 /* TitleCell.swift */,
+				35EB195B1F1E3D7C00DD3AA5 /* TitleCellView.swift */,
+			);
+			path = TitleCell;
 			sourceTree = "<group>";
 		};
 		50E9A3DEBA93BC34B3EA5C96 /* Frameworks */ = {
@@ -335,7 +403,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = "ITEO Sp. z o.o.";
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					3572CF251F1DEAF9004FC883 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -381,6 +449,7 @@
 			files = (
 				3572CF371F1DEAF9004FC883 /* LaunchScreen.storyboard in Resources */,
 				3572CF341F1DEAF9004FC883 /* Assets.xcassets in Resources */,
+				35EB19521F1E371200DD3AA5 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,14 +615,22 @@
 				3572CF2C1F1DEAF9004FC883 /* WelcomeScreenViewController.swift in Sources */,
 				3572CF321F1DEAF9004FC883 /* OSOM_app.xcdatamodeld in Sources */,
 				3572CF641F1DFD7B004FC883 /* ViewControllerContainer.swift in Sources */,
+				35EB195C1F1E3D7C00DD3AA5 /* TitleCellView.swift in Sources */,
+				35EB19571F1E3D0800DD3AA5 /* UIViewController+CellAnimations.swift in Sources */,
 				3572CF2A1F1DEAF9004FC883 /* AppDelegate.swift in Sources */,
+				35EB194F1F1E34C100DD3AA5 /* String+Localized.swift in Sources */,
 				3572CF681F1DFD93004FC883 /* ViewContainer.swift in Sources */,
 				3572CF6A1F1DFDA5004FC883 /* ValidatorContainer.swift in Sources */,
+				35EB194C1F1E32DA00DD3AA5 /* CutomButton.swift in Sources */,
 				3572CF771F1E036E004FC883 /* WelcomeView.swift in Sources */,
 				3572CF6E1F1DFDCD004FC883 /* SerializerContainer.swift in Sources */,
 				3572CF661F1DFD89004FC883 /* ViewModelContainer.swift in Sources */,
+				35EB195E1F1E3DAD00DD3AA5 /* Int+ConstraintMaker.swift in Sources */,
+				35EB19591F1E3D3E00DD3AA5 /* TitleCell.swift in Sources */,
 				3572CF6C1F1DFDC2004FC883 /* NetworkingContainer.swift in Sources */,
 				3572CF701F1DFDEB004FC883 /* CellManagerContainer.swift in Sources */,
+				35EB19601F1E3DE200DD3AA5 /* Fonts.swift in Sources */,
+				35EB19491F1E2BBE00DD3AA5 /* WelcomeScreenViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +673,16 @@
 			);
 			name = LaunchScreen.storyboard;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		35EB19541F1E371200DD3AA5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35EB19531F1E371200DD3AA5 /* en */,
+				35EB19551F1E37A000DD3AA5 /* Base */,
+			);
+			name = Localizable.strings;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -699,11 +786,13 @@
 			baseConfigurationReference = 54E9155BD58BDDF7CBF6E62F /* Pods-OSOM_app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = Z3U8X2726Z;
 				INFOPLIST_FILE = OSOM_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.com.iteo.OSOM-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -713,11 +802,13 @@
 			baseConfigurationReference = FC233DFF9418B6F3872C6077 /* Pods-OSOM_app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = Z3U8X2726Z;
 				INFOPLIST_FILE = OSOM_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.com.iteo.OSOM-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
