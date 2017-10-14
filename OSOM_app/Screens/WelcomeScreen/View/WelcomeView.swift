@@ -52,7 +52,7 @@ fileprivate struct Constants {
 
 class WelcomeView: UIView {
     
-    fileprivate let scrollView: UIScrollView = {
+    let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.backgroundColor = UIColor.white
         return scrollView

@@ -23,6 +23,11 @@
 		3572CF6E1F1DFDCD004FC883 /* SerializerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3572CF6D1F1DFDCD004FC883 /* SerializerContainer.swift */; };
 		3572CF701F1DFDEB004FC883 /* CellManagerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3572CF6F1F1DFDEB004FC883 /* CellManagerContainer.swift */; };
 		3572CF771F1E036E004FC883 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3572CF761F1E036E004FC883 /* WelcomeView.swift */; };
+		3577D8041F1F350C001BCD63 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3577D8031F1F350C001BCD63 /* UIView+Gradient.swift */; };
+		3577D8061F1F3565001BCD63 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3577D8051F1F3565001BCD63 /* UIView+Shadow.swift */; };
+		3577D8081F1F35B6001BCD63 /* ColorSchameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3577D8071F1F35B6001BCD63 /* ColorSchameHelper.swift */; };
+		3577D80D1F1F418F001BCD63 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3577D80C1F1F418F001BCD63 /* SignInViewController.swift */; };
+		3577D8121F1F4433001BCD63 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3577D8111F1F4433001BCD63 /* SignInViewModel.swift */; };
 		35EB19491F1E2BBE00DD3AA5 /* WelcomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB19481F1E2BBE00DD3AA5 /* WelcomeScreenViewModel.swift */; };
 		35EB194C1F1E32DA00DD3AA5 /* CutomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB194B1F1E32DA00DD3AA5 /* CutomButton.swift */; };
 		35EB194F1F1E34C100DD3AA5 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB194E1F1E34C100DD3AA5 /* String+Localized.swift */; };
@@ -76,6 +81,11 @@
 		3572CF6D1F1DFDCD004FC883 /* SerializerContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializerContainer.swift; sourceTree = "<group>"; };
 		3572CF6F1F1DFDEB004FC883 /* CellManagerContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellManagerContainer.swift; sourceTree = "<group>"; };
 		3572CF761F1E036E004FC883 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		3577D8031F1F350C001BCD63 /* UIView+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		3577D8051F1F3565001BCD63 /* UIView+Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
+		3577D8071F1F35B6001BCD63 /* ColorSchameHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSchameHelper.swift; sourceTree = "<group>"; };
+		3577D80C1F1F418F001BCD63 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = ../SignInViewController.swift; sourceTree = "<group>"; };
+		3577D8111F1F4433001BCD63 /* SignInViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		35EB19481F1E2BBE00DD3AA5 /* WelcomeScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewModel.swift; sourceTree = "<group>"; };
 		35EB194B1F1E32DA00DD3AA5 /* CutomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CutomButton.swift; sourceTree = "<group>"; };
 		35EB194E1F1E34C100DD3AA5 /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
@@ -199,6 +209,9 @@
 		3572CF711F1E01F5004FC883 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				3577D80B1F1F415B001BCD63 /* SignIn */,
+				3577D80A1F1F3A88001BCD63 /* Employer */,
+				3577D8091F1F3A68001BCD63 /* Employee */,
 				3572CF721F1E02B5004FC883 /* WelcomeScreen */,
 			);
 			path = Screens;
@@ -278,6 +291,61 @@
 			name = Serializers;
 			sourceTree = "<group>";
 		};
+		3577D8091F1F3A68001BCD63 /* Employee */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Employee;
+			sourceTree = "<group>";
+		};
+		3577D80A1F1F3A88001BCD63 /* Employer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Employer;
+			sourceTree = "<group>";
+		};
+		3577D80B1F1F415B001BCD63 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				3577D8131F1F4497001BCD63 /* ViewManagmentClasses */,
+				3577D8101F1F43A5001BCD63 /* View */,
+				3577D80F1F1F4397001BCD63 /* ViewModel */,
+				3577D80E1F1F435D001BCD63 /* ViewController */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		3577D80E1F1F435D001BCD63 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3577D80C1F1F418F001BCD63 /* SignInViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3577D80F1F1F4397001BCD63 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3577D8111F1F4433001BCD63 /* SignInViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3577D8101F1F43A5001BCD63 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3577D8131F1F4497001BCD63 /* ViewManagmentClasses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewManagmentClasses;
+			sourceTree = "<group>";
+		};
 		35EB194A1F1E329B00DD3AA5 /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +362,9 @@
 				35EB19561F1E3D0800DD3AA5 /* UIViewController+CellAnimations.swift */,
 				35EB195D1F1E3DAD00DD3AA5 /* Int+ConstraintMaker.swift */,
 				35EB195F1F1E3DE200DD3AA5 /* Fonts.swift */,
+				3577D8031F1F350C001BCD63 /* UIView+Gradient.swift */,
+				3577D8051F1F3565001BCD63 /* UIView+Shadow.swift */,
+				3577D8071F1F35B6001BCD63 /* ColorSchameHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -612,6 +683,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3577D8081F1F35B6001BCD63 /* ColorSchameHelper.swift in Sources */,
 				3572CF2C1F1DEAF9004FC883 /* WelcomeScreenViewController.swift in Sources */,
 				3572CF321F1DEAF9004FC883 /* OSOM_app.xcdatamodeld in Sources */,
 				3572CF641F1DFD7B004FC883 /* ViewControllerContainer.swift in Sources */,
@@ -619,6 +691,7 @@
 				35EB19571F1E3D0800DD3AA5 /* UIViewController+CellAnimations.swift in Sources */,
 				3572CF2A1F1DEAF9004FC883 /* AppDelegate.swift in Sources */,
 				35EB194F1F1E34C100DD3AA5 /* String+Localized.swift in Sources */,
+				3577D8061F1F3565001BCD63 /* UIView+Shadow.swift in Sources */,
 				3572CF681F1DFD93004FC883 /* ViewContainer.swift in Sources */,
 				3572CF6A1F1DFDA5004FC883 /* ValidatorContainer.swift in Sources */,
 				35EB194C1F1E32DA00DD3AA5 /* CutomButton.swift in Sources */,
@@ -630,6 +703,9 @@
 				3572CF6C1F1DFDC2004FC883 /* NetworkingContainer.swift in Sources */,
 				3572CF701F1DFDEB004FC883 /* CellManagerContainer.swift in Sources */,
 				35EB19601F1E3DE200DD3AA5 /* Fonts.swift in Sources */,
+				3577D8121F1F4433001BCD63 /* SignInViewModel.swift in Sources */,
+				3577D8041F1F350C001BCD63 /* UIView+Gradient.swift in Sources */,
+				3577D80D1F1F418F001BCD63 /* SignInViewController.swift in Sources */,
 				35EB19491F1E2BBE00DD3AA5 /* WelcomeScreenViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
