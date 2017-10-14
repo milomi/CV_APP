@@ -11,7 +11,7 @@ import UIKit
 
 fileprivate struct Constants {
     static let cornerRadius: CGFloat = 5
-    static let buttonBackgroundColor = UIColor(colorLiteralRed: 0.84, green: 0.84, blue: 0.84, alpha: 1)
+    static let buttonBackgroundColor = UIColor(red: 0.84, green: 0.84, blue: 0.84, alpha: 1)
     static let buttonBorderColor = UIColor.gray
     static let buttonTextColor = UIColor.black
 }
