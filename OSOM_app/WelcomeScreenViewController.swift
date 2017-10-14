@@ -57,12 +57,12 @@ class WelcomeScreenViewController: UIViewController {
 // MARK Actions
 extension WelcomeScreenViewController {
     
-    func EmployeeAction() {
+    @objc func EmployeeAction() {
 //        let controller = ViewControllerContainer().getSignIn()
 //        self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    func EmployerAction() {
+    @objc func EmployerAction() {
 //        let controller = ViewControllerContainer().getSignUp()
 //        self.navigationController?.pushViewController(controller, animated: true)
     }
