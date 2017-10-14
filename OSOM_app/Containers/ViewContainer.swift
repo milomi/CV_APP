@@ -10,6 +10,8 @@ import Foundation
 
 class ViewContainer {
     
-    
+    func getWelcome() -> WelcomeView {
+        return WelcomeView()
+    }
     
 }

@@ -11,8 +11,16 @@ import UIKit
 
 class ViewControllerContainer {
     
-    func getWelcome() -> UIViewController {
-        return WelcomeScreenViewController(viewModel: WelcomeScreenViewModelImpl(), mainView: WelcomeView())
+    fileprivate let viewModelContainer = ViewModelContainer()
+    fileprivate let viewContainer = ViewContainer()
+    fileprivate let cellManagerContainer = CellManagerContainer()
+    
+    func getWelcome() -> WelcomeScreenViewController {
+        return WelcomeScreenViewController(viewModel: viewModelContainer.getWelcome(), mainView: viewContainer.getWelcome())
+    }
+    
+    func getSignIn() -> UIViewController {
+        return UIViewController()
     }
     
 }

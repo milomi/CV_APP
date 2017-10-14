@@ -34,9 +34,10 @@ class WelcomeScreenViewController: UIViewController {
         setupView()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) {
+
+        view.superview?.addGradient(topColor: UIColor.blue)
+        animateViewFadeIn(view: mainView)
     }
     
     fileprivate func setupView() {

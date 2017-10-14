@@ -10,5 +10,8 @@ import Foundation
 
 class ViewModelContainer {
     
+    func getWelcome() -> WelcomeScreenViewModel {
+        return WelcomeScreenViewModelImpl()
+    }
     
 }
