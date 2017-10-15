@@ -10,10 +10,6 @@ import Foundation
 import UIKit
 import SnapKit
 
-import Foundation
-import UIKit
-import SnapKit
-
 fileprivate struct Constants {
     struct AppName {
         struct Constraints {

@@ -37,6 +37,11 @@
 		5698354B51170AEE864DCE29 /* Pods_OSOM_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BF1DBED7E1A0F18EC7F324 /* Pods_OSOM_appUITests.framework */; };
 		69245883FDBBC27DE19A67BB /* Pods_OSOM_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2330CA05BBE27C8240531B06 /* Pods_OSOM_app.framework */; };
 		B2024F6E1F9220EA0083B813 /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2024F6D1F9220EA0083B813 /* WelcomeScreenViewController.swift */; };
+		B2024F741F9365090083B813 /* SignUpNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2024F731F9365090083B813 /* SignUpNameViewController.swift */; };
+		B2024F761F93652E0083B813 /* SignUpNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2024F751F93652E0083B813 /* SignUpNameView.swift */; };
+		B2024F781F9365B10083B813 /* BaseSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2024F771F9365B10083B813 /* BaseSignUpView.swift */; };
+		B2C48FED1F9367F600DFECA4 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */; };
+		B2C48FF01F936A9F00DFECA4 /* BaseEditField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +100,11 @@
 		81B1F8EC51FDDC79EFDBEE63 /* Pods-OSOM_appUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSOM_appUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OSOM_appUITests/Pods-OSOM_appUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B2024F6B1F92206C0083B813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2024F6D1F9220EA0083B813 /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
+		B2024F731F9365090083B813 /* SignUpNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNameViewController.swift; sourceTree = "<group>"; };
+		B2024F751F93652E0083B813 /* SignUpNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNameView.swift; sourceTree = "<group>"; };
+		B2024F771F9365B10083B813 /* BaseSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSignUpView.swift; sourceTree = "<group>"; };
+		B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
+		B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEditField.swift; sourceTree = "<group>"; };
 		DD3DC9D34C9F8335E34F0A16 /* Pods-OSOM_appUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSOM_appUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OSOM_appUITests/Pods-OSOM_appUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E16608CC816851F59D5FFD95 /* Pods_OSOM_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OSOM_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE89B747A59E42E08DA5223 /* Pods-OSOM_appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSOM_appTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OSOM_appTests/Pods-OSOM_appTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -205,6 +215,7 @@
 		3572CF711F1E01F5004FC883 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				B2024F6F1F9364BA0083B813 /* SignUp */,
 				3572CF721F1E02B5004FC883 /* WelcomeScreen */,
 			);
 			path = Screens;
@@ -239,6 +250,7 @@
 		35EB194A1F1E329B00DD3AA5 /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
+				B2C48FEE1F936A8900DFECA4 /* SignUp */,
 				35EB195A1F1E3D5C00DD3AA5 /* TitleCell */,
 				35EB194B1F1E32DA00DD3AA5 /* CutomButton.swift */,
 			);
@@ -255,6 +267,7 @@
 				3577D8031F1F350C001BCD63 /* UIView+Gradient.swift */,
 				3577D8051F1F3565001BCD63 /* UIView+Shadow.swift */,
 				3577D8071F1F35B6001BCD63 /* ColorSchameHelper.swift */,
+				B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -297,6 +310,48 @@
 				B2024F6D1F9220EA0083B813 /* WelcomeScreenViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B2024F6F1F9364BA0083B813 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				B2024F721F9364DB0083B813 /* ViewModel */,
+				B2024F711F9364D60083B813 /* View */,
+				B2024F701F9364CF0083B813 /* ViewController */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		B2024F701F9364CF0083B813 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B2024F731F9365090083B813 /* SignUpNameViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B2024F711F9364D60083B813 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2024F751F93652E0083B813 /* SignUpNameView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B2024F721F9364DB0083B813 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B2C48FEE1F936A8900DFECA4 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				B2024F771F9365B10083B813 /* BaseSignUpView.swift */,
+				B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -606,8 +661,11 @@
 				3577D8081F1F35B6001BCD63 /* ColorSchameHelper.swift in Sources */,
 				3572CF321F1DEAF9004FC883 /* OSOM_app.xcdatamodeld in Sources */,
 				3572CF641F1DFD7B004FC883 /* ViewControllerContainer.swift in Sources */,
+				B2C48FF01F936A9F00DFECA4 /* BaseEditField.swift in Sources */,
+				B2C48FED1F9367F600DFECA4 /* UIColor+extension.swift in Sources */,
 				35EB195C1F1E3D7C00DD3AA5 /* TitleCellView.swift in Sources */,
 				35EB19571F1E3D0800DD3AA5 /* UIViewController+CellAnimations.swift in Sources */,
+				B2024F741F9365090083B813 /* SignUpNameViewController.swift in Sources */,
 				3572CF2A1F1DEAF9004FC883 /* AppDelegate.swift in Sources */,
 				35EB194F1F1E34C100DD3AA5 /* String+Localized.swift in Sources */,
 				3577D8061F1F3565001BCD63 /* UIView+Shadow.swift in Sources */,
@@ -616,9 +674,11 @@
 				35EB194C1F1E32DA00DD3AA5 /* CutomButton.swift in Sources */,
 				3572CF771F1E036E004FC883 /* WelcomeView.swift in Sources */,
 				3572CF6E1F1DFDCD004FC883 /* SerializerContainer.swift in Sources */,
+				B2024F781F9365B10083B813 /* BaseSignUpView.swift in Sources */,
 				3572CF661F1DFD89004FC883 /* ViewModelContainer.swift in Sources */,
 				35EB195E1F1E3DAD00DD3AA5 /* Int+ConstraintMaker.swift in Sources */,
 				B2024F6E1F9220EA0083B813 /* WelcomeScreenViewController.swift in Sources */,
+				B2024F761F93652E0083B813 /* SignUpNameView.swift in Sources */,
 				35EB19591F1E3D3E00DD3AA5 /* TitleCell.swift in Sources */,
 				3572CF6C1F1DFDC2004FC883 /* NetworkingContainer.swift in Sources */,
 				3572CF701F1DFDEB004FC883 /* CellManagerContainer.swift in Sources */,

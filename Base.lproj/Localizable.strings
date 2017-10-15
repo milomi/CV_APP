@@ -6,7 +6,18 @@
 
 */
 
+"welcome_nav_title" = "Title";
 "welcome_title_label" = " Looking for or being searched for?";
 "welcome_subtitle_label" = "";
 "welcome_employee__action" = "EMPLOYEE";
 "welcome_employer_action" = "EMPLOYER";
+
+// Sign Up
+"signUp.name" = "NAME";
+"signUp.surname" = "SURNAME";
+"signUp.email" = "EMAIL";
+"signUp.password" = "PASSWORD";
+"signUP.repeatPassword" = "REPEAT PASSWORD";
+"signUp.placeholder" = "fill it up";
+"signUp.placeholder.password" = "8Characters#";
+"signUp.placeholder.repeatPassword" = "yup, once again...";
