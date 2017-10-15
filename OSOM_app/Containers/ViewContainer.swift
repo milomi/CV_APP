@@ -10,8 +10,14 @@ import Foundation
 
 class ViewContainer {
     
+    static let shared = ViewContainer()
+    
     func getWelcome() -> WelcomeView {
         return WelcomeView()
+    }
+    
+    func signUpName() -> SignUpNameView {
+        return SignUpNameView()
     }
     
 }

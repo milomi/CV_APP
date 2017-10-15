@@ -38,11 +38,19 @@ class BaseSignUpView: UIView {
         return imageView
     }()
     
-    private let contentView: UIView = {
+    let contentView: UIView = {
         let view = UIView()
         view.backgroundColor = Constants.ContentView.backgroundColor
         return view
     }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     func setupView() {
         setupSelf()
@@ -70,8 +78,9 @@ class BaseSignUpView: UIView {
         contentView.snp.makeConstraints {
             make in
             make.leading.equalTo(Constants.ContentView.Constraints.padding)
-            make.trailing.bottom.equalTo(-Constants.ContentView.Constraints.padding)
+            make.trailing.equalTo(-Constants.ContentView.Constraints.padding)
             make.top.equalTo(headerImage.snp.bottom)
+            make.bottom.equalTo(-Constants.ContentView.Constraints.padding)
         }
     }
 }

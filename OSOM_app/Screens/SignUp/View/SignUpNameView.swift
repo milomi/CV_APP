@@ -9,21 +9,66 @@ import Foundation
 
 fileprivate struct Constants {
     struct NameEditField {
-        static let title = Name
-        static let placeholder = Type your name
+        static let title = "signUp.name"
+        static let placeholder = "signUp.placeholder"
+        
+        struct Constraints {
+            static let top = 30
+            static let padding = 35
+        }
+    }
+    
+    struct SurnameEditField {
+        static let title = "signUp.surname"
+        static let placeholder = "signUp.placeholder"
+        
+        struct Constraints {
+            static let top = 30
+            static let padding = 35
+        }
     }
 }
 
-class SignUpNameView: BaseSignUpView {
+final class SignUpNameView: BaseSignUpView {
     
     let nameEditField: BaseEditField = {
         let field = BaseEditField()
-        field.t
+        field.headerLabel.text = Constants.NameEditField.title.localized()
+        field.textField.placeholder = Constants.NameEditField.placeholder.localized()
         return field
     }()
     
-    func setupView() {
-        
+    let surnameEditField: BaseEditField = {
+        let field = BaseEditField()
+        field.headerLabel.text = Constants.SurnameEditField.title.localized()
+        field.textField.placeholder = Constants.SurnameEditField.placeholder.localized()
+        return field
+    }()
+    
+    override func setupView() {
+        super.setupView()
+        setupNameEditField()
+        setupSurnameEditField()
     }
     
+    private func setupNameEditField() {
+        contentView.addSubview(nameEditField)
+        nameEditField.setupView()
+        nameEditField.snp.makeConstraints { (make) in
+            make.top.equalTo(Constants.NameEditField.Constraints.top)
+            make.leading.equalTo(Constants.NameEditField.Constraints.padding)
+            make.trailing.equalTo(-Constants.NameEditField.Constraints.padding)
+        }
+    }
+    
+    private func setupSurnameEditField() {
+        contentView.addSubview(surnameEditField)
+        surnameEditField.setupView()
+        surnameEditField.snp.makeConstraints { (make) in
+            make.top.equalTo(nameEditField.snp.bottom).offset(Constants.SurnameEditField.Constraints.top)
+            make.width.equalTo(nameEditField.snp.width)
+            make.centerX.equalTo(nameEditField.snp.centerX)
+            make.bottom.lessThanOrEqualToSuperview()
+        }
+    }
 }

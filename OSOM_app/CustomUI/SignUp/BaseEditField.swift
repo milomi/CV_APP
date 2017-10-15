@@ -17,6 +17,7 @@ fileprivate struct Constants {
     struct Separator {
         static let backgroundColor = UIColor.white
         struct Constraints {
+            static let top = 5
             static let height = 1
         }
     }
@@ -45,7 +46,7 @@ class BaseEditField: UIView {
         return view
     }()
     
-    private let textField: UITextField = {
+    let textField: UITextField = {
         let textField = UITextField()
         return textField
     }()
@@ -69,7 +70,7 @@ class BaseEditField: UIView {
         
         separator.snp.makeConstraints { (make) in
             make.leading.trailing.equalToSuperview()
-            make.top.equalTo(headerLabel.snp.bottom)
+            make.top.equalTo(headerLabel.snp.bottom).offset(Constants.Separator.Constraints.top)
             make.height.equalTo(Constants.Separator.Constraints.height)
         }
     }
@@ -79,7 +80,8 @@ class BaseEditField: UIView {
         
         textField.snp.makeConstraints { (make) in
             make.leading.trailing.equalToSuperview()
-            make.top.equalTo(Constants.TextField.Constraints.top)
+            make.top.equalTo(separator.snp.bottom).offset(Constants.TextField.Constraints.top)
+            make.bottom.equalToSuperview()
         }
     }
 }

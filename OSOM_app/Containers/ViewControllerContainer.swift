@@ -15,12 +15,15 @@ class ViewControllerContainer {
     fileprivate let viewContainer = ViewContainer()
     fileprivate let cellManagerContainer = CellManagerContainer()
     
+    static let shared = ViewControllerContainer()
+    
     func getWelcome() -> WelcomeScreenViewController {
         return WelcomeScreenViewController(viewModel: viewModelContainer.getWelcome(), mainView: viewContainer.getWelcome())
     }
     
-    func getSignIn() -> UIViewController {
-        return UIViewController()
+    func getSignUpName() -> SignUpNameViewController {
+        let view = ViewContainer.shared.signUpName()
+        return SignUpNameViewController(mainView: view)
     }
     
 }
