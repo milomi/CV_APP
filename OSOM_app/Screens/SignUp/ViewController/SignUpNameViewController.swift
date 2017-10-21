@@ -20,6 +20,8 @@ class SignUpNameViewController: UIViewController {
     
     override func viewDidLoad() {
         setupView()
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationItem.leftBarButtonItem?.title = "SignUp"
     }
     
     required init?(coder aDecoder: NSCoder) {

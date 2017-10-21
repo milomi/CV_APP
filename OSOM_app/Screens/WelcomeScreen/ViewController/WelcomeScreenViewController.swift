@@ -35,9 +35,6 @@ class WelcomeScreenViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-
-        view.superview?.addGradient(topColor: UIColor.blue)
-        animateViewFadeIn(view: mainView)
     }
     
     fileprivate func setupView() {
