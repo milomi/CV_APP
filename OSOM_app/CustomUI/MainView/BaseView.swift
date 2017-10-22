@@ -18,7 +18,7 @@ fileprivate struct Constants {
     struct ContentFrame {
         static let backgroundColor = UIColor.black
         struct Constraints {
-            static let padding = 22
+            static let padding = 20
         }
     }
     
@@ -34,15 +34,6 @@ class BaseView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        let subview = UIView()
-        addSubview(subview)
-        subview.snp.makeConstraints { make in
-            if #available(iOS 11, *) {
-                make.top.equalTo(safeAreaLayoutGuide.snp.topMargin)
-            } else {
-                make.top.equalTo(self)
-            }
-        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -64,9 +55,9 @@ class BaseView: UIView {
         
         contentFrame.snp.makeConstraints { (make) in
             if #available(iOS 11, *) {
-                make.top.equalTo(safeAreaLayoutGuide.snp.topMargin)
+                make.top.equalTo(safeAreaLayoutGuide.snp.topMargin).offset(Constants.ContentFrame.Constraints.padding)
             } else {
-                make.top.equalTo(self)
+                make.top.equalTo(self.snp.topMargin).offset(Constants.ContentFrame.Constraints.padding)
             }
             make.leading.equalTo(Constants.ContentFrame.Constraints.padding)
             make.trailing.bottom.equalTo(-Constants.ContentFrame.Constraints.padding)

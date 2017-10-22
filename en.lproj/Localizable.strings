@@ -7,11 +7,12 @@
 */
 
 // Welcome view
-"mainView.signUn" = "SIGN UP";
 "mainView.logIn" = "LOG IN";
 "mainView.facebook" = "USE FACEBOOK";
 
 // Sign Up
+"signUp.navigation.title" = "SIGNUP";
+"signUp.navigation.rightButton" = "NEXT";
 "signUp.name" = "NAME";
 "signUp.surname" = "SURNAME";
 "signUp.email" = "EMAIL";

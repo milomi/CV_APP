@@ -11,6 +11,7 @@ import UIKit
 class SignUpNameViewController: UIViewController {
     
     private let mainView: SignUpNameView
+    var navigator: NavigationController?
 
     init(mainView: SignUpNameView) {
         self.mainView = mainView
@@ -20,16 +21,27 @@ class SignUpNameViewController: UIViewController {
     
     override func viewDidLoad() {
         setupView()
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationItem.leftBarButtonItem?.title = "SignUp"
+        setupNavigation()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    fileprivate func setupNavigation() {
+        navigator = NavigationController(navigationView: mainView.navigation, navigationController: navigationController)
+        navigator?.delegate = self
+    }
+    
+    
     private func setupView() {
         view = mainView
         mainView.setupView()
+    }
+}
+
+extension SignUpNameViewController: NavigationControllerDelegate {
+    func rightAction() {
+        
     }
 }

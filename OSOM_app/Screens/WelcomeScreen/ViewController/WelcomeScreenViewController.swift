@@ -27,7 +27,6 @@ class WelcomeScreenViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +44,7 @@ class WelcomeScreenViewController: UIViewController {
         mainView.signUp.button.addTarget(self, action: .signUp, for: .touchUpInside)
         mainView.setupView()
     }
-    
+
 }
 
 // MARK Actions

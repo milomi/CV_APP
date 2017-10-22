@@ -12,8 +12,11 @@ import SnapKit
 fileprivate struct Constants {
     struct General {
         static let backgroundColor = UIColor.black
+        static let title = "signUp.navigation.title"
+        static let rightButton = "signUp.navigation.rightButton"
 
     }
+    
     struct headerImage {
         static let image = ""
         static let backgroundColor = UIColor.black
@@ -31,6 +34,14 @@ fileprivate struct Constants {
 }
 
 class BaseSignUpView: BaseView {
+    
+    let navigation: NavigationView = {
+        let navigation = NavigationView()
+        navigation.title.text = Constants.General.title.localized()
+        navigation.rightButton.setTitle(Constants.General.rightButton.localized(), for: .normal)
+
+        return navigation
+    }()
     
     private let headerImage: UIImageView = {
         let imageView = UIImageView()
@@ -54,27 +65,34 @@ class BaseSignUpView: BaseView {
     
     override func setupView() {
         super.setupView()
-        setupSelf()
+        setupNavigation()
         setupHeaderImage()
         setupContentView()
     }
     
-    private func setupSelf() {
-        backgroundColor = Constants.General.backgroundColor
+    private func setupNavigation() {
+        contentFrame.addSubview(navigation)
+        
+        navigation.snp.makeConstraints { (make) in
+            make.leading.top.equalTo(Constants.ContentView.Constraints.padding)
+            make.trailing.equalTo(-Constants.ContentView.Constraints.padding)
+            make.height.equalTo(70)
+        }
     }
     
     private func setupHeaderImage() {
-        addSubview(headerImage)
+        contentFrame.addSubview(headerImage)
         
         headerImage.snp.makeConstraints {
             make in
-            make.leading.trailing.top.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
+            make.top.equalTo(navigation.snp.bottom)
             make.height.equalTo(Constants.headerImage.Constraints.height)
         }
     }
     
     private func setupContentView() {
-        addSubview(contentView)
+        contentFrame.addSubview(contentView)
         
         contentView.snp.makeConstraints {
             make in
