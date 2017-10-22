@@ -40,6 +40,8 @@
 		B2024F781F9365B10083B813 /* BaseSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2024F771F9365B10083B813 /* BaseSignUpView.swift */; };
 		B20CA6301F9CBFF50018208A /* SignUpEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CA62F1F9CBFF50018208A /* SignUpEmailView.swift */; };
 		B20CA6321F9CC0750018208A /* SignUpEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CA6311F9CC0750018208A /* SignUpEmailViewController.swift */; };
+		B20CA6381F9CC1BA0018208A /* SignUpPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CA6371F9CC1BA0018208A /* SignUpPasswordViewController.swift */; };
+		B20CA63B1F9CC1FA0018208A /* SignUpPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CA63A1F9CC1FA0018208A /* SignUpPasswordView.swift */; };
 		B2C48FED1F9367F600DFECA4 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */; };
 		B2C48FF01F936A9F00DFECA4 /* BaseEditField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */; };
 		B2C48FF81F937B8400DFECA4 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF31F937B8400DFECA4 /* Montserrat-Bold.otf */; };
@@ -112,6 +114,8 @@
 		B2024F771F9365B10083B813 /* BaseSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSignUpView.swift; sourceTree = "<group>"; };
 		B20CA62F1F9CBFF50018208A /* SignUpEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpEmailView.swift; sourceTree = "<group>"; };
 		B20CA6311F9CC0750018208A /* SignUpEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpEmailViewController.swift; sourceTree = "<group>"; };
+		B20CA6371F9CC1BA0018208A /* SignUpPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswordViewController.swift; sourceTree = "<group>"; };
+		B20CA63A1F9CC1FA0018208A /* SignUpPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswordView.swift; sourceTree = "<group>"; };
 		B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEditField.swift; sourceTree = "<group>"; };
 		B2C48FF31F937B8400DFECA4 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
@@ -335,6 +339,7 @@
 		B2024F6F1F9364BA0083B813 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				B20CA6331F9CC18D0018208A /* Password */,
 				B20CA62B1F9CBF690018208A /* Email */,
 				B20CA62A1F9CBC4D0018208A /* Name */,
 			);
@@ -405,6 +410,48 @@
 				B20CA6311F9CC0750018208A /* SignUpEmailViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B20CA6331F9CC18D0018208A /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				B20CA6391F9CC1EB0018208A /* View */,
+				B20CA6361F9CC1A80018208A /* ViewController */,
+				B20CA6351F9CC1A30018208A /* ViewModel */,
+				B20CA6341F9CC19E0018208A /* View */,
+			);
+			path = Password;
+			sourceTree = "<group>";
+		};
+		B20CA6341F9CC19E0018208A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B20CA6351F9CC1A30018208A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B20CA6361F9CC1A80018208A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B20CA6371F9CC1BA0018208A /* SignUpPasswordViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B20CA6391F9CC1EB0018208A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B20CA63A1F9CC1FA0018208A /* SignUpPasswordView.swift */,
+			);
+			name = View;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		B2C48FEE1F936A8900DFECA4 /* SignUp */ = {
@@ -787,9 +834,11 @@
 				B2024F6E1F9220EA0083B813 /* WelcomeScreenViewController.swift in Sources */,
 				B2F029D01F9CA60E0006A5A0 /* NavigationController.swift in Sources */,
 				B2024F761F93652E0083B813 /* SignUpNameView.swift in Sources */,
+				B20CA6381F9CC1BA0018208A /* SignUpPasswordViewController.swift in Sources */,
 				35EB19591F1E3D3E00DD3AA5 /* TitleCell.swift in Sources */,
 				3572CF6C1F1DFDC2004FC883 /* NetworkingContainer.swift in Sources */,
 				3572CF701F1DFDEB004FC883 /* CellManagerContainer.swift in Sources */,
+				B20CA63B1F9CC1FA0018208A /* SignUpPasswordView.swift in Sources */,
 				B20CA6301F9CBFF50018208A /* SignUpEmailView.swift in Sources */,
 				35EB19601F1E3DE200DD3AA5 /* Fonts.swift in Sources */,
 				35EB19491F1E2BBE00DD3AA5 /* WelcomeScreenViewModel.swift in Sources */,

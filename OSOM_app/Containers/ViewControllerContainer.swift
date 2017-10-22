@@ -31,4 +31,9 @@ class ViewControllerContainer {
         return SignUpEmailViewController(mainView: view)
     }
     
+    func getSignUpPassword() -> SignUpPasswordViewController {
+        let view = ViewContainer.shared.signUpPassword()
+        return SignUpPasswordViewController(mainView: view)
+    }
+    
 }
