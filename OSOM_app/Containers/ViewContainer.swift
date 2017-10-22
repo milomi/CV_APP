@@ -20,4 +20,8 @@ class ViewContainer {
         return SignUpNameView()
     }
     
+    func signUpEmail() -> SignUpEmailView {
+        return SignUpEmailView()
+    }
+    
 }

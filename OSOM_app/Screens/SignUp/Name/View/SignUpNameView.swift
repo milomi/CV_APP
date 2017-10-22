@@ -66,6 +66,7 @@ final class SignUpNameView: BaseSignUpView {
     private func setupSurnameEditField() {
         contentView.addSubview(surnameEditField)
         surnameEditField.setupView()
+        
         surnameEditField.snp.makeConstraints { (make) in
             make.top.equalTo(nameEditField.snp.bottom).offset(Constants.SurnameEditField.Constraints.top)
             make.width.equalTo(nameEditField.snp.width)

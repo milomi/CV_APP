@@ -49,9 +49,11 @@ class BaseSignUpView: BaseView {
         return imageView
     }()
     
-    let contentView: UIView = {
-        let view = UIView()
+    let contentView: UIScrollView = {
+        let view = UIScrollView()
         view.backgroundColor = Constants.ContentView.backgroundColor
+        view.showsVerticalScrollIndicator = false
+        view.showsHorizontalScrollIndicator = false
         return view
     }()
     

@@ -26,4 +26,9 @@ class ViewControllerContainer {
         return SignUpNameViewController(mainView: view)
     }
     
+    func getSignUpEmail() -> SignUpEmailViewController {
+        let view = ViewContainer.shared.signUpEmail()
+        return SignUpEmailViewController(mainView: view)
+    }
+    
 }

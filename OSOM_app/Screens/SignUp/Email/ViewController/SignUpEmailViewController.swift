@@ -1,22 +1,21 @@
 //
-//  SignUpNameViewController.swift
+//  SignUpEmailViewController.swift
 //  OSOM_app
 //
-//  Created by Miłosz Bugla on 15.10.2017.
+//  Created by Miłosz Bugla on 22.10.2017.
 //
 
 import Foundation
 import UIKit
 
-class SignUpNameViewController: UIViewController {
+final class SignUpEmailViewController: UIViewController {
     
-    private let mainView: SignUpNameView
+    private let mainView: SignUpEmailView
     var navigator: NavigationController?
-
-    init(mainView: SignUpNameView) {
+    
+    init(mainView: SignUpEmailView) {
         self.mainView = mainView
         super.init(nibName: nil, bundle: nil)
-
     }
     
     override func viewDidLoad() {
@@ -33,14 +32,13 @@ class SignUpNameViewController: UIViewController {
         navigator?.delegate = self
     }
     
-    
     private func setupView() {
         view = mainView
         mainView.setupView()
     }
 }
 
-extension SignUpNameViewController: NavigationControllerDelegate {
+extension SignUpEmailViewController: NavigationControllerDelegate {
     func rightAction() {
         
     }
