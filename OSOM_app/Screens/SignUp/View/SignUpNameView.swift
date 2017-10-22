@@ -6,11 +6,13 @@
 //
 
 import Foundation
+import UIKit
 
 fileprivate struct Constants {
+    
     struct NameEditField {
         static let title = "signUp.name"
-        static let placeholder = "signUp.placeholder"
+        static let placeholder = "signUp.name.placeholder"
         
         struct Constraints {
             static let top = 30
@@ -20,7 +22,7 @@ fileprivate struct Constants {
     
     struct SurnameEditField {
         static let title = "signUp.surname"
-        static let placeholder = "signUp.placeholder"
+        static let placeholder = "signUp.surname.placeholder"
         
         struct Constraints {
             static let top = 30
@@ -34,14 +36,14 @@ final class SignUpNameView: BaseSignUpView {
     let nameEditField: BaseEditField = {
         let field = BaseEditField()
         field.headerLabel.text = Constants.NameEditField.title.localized()
-        field.textField.placeholder = Constants.NameEditField.placeholder.localized()
+        field.textField.attributedPlaceholder = field.setAttributedPlaceholder(string: Constants.NameEditField.placeholder.localized())
         return field
     }()
     
     let surnameEditField: BaseEditField = {
         let field = BaseEditField()
         field.headerLabel.text = Constants.SurnameEditField.title.localized()
-        field.textField.placeholder = Constants.SurnameEditField.placeholder.localized()
+        field.textField.attributedPlaceholder = field.setAttributedPlaceholder(string:  Constants.SurnameEditField.placeholder.localized())
         return field
     }()
     

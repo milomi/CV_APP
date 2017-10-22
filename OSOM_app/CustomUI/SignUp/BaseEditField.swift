@@ -48,6 +48,8 @@ class BaseEditField: UIView {
     
     let textField: UITextField = {
         let textField = UITextField()
+        textField.font = UIFont.getFontWithSizeAndType(20, type: .bold)
+        textField.textColor = Constants.TextField.textColor
         return textField
     }()
     
@@ -55,6 +57,13 @@ class BaseEditField: UIView {
         setupHeader()
         setupSeparator()
         setupTextField()
+    }
+    
+    func setAttributedPlaceholder(string: String) -> NSAttributedString {
+        let attributedString = NSAttributedString(string: string,
+                                                  attributes: [NSAttributedStringKey.foregroundColor: UIColor.white,
+                                                               NSAttributedStringKey.font : UIFont.getFontWithSizeAndType(20, type: .bold)])
+        return attributedString
     }
     
     private func setupHeader() {

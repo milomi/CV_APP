@@ -13,7 +13,7 @@ import SnapKit
 fileprivate struct Constants {
     
     fileprivate struct LocalizableKeys {
-        static let signUp = "mainView.signUn"
+        static let signUp = "mainView.signUp"
         static let logIn = "mainView.logIn"
         static let fb = "mainView.facebook"
     }
@@ -88,7 +88,7 @@ class WelcomeView: BaseView {
     
     let facebookButton: CustomButton = {
         let facebookButton = CustomButton()
-        facebookButton.button.setTitle(Constants.LocalizableKeys.signUp.localized(), for: .normal)
+        facebookButton.button.setTitle(Constants.LocalizableKeys.fb.localized(), for: .normal)
         facebookButton.separator.alpha = 0.0
         return facebookButton
     }()

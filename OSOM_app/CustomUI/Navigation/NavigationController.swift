@@ -27,10 +27,12 @@ class NavigationController {
     init(navigationView: NavigationView, navigationController: UINavigationController?) {
         self.view = navigationView
         self.navigationController = navigationController
+        setupNavigation()
     }
     
     private func setupNavigation() {
         view.leftButton.addTarget(self, action: .backAction, for: .touchUpInside)
+        view.rightButton.addTarget(self, action: .rightAction, for: .touchUpInside)
     }
 }
 

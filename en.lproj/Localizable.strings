@@ -9,6 +9,7 @@
 // Welcome view
 "mainView.logIn" = "LOG IN";
 "mainView.facebook" = "USE FACEBOOK";
+"mainView.signUp" = "SIGN UP";
 
 // Sign Up
 "signUp.navigation.title" = "SIGNUP";
@@ -18,7 +19,8 @@
 "signUp.email" = "EMAIL";
 "signUp.password" = "PASSWORD";
 "signUP.repeatPassword" = "REPEAT PASSWORD";
-"signUp.placeholder" = "fill it up";
+"signUp.name.placeholder" = "who are you?";
+"signUp.surname.placeholder" = "and you go by?";
 "signUp.placeholder.password" = "8Characters#";
 "signUp.placeholder.repeatPassword" = "yup, once again...";
 

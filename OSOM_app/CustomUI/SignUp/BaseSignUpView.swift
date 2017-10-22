@@ -39,7 +39,7 @@ class BaseSignUpView: BaseView {
         let navigation = NavigationView()
         navigation.title.text = Constants.General.title.localized()
         navigation.rightButton.setTitle(Constants.General.rightButton.localized(), for: .normal)
-
+        navigation.leftButton.setTitle("<", for: .normal)
         return navigation
     }()
     
