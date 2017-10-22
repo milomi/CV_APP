@@ -22,14 +22,12 @@
 		3572CF6E1F1DFDCD004FC883 /* SerializerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3572CF6D1F1DFDCD004FC883 /* SerializerContainer.swift */; };
 		3572CF701F1DFDEB004FC883 /* CellManagerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3572CF6F1F1DFDEB004FC883 /* CellManagerContainer.swift */; };
 		3572CF771F1E036E004FC883 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3572CF761F1E036E004FC883 /* WelcomeView.swift */; };
-		3577D8041F1F350C001BCD63 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3577D8031F1F350C001BCD63 /* UIView+Gradient.swift */; };
 		3577D8061F1F3565001BCD63 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3577D8051F1F3565001BCD63 /* UIView+Shadow.swift */; };
 		3577D8081F1F35B6001BCD63 /* ColorSchameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3577D8071F1F35B6001BCD63 /* ColorSchameHelper.swift */; };
 		35EB19491F1E2BBE00DD3AA5 /* WelcomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB19481F1E2BBE00DD3AA5 /* WelcomeScreenViewModel.swift */; };
 		35EB194C1F1E32DA00DD3AA5 /* CutomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB194B1F1E32DA00DD3AA5 /* CutomButton.swift */; };
 		35EB194F1F1E34C100DD3AA5 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB194E1F1E34C100DD3AA5 /* String+Localized.swift */; };
 		35EB19521F1E371200DD3AA5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35EB19541F1E371200DD3AA5 /* Localizable.strings */; };
-		35EB19571F1E3D0800DD3AA5 /* UIViewController+CellAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB19561F1E3D0800DD3AA5 /* UIViewController+CellAnimations.swift */; };
 		35EB19591F1E3D3E00DD3AA5 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB19581F1E3D3E00DD3AA5 /* TitleCell.swift */; };
 		35EB195C1F1E3D7C00DD3AA5 /* TitleCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB195B1F1E3D7C00DD3AA5 /* TitleCellView.swift */; };
 		35EB195E1F1E3DAD00DD3AA5 /* Int+ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB195D1F1E3DAD00DD3AA5 /* Int+ConstraintMaker.swift */; };
@@ -37,6 +35,24 @@
 		5698354B51170AEE864DCE29 /* Pods_OSOM_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BF1DBED7E1A0F18EC7F324 /* Pods_OSOM_appUITests.framework */; };
 		69245883FDBBC27DE19A67BB /* Pods_OSOM_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2330CA05BBE27C8240531B06 /* Pods_OSOM_app.framework */; };
 		B2024F6E1F9220EA0083B813 /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2024F6D1F9220EA0083B813 /* WelcomeScreenViewController.swift */; };
+		B2024F741F9365090083B813 /* SignUpNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2024F731F9365090083B813 /* SignUpNameViewController.swift */; };
+		B2024F761F93652E0083B813 /* SignUpNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2024F751F93652E0083B813 /* SignUpNameView.swift */; };
+		B2024F781F9365B10083B813 /* BaseSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2024F771F9365B10083B813 /* BaseSignUpView.swift */; };
+		B20CA6301F9CBFF50018208A /* SignUpEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CA62F1F9CBFF50018208A /* SignUpEmailView.swift */; };
+		B20CA6321F9CC0750018208A /* SignUpEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CA6311F9CC0750018208A /* SignUpEmailViewController.swift */; };
+		B20CA6381F9CC1BA0018208A /* SignUpPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CA6371F9CC1BA0018208A /* SignUpPasswordViewController.swift */; };
+		B20CA63B1F9CC1FA0018208A /* SignUpPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CA63A1F9CC1FA0018208A /* SignUpPasswordView.swift */; };
+		B2C48FED1F9367F600DFECA4 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */; };
+		B2C48FF01F936A9F00DFECA4 /* BaseEditField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */; };
+		B2C48FF81F937B8400DFECA4 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF31F937B8400DFECA4 /* Montserrat-Bold.otf */; };
+		B2C48FF91F937B8400DFECA4 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF41F937B8400DFECA4 /* Montserrat-Regular.otf */; };
+		B2C48FFA1F937B8400DFECA4 /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF51F937B8400DFECA4 /* Montserrat-Medium.otf */; };
+		B2C48FFB1F937B8400DFECA4 /* Montserrat-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF61F937B8400DFECA4 /* Montserrat-ExtraBold.otf */; };
+		B2C48FFC1F937B8400DFECA4 /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF71F937B8400DFECA4 /* Montserrat-Light.otf */; };
+		B2F029C91F9C7ECD0006A5A0 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F029C81F9C7ECD0006A5A0 /* BaseView.swift */; };
+		B2F029CB1F9C8DEC0006A5A0 /* UIDevice+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F029CA1F9C8DEC0006A5A0 /* UIDevice+extension.swift */; };
+		B2F029CE1F9C9BB10006A5A0 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F029CD1F9C9BB10006A5A0 /* NavigationView.swift */; };
+		B2F029D01F9CA60E0006A5A0 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F029CF1F9CA60D0006A5A0 /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +93,6 @@
 		3572CF6D1F1DFDCD004FC883 /* SerializerContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializerContainer.swift; sourceTree = "<group>"; };
 		3572CF6F1F1DFDEB004FC883 /* CellManagerContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellManagerContainer.swift; sourceTree = "<group>"; };
 		3572CF761F1E036E004FC883 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		3577D8031F1F350C001BCD63 /* UIView+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		3577D8051F1F3565001BCD63 /* UIView+Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		3577D8071F1F35B6001BCD63 /* ColorSchameHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSchameHelper.swift; sourceTree = "<group>"; };
 		35EB19481F1E2BBE00DD3AA5 /* WelcomeScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewModel.swift; sourceTree = "<group>"; };
@@ -85,7 +100,6 @@
 		35EB194E1F1E34C100DD3AA5 /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		35EB19531F1E371200DD3AA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		35EB19551F1E37A000DD3AA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		35EB19561F1E3D0800DD3AA5 /* UIViewController+CellAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+CellAnimations.swift"; sourceTree = "<group>"; };
 		35EB19581F1E3D3E00DD3AA5 /* TitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitleCell.swift; path = OSOM_app/CustomUI/TitleCell.swift; sourceTree = SOURCE_ROOT; };
 		35EB195B1F1E3D7C00DD3AA5 /* TitleCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleCellView.swift; sourceTree = "<group>"; };
 		35EB195D1F1E3DAD00DD3AA5 /* Int+ConstraintMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+ConstraintMaker.swift"; sourceTree = "<group>"; };
@@ -95,6 +109,24 @@
 		81B1F8EC51FDDC79EFDBEE63 /* Pods-OSOM_appUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSOM_appUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OSOM_appUITests/Pods-OSOM_appUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B2024F6B1F92206C0083B813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2024F6D1F9220EA0083B813 /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
+		B2024F731F9365090083B813 /* SignUpNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNameViewController.swift; sourceTree = "<group>"; };
+		B2024F751F93652E0083B813 /* SignUpNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNameView.swift; sourceTree = "<group>"; };
+		B2024F771F9365B10083B813 /* BaseSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSignUpView.swift; sourceTree = "<group>"; };
+		B20CA62F1F9CBFF50018208A /* SignUpEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpEmailView.swift; sourceTree = "<group>"; };
+		B20CA6311F9CC0750018208A /* SignUpEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpEmailViewController.swift; sourceTree = "<group>"; };
+		B20CA6371F9CC1BA0018208A /* SignUpPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswordViewController.swift; sourceTree = "<group>"; };
+		B20CA63A1F9CC1FA0018208A /* SignUpPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswordView.swift; sourceTree = "<group>"; };
+		B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
+		B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEditField.swift; sourceTree = "<group>"; };
+		B2C48FF31F937B8400DFECA4 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
+		B2C48FF41F937B8400DFECA4 /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
+		B2C48FF51F937B8400DFECA4 /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.otf"; sourceTree = "<group>"; };
+		B2C48FF61F937B8400DFECA4 /* Montserrat-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.otf"; sourceTree = "<group>"; };
+		B2C48FF71F937B8400DFECA4 /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
+		B2F029C81F9C7ECD0006A5A0 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		B2F029CA1F9C8DEC0006A5A0 /* UIDevice+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+extension.swift"; sourceTree = "<group>"; };
+		B2F029CD1F9C9BB10006A5A0 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		B2F029CF1F9CA60D0006A5A0 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		DD3DC9D34C9F8335E34F0A16 /* Pods-OSOM_appUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSOM_appUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OSOM_appUITests/Pods-OSOM_appUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E16608CC816851F59D5FFD95 /* Pods_OSOM_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OSOM_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE89B747A59E42E08DA5223 /* Pods-OSOM_appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSOM_appTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OSOM_appTests/Pods-OSOM_appTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +187,7 @@
 		3572CF281F1DEAF9004FC883 /* OSOM_app */ = {
 			isa = PBXGroup;
 			children = (
+				B2C48FF11F937B5400DFECA4 /* Resources */,
 				B2024F6B1F92206C0083B813 /* Info.plist */,
 				35EB19541F1E371200DD3AA5 /* Localizable.strings */,
 				3572CF331F1DEAF9004FC883 /* Assets.xcassets */,
@@ -205,6 +238,7 @@
 		3572CF711F1E01F5004FC883 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				B2024F6F1F9364BA0083B813 /* SignUp */,
 				3572CF721F1E02B5004FC883 /* WelcomeScreen */,
 			);
 			path = Screens;
@@ -239,6 +273,9 @@
 		35EB194A1F1E329B00DD3AA5 /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
+				B2F029CC1F9C9AED0006A5A0 /* Navigation */,
+				B2F029C51F9B71E10006A5A0 /* MainView */,
+				B2C48FEE1F936A8900DFECA4 /* SignUp */,
 				35EB195A1F1E3D5C00DD3AA5 /* TitleCell */,
 				35EB194B1F1E32DA00DD3AA5 /* CutomButton.swift */,
 			);
@@ -249,12 +286,12 @@
 			isa = PBXGroup;
 			children = (
 				35EB194E1F1E34C100DD3AA5 /* String+Localized.swift */,
-				35EB19561F1E3D0800DD3AA5 /* UIViewController+CellAnimations.swift */,
 				35EB195D1F1E3DAD00DD3AA5 /* Int+ConstraintMaker.swift */,
 				35EB195F1F1E3DE200DD3AA5 /* Fonts.swift */,
-				3577D8031F1F350C001BCD63 /* UIView+Gradient.swift */,
 				3577D8051F1F3565001BCD63 /* UIView+Shadow.swift */,
 				3577D8071F1F35B6001BCD63 /* ColorSchameHelper.swift */,
+				B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */,
+				B2F029CA1F9C8DEC0006A5A0 /* UIDevice+extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -297,6 +334,170 @@
 				B2024F6D1F9220EA0083B813 /* WelcomeScreenViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B2024F6F1F9364BA0083B813 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				B20CA6331F9CC18D0018208A /* Password */,
+				B20CA62B1F9CBF690018208A /* Email */,
+				B20CA62A1F9CBC4D0018208A /* Name */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		B2024F701F9364CF0083B813 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B2024F731F9365090083B813 /* SignUpNameViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B2024F711F9364D60083B813 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2024F751F93652E0083B813 /* SignUpNameView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B2024F721F9364DB0083B813 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B20CA62A1F9CBC4D0018208A /* Name */ = {
+			isa = PBXGroup;
+			children = (
+				B2024F721F9364DB0083B813 /* ViewModel */,
+				B2024F711F9364D60083B813 /* View */,
+				B2024F701F9364CF0083B813 /* ViewController */,
+			);
+			path = Name;
+			sourceTree = "<group>";
+		};
+		B20CA62B1F9CBF690018208A /* Email */ = {
+			isa = PBXGroup;
+			children = (
+				B20CA62E1F9CBFCA0018208A /* ViewController */,
+				B20CA62D1F9CBFC60018208A /* View */,
+				B20CA62C1F9CBFC00018208A /* ViewModel */,
+			);
+			path = Email;
+			sourceTree = "<group>";
+		};
+		B20CA62C1F9CBFC00018208A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B20CA62D1F9CBFC60018208A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B20CA62F1F9CBFF50018208A /* SignUpEmailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B20CA62E1F9CBFCA0018208A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B20CA6311F9CC0750018208A /* SignUpEmailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B20CA6331F9CC18D0018208A /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				B20CA6391F9CC1EB0018208A /* View */,
+				B20CA6361F9CC1A80018208A /* ViewController */,
+				B20CA6351F9CC1A30018208A /* ViewModel */,
+				B20CA6341F9CC19E0018208A /* View */,
+			);
+			path = Password;
+			sourceTree = "<group>";
+		};
+		B20CA6341F9CC19E0018208A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B20CA6351F9CC1A30018208A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B20CA6361F9CC1A80018208A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B20CA6371F9CC1BA0018208A /* SignUpPasswordViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B20CA6391F9CC1EB0018208A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B20CA63A1F9CC1FA0018208A /* SignUpPasswordView.swift */,
+			);
+			name = View;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		B2C48FEE1F936A8900DFECA4 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				B2024F771F9365B10083B813 /* BaseSignUpView.swift */,
+				B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		B2C48FF11F937B5400DFECA4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B2C48FF21F937B5A00DFECA4 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B2C48FF21F937B5A00DFECA4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B2C48FF31F937B8400DFECA4 /* Montserrat-Bold.otf */,
+				B2C48FF61F937B8400DFECA4 /* Montserrat-ExtraBold.otf */,
+				B2C48FF71F937B8400DFECA4 /* Montserrat-Light.otf */,
+				B2C48FF51F937B8400DFECA4 /* Montserrat-Medium.otf */,
+				B2C48FF41F937B8400DFECA4 /* Montserrat-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B2F029C51F9B71E10006A5A0 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				B2F029C81F9C7ECD0006A5A0 /* BaseView.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		B2F029CC1F9C9AED0006A5A0 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				B2F029CD1F9C9BB10006A5A0 /* NavigationView.swift */,
+				B2F029CF1F9CA60D0006A5A0 /* NavigationController.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,7 +577,7 @@
 				TargetAttributes = {
 					3572CF251F1DEAF9004FC883 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = Z3U8X2726Z;
+						DevelopmentTeam = B78XDNYG5Q;
 						ProvisioningStyle = Automatic;
 					};
 					3572CF3C1F1DEAF9004FC883 = {
@@ -418,9 +619,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2C48FFB1F937B8400DFECA4 /* Montserrat-ExtraBold.otf in Resources */,
 				3572CF371F1DEAF9004FC883 /* LaunchScreen.storyboard in Resources */,
+				B2C48FFA1F937B8400DFECA4 /* Montserrat-Medium.otf in Resources */,
 				3572CF341F1DEAF9004FC883 /* Assets.xcassets in Resources */,
 				35EB19521F1E371200DD3AA5 /* Localizable.strings in Resources */,
+				B2C48FF91F937B8400DFECA4 /* Montserrat-Regular.otf in Resources */,
+				B2C48FF81F937B8400DFECA4 /* Montserrat-Bold.otf in Resources */,
+				B2C48FFC1F937B8400DFECA4 /* Montserrat-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +692,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		5D593A54A512EC9CFE32112A /* [CP] Copy Pods Resources */ = {
@@ -519,7 +725,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9A45FE9A33A26E319C63610E /* [CP] Check Pods Manifest.lock */ = {
@@ -537,7 +743,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		BA2B65262B655DF0BFDF90F7 /* [CP] Embed Pods Frameworks */ = {
@@ -604,26 +810,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				3577D8081F1F35B6001BCD63 /* ColorSchameHelper.swift in Sources */,
+				B2F029C91F9C7ECD0006A5A0 /* BaseView.swift in Sources */,
 				3572CF321F1DEAF9004FC883 /* OSOM_app.xcdatamodeld in Sources */,
 				3572CF641F1DFD7B004FC883 /* ViewControllerContainer.swift in Sources */,
+				B2C48FF01F936A9F00DFECA4 /* BaseEditField.swift in Sources */,
+				B2C48FED1F9367F600DFECA4 /* UIColor+extension.swift in Sources */,
 				35EB195C1F1E3D7C00DD3AA5 /* TitleCellView.swift in Sources */,
-				35EB19571F1E3D0800DD3AA5 /* UIViewController+CellAnimations.swift in Sources */,
+				B2024F741F9365090083B813 /* SignUpNameViewController.swift in Sources */,
 				3572CF2A1F1DEAF9004FC883 /* AppDelegate.swift in Sources */,
 				35EB194F1F1E34C100DD3AA5 /* String+Localized.swift in Sources */,
 				3577D8061F1F3565001BCD63 /* UIView+Shadow.swift in Sources */,
 				3572CF681F1DFD93004FC883 /* ViewContainer.swift in Sources */,
 				3572CF6A1F1DFDA5004FC883 /* ValidatorContainer.swift in Sources */,
+				B20CA6321F9CC0750018208A /* SignUpEmailViewController.swift in Sources */,
 				35EB194C1F1E32DA00DD3AA5 /* CutomButton.swift in Sources */,
+				B2F029CE1F9C9BB10006A5A0 /* NavigationView.swift in Sources */,
 				3572CF771F1E036E004FC883 /* WelcomeView.swift in Sources */,
 				3572CF6E1F1DFDCD004FC883 /* SerializerContainer.swift in Sources */,
+				B2F029CB1F9C8DEC0006A5A0 /* UIDevice+extension.swift in Sources */,
+				B2024F781F9365B10083B813 /* BaseSignUpView.swift in Sources */,
 				3572CF661F1DFD89004FC883 /* ViewModelContainer.swift in Sources */,
 				35EB195E1F1E3DAD00DD3AA5 /* Int+ConstraintMaker.swift in Sources */,
 				B2024F6E1F9220EA0083B813 /* WelcomeScreenViewController.swift in Sources */,
+				B2F029D01F9CA60E0006A5A0 /* NavigationController.swift in Sources */,
+				B2024F761F93652E0083B813 /* SignUpNameView.swift in Sources */,
+				B20CA6381F9CC1BA0018208A /* SignUpPasswordViewController.swift in Sources */,
 				35EB19591F1E3D3E00DD3AA5 /* TitleCell.swift in Sources */,
 				3572CF6C1F1DFDC2004FC883 /* NetworkingContainer.swift in Sources */,
 				3572CF701F1DFDEB004FC883 /* CellManagerContainer.swift in Sources */,
+				B20CA63B1F9CC1FA0018208A /* SignUpPasswordView.swift in Sources */,
+				B20CA6301F9CBFF50018208A /* SignUpEmailView.swift in Sources */,
 				35EB19601F1E3DE200DD3AA5 /* Fonts.swift in Sources */,
-				3577D8041F1F350C001BCD63 /* UIView+Gradient.swift in Sources */,
 				35EB19491F1E2BBE00DD3AA5 /* WelcomeScreenViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -792,7 +1009,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = Z3U8X2726Z;
+				DEVELOPMENT_TEAM = B78XDNYG5Q;
 				INFOPLIST_FILE = OSOM_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.com.iteo.OSOM-app";
@@ -808,7 +1025,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = Z3U8X2726Z;
+				DEVELOPMENT_TEAM = B78XDNYG5Q;
 				INFOPLIST_FILE = OSOM_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.com.iteo.OSOM-app";

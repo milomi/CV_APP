@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
         IQKeyboardManager.shared().isEnabled = true
-        IQKeyboardManager.shared().keyboardDistanceFromTextField = 100
+        IQKeyboardManager.shared().keyboardDistanceFromTextField = 60
         return true
     }
 

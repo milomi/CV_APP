@@ -6,8 +6,25 @@
 
 */
 
-"welcome_nav_title" = "Title";
-"welcome_title_label" = " Looking for or being searched for?";
-"welcome_subtitle_label" = "";
-"welcome_employee__action" = "EMPLOYEE";
-"welcome_employer_action" = "EMPLOYER";
+// Welcome view
+"mainView.logIn" = "LOG IN";
+"mainView.facebook" = "USE FACEBOOK";
+"mainView.signUp" = "SIGN UP";
+
+// Sign Up
+"signUp.navigation.title" = "SIGNUP";
+"signUp.navigation.rightButton" = "NEXT";
+"signUp.name" = "NAME";
+"signUp.surname" = "SURNAME";
+"signUp.email" = "EMAIL";
+"signUp.password" = "PASSWORD";
+"signUp.repeatPassword" = "REPEAT PASSWORD";
+"signUp.name.placeholder" = "who are you?";
+"signUp.surname.placeholder" = "and you go by?";
+"signUp.email.placeholder" = "fill it up";
+"signUp.password.placeholder" = "8Characters#";
+"signUp.repeatPassword.placeholder" = "yup, once again...";
+
+// Log In
+"LogIn.password.placeholder" = "8Characters#";
+"LogIn.repeatPassword.placeholder" = "yup, once again...";

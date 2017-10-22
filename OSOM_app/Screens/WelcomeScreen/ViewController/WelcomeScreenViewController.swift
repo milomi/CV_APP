@@ -9,8 +9,8 @@
 import UIKit
 
 fileprivate extension Selector {
-    static let EmployeeAction = #selector(WelcomeScreenViewController.EmployeeAction)
-    static let EmployerAction = #selector(WelcomeScreenViewController.EmployerAction)
+    static let logIn = #selector(WelcomeScreenViewController.logIn)
+    static let signUp = #selector(WelcomeScreenViewController.signUp)
 }
 
 class WelcomeScreenViewController: UIViewController {
@@ -27,44 +27,36 @@ class WelcomeScreenViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        navigationController?.isNavigationBarHidden = true
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-
-        view.superview?.addGradient(topColor: UIColor.blue)
-        animateViewFadeIn(view: mainView)
     }
     
     fileprivate func setupView() {
         self.view = mainView
-        mainView.setAppNameText(text: viewModel.getAppNameLabelText())
-        mainView.setTitleText(text: viewModel.getWelcomeLabelText())
-        mainView.setSignInButtonTitle(title: viewModel.getSignInButtonText())
-        mainView.setSignUpButtonTitle(title: viewModel.getSignUpButtonText())
-        mainView.signIn.addTarget(self, action: .EmployeeAction, for: .touchUpInside)
-        mainView.signUp.addTarget(self, action: .EmployerAction, for: .touchUpInside)
+        mainView.logIn.button.addTarget(self, action: .logIn, for: .touchUpInside)
+        mainView.signUp.button.addTarget(self, action: .signUp, for: .touchUpInside)
         mainView.setupView()
     }
-    
-    
+
 }
 
 // MARK Actions
 extension WelcomeScreenViewController {
     
-    @objc func EmployeeAction() {
-//        let controller = ViewControllerContainer().getSignIn()
-//        self.navigationController?.pushViewController(controller, animated: true)
+    @objc func logIn() {
+
     }
     
-    @objc func EmployerAction() {
-//        let controller = ViewControllerContainer().getSignUp()
-//        self.navigationController?.pushViewController(controller, animated: true)
+    @objc func signUp() {
+        let controller = ViewControllerContainer.shared.getSignUpName()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
 }
