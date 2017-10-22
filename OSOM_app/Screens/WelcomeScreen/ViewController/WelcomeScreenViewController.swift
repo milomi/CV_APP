@@ -9,8 +9,8 @@
 import UIKit
 
 fileprivate extension Selector {
-    static let EmployeeAction = #selector(WelcomeScreenViewController.EmployeeAction)
-    static let EmployerAction = #selector(WelcomeScreenViewController.EmployerAction)
+    static let logIn = #selector(WelcomeScreenViewController.logIn)
+    static let signUp = #selector(WelcomeScreenViewController.signUp)
 }
 
 class WelcomeScreenViewController: UIViewController {
@@ -32,6 +32,8 @@ class WelcomeScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        navigationController?.isNavigationBarHidden = true
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,27 +41,22 @@ class WelcomeScreenViewController: UIViewController {
     
     fileprivate func setupView() {
         self.view = mainView
-        mainView.setAppNameText(text: viewModel.getAppNameLabelText())
-        mainView.setTitleText(text: viewModel.getWelcomeLabelText())
-        mainView.setSignInButtonTitle(title: viewModel.getSignInButtonText())
-        mainView.setSignUpButtonTitle(title: viewModel.getSignUpButtonText())
-        mainView.signIn.addTarget(self, action: .EmployeeAction, for: .touchUpInside)
-        mainView.signUp.addTarget(self, action: .EmployerAction, for: .touchUpInside)
+        mainView.logIn.button.addTarget(self, action: .logIn, for: .touchUpInside)
+        mainView.signUp.button.addTarget(self, action: .signUp, for: .touchUpInside)
         mainView.setupView()
     }
-    
     
 }
 
 // MARK Actions
 extension WelcomeScreenViewController {
     
-    @objc func EmployeeAction() {
+    @objc func logIn() {
         let controller = ViewControllerContainer.shared.getSignUpName()
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    @objc func EmployerAction() {
+    @objc func signUp() {
 //        let controller = ViewControllerContainer().getSignUp()
 //        self.navigationController?.pushViewController(controller, animated: true)
     }

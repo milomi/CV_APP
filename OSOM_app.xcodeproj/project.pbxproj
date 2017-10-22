@@ -45,6 +45,8 @@
 		B2C48FFA1F937B8400DFECA4 /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF51F937B8400DFECA4 /* Montserrat-Medium.otf */; };
 		B2C48FFB1F937B8400DFECA4 /* Montserrat-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF61F937B8400DFECA4 /* Montserrat-ExtraBold.otf */; };
 		B2C48FFC1F937B8400DFECA4 /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF71F937B8400DFECA4 /* Montserrat-Light.otf */; };
+		B2F029C91F9C7ECD0006A5A0 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F029C81F9C7ECD0006A5A0 /* BaseView.swift */; };
+		B2F029CB1F9C8DEC0006A5A0 /* UIDevice+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F029CA1F9C8DEC0006A5A0 /* UIDevice+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,8 @@
 		B2C48FF51F937B8400DFECA4 /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.otf"; sourceTree = "<group>"; };
 		B2C48FF61F937B8400DFECA4 /* Montserrat-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.otf"; sourceTree = "<group>"; };
 		B2C48FF71F937B8400DFECA4 /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
+		B2F029C81F9C7ECD0006A5A0 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		B2F029CA1F9C8DEC0006A5A0 /* UIDevice+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+extension.swift"; sourceTree = "<group>"; };
 		DD3DC9D34C9F8335E34F0A16 /* Pods-OSOM_appUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSOM_appUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OSOM_appUITests/Pods-OSOM_appUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E16608CC816851F59D5FFD95 /* Pods_OSOM_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OSOM_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE89B747A59E42E08DA5223 /* Pods-OSOM_appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSOM_appTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OSOM_appTests/Pods-OSOM_appTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -257,6 +261,7 @@
 		35EB194A1F1E329B00DD3AA5 /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
+				B2F029C51F9B71E10006A5A0 /* MainView */,
 				B2C48FEE1F936A8900DFECA4 /* SignUp */,
 				35EB195A1F1E3D5C00DD3AA5 /* TitleCell */,
 				35EB194B1F1E32DA00DD3AA5 /* CutomButton.swift */,
@@ -273,6 +278,7 @@
 				3577D8051F1F3565001BCD63 /* UIView+Shadow.swift */,
 				3577D8071F1F35B6001BCD63 /* ColorSchameHelper.swift */,
 				B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */,
+				B2F029CA1F9C8DEC0006A5A0 /* UIDevice+extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -377,6 +383,14 @@
 				B2C48FF41F937B8400DFECA4 /* Montserrat-Regular.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B2F029C51F9B71E10006A5A0 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				B2F029C81F9C7ECD0006A5A0 /* BaseView.swift */,
+			);
+			path = MainView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -689,6 +703,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3577D8081F1F35B6001BCD63 /* ColorSchameHelper.swift in Sources */,
+				B2F029C91F9C7ECD0006A5A0 /* BaseView.swift in Sources */,
 				3572CF321F1DEAF9004FC883 /* OSOM_app.xcdatamodeld in Sources */,
 				3572CF641F1DFD7B004FC883 /* ViewControllerContainer.swift in Sources */,
 				B2C48FF01F936A9F00DFECA4 /* BaseEditField.swift in Sources */,
@@ -703,6 +718,7 @@
 				35EB194C1F1E32DA00DD3AA5 /* CutomButton.swift in Sources */,
 				3572CF771F1E036E004FC883 /* WelcomeView.swift in Sources */,
 				3572CF6E1F1DFDCD004FC883 /* SerializerContainer.swift in Sources */,
+				B2F029CB1F9C8DEC0006A5A0 /* UIDevice+extension.swift in Sources */,
 				B2024F781F9365B10083B813 /* BaseSignUpView.swift in Sources */,
 				3572CF661F1DFD89004FC883 /* ViewModelContainer.swift in Sources */,
 				35EB195E1F1E3DAD00DD3AA5 /* Int+ConstraintMaker.swift in Sources */,

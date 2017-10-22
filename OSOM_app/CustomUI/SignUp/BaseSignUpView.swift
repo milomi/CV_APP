@@ -30,7 +30,7 @@ fileprivate struct Constants {
     }
 }
 
-class BaseSignUpView: UIView {
+class BaseSignUpView: BaseView {
     
     private let headerImage: UIImageView = {
         let imageView = UIImageView()
@@ -52,7 +52,8 @@ class BaseSignUpView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupView() {
+    override func setupView() {
+        super.setupView()
         setupSelf()
         setupHeaderImage()
         setupContentView()

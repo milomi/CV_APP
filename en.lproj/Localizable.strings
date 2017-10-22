@@ -6,11 +6,10 @@
 
 */
 
-"welcome_nav_title" = "Title";
-"welcome_title_label" = " Looking for or being searched for?";
-"welcome_subtitle_label" = "";
-"welcome_employee__action" = "EMPLOYEE";
-"welcome_employer_action" = "EMPLOYER";
+// Welcome view
+"mainView.signUn" = "SIGN UP";
+"mainView.logIn" = "LOG IN";
+"mainView.facebook" = "USE FACEBOOK";
 
 // Sign Up
 "signUp.name" = "NAME";

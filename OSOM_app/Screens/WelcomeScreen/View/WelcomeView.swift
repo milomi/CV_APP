@@ -11,22 +11,29 @@ import UIKit
 import SnapKit
 
 fileprivate struct Constants {
-    struct AppName {
+    
+    fileprivate struct LocalizableKeys {
+        static let signUp = "mainView.signUn"
+        static let logIn = "mainView.logIn"
+        static let fb = "mainView.facebook"
+    }
+    
+    struct headerImage {
+        static let image = "cvLogo"
+        
         struct Constraints {
-            static let top = 60
-            static let height = 40
-        }
-        struct Font {
-            static let size: CGFloat = 50
+            static let height = 336
+            static let height4 = 266
         }
     }
-    struct Title {
+    
+    struct ContentView {
+        static let backgroundColor = UIColor.white
         struct Constraints {
-            static let top = 35
-            static let leading = 40
-            static let trailing = -40
+            static let padding = 4
         }
     }
+    
     struct SigninButton {
         struct Constraints {
             static let top = 35
@@ -46,7 +53,7 @@ fileprivate struct Constants {
     }
 }
 
-class WelcomeView: UIView {
+class WelcomeView: BaseView {
     
     let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -54,33 +61,36 @@ class WelcomeView: UIView {
         return scrollView
     }()
     
-    fileprivate let contentView: UIView = {
-        let view = UIView()
-        return view
+    private let headerImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: Constants.headerImage.image)
+        return imageView
     }()
     
-    let appNameLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: Constants.AppName.Font.size)
-        return label
+    let contentView: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.distribution = .fillEqually
+        return stack
     }()
     
-    let titleLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        return label
-    }()
-    
-    let signIn: CustomButton = {
-        let button = CustomButton()
-        return button
+    let logIn: CustomButton = {
+        let logIn = CustomButton()
+        logIn.button.setTitle(Constants.LocalizableKeys.logIn.localized(), for: .normal)
+        return logIn
     }()
     
     let signUp: CustomButton = {
-        let button = CustomButton()
-        return button
+        let signUp = CustomButton()
+        signUp.button.setTitle(Constants.LocalizableKeys.signUp.localized(), for: .normal)
+        return signUp
+    }()
+    
+    let facebookButton: CustomButton = {
+        let facebookButton = CustomButton()
+        facebookButton.button.setTitle(Constants.LocalizableKeys.signUp.localized(), for: .normal)
+        facebookButton.separator.alpha = 0.0
+        return facebookButton
     }()
     
     override init(frame: CGRect) {
@@ -91,87 +101,49 @@ class WelcomeView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setAppNameText(text: String) {
-        appNameLabel.text = text
-    }
-    
-    func setTitleText(text: String) {
-        titleLabel.text = text
-    }
-    
-    func setSignInButtonTitle(title: String) {
-        signIn.setTitle(title, for: .normal)
-    }
-    
-    func setSignUpButtonTitle(title: String) {
-        signUp.setTitle(title, for: .normal)
-    }
-    
-}
-
-extension WelcomeView {
-    
-    func setupView() {
-        setupSelf()
+    override func setupView() {
+        super.setupView()
+        setupHeaderImage()
         setupContentView()
-        setupAppLabel()
-        setupLabel()
         setupSignIn()
         setupSignUp()
+        setupFbButton()
     }
     
-    func setupSelf() {
-        addSubview(scrollView)
-        scrollView.snp.makeConstraints { (make) in
-            make.top.bottom.leading.trailing.equalTo(0)
+    private func setupHeaderImage() {
+        contentFrame.addSubview(headerImage)
+        
+        headerImage.snp.makeConstraints { (make) in
+            make.leading.trailing.top.equalToSuperview()
+            if UIDevice.current.isScreen4inch() {
+                make.height.equalTo(Constants.headerImage.Constraints.height4)
+            } else {
+                make.height.equalTo(Constants.headerImage.Constraints.height)
+            }
         }
     }
     
-    fileprivate func setupContentView() {
-        scrollView.addSubview(contentView)
+    private func setupContentView() {
+        contentFrame.addSubview(contentView)
+        
         contentView.snp.makeConstraints { (make) in
-            make.top.bottom.leading.trailing.equalTo(0)
-            make.centerX.equalTo(scrollView.snp.centerX)
-        }
-    }
-    
-    fileprivate func setupAppLabel() {
-        contentView.addSubview(appNameLabel)
-        appNameLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(Constants.AppName.Constraints.top)
-            make.height.equalTo(Constants.AppName.Constraints.height)
-            make.leading.trailing.equalTo(0)
-        }
-    }
-    
-    fileprivate func setupLabel() {
-        contentView.addSubview(titleLabel)
-        titleLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(appNameLabel.snp.bottom).offset(Constants.Title.Constraints.top)
-            make.leading.equalTo(Constants.Title.Constraints.leading)
-            make.trailing.equalTo(Constants.Title.Constraints.trailing)
+            make.leading.equalTo(Constants.ContentView.Constraints.padding)
+            make.trailing.equalTo(-Constants.ContentView.Constraints.padding)
+            make.top.equalTo(headerImage.snp.bottom)
+            make.bottom.equalTo(-Constants.ContentView.Constraints.padding)
         }
     }
     
     fileprivate func setupSignIn() {
-        contentView.addSubview(signIn)
-        signIn.snp.makeConstraints { (make) in
-            make.top.equalTo(titleLabel.snp.bottom).offset(Constants.SigninButton.Constraints.top)
-            make.leading.equalTo(Constants.SigninButton.Constraints.leading)
-            make.trailing.equalTo(Constants.SigninButton.Constraints.trailing)
-            make.height.equalTo(Constants.SigninButton.Constraints.height)
-        }
+        contentView.addArrangedSubview(signUp)
     }
     
     fileprivate func setupSignUp() {
-        contentView.addSubview(signUp)
-        signUp.snp.makeConstraints { (make) in
-            make.top.equalTo(signIn.snp.bottom).offset(Constants.SignUpButton.Constraints.top)
-            make.leading.equalTo(Constants.SignUpButton.Constraints.leading)
-            make.trailing.equalTo(Constants.SignUpButton.Constraints.trailing)
-            make.height.equalTo(Constants.SignUpButton.Constraints.height)
-            make.bottom.equalTo(Constants.SignUpButton.Constraints.bottom)
-        }
+        contentView.addArrangedSubview(logIn)
+    }
+    
+    fileprivate func setupFbButton() {
+        contentView.addArrangedSubview(facebookButton)
     }
     
 }
