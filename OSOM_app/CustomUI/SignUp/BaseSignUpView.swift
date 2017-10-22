@@ -43,7 +43,7 @@ class BaseSignUpView: BaseView {
         return navigation
     }()
     
-    private let headerImage: UIImageView = {
+    let headerImage: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = Constants.headerImage.backgroundColor
         return imageView
