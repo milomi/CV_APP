@@ -18,13 +18,19 @@ final class SignUpEmailViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         setupView()
         setupNavigation()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    override func viewDidAppear(_ animated: Bool) {
+        DispatchQueue.main.async(execute: {
+            self.mainView.fadeIn()
+        })
     }
     
     fileprivate func setupNavigation() {
@@ -40,7 +46,16 @@ final class SignUpEmailViewController: UIViewController {
 
 extension SignUpEmailViewController: NavigationControllerDelegate {
     func rightAction() {
-        let vc = ViewControllerContainer.shared.getSignUpPassword()
-        navigationController?.pushViewController(vc, animated: true)
+        mainView.animate(entry: true, completion: {
+            let vc = ViewControllerContainer.shared.getSignUpPassword()
+            self.navigationController?.pushViewController(vc, animated: false)
+        })
     }
+    
+    func backAction() {
+        mainView.animate(entry: false, completion: {
+            self.navigationController?.popViewController(animated: false)
+        })
+    }
+        
 }

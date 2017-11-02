@@ -15,6 +15,7 @@ fileprivate extension Selector {
 
 protocol NavigationControllerDelegate: class {
     func rightAction()
+    func backAction()
 }
 
 class NavigationController {
@@ -38,7 +39,7 @@ class NavigationController {
 
 extension NavigationController {
     @objc func backAction() {
-        navigationController?.popViewController(animated: true)
+        delegate?.backAction()
     }
     
     @objc func rightAction() {

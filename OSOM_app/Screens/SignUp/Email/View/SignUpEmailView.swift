@@ -36,6 +36,19 @@ final class SignUpEmailView: BaseSignUpView {
         setupEmailEditField()
     }
     
+    func fadeIn() {
+        emailEditField.fadeIn()
+    }
+    
+    func animate(entry: Bool, completion: (() -> Void)? = nil) {
+        let width = self.contentView.bounds.width
+        UIView.animate(withDuration: 0.5, animations: {
+            self.emailEditField.center.x -= entry ? width : -width
+        }, completion: { (data) in
+            completion?()
+        })
+    }
+    
     private func setupEmailEditField() {
         contentView.addSubview(emailEditField)
         emailEditField.setupView()

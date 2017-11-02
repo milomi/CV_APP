@@ -59,6 +59,29 @@ class BaseEditField: UIView {
         setupTextField()
     }
     
+    func fadeIn(completion: (() -> Void)? = nil) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.alpha = 1.0
+            //self.passwordEditField.center.x -= entry ? width : -width
+        }, completion: { data in
+            if let completion = completion {
+                completion()
+            }
+        })
+        
+    }
+    
+    func fadeOut(completion: (() -> Void)? = nil) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.alpha = 0.0
+            //self.passwordEditField.center.x -= entry ? width : -width
+        }, completion: { data in
+            if let completion = completion {
+                completion()
+            }
+        })
+    }
+    
     func setAttributedPlaceholder(string: String) -> NSAttributedString {
         let attributedString = NSAttributedString(string: string,
                                                   attributes: [NSAttributedStringKey.foregroundColor: UIColor.white,
@@ -93,4 +116,5 @@ class BaseEditField: UIView {
             make.bottom.equalToSuperview()
         }
     }
+    
 }

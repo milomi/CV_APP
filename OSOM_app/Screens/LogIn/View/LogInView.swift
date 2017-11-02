@@ -52,6 +52,14 @@ final class LogInView: BaseSignUpView {
         return field
     }()
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func setupView() {
         super.setupView()
         setupNavigation()

@@ -42,4 +42,8 @@ extension LogInViewController: NavigationControllerDelegate {
     func rightAction() {
         
     }
+    
+    func backAction() {
+        self.navigationController?.popViewController(animated: false)
+    }
 }

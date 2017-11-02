@@ -18,13 +18,19 @@ final class SignUpPasswordViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         setupView()
         setupNavigation()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    override func viewDidAppear(_ animated: Bool) {
+        DispatchQueue.main.async(execute: {
+            self.mainView.fadeIn()
+        })
     }
     
     fileprivate func setupNavigation() {
@@ -36,10 +42,19 @@ final class SignUpPasswordViewController: UIViewController {
         view = mainView
         mainView.setupView()
     }
+    
 }
 
 extension SignUpPasswordViewController: NavigationControllerDelegate {
     func rightAction() {
-        
+        mainView.animate(entry: true, completion: {
+            
+        })
+    }
+    
+    func backAction() {
+        mainView.animate(entry: false, completion: {
+            self.navigationController?.popViewController(animated: false)
+        })
     }
 }

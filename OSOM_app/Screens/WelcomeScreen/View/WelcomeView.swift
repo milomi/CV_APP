@@ -110,6 +110,12 @@ class WelcomeView: BaseView {
         setupFbButton()
     }
     
+    func animate(completion: (() -> Void)? = nil) {
+        UIView.animate(withDuration: 1.5, animations: {
+            self.headerImage.center.y -= 150
+        })
+    }
+    
     private func setupHeaderImage() {
         contentFrame.addSubview(headerImage)
         

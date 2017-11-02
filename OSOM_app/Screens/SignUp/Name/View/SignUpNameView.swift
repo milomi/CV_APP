@@ -35,6 +35,7 @@ final class SignUpNameView: BaseSignUpView {
     
     let nameEditField: BaseEditField = {
         let field = BaseEditField()
+        field.alpha = 0.0
         field.headerLabel.text = Constants.NameEditField.title.localized()
         field.textField.attributedPlaceholder = field.setAttributedPlaceholder(string: Constants.NameEditField.placeholder.localized())
         return field
@@ -42,6 +43,7 @@ final class SignUpNameView: BaseSignUpView {
     
     let surnameEditField: BaseEditField = {
         let field = BaseEditField()
+        field.alpha = 0.0
         field.headerLabel.text = Constants.SurnameEditField.title.localized()
         field.textField.attributedPlaceholder = field.setAttributedPlaceholder(string:  Constants.SurnameEditField.placeholder.localized())
         return field
@@ -53,8 +55,31 @@ final class SignUpNameView: BaseSignUpView {
         setupSurnameEditField()
     }
     
+    func fadeIn() {
+        nameEditField.fadeIn()
+        let when = DispatchTime.now() + 0.3 // change 2 to desired number of seconds
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            self.surnameEditField.fadeIn()
+        }
+    }
+    
+    func animate(entry: Bool, completion: (() -> Void)? = nil) {
+        let width = self.contentView.bounds.width
+        UIView.animate(withDuration: 0.5, animations: {
+            self.nameEditField.center.x -= entry ? width : -width
+        })
+        
+        UIView.animate(withDuration: 0.5, delay: 0.3, options: .beginFromCurrentState, animations: {
+            self.surnameEditField.center.x -= entry ? width : -width
+            
+        }, completion: { (data) in
+            completion?()
+        })
+    }
+    
     private func setupNameEditField() {
         contentView.addSubview(nameEditField)
+        
         nameEditField.setupView()
         nameEditField.snp.makeConstraints { (make) in
             make.top.equalTo(Constants.NameEditField.Constraints.top)
@@ -74,4 +99,5 @@ final class SignUpNameView: BaseSignUpView {
             make.bottom.lessThanOrEqualToSuperview()
         }
     }
+
 }
