@@ -36,4 +36,9 @@ class ViewControllerContainer {
         return SignUpPasswordViewController(mainView: view)
     }
     
+    func getLogIn() -> LogInViewController {
+        let view = ViewContainer.shared.logIn()
+        return LogInViewController(mainView: view)
+    }
+    
 }

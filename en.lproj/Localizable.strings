@@ -26,5 +26,6 @@
 "signUp.repeatPassword.placeholder" = "yup, once again...";
 
 // Log In
-"LogIn.password.placeholder" = "8Characters#";
-"LogIn.repeatPassword.placeholder" = "yup, once again...";
+"LogIn.title" = "LOG IN";
+"LogIn.password.placeholder" = "fill it up";
+"LogIn.email.placeholder" = "fill it up";

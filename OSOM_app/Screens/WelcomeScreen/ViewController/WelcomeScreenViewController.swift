@@ -44,19 +44,20 @@ class WelcomeScreenViewController: UIViewController {
         mainView.signUp.button.addTarget(self, action: .signUp, for: .touchUpInside)
         mainView.setupView()
     }
-
+    
 }
 
 // MARK Actions
 extension WelcomeScreenViewController {
     
     @objc func logIn() {
-
+        let controller = ViewControllerContainer.shared.getLogIn()
+        self.navigationController?.pushViewController(controller, animated: false)
     }
     
     @objc func signUp() {
         let controller = ViewControllerContainer.shared.getSignUpName()
-        self.navigationController?.pushViewController(controller, animated: true)
+        self.navigationController?.pushViewController(controller, animated: false)
     }
     
 }

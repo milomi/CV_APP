@@ -18,7 +18,7 @@ fileprivate struct Constants {
     }
     
     struct headerImage {
-        static let image = ""
+        static let image = "signup"
         static let backgroundColor = UIColor.black
         struct Constraints {
             static let height = 122
@@ -39,13 +39,12 @@ class BaseSignUpView: BaseView {
         let navigation = NavigationView()
         navigation.title.text = Constants.General.title.localized()
         navigation.rightButton.setTitle(Constants.General.rightButton.localized(), for: .normal)
-        navigation.leftButton.setTitle("<", for: .normal)
         return navigation
     }()
     
-    private let headerImage: UIImageView = {
+    let headerImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = Constants.headerImage.backgroundColor
+        imageView.image = UIImage(named: Constants.headerImage.image)
         return imageView
     }()
     

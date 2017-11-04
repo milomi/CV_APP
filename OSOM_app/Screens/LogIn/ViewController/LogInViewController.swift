@@ -1,5 +1,5 @@
 //
-//  SignUpEmailViewController.swift
+//  LogInViewController.swift
 //  OSOM_app
 //
 //  Created by Miłosz Bugla on 22.10.2017.
@@ -8,12 +8,12 @@
 import Foundation
 import UIKit
 
-final class SignUpEmailViewController: UIViewController {
+final class LogInViewController: UIViewController {
     
-    private let mainView: SignUpEmailView
+    private let mainView: LogInView
     var navigator: NavigationController?
     
-    init(mainView: SignUpEmailView) {
+    init(mainView: LogInView) {
         self.mainView = mainView
         super.init(nibName: nil, bundle: nil)
     }
@@ -26,7 +26,7 @@ final class SignUpEmailViewController: UIViewController {
         setupView()
         setupNavigation()
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         DispatchQueue.main.async(execute: {
             self.mainView.fadeIn()
@@ -44,12 +44,9 @@ final class SignUpEmailViewController: UIViewController {
     }
 }
 
-extension SignUpEmailViewController: NavigationControllerDelegate {
+extension LogInViewController: NavigationControllerDelegate {
     func rightAction() {
-        mainView.animate(entry: true, completion: {
-            let vc = ViewControllerContainer.shared.getSignUpPassword()
-            self.navigationController?.pushViewController(vc, animated: false)
-        })
+        
     }
     
     func backAction() {
@@ -57,5 +54,4 @@ extension SignUpEmailViewController: NavigationControllerDelegate {
             self.navigationController?.popViewController(animated: false)
         })
     }
-        
 }

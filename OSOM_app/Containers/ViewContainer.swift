@@ -28,4 +28,8 @@ class ViewContainer {
         return SignUpPasswordView()
     }
     
+    func logIn() -> LogInView {
+        return LogInView()
+    }
+    
 }

@@ -11,6 +11,7 @@ import UIKit
 fileprivate struct Constants {
     
     struct LeftButton {
+        static let backIcon = "iconBack"
         struct Constraints {
             static let leading = 15
             static let height = 40
@@ -39,6 +40,7 @@ class NavigationView: UIView {
     let leftButton: UIButton = {
         let button = UIButton()
         button.setTitleColor(.black, for: .normal)
+        button.setImage(UIImage(named: Constants.LeftButton.backIcon), for: .normal)
         button.setTitleColor(UIColor.separatorGray, for: .disabled)
         return button
     }()
