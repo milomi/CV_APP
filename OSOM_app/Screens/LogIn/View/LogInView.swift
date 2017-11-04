@@ -119,7 +119,7 @@ final class LogInView: BaseSignUpView {
         emailEditField.snp.makeConstraints { (make) in
             make.top.equalTo(Constants.PasswordEditField.Constraints.top)
             make.leading.equalTo(Constants.PasswordEditField.Constraints.padding)
-            make.trailing.equalTo(-Constants.PasswordEditField.Constraints.padding)
+            make.trailing.equalTo(headerImage.snp.trailing).offset(-Constants.EmailEditField.Constraints.padding)
         }
     }
 }

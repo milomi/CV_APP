@@ -85,7 +85,7 @@ final class SignUpPasswordView: BaseSignUpView {
         passwordEditField.snp.makeConstraints { (make) in
             make.top.equalTo(Constants.PasswordEditField.Constraints.top)
             make.leading.equalTo(Constants.PasswordEditField.Constraints.padding)
-            make.trailing.equalTo(-Constants.PasswordEditField.Constraints.padding)
+            make.trailing.equalTo(headerImage.snp.trailing).offset(-Constants.PasswordEditField.Constraints.padding)
         }
         
         self.passwordEditField.center.x -= contentView.bounds.width

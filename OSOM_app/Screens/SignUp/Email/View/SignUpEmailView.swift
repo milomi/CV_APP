@@ -55,7 +55,7 @@ final class SignUpEmailView: BaseSignUpView {
         emailEditField.snp.makeConstraints { (make) in
             make.top.equalTo(Constants.EmailEditField.Constraints.top)
             make.leading.equalTo(Constants.EmailEditField.Constraints.padding)
-            make.trailing.equalTo(-Constants.EmailEditField.Constraints.padding)
+            make.trailing.equalTo(headerImage.snp.trailing).offset(-Constants.EmailEditField.Constraints.padding)
         }
     }
     

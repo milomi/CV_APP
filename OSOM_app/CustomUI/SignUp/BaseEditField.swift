@@ -18,7 +18,7 @@ fileprivate struct Constants {
         static let backgroundColor = UIColor.white
         struct Constraints {
             static let top = 5
-            static let height = 1
+            static let height = 2
         }
     }
     
@@ -131,7 +131,8 @@ class BaseEditField: UIView {
         addSubview(textField)
         
         textField.snp.makeConstraints { (make) in
-            make.leading.trailing.equalToSuperview()
+            make.leading.equalToSuperview()
+            make.trailing.lessThanOrEqualToSuperview()
             make.top.equalTo(separator.snp.bottom).offset(Constants.TextField.Constraints.top)
             make.bottom.equalToSuperview()
         }

@@ -84,7 +84,7 @@ final class SignUpNameView: BaseSignUpView {
         nameEditField.snp.makeConstraints { (make) in
             make.top.equalTo(Constants.NameEditField.Constraints.top)
             make.leading.equalTo(Constants.NameEditField.Constraints.padding)
-            make.trailing.equalTo(-Constants.NameEditField.Constraints.padding)
+            make.trailing.equalTo(headerImage.snp.trailing).offset(-Constants.NameEditField.Constraints.padding)
         }
     }
     
