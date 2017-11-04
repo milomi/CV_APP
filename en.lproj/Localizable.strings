@@ -25,6 +25,15 @@
 "signUp.password.placeholder" = "8Characters#";
 "signUp.repeatPassword.placeholder" = "yup, once again...";
 
+// About
+"signUp.about.title" = "ABOUT";
+"signUp.about.rightButton" = "SAVE";
+"signUp.about.photoHeader" = "Photo";
+"signUp.about.photoPlaceholder" = "Add photo";
+"signUp.about.photoText" = "Nice one!";
+"signUp.about.personal" = "PERSONAL STATEMENT";
+"signUp.about.personal.placeholder" = "Write few sentences about yourself";
+
 // Log In
 "LogIn.title" = "LOG IN";
 "LogIn.password.placeholder" = "fill it up";

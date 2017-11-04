@@ -48,7 +48,8 @@ final class SignUpPasswordViewController: UIViewController {
 extension SignUpPasswordViewController: NavigationControllerDelegate {
     func rightAction() {
         mainView.animate(entry: true, completion: {
-            
+            let vc = ViewControllerContainer.shared.getCreateAbout()
+            self.navigationController?.pushViewController(vc, animated: false)
         })
     }
     

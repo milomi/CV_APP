@@ -41,4 +41,9 @@ class ViewControllerContainer {
         return LogInViewController(mainView: view)
     }
     
+    func getCreateAbout() -> CreateAboutViewController {
+        let view = ViewContainer.shared.createAbout()
+        return CreateAboutViewController(view: view)
+    }
+    
 }

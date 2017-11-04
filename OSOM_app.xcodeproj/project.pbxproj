@@ -51,6 +51,11 @@
 		B2C48FFA1F937B8400DFECA4 /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF51F937B8400DFECA4 /* Montserrat-Medium.otf */; };
 		B2C48FFB1F937B8400DFECA4 /* Montserrat-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF61F937B8400DFECA4 /* Montserrat-ExtraBold.otf */; };
 		B2C48FFC1F937B8400DFECA4 /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF71F937B8400DFECA4 /* Montserrat-Light.otf */; };
+		B2E632271FADB169009D837E /* CreateAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E632261FADB169009D837E /* CreateAboutView.swift */; };
+		B2E6322D1FADB1B8009D837E /* BaseCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E6322C1FADB1B8009D837E /* BaseCreateView.swift */; };
+		B2E6322F1FADB442009D837E /* CreationStageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E6322E1FADB442009D837E /* CreationStageHeader.swift */; };
+		B2E632311FADFDBD009D837E /* CreateAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E632301FADFDBD009D837E /* CreateAboutViewController.swift */; };
+		B2E632331FAE107C009D837E /* BaseEditTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E632321FAE107C009D837E /* BaseEditTextView.swift */; };
 		B2F029C91F9C7ECD0006A5A0 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F029C81F9C7ECD0006A5A0 /* BaseView.swift */; };
 		B2F029CB1F9C8DEC0006A5A0 /* UIDevice+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F029CA1F9C8DEC0006A5A0 /* UIDevice+extension.swift */; };
 		B2F029CE1F9C9BB10006A5A0 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F029CD1F9C9BB10006A5A0 /* NavigationView.swift */; };
@@ -127,6 +132,11 @@
 		B2C48FF51F937B8400DFECA4 /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.otf"; sourceTree = "<group>"; };
 		B2C48FF61F937B8400DFECA4 /* Montserrat-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.otf"; sourceTree = "<group>"; };
 		B2C48FF71F937B8400DFECA4 /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
+		B2E632261FADB169009D837E /* CreateAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAboutView.swift; sourceTree = "<group>"; };
+		B2E6322C1FADB1B8009D837E /* BaseCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCreateView.swift; sourceTree = "<group>"; };
+		B2E6322E1FADB442009D837E /* CreationStageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationStageHeader.swift; sourceTree = "<group>"; };
+		B2E632301FADFDBD009D837E /* CreateAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAboutViewController.swift; sourceTree = "<group>"; };
+		B2E632321FAE107C009D837E /* BaseEditTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEditTextView.swift; sourceTree = "<group>"; };
 		B2F029C81F9C7ECD0006A5A0 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		B2F029CA1F9C8DEC0006A5A0 /* UIDevice+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+extension.swift"; sourceTree = "<group>"; };
 		B2F029CD1F9C9BB10006A5A0 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
@@ -242,6 +252,7 @@
 		3572CF711F1E01F5004FC883 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				B2E632251FADB0E0009D837E /* CreateAbout */,
 				B20CA63C1F9D06F20018208A /* LogIn */,
 				B2024F6F1F9364BA0083B813 /* SignUp */,
 				3572CF721F1E02B5004FC883 /* WelcomeScreen */,
@@ -278,11 +289,14 @@
 		35EB194A1F1E329B00DD3AA5 /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
+				B2E6322B1FADB1AB009D837E /* CreateView */,
 				B2F029CC1F9C9AED0006A5A0 /* Navigation */,
 				B2F029C51F9B71E10006A5A0 /* MainView */,
 				B2C48FEE1F936A8900DFECA4 /* SignUp */,
 				35EB195A1F1E3D5C00DD3AA5 /* TitleCell */,
 				35EB194B1F1E32DA00DD3AA5 /* CutomButton.swift */,
+				B2E6322E1FADB442009D837E /* CreationStageHeader.swift */,
+				B2E632321FAE107C009D837E /* BaseEditTextView.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -519,6 +533,47 @@
 				B2C48FF41F937B8400DFECA4 /* Montserrat-Regular.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B2E632251FADB0E0009D837E /* CreateAbout */ = {
+			isa = PBXGroup;
+			children = (
+				B2E6322A1FADB174009D837E /* ViewModel */,
+				B2E632291FADB16F009D837E /* ViewController */,
+				B2E632281FADB16C009D837E /* View */,
+			);
+			path = CreateAbout;
+			sourceTree = "<group>";
+		};
+		B2E632281FADB16C009D837E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2E632261FADB169009D837E /* CreateAboutView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B2E632291FADB16F009D837E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B2E632301FADFDBD009D837E /* CreateAboutViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B2E6322A1FADB174009D837E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B2E6322B1FADB1AB009D837E /* CreateView */ = {
+			isa = PBXGroup;
+			children = (
+				B2E6322C1FADB1B8009D837E /* BaseCreateView.swift */,
+			);
+			path = CreateView;
 			sourceTree = "<group>";
 		};
 		B2F029C51F9B71E10006A5A0 /* MainView */ = {
@@ -863,13 +918,18 @@
 				3572CF6A1F1DFDA5004FC883 /* ValidatorContainer.swift in Sources */,
 				B20CA6321F9CC0750018208A /* SignUpEmailViewController.swift in Sources */,
 				B20CA6431F9D075E0018208A /* LogInView.swift in Sources */,
+				B2E632311FADFDBD009D837E /* CreateAboutViewController.swift in Sources */,
+				B2E6322F1FADB442009D837E /* CreationStageHeader.swift in Sources */,
+				B2E632331FAE107C009D837E /* BaseEditTextView.swift in Sources */,
 				35EB194C1F1E32DA00DD3AA5 /* CutomButton.swift in Sources */,
 				B2F029CE1F9C9BB10006A5A0 /* NavigationView.swift in Sources */,
+				B2E632271FADB169009D837E /* CreateAboutView.swift in Sources */,
 				3572CF771F1E036E004FC883 /* WelcomeView.swift in Sources */,
 				3572CF6E1F1DFDCD004FC883 /* SerializerContainer.swift in Sources */,
 				B2F029CB1F9C8DEC0006A5A0 /* UIDevice+extension.swift in Sources */,
 				B2024F781F9365B10083B813 /* BaseSignUpView.swift in Sources */,
 				3572CF661F1DFD89004FC883 /* ViewModelContainer.swift in Sources */,
+				B2E6322D1FADB1B8009D837E /* BaseCreateView.swift in Sources */,
 				35EB195E1F1E3DAD00DD3AA5 /* Int+ConstraintMaker.swift in Sources */,
 				B2024F6E1F9220EA0083B813 /* WelcomeScreenViewController.swift in Sources */,
 				B2F029D01F9CA60E0006A5A0 /* NavigationController.swift in Sources */,

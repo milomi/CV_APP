@@ -32,4 +32,7 @@ class ViewContainer {
         return LogInView()
     }
     
+    func createAbout() -> CreateAboutView {
+        return CreateAboutView()
+    }
 }
