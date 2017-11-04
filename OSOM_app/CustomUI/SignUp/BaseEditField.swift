@@ -31,7 +31,29 @@ fileprivate struct Constants {
     }
 }
 
+enum BaseEditFieldType {
+    case name
+    case surname
+    case email
+    case password
+    case repeatPassword
+    case none
+}
+
+fileprivate extension Selector {
+    static let textDidEdit = #selector(BaseEditField.textFieldEdited)
+    static let textDidEndEditing = #selector(BaseEditField.textFieldDidEndEditing(_:))
+    static let securePasswordEye = #selector(BaseEditField.securePasswordEyeChanged)
+}
+
+protocol BaseEditFieldDelegate: class {
+    func textFieldEdited()
+}
+
 class BaseEditField: UIView {
+    
+    weak var delegate: BaseEditFieldDelegate?
+    let type: BaseEditFieldType = .none
     
     let headerLabel: UILabel = {
         let label = UILabel()
@@ -62,7 +84,6 @@ class BaseEditField: UIView {
     func fadeIn(completion: (() -> Void)? = nil) {
         UIView.animate(withDuration: 0.5, animations: {
             self.alpha = 1.0
-            //self.passwordEditField.center.x -= entry ? width : -width
         }, completion: { data in
             if let completion = completion {
                 completion()
@@ -74,7 +95,6 @@ class BaseEditField: UIView {
     func fadeOut(completion: (() -> Void)? = nil) {
         UIView.animate(withDuration: 0.5, animations: {
             self.alpha = 0.0
-            //self.passwordEditField.center.x -= entry ? width : -width
         }, completion: { data in
             if let completion = completion {
                 completion()
@@ -117,4 +137,26 @@ class BaseEditField: UIView {
         }
     }
     
+}
+
+extension BaseEditField: UITextFieldDelegate {
+    
+    func setupTextFieldDelegate() {
+        textField.delegate = self
+        textField.addTarget(self, action: .textDidEndEditing, for: .editingDidEnd)
+        textField.addTarget(self, action: .textDidEdit, for: .editingChanged)
+    }
+    
+    @objc func textFieldDidEndEditing(_ textField: UITextField) {
+        
+    }
+    
+    
+    @objc func textFieldEdited() {
+        
+    }
+    
+    @objc func securePasswordEyeChanged() {
+        
+    }
 }

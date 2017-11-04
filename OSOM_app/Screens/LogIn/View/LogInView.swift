@@ -12,7 +12,7 @@ fileprivate struct Constants {
     
     struct Navigation {
         static let title = "LogIn.title"
-        static let headerImage = "LogIn.headerImage"
+        static let headerImage = "login"
     }
     
     struct PasswordEditField {
@@ -40,6 +40,7 @@ final class LogInView: BaseSignUpView {
     
     let passwordEditField: BaseEditField = {
         let field = BaseEditField()
+        field.alpha = 0.0
         field.headerLabel.text = Constants.PasswordEditField.title.localized()
         field.textField.attributedPlaceholder = field.setAttributedPlaceholder(string: Constants.PasswordEditField.placeholder.localized())
         return field
@@ -47,6 +48,7 @@ final class LogInView: BaseSignUpView {
     
     let emailEditField: BaseEditField = {
         let field = BaseEditField()
+        field.alpha = 0.0
         field.headerLabel.text = Constants.EmailEditField.title.localized()
         field.textField.attributedPlaceholder = field.setAttributedPlaceholder(string: Constants.EmailEditField.placeholder.localized())
         return field
@@ -64,8 +66,31 @@ final class LogInView: BaseSignUpView {
         super.setupView()
         setupNavigation()
         setupHeaderImage()
-        setupPasswordEditField()
         setupEmailEditField()
+        setupPasswordEditField()
+    }
+    
+    func fadeIn() {
+        emailEditField.fadeIn()
+        let when = DispatchTime.now() + 0.3 // change 2 to desired number of seconds
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            self.passwordEditField.fadeIn()
+        }
+    }
+    
+    func animate(entry: Bool, completion: (() -> Void)? = nil) {
+        let width = self.contentView.bounds.width
+        UIView.animate(withDuration: 0.5, animations: {
+            self.emailEditField.center.x -= entry ? width : -width
+        })
+        
+        UIView.animate(withDuration: 0.5, delay: 0.3, options: .beginFromCurrentState, animations: {
+            self.passwordEditField.center.x -= entry ? width : -width
+        }, completion: { (data) in
+            if let completion = completion {
+                completion()
+            }
+        })
     }
     
     private func setupNavigation() {
@@ -80,9 +105,10 @@ final class LogInView: BaseSignUpView {
         contentView.addSubview(passwordEditField)
         passwordEditField.setupView()
         passwordEditField.snp.makeConstraints { (make) in
-            make.top.equalTo(Constants.PasswordEditField.Constraints.top)
-            make.leading.equalTo(Constants.PasswordEditField.Constraints.padding)
-            make.trailing.equalTo(-Constants.PasswordEditField.Constraints.padding)
+            make.top.equalTo(emailEditField.snp.bottom).offset(Constants.EmailEditField.Constraints.top)
+            make.width.equalTo(emailEditField.snp.width)
+            make.centerX.equalTo(emailEditField.snp.centerX)
+            make.bottom.lessThanOrEqualToSuperview()
         }
     }
     
@@ -91,10 +117,9 @@ final class LogInView: BaseSignUpView {
         emailEditField.setupView()
         
         emailEditField.snp.makeConstraints { (make) in
-            make.top.equalTo(passwordEditField.snp.bottom).offset(Constants.EmailEditField.Constraints.top)
-            make.width.equalTo(passwordEditField.snp.width)
-            make.centerX.equalTo(passwordEditField.snp.centerX)
-            make.bottom.lessThanOrEqualToSuperview()
+            make.top.equalTo(Constants.PasswordEditField.Constraints.top)
+            make.leading.equalTo(Constants.PasswordEditField.Constraints.padding)
+            make.trailing.equalTo(-Constants.PasswordEditField.Constraints.padding)
         }
     }
 }

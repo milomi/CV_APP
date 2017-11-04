@@ -18,13 +18,19 @@ final class LogInViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         setupView()
         setupNavigation()
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+
+    override func viewDidAppear(_ animated: Bool) {
+        DispatchQueue.main.async(execute: {
+            self.mainView.fadeIn()
+        })
     }
     
     fileprivate func setupNavigation() {
@@ -44,6 +50,8 @@ extension LogInViewController: NavigationControllerDelegate {
     }
     
     func backAction() {
-        self.navigationController?.popViewController(animated: false)
+        mainView.animate(entry: false, completion: {
+            self.navigationController?.popViewController(animated: false)
+        })
     }
 }
