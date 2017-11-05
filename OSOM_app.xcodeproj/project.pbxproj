@@ -57,6 +57,13 @@
 		B2E632311FADFDBD009D837E /* CreateAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E632301FADFDBD009D837E /* CreateAboutViewController.swift */; };
 		B2E632331FAE107C009D837E /* BaseEditTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E632321FAE107C009D837E /* BaseEditTextView.swift */; };
 		B2E632351FAF410E009D837E /* UIImage+resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E632341FAF410E009D837E /* UIImage+resize.swift */; };
+		B2E632471FAF5E04009D837E /* UIView+shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E632461FAF5E04009D837E /* UIView+shake.swift */; };
+		B2E6324D1FAF66C6009D837E /* AddEducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E6324C1FAF66C6009D837E /* AddEducationViewController.swift */; };
+		B2E6324F1FAF678F009D837E /* AddEducationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E6324E1FAF678F009D837E /* AddEducationView.swift */; };
+		B2E632521FAF68DA009D837E /* AddEducationCellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E632511FAF68DA009D837E /* AddEducationCellManager.swift */; };
+		B2E632571FAF6B67009D837E /* AddEducationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E632561FAF6B67009D837E /* AddEducationCell.swift */; };
+		B2E632591FAF6BA9009D837E /* AddEducationCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E632581FAF6BA9009D837E /* AddEducationCellView.swift */; };
+		B2E6325B1FAF6E1A009D837E /* UITableView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E6325A1FAF6E1A009D837E /* UITableView+Register.swift */; };
 		B2F029C91F9C7ECD0006A5A0 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F029C81F9C7ECD0006A5A0 /* BaseView.swift */; };
 		B2F029CB1F9C8DEC0006A5A0 /* UIDevice+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F029CA1F9C8DEC0006A5A0 /* UIDevice+extension.swift */; };
 		B2F029CE1F9C9BB10006A5A0 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F029CD1F9C9BB10006A5A0 /* NavigationView.swift */; };
@@ -139,6 +146,13 @@
 		B2E632301FADFDBD009D837E /* CreateAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAboutViewController.swift; sourceTree = "<group>"; };
 		B2E632321FAE107C009D837E /* BaseEditTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEditTextView.swift; sourceTree = "<group>"; };
 		B2E632341FAF410E009D837E /* UIImage+resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+resize.swift"; sourceTree = "<group>"; };
+		B2E632461FAF5E04009D837E /* UIView+shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+shake.swift"; sourceTree = "<group>"; };
+		B2E6324C1FAF66C6009D837E /* AddEducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationViewController.swift; sourceTree = "<group>"; };
+		B2E6324E1FAF678F009D837E /* AddEducationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationView.swift; sourceTree = "<group>"; };
+		B2E632511FAF68DA009D837E /* AddEducationCellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationCellManager.swift; sourceTree = "<group>"; };
+		B2E632561FAF6B67009D837E /* AddEducationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationCell.swift; sourceTree = "<group>"; };
+		B2E632581FAF6BA9009D837E /* AddEducationCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationCellView.swift; sourceTree = "<group>"; };
+		B2E6325A1FAF6E1A009D837E /* UITableView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Register.swift"; sourceTree = "<group>"; };
 		B2F029C81F9C7ECD0006A5A0 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		B2F029CA1F9C8DEC0006A5A0 /* UIDevice+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+extension.swift"; sourceTree = "<group>"; };
 		B2F029CD1F9C9BB10006A5A0 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
@@ -254,6 +268,7 @@
 		3572CF711F1E01F5004FC883 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				B2E632481FAF6683009D837E /* AddEducation */,
 				B2E632251FADB0E0009D837E /* CreateAbout */,
 				B20CA63C1F9D06F20018208A /* LogIn */,
 				B2024F6F1F9364BA0083B813 /* SignUp */,
@@ -314,6 +329,8 @@
 				B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */,
 				B2F029CA1F9C8DEC0006A5A0 /* UIDevice+extension.swift */,
 				B2E632341FAF410E009D837E /* UIImage+resize.swift */,
+				B2E632461FAF5E04009D837E /* UIView+shake.swift */,
+				B2E6325A1FAF6E1A009D837E /* UITableView+Register.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -577,6 +594,58 @@
 				B2E6322C1FADB1B8009D837E /* BaseCreateView.swift */,
 			);
 			path = CreateView;
+			sourceTree = "<group>";
+		};
+		B2E632481FAF6683009D837E /* AddEducation */ = {
+			isa = PBXGroup;
+			children = (
+				B2E632501FAF68C6009D837E /* ViewManagment */,
+				B2E6324B1FAF66AA009D837E /* ViewModel */,
+				B2E6324A1FAF66A2009D837E /* ViewController */,
+				B2E632491FAF669D009D837E /* View */,
+			);
+			path = AddEducation;
+			sourceTree = "<group>";
+		};
+		B2E632491FAF669D009D837E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2E632531FAF6B51009D837E /* Cells */,
+				B2E6324E1FAF678F009D837E /* AddEducationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B2E6324A1FAF66A2009D837E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B2E6324C1FAF66C6009D837E /* AddEducationViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B2E6324B1FAF66AA009D837E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B2E632501FAF68C6009D837E /* ViewManagment */ = {
+			isa = PBXGroup;
+			children = (
+				B2E632511FAF68DA009D837E /* AddEducationCellManager.swift */,
+			);
+			path = ViewManagment;
+			sourceTree = "<group>";
+		};
+		B2E632531FAF6B51009D837E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B2E632561FAF6B67009D837E /* AddEducationCell.swift */,
+				B2E632581FAF6BA9009D837E /* AddEducationCellView.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		B2F029C51F9B71E10006A5A0 /* MainView */ = {
@@ -852,6 +921,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftValidator/SwiftValidator.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/TTTAttributedLabel/TTTAttributedLabel.framework",
 			);
@@ -860,6 +930,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftValidator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTTAttributedLabel.framework",
 			);
@@ -906,14 +977,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3577D8081F1F35B6001BCD63 /* ColorSchameHelper.swift in Sources */,
+				B2E6324F1FAF678F009D837E /* AddEducationView.swift in Sources */,
 				B2F029C91F9C7ECD0006A5A0 /* BaseView.swift in Sources */,
+				B2E6324D1FAF66C6009D837E /* AddEducationViewController.swift in Sources */,
 				3572CF321F1DEAF9004FC883 /* OSOM_app.xcdatamodeld in Sources */,
 				3572CF641F1DFD7B004FC883 /* ViewControllerContainer.swift in Sources */,
+				B2E6325B1FAF6E1A009D837E /* UITableView+Register.swift in Sources */,
 				B20CA6411F9D073C0018208A /* LogInViewController.swift in Sources */,
 				B2E632351FAF410E009D837E /* UIImage+resize.swift in Sources */,
 				B2C48FF01F936A9F00DFECA4 /* BaseEditField.swift in Sources */,
 				B2C48FED1F9367F600DFECA4 /* UIColor+extension.swift in Sources */,
 				35EB195C1F1E3D7C00DD3AA5 /* TitleCellView.swift in Sources */,
+				B2E632471FAF5E04009D837E /* UIView+shake.swift in Sources */,
 				B2024F741F9365090083B813 /* SignUpNameViewController.swift in Sources */,
 				3572CF2A1F1DEAF9004FC883 /* AppDelegate.swift in Sources */,
 				35EB194F1F1E34C100DD3AA5 /* String+Localized.swift in Sources */,
@@ -925,11 +1000,13 @@
 				B2E632311FADFDBD009D837E /* CreateAboutViewController.swift in Sources */,
 				B2E6322F1FADB442009D837E /* CreationStageHeader.swift in Sources */,
 				B2E632331FAE107C009D837E /* BaseEditTextView.swift in Sources */,
+				B2E632591FAF6BA9009D837E /* AddEducationCellView.swift in Sources */,
 				35EB194C1F1E32DA00DD3AA5 /* CutomButton.swift in Sources */,
 				B2F029CE1F9C9BB10006A5A0 /* NavigationView.swift in Sources */,
 				B2E632271FADB169009D837E /* CreateAboutView.swift in Sources */,
 				3572CF771F1E036E004FC883 /* WelcomeView.swift in Sources */,
 				3572CF6E1F1DFDCD004FC883 /* SerializerContainer.swift in Sources */,
+				B2E632571FAF6B67009D837E /* AddEducationCell.swift in Sources */,
 				B2F029CB1F9C8DEC0006A5A0 /* UIDevice+extension.swift in Sources */,
 				B2024F781F9365B10083B813 /* BaseSignUpView.swift in Sources */,
 				3572CF661F1DFD89004FC883 /* ViewModelContainer.swift in Sources */,
@@ -942,6 +1019,7 @@
 				35EB19591F1E3D3E00DD3AA5 /* TitleCell.swift in Sources */,
 				3572CF6C1F1DFDC2004FC883 /* NetworkingContainer.swift in Sources */,
 				3572CF701F1DFDEB004FC883 /* CellManagerContainer.swift in Sources */,
+				B2E632521FAF68DA009D837E /* AddEducationCellManager.swift in Sources */,
 				B20CA63B1F9CC1FA0018208A /* SignUpPasswordView.swift in Sources */,
 				B20CA6301F9CBFF50018208A /* SignUpEmailView.swift in Sources */,
 				35EB19601F1E3DE200DD3AA5 /* Fonts.swift in Sources */,

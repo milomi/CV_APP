@@ -99,7 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: Fileprifate functions
     
     fileprivate func setRootViewController() -> UIViewController {
-        return ViewControllerContainer().getWelcome()
+        return ViewControllerContainer.shared.getAddEducation()
     }
 
 }

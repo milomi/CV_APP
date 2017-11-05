@@ -51,6 +51,8 @@ class CreateAboutView: BaseCreateView {
         button.setImage(UIImage(named: Constants.PhotoButton.image), for: .normal)
         button.backgroundColor = .white
         button.alpha = 0.0
+        button.imageView?.contentMode = .scaleAspectFill
+        button.contentMode = .scaleAspectFill
         button.layer.borderColor = UIColor.black.cgColor
         button.layer.borderWidth = 2.0
         return button

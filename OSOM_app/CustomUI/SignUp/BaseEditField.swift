@@ -62,7 +62,7 @@ class BaseEditField: UIView {
         return label
     }()
     
-    private let separator: UIView = {
+    let separator: UIView = {
         let view = UIView()
         view.backgroundColor = Constants.Separator.backgroundColor
         return view

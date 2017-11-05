@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftValidator
 
 fileprivate struct Constants {
     struct ActionSheet {
@@ -24,7 +25,7 @@ fileprivate struct Constants {
         static let accountDeletedMessage = "settings.alert.accountDeleted"
     }
     
-    static let maxImageSize = CGSize(width: 1024, height: 760)
+    static let maxImageSize = CGSize(width: 200, height: 320)
     
 }
 
@@ -35,7 +36,9 @@ fileprivate extension Selector {
 final class CreateAboutViewController: UIViewController {
     
     fileprivate let mainView: CreateAboutView
-    var navigator: NavigationController?
+    fileprivate var navigator: NavigationController?
+    fileprivate let validator = Validator()
+
     
     init(view: CreateAboutView) {
         mainView = view
@@ -63,6 +66,7 @@ final class CreateAboutViewController: UIViewController {
         view = mainView
         mainView.setupView()
         mainView.photoButton.addTarget(self, action: .onPhoto, for: .touchUpInside)
+        registerValidatableFields()
     }
 }
 
@@ -74,8 +78,7 @@ extension CreateAboutViewController: NavigationControllerDelegate {
     }
     
     func rightAction() {
-        let vc = ViewControllerContainer.shared.getCreateAbout()
-        self.navigationController?.pushViewController(vc, animated: false)
+        validator.validate(self)
     }
     
     func backAction() {
@@ -122,6 +125,7 @@ extension CreateAboutViewController: UIImagePickerControllerDelegate, UINavigati
         }
         
         let resizedImage = chosenImage.resize(Constants.maxImageSize)
+        mainView.photoButton.setImage(resizedImage, for: .normal)
         //viewModel.updateUserPhoto(image: resizedImage)
         picker.dismiss(animated: true, completion: nil)
     }
@@ -131,3 +135,23 @@ extension CreateAboutViewController: UIImagePickerControllerDelegate, UINavigati
     }
     
 }
+
+extension CreateAboutViewController: ValidationDelegate {
+    func validationSuccessful() {
+        let vc = ViewControllerContainer.shared.getCreateAbout()
+        self.navigationController?.pushViewController(vc, animated: false)
+    }
+    
+    func validationFailed(_ errors: [(Validatable, ValidationError)]) {
+        for (field, error) in errors {
+            if let field = field as? UITextView {
+                field.shake()
+            }
+        }
+    }
+    
+    fileprivate func registerValidatableFields() {
+        //validator.registerField(mainView.personalStatement.textField as! ValidatableField, rules: [RequiredRule()])
+    }
+}
+

@@ -7,11 +7,14 @@
 
 import Foundation
 import UIKit
+import SwiftValidator
 
 final class SignUpPasswordViewController: UIViewController {
     
-    private let mainView: SignUpPasswordView
-    var navigator: NavigationController?
+    fileprivate let mainView: SignUpPasswordView
+    fileprivate var navigator: NavigationController?
+    fileprivate let validator = Validator()
+
     
     init(mainView: SignUpPasswordView) {
         self.mainView = mainView
@@ -57,5 +60,27 @@ extension SignUpPasswordViewController: NavigationControllerDelegate {
         mainView.animate(entry: false, completion: {
             self.navigationController?.popViewController(animated: false)
         })
+    }
+}
+
+extension SignUpPasswordViewController: ValidationDelegate {
+    func validationSuccessful() {
+        mainView.animate(entry: true, completion: {
+            let vc = ViewControllerContainer.shared.getSignUpPassword()
+            self.navigationController?.pushViewController(vc, animated: false)
+        })
+    }
+    
+    func validationFailed(_ errors: [(Validatable, ValidationError)]) {
+        for (field, error) in errors {
+            if let field = field as? UITextField {
+                field.shake()
+            }
+        }
+    }
+    
+    fileprivate func registerValidatableFields() {
+        validator.registerField(mainView.passwordEditField.textField, rules: [RequiredRule(), PasswordRule()])
+        validator.registerField(mainView.passwordEditField.textField, rules: [RequiredRule(), PasswordRule()])
     }
 }

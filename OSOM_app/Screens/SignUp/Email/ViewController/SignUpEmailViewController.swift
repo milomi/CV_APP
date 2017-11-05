@@ -7,11 +7,13 @@
 
 import Foundation
 import UIKit
+import SwiftValidator
 
 final class SignUpEmailViewController: UIViewController {
     
-    private let mainView: SignUpEmailView
-    var navigator: NavigationController?
+    fileprivate let mainView: SignUpEmailView
+    fileprivate var navigator: NavigationController?
+    fileprivate let validator = Validator()
     
     init(mainView: SignUpEmailView) {
         self.mainView = mainView
@@ -41,15 +43,13 @@ final class SignUpEmailViewController: UIViewController {
     private func setupView() {
         view = mainView
         mainView.setupView()
+        registerValidatableFields()
     }
 }
 
 extension SignUpEmailViewController: NavigationControllerDelegate {
     func rightAction() {
-        mainView.animate(entry: true, completion: {
-            let vc = ViewControllerContainer.shared.getSignUpPassword()
-            self.navigationController?.pushViewController(vc, animated: false)
-        })
+        validator.validate(self)
     }
     
     func backAction() {
@@ -58,4 +58,26 @@ extension SignUpEmailViewController: NavigationControllerDelegate {
         })
     }
         
+}
+
+
+extension SignUpEmailViewController: ValidationDelegate {
+    func validationSuccessful() {
+        mainView.animate(entry: true, completion: {
+            let vc = ViewControllerContainer.shared.getSignUpPassword()
+            self.navigationController?.pushViewController(vc, animated: false)
+        })
+    }
+    
+    func validationFailed(_ errors: [(Validatable, ValidationError)]) {
+        for (field, error) in errors {
+            if let field = field as? UITextField {
+                field.shake()
+            }
+        }
+    }
+    
+    fileprivate func registerValidatableFields() {
+        validator.registerField(mainView.emailEditField.textField, rules: [RequiredRule(), EmailRule()])
+    }
 }

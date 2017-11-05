@@ -35,4 +35,8 @@ class ViewContainer {
     func createAbout() -> CreateAboutView {
         return CreateAboutView()
     }
+    
+    func addEducation() -> AddEducationView {
+        return AddEducationView()
+    }
 }

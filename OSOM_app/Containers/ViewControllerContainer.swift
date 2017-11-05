@@ -46,4 +46,10 @@ class ViewControllerContainer {
         return CreateAboutViewController(view: view)
     }
     
+    func getAddEducation() -> AddEducationViewController {
+        let view = viewContainer.addEducation()
+        let cellManager = AddEducationCellManagerImpl(tableView: view.tableView)
+        return AddEducationViewController(view: view, cellManager: cellManager)
+    }
+    
 }
