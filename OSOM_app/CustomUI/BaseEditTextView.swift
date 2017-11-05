@@ -60,8 +60,8 @@ class BaseEditTextView: UIView {
     let placeholderLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.numberOfLines = 0
         label.font = UIFont.getFontWithSizeAndType(20, type: .bold)
+        label.numberOfLines = 0
         return label
     }()
     
@@ -70,6 +70,8 @@ class BaseEditTextView: UIView {
         setupSeparator()
         setupTextField()
         setupPlaceholder()
+        
+        textField.delegate = self
     }
     
     func fadeIn(completion: (() -> Void)? = nil) {
@@ -132,4 +134,18 @@ class BaseEditTextView: UIView {
         }
     }
     
+}
+
+extension BaseEditTextView: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        placeholderLabel.alpha = 0.0
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        guard textView.text.isEmpty else {
+            placeholderLabel.alpha = 0.0
+            return
+        }
+        placeholderLabel.alpha = 1.0
+    }
 }

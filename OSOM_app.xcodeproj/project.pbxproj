@@ -56,6 +56,7 @@
 		B2E6322F1FADB442009D837E /* CreationStageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E6322E1FADB442009D837E /* CreationStageHeader.swift */; };
 		B2E632311FADFDBD009D837E /* CreateAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E632301FADFDBD009D837E /* CreateAboutViewController.swift */; };
 		B2E632331FAE107C009D837E /* BaseEditTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E632321FAE107C009D837E /* BaseEditTextView.swift */; };
+		B2E632351FAF410E009D837E /* UIImage+resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E632341FAF410E009D837E /* UIImage+resize.swift */; };
 		B2F029C91F9C7ECD0006A5A0 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F029C81F9C7ECD0006A5A0 /* BaseView.swift */; };
 		B2F029CB1F9C8DEC0006A5A0 /* UIDevice+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F029CA1F9C8DEC0006A5A0 /* UIDevice+extension.swift */; };
 		B2F029CE1F9C9BB10006A5A0 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F029CD1F9C9BB10006A5A0 /* NavigationView.swift */; };
@@ -137,6 +138,7 @@
 		B2E6322E1FADB442009D837E /* CreationStageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationStageHeader.swift; sourceTree = "<group>"; };
 		B2E632301FADFDBD009D837E /* CreateAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAboutViewController.swift; sourceTree = "<group>"; };
 		B2E632321FAE107C009D837E /* BaseEditTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEditTextView.swift; sourceTree = "<group>"; };
+		B2E632341FAF410E009D837E /* UIImage+resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+resize.swift"; sourceTree = "<group>"; };
 		B2F029C81F9C7ECD0006A5A0 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		B2F029CA1F9C8DEC0006A5A0 /* UIDevice+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+extension.swift"; sourceTree = "<group>"; };
 		B2F029CD1F9C9BB10006A5A0 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 				3577D8071F1F35B6001BCD63 /* ColorSchameHelper.swift */,
 				B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */,
 				B2F029CA1F9C8DEC0006A5A0 /* UIDevice+extension.swift */,
+				B2E632341FAF410E009D837E /* UIImage+resize.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -907,6 +910,7 @@
 				3572CF321F1DEAF9004FC883 /* OSOM_app.xcdatamodeld in Sources */,
 				3572CF641F1DFD7B004FC883 /* ViewControllerContainer.swift in Sources */,
 				B20CA6411F9D073C0018208A /* LogInViewController.swift in Sources */,
+				B2E632351FAF410E009D837E /* UIImage+resize.swift in Sources */,
 				B2C48FF01F936A9F00DFECA4 /* BaseEditField.swift in Sources */,
 				B2C48FED1F9367F600DFECA4 /* UIColor+extension.swift in Sources */,
 				35EB195C1F1E3D7C00DD3AA5 /* TitleCellView.swift in Sources */,
