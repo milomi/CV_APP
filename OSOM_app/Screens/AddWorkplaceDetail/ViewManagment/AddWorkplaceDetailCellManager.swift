@@ -9,16 +9,16 @@ import Foundation
 import UIKit
 
 fileprivate struct LocalizedStrings {
-    static let nameTitle = "addDetailEdu.name.title"
-    static let startDate = "addDetailEdu.startDate.title"
-    static let endDate = "addDetailEdu.endDate.title"
-    static let courseTitle = "addDetailEdu.courseTitle.title"
-    static let detailedInfoTitle = "addDetailEdu.detailedInfo.title"
-    static let namePlaceholder = "addDetailEdu.name.placeholder"
-    static let startDatePlaceholder = "addDetailEdu.startDate.placeholder"
-    static let endDatePlaceholder = "addDetailEdu.endDate.placeholder"
-    static let courseTitlePlaceholder = "addDetailEdu.courseTitle.placeholder"
-    static let detailedInfoPlaceholder = "addDetailEdu.detailedInfo.placeholder"
+    static let nameTitle = "addWorkDetail.name.title"
+    static let startDate = "addWorkDetail.startDate.title"
+    static let endDate = "addWorkDetail.endDate.title"
+    static let courseTitle = "addWorkDetail.jobTitle.title"
+    static let detailedInfoTitle = "addWorkDetail.detailedInfo.title"
+    static let namePlaceholder = "addWorkDetail.name.placeholder"
+    static let startDatePlaceholder = "addWorkDetail.startDate.placeholder"
+    static let endDatePlaceholder = "addWorkDetail.endDate.placeholder"
+    static let courseTitlePlaceholder = "addWorkDetail.jobTitle.placeholder"
+    static let detailedInfoPlaceholder = "addWorkDetail.detailedInfo.placeholder"
 }
 
 enum AddWorkplaceDetailCellType: Int {

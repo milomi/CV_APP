@@ -53,6 +53,7 @@
 		B24B9F341FBF833D00810ED6 /* AddWorkplaceCellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F331FBF833D00810ED6 /* AddWorkplaceCellManager.swift */; };
 		B24B9F381FBF84A700810ED6 /* AddWorkplaceDetailCellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F371FBF84A700810ED6 /* AddWorkplaceDetailCellManager.swift */; };
 		B24B9F3B1FBF84DE00810ED6 /* AddWorkplaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F3A1FBF84DE00810ED6 /* AddWorkplaceDetailViewController.swift */; };
+		B24B9F3D1FBF876A00810ED6 /* UIViewController+Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F3C1FBF876A00810ED6 /* UIViewController+Animate.swift */; };
 		B2C48FED1F9367F600DFECA4 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */; };
 		B2C48FF01F936A9F00DFECA4 /* BaseEditField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */; };
 		B2C48FF81F937B8400DFECA4 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF31F937B8400DFECA4 /* Montserrat-Bold.otf */; };
@@ -151,6 +152,7 @@
 		B24B9F331FBF833D00810ED6 /* AddWorkplaceCellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkplaceCellManager.swift; sourceTree = "<group>"; };
 		B24B9F371FBF84A700810ED6 /* AddWorkplaceDetailCellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkplaceDetailCellManager.swift; sourceTree = "<group>"; };
 		B24B9F3A1FBF84DE00810ED6 /* AddWorkplaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkplaceDetailViewController.swift; sourceTree = "<group>"; };
+		B24B9F3C1FBF876A00810ED6 /* UIViewController+Animate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Animate.swift"; sourceTree = "<group>"; };
 		B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEditField.swift; sourceTree = "<group>"; };
 		B2C48FF31F937B8400DFECA4 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 				B2E632341FAF410E009D837E /* UIImage+resize.swift */,
 				B2E632461FAF5E04009D837E /* UIView+shake.swift */,
 				B2E6325A1FAF6E1A009D837E /* UITableView+Register.swift */,
+				B24B9F3C1FBF876A00810ED6 /* UIViewController+Animate.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1161,6 +1164,7 @@
 				B2C48FF01F936A9F00DFECA4 /* BaseEditField.swift in Sources */,
 				B24B9F221FBF60F800810ED6 /* AddEducationDetailViewController.swift in Sources */,
 				B2C48FED1F9367F600DFECA4 /* UIColor+extension.swift in Sources */,
+				B24B9F3D1FBF876A00810ED6 /* UIViewController+Animate.swift in Sources */,
 				B24B9F381FBF84A700810ED6 /* AddWorkplaceDetailCellManager.swift in Sources */,
 				35EB195C1F1E3D7C00DD3AA5 /* TitleCellView.swift in Sources */,
 				B2E632471FAF5E04009D837E /* UIView+shake.swift in Sources */,

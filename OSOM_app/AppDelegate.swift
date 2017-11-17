@@ -99,9 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: Fileprifate functions
     
     fileprivate func setRootViewController() -> UIViewController {
-        
-        return ViewControllerContainer.shared.getAddWorkplaceDetail()
-        // return ViewControllerContainer.shared.getWelcome()
+         return ViewControllerContainer.shared.getWelcome()
     }
 
 }

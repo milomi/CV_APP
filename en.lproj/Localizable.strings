@@ -47,6 +47,9 @@
 "settings.actionSheet.delete" = "Delete";
 "settings.actionSheet.cancel" = "Cancel";
 
+// Mark: Education
+"education.nav.title" = "EDUCATION";
+
 // Mark: Detailed Education
 "addDetailEdu.name.title" = "NAME OF THE SCHOOL";
 "addDetailEdu.startDate.title" = "STARTING TIME";
@@ -58,4 +61,19 @@
 "addDetailEdu.endDate.placeholder" = "finished when?";
 "addDetailEdu.courseTitle.placeholder" = "what did you study?";
 "addDetailEdu.detailedInfo.placeholder" = "what have you learned?";
+
+// Mark: Workplace
+"workplace.nav.title" = "WORK";
+
+// Mark: Detailed Education
+"addWorkDetail.name.title" = "NAME OF THE WORKPLACE";
+"addWorkDetail.startDate.title" = "STARTING TIME";
+"addWorkDetail.endDate.title" = "ENDING TIME";
+"addWorkDetail.jobTitle.title" = "JOB TITLE";
+"addWorkDetail.detailedInfo.title" = "DETAILED INFO";
+"addWorkDetail.name.placeholder" = "where did u work?";
+"addWorkDetail.startDate.placeholder" = "started when?";
+"addWorkDetail.endDate.placeholder" = "finished when?";
+"addWorkDetail.jobTitle.placeholder" = "what did you do?";
+"addWorkDetail.detailedInfo.placeholder" = "what have you worked on?";
 

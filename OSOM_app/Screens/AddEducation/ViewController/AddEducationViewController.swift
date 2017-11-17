@@ -31,16 +31,27 @@ class AddEducationViewController: UIViewController {
         mainView.setupView()
         setupDataSource()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animateCells(mainView.tableView)
+
+    }
 }
 
 extension AddEducationViewController: NavigationControllerDelegate {
     
     fileprivate func setupNavigation() {
         navigator = NavigationController(navigationView: mainView.navigation, navigationController: navigationController)
+        mainView.navigation.title.text = "education.nav.title".localized()
         navigator?.delegate = self
     }
     
     func rightAction() {
+        animateCellsFadeOut(tableView: mainView.tableView) {
+            let vc = ViewControllerContainer.shared.getAddWorkplace()
+            self.navigationController?.pushViewController(vc, animated: false)
+        }
     }
     
     func backAction() {
@@ -65,11 +76,18 @@ extension AddEducationViewController: UITableViewDataSource {
 }
 
 extension AddEducationViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+    }
 }
 
 extension AddEducationViewController: AddEducationCellDelegate {
     func onButton(_ sender: UIButton) {
-        print(sender.tag)
+        animateCellsFadeOut(tableView: mainView.tableView) {
+            let vc = ViewControllerContainer.shared.getAddEducationDetail()
+            self.navigationController?.pushViewController(vc, animated: false)
+            print(sender.tag)
+        }
+
     }
 }

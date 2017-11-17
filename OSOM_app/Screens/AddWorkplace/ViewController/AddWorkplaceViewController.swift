@@ -26,6 +26,13 @@ class AddWorkplaceViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        DispatchQueue.main.async {
+            self.animateCells(self.mainView.tableView)
+        }
+    }
+    
     private func setupView() {
         view = mainView
         mainView.setupView()
@@ -37,6 +44,7 @@ extension AddWorkplaceViewController: NavigationControllerDelegate {
     
     fileprivate func setupNavigation() {
         navigator = NavigationController(navigationView: mainView.navigation, navigationController: navigationController)
+        mainView.navigation.title.text = "workplace.nav.title".localized()
         navigator?.delegate = self
     }
     
@@ -44,7 +52,9 @@ extension AddWorkplaceViewController: NavigationControllerDelegate {
     }
     
     func backAction() {
-        self.navigationController?.popViewController(animated: false)
+        animateCellsFadeOut(tableView: mainView.tableView) {
+            self.navigationController?.popViewController(animated: false)
+        }
     }
 }
 
@@ -70,6 +80,10 @@ extension AddWorkplaceViewController: UITableViewDelegate {
 
 extension AddWorkplaceViewController: AddEducationCellDelegate {
     func onButton(_ sender: UIButton) {
-        print(sender.tag)
+        animateCellsFadeOut(tableView: mainView.tableView) {
+            let vc = ViewControllerContainer.shared.getAddWorkplaceDetail()
+            self.navigationController?.pushViewController(vc, animated: false)
+            print(sender.tag)
+        }
     }
 }

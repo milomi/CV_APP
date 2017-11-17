@@ -38,6 +38,7 @@ extension AddWorkplaceDetailViewController: NavigationControllerDelegate {
     
     fileprivate func setupNavigation() {
         navigator = NavigationController(navigationView: mainView.navigation, navigationController: navigationController)
+        mainView.navigation.title.text = "workplace.nav.title".localized()
         navigator?.delegate = self
     }
     

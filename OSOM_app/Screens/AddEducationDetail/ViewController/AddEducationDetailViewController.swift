@@ -26,6 +26,14 @@ class AddEducationDetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        DispatchQueue.main.async {
+            self.animateViewFadeIn(view: self.mainView.contentView)
+        }
+    }
+    
     private func setupView() {
         view = mainView
         mainView.tableView.contentInset = UIEdgeInsetsMake(15.0, 0, 0, 0)
@@ -38,6 +46,7 @@ extension AddEducationDetailViewController: NavigationControllerDelegate {
     
     fileprivate func setupNavigation() {
         navigator = NavigationController(navigationView: mainView.navigation, navigationController: navigationController)
+        mainView.navigation.title.text = "education.nav.title".localized()
         navigator?.delegate = self
     }
     
