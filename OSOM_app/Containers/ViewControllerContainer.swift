@@ -58,4 +58,16 @@ class ViewControllerContainer {
         return AddEducationDetailViewController(view: view, cellManager: cellManager)
     }
     
+    func getAddWorkplace() -> AddWorkplaceViewController {
+        let view = viewContainer.addWorkplace()
+        let cellManager = AddWorkplaceCellManagerImpl(tableView: view.tableView)
+        return AddWorkplaceViewController(view: view, cellManager: cellManager)
+    }
+    
+    func getAddWorkplaceDetail() -> AddWorkplaceDetailViewController {
+        let view = viewContainer.addWorkplace()
+        let cellManager = AddWorkplaceDetailCellManagerImpl(tableView: view.tableView)
+        return AddWorkplaceDetailViewController(view: view, cellManager: cellManager)
+    }
+    
 }

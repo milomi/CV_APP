@@ -48,6 +48,11 @@
 		B24B9F251FBF615F00810ED6 /* AddEducationDetailCellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F241FBF615F00810ED6 /* AddEducationDetailCellManager.swift */; };
 		B24B9F271FBF619300810ED6 /* AddEducationDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F261FBF619300810ED6 /* AddEducationDetailCell.swift */; };
 		B24B9F291FBF643A00810ED6 /* DetailCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F281FBF643A00810ED6 /* DetailCellView.swift */; };
+		B24B9F2E1FBF824A00810ED6 /* AddWorkplaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F2D1FBF824A00810ED6 /* AddWorkplaceViewController.swift */; };
+		B24B9F301FBF827E00810ED6 /* AddWorkplaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F2F1FBF827E00810ED6 /* AddWorkplaceView.swift */; };
+		B24B9F341FBF833D00810ED6 /* AddWorkplaceCellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F331FBF833D00810ED6 /* AddWorkplaceCellManager.swift */; };
+		B24B9F381FBF84A700810ED6 /* AddWorkplaceDetailCellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F371FBF84A700810ED6 /* AddWorkplaceDetailCellManager.swift */; };
+		B24B9F3B1FBF84DE00810ED6 /* AddWorkplaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F3A1FBF84DE00810ED6 /* AddWorkplaceDetailViewController.swift */; };
 		B2C48FED1F9367F600DFECA4 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */; };
 		B2C48FF01F936A9F00DFECA4 /* BaseEditField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */; };
 		B2C48FF81F937B8400DFECA4 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF31F937B8400DFECA4 /* Montserrat-Bold.otf */; };
@@ -141,6 +146,11 @@
 		B24B9F241FBF615F00810ED6 /* AddEducationDetailCellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationDetailCellManager.swift; sourceTree = "<group>"; };
 		B24B9F261FBF619300810ED6 /* AddEducationDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationDetailCell.swift; sourceTree = "<group>"; };
 		B24B9F281FBF643A00810ED6 /* DetailCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCellView.swift; sourceTree = "<group>"; };
+		B24B9F2D1FBF824A00810ED6 /* AddWorkplaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkplaceViewController.swift; sourceTree = "<group>"; };
+		B24B9F2F1FBF827E00810ED6 /* AddWorkplaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkplaceView.swift; sourceTree = "<group>"; };
+		B24B9F331FBF833D00810ED6 /* AddWorkplaceCellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkplaceCellManager.swift; sourceTree = "<group>"; };
+		B24B9F371FBF84A700810ED6 /* AddWorkplaceDetailCellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkplaceDetailCellManager.swift; sourceTree = "<group>"; };
+		B24B9F3A1FBF84DE00810ED6 /* AddWorkplaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkplaceDetailViewController.swift; sourceTree = "<group>"; };
 		B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEditField.swift; sourceTree = "<group>"; };
 		B2C48FF31F937B8400DFECA4 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
@@ -276,6 +286,8 @@
 		3572CF711F1E01F5004FC883 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				B24B9F351FBF847600810ED6 /* AddWorkplaceDetail */,
+				B24B9F2A1FBF820400810ED6 /* AddWorkplace */,
 				B24B9F1C1FBF607300810ED6 /* AddEducationDetail */,
 				B29FF8A61FB4FA5C00E935A1 /* SchoolForm */,
 				B2E632481FAF6683009D837E /* AddEducation */,
@@ -585,6 +597,65 @@
 				B24B9F241FBF615F00810ED6 /* AddEducationDetailCellManager.swift */,
 			);
 			path = ViewManagment;
+			sourceTree = "<group>";
+		};
+		B24B9F2A1FBF820400810ED6 /* AddWorkplace */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F321FBF832700810ED6 /* ViewManagment */,
+				B24B9F2C1FBF822500810ED6 /* ViewController */,
+				B24B9F2B1FBF821E00810ED6 /* View */,
+			);
+			path = AddWorkplace;
+			sourceTree = "<group>";
+		};
+		B24B9F2B1FBF821E00810ED6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F2F1FBF827E00810ED6 /* AddWorkplaceView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B24B9F2C1FBF822500810ED6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F2D1FBF824A00810ED6 /* AddWorkplaceViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B24B9F321FBF832700810ED6 /* ViewManagment */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F331FBF833D00810ED6 /* AddWorkplaceCellManager.swift */,
+			);
+			path = ViewManagment;
+			sourceTree = "<group>";
+		};
+		B24B9F351FBF847600810ED6 /* AddWorkplaceDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F391FBF84CA00810ED6 /* ViewController */,
+				B24B9F361FBF848A00810ED6 /* ViewManagment */,
+			);
+			path = AddWorkplaceDetail;
+			sourceTree = "<group>";
+		};
+		B24B9F361FBF848A00810ED6 /* ViewManagment */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F371FBF84A700810ED6 /* AddWorkplaceDetailCellManager.swift */,
+			);
+			path = ViewManagment;
+			sourceTree = "<group>";
+		};
+		B24B9F391FBF84CA00810ED6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F3A1FBF84DE00810ED6 /* AddWorkplaceDetailViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		B29FF8A61FB4FA5C00E935A1 /* SchoolForm */ = {
@@ -1076,9 +1147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B24B9F341FBF833D00810ED6 /* AddWorkplaceCellManager.swift in Sources */,
 				3577D8081F1F35B6001BCD63 /* ColorSchameHelper.swift in Sources */,
 				B2E6324F1FAF678F009D837E /* AddEducationView.swift in Sources */,
 				B2F029C91F9C7ECD0006A5A0 /* BaseView.swift in Sources */,
+				B24B9F3B1FBF84DE00810ED6 /* AddWorkplaceDetailViewController.swift in Sources */,
 				B2E6324D1FAF66C6009D837E /* AddEducationViewController.swift in Sources */,
 				3572CF321F1DEAF9004FC883 /* OSOM_app.xcdatamodeld in Sources */,
 				3572CF641F1DFD7B004FC883 /* ViewControllerContainer.swift in Sources */,
@@ -1088,6 +1161,7 @@
 				B2C48FF01F936A9F00DFECA4 /* BaseEditField.swift in Sources */,
 				B24B9F221FBF60F800810ED6 /* AddEducationDetailViewController.swift in Sources */,
 				B2C48FED1F9367F600DFECA4 /* UIColor+extension.swift in Sources */,
+				B24B9F381FBF84A700810ED6 /* AddWorkplaceDetailCellManager.swift in Sources */,
 				35EB195C1F1E3D7C00DD3AA5 /* TitleCellView.swift in Sources */,
 				B2E632471FAF5E04009D837E /* UIView+shake.swift in Sources */,
 				B2024F741F9365090083B813 /* SignUpNameViewController.swift in Sources */,
@@ -1095,6 +1169,7 @@
 				35EB194F1F1E34C100DD3AA5 /* String+Localized.swift in Sources */,
 				3577D8061F1F3565001BCD63 /* UIView+Shadow.swift in Sources */,
 				3572CF681F1DFD93004FC883 /* ViewContainer.swift in Sources */,
+				B24B9F2E1FBF824A00810ED6 /* AddWorkplaceViewController.swift in Sources */,
 				3572CF6A1F1DFDA5004FC883 /* ValidatorContainer.swift in Sources */,
 				B20CA6321F9CC0750018208A /* SignUpEmailViewController.swift in Sources */,
 				B20CA6431F9D075E0018208A /* LogInView.swift in Sources */,
@@ -1108,6 +1183,7 @@
 				3572CF771F1E036E004FC883 /* WelcomeView.swift in Sources */,
 				B24B9F271FBF619300810ED6 /* AddEducationDetailCell.swift in Sources */,
 				3572CF6E1F1DFDCD004FC883 /* SerializerContainer.swift in Sources */,
+				B24B9F301FBF827E00810ED6 /* AddWorkplaceView.swift in Sources */,
 				B2E632571FAF6B67009D837E /* AddEducationCell.swift in Sources */,
 				B2F029CB1F9C8DEC0006A5A0 /* UIDevice+extension.swift in Sources */,
 				B2024F781F9365B10083B813 /* BaseSignUpView.swift in Sources */,

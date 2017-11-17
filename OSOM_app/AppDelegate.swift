@@ -100,7 +100,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     fileprivate func setRootViewController() -> UIViewController {
         
-        return ViewControllerContainer.shared.getAddEducationDetail()
+        return ViewControllerContainer.shared.getAddWorkplaceDetail()
         // return ViewControllerContainer.shared.getWelcome()
     }
 
