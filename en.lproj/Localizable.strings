@@ -38,3 +38,24 @@
 "LogIn.title" = "LOG IN";
 "LogIn.password.placeholder" = "fill it up";
 "LogIn.email.placeholder" = "fill it up";
+
+// MARK: Settings image picker
+"settings.actionSheet.title" = "Edit Photo";
+"settings.actionSheet.message" = "Select Photo Source";
+"settings.actionSheet.camera" = "Take Photo";
+"settings.actionSheet.library" = "Choose from library";
+"settings.actionSheet.delete" = "Delete";
+"settings.actionSheet.cancel" = "Cancel";
+
+// Mark: Detailed Education
+"addDetailEdu.name.title" = "NAME OF THE SCHOOL";
+"addDetailEdu.startDate.title" = "STARTING TIME";
+"addDetailEdu.endDate.title" = "ENDING TIME";
+"addDetailEdu.courseTitle.title" = "COURSE TITLE";
+"addDetailEdu.detailedInfo.title" = "DETAILED INFO";
+"addDetailEdu.name.placeholder" = "where did you go?";
+"addDetailEdu.startDate.placeholder" = "started when?";
+"addDetailEdu.endDate.placeholder" = "finished when?";
+"addDetailEdu.courseTitle.placeholder" = "what did you study?";
+"addDetailEdu.detailedInfo.placeholder" = "what have you learned?";
+

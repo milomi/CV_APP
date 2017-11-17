@@ -63,6 +63,7 @@ extension SignUpEmailViewController: NavigationControllerDelegate {
 
 extension SignUpEmailViewController: ValidationDelegate {
     func validationSuccessful() {
+        mainView.clearErrorLabels()
         mainView.animate(entry: true, completion: {
             let vc = ViewControllerContainer.shared.getSignUpPassword()
             self.navigationController?.pushViewController(vc, animated: false)
@@ -70,14 +71,16 @@ extension SignUpEmailViewController: ValidationDelegate {
     }
     
     func validationFailed(_ errors: [(Validatable, ValidationError)]) {
+        mainView.clearErrorLabels()
         for (field, error) in errors {
             if let field = field as? UITextField {
+                error.errorLabel?.text = error.errorMessage
                 field.shake()
             }
         }
     }
     
     fileprivate func registerValidatableFields() {
-        validator.registerField(mainView.emailEditField.textField, rules: [RequiredRule(), EmailRule()])
+        validator.registerField(mainView.emailEditField.textField, errorLabel: mainView.emailEditField.errorLabel, rules: [RequiredRule(), EmailRule()])
     }
 }

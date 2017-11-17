@@ -1,20 +1,20 @@
 //
-//  AddEducationViewController.swift
+//  AddEducationDetailDetailViewController.swift
 //  OSOM_app
 //
-//  Created by Miłosz Bugla on 05.11.2017.
+//  Created by Miłosz Bugla on 17.11.2017.
 //
 
 import Foundation
 import UIKit
 
-class AddEducationViewController: UIViewController {
+class AddEducationDetailViewController: UIViewController {
     
     fileprivate let mainView: AddEducationView
-    fileprivate let cellManager: AddEducationCellManager
+    fileprivate let cellManager: AddEducationDetailCellManager
     fileprivate var navigator: NavigationController?
     
-    init(view: AddEducationView, cellManager: AddEducationCellManager) {
+    init(view: AddEducationView, cellManager: AddEducationDetailCellManager) {
         self.mainView = view
         self.cellManager = cellManager
         super.init(nibName: nil, bundle: nil)
@@ -28,12 +28,13 @@ class AddEducationViewController: UIViewController {
     
     private func setupView() {
         view = mainView
+        mainView.tableView.contentInset = UIEdgeInsetsMake(15.0, 0, 0, 0)
         mainView.setupView()
         setupDataSource()
     }
 }
 
-extension AddEducationViewController: NavigationControllerDelegate {
+extension AddEducationDetailViewController: NavigationControllerDelegate {
     
     fileprivate func setupNavigation() {
         navigator = NavigationController(navigationView: mainView.navigation, navigationController: navigationController)
@@ -48,14 +49,14 @@ extension AddEducationViewController: NavigationControllerDelegate {
     }
 }
 
-extension AddEducationViewController: UITableViewDataSource {
+extension AddEducationDetailViewController: UITableViewDataSource {
     
     fileprivate func setupDataSource() {
-        mainView.tableView.dataSource = self 
+        mainView.tableView.dataSource = self
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return AddEducationDetailCellType.detailedInfo.rawValue + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -64,12 +65,7 @@ extension AddEducationViewController: UITableViewDataSource {
     
 }
 
-extension AddEducationViewController: UITableViewDelegate {
+extension AddEducationDetailViewController: UITableViewDelegate {
     
 }
 
-extension AddEducationViewController: AddEducationCellDelegate {
-    func onButton(_ sender: UIButton) {
-        print(sender.tag)
-    }
-}

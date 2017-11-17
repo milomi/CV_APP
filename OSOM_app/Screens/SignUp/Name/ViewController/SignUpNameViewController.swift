@@ -45,6 +45,7 @@ final class SignUpNameViewController: UIViewController {
         mainView.setupView()
         registerValidatableFields()
     }
+    
 }
 
 extension SignUpNameViewController: NavigationControllerDelegate {
@@ -61,6 +62,7 @@ extension SignUpNameViewController: NavigationControllerDelegate {
 
 extension SignUpNameViewController: ValidationDelegate {
     func validationSuccessful() {
+        mainView.clearErrorLabels()
         DispatchQueue.main.async(execute: {
             self.mainView.animate(entry: true, completion: {
                 let vc = ViewControllerContainer.shared.getSignUpEmail()
@@ -70,15 +72,17 @@ extension SignUpNameViewController: ValidationDelegate {
     }
     
     func validationFailed(_ errors: [(Validatable, ValidationError)]) {
+        mainView.clearErrorLabels()
         for (field, error) in errors {
             if let field = field as? UITextField {
+                error.errorLabel?.text = error.errorMessage
                 field.shake()
             }
         }
     }
     
     fileprivate func registerValidatableFields() {
-        validator.registerField(mainView.nameEditField.textField, rules: [RequiredRule()])
-        validator.registerField(mainView.surnameEditField.textField, rules: [RequiredRule()])
+        validator.registerField(mainView.nameEditField.textField, errorLabel: mainView.nameEditField.errorLabel, rules: [RequiredRule()])
+        validator.registerField(mainView.surnameEditField.textField, errorLabel: mainView.surnameEditField.errorLabel, rules: [RequiredRule()])
     }
 }

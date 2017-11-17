@@ -44,6 +44,10 @@
 		B20CA63B1F9CC1FA0018208A /* SignUpPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CA63A1F9CC1FA0018208A /* SignUpPasswordView.swift */; };
 		B20CA6411F9D073C0018208A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CA6401F9D073C0018208A /* LogInViewController.swift */; };
 		B20CA6431F9D075E0018208A /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CA6421F9D075E0018208A /* LogInView.swift */; };
+		B24B9F221FBF60F800810ED6 /* AddEducationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F211FBF60F800810ED6 /* AddEducationDetailViewController.swift */; };
+		B24B9F251FBF615F00810ED6 /* AddEducationDetailCellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F241FBF615F00810ED6 /* AddEducationDetailCellManager.swift */; };
+		B24B9F271FBF619300810ED6 /* AddEducationDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F261FBF619300810ED6 /* AddEducationDetailCell.swift */; };
+		B24B9F291FBF643A00810ED6 /* DetailCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F281FBF643A00810ED6 /* DetailCellView.swift */; };
 		B2C48FED1F9367F600DFECA4 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */; };
 		B2C48FF01F936A9F00DFECA4 /* BaseEditField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */; };
 		B2C48FF81F937B8400DFECA4 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF31F937B8400DFECA4 /* Montserrat-Bold.otf */; };
@@ -133,6 +137,10 @@
 		B20CA63A1F9CC1FA0018208A /* SignUpPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswordView.swift; sourceTree = "<group>"; };
 		B20CA6401F9D073C0018208A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		B20CA6421F9D075E0018208A /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		B24B9F211FBF60F800810ED6 /* AddEducationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationDetailViewController.swift; sourceTree = "<group>"; };
+		B24B9F241FBF615F00810ED6 /* AddEducationDetailCellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationDetailCellManager.swift; sourceTree = "<group>"; };
+		B24B9F261FBF619300810ED6 /* AddEducationDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationDetailCell.swift; sourceTree = "<group>"; };
+		B24B9F281FBF643A00810ED6 /* DetailCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCellView.swift; sourceTree = "<group>"; };
 		B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEditField.swift; sourceTree = "<group>"; };
 		B2C48FF31F937B8400DFECA4 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
@@ -268,6 +276,8 @@
 		3572CF711F1E01F5004FC883 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				B24B9F1C1FBF607300810ED6 /* AddEducationDetail */,
+				B29FF8A61FB4FA5C00E935A1 /* SchoolForm */,
 				B2E632481FAF6683009D837E /* AddEducation */,
 				B2E632251FADB0E0009D837E /* CreateAbout */,
 				B20CA63C1F9D06F20018208A /* LogIn */,
@@ -524,6 +534,96 @@
 				B20CA6401F9D073C0018208A /* LogInViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B24B9F1C1FBF607300810ED6 /* AddEducationDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F231FBF614A00810ED6 /* ViewManagment */,
+				B24B9F1F1FBF609800810ED6 /* ViewModel */,
+				B24B9F1E1FBF609100810ED6 /* View */,
+				B24B9F1D1FBF608900810ED6 /* ViewController */,
+			);
+			path = AddEducationDetail;
+			sourceTree = "<group>";
+		};
+		B24B9F1D1FBF608900810ED6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F211FBF60F800810ED6 /* AddEducationDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B24B9F1E1FBF609100810ED6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F201FBF60D300810ED6 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B24B9F1F1FBF609800810ED6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B24B9F201FBF60D300810ED6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F261FBF619300810ED6 /* AddEducationDetailCell.swift */,
+				B24B9F281FBF643A00810ED6 /* DetailCellView.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B24B9F231FBF614A00810ED6 /* ViewManagment */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F241FBF615F00810ED6 /* AddEducationDetailCellManager.swift */,
+			);
+			path = ViewManagment;
+			sourceTree = "<group>";
+		};
+		B29FF8A61FB4FA5C00E935A1 /* SchoolForm */ = {
+			isa = PBXGroup;
+			children = (
+				B29FF8AA1FB4FA7B00E935A1 /* ViewManagment */,
+				B29FF8A91FB4FA7400E935A1 /* ViewModel */,
+				B29FF8A81FB4FA6C00E935A1 /* ViewController */,
+				B29FF8A71FB4FA6800E935A1 /* View */,
+			);
+			path = SchoolForm;
+			sourceTree = "<group>";
+		};
+		B29FF8A71FB4FA6800E935A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B29FF8A81FB4FA6C00E935A1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B29FF8A91FB4FA7400E935A1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B29FF8AA1FB4FA7B00E935A1 /* ViewManagment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewManagment;
 			sourceTree = "<group>";
 		};
 		B2C48FEE1F936A8900DFECA4 /* SignUp */ = {
@@ -986,6 +1086,7 @@
 				B20CA6411F9D073C0018208A /* LogInViewController.swift in Sources */,
 				B2E632351FAF410E009D837E /* UIImage+resize.swift in Sources */,
 				B2C48FF01F936A9F00DFECA4 /* BaseEditField.swift in Sources */,
+				B24B9F221FBF60F800810ED6 /* AddEducationDetailViewController.swift in Sources */,
 				B2C48FED1F9367F600DFECA4 /* UIColor+extension.swift in Sources */,
 				35EB195C1F1E3D7C00DD3AA5 /* TitleCellView.swift in Sources */,
 				B2E632471FAF5E04009D837E /* UIView+shake.swift in Sources */,
@@ -1005,6 +1106,7 @@
 				B2F029CE1F9C9BB10006A5A0 /* NavigationView.swift in Sources */,
 				B2E632271FADB169009D837E /* CreateAboutView.swift in Sources */,
 				3572CF771F1E036E004FC883 /* WelcomeView.swift in Sources */,
+				B24B9F271FBF619300810ED6 /* AddEducationDetailCell.swift in Sources */,
 				3572CF6E1F1DFDCD004FC883 /* SerializerContainer.swift in Sources */,
 				B2E632571FAF6B67009D837E /* AddEducationCell.swift in Sources */,
 				B2F029CB1F9C8DEC0006A5A0 /* UIDevice+extension.swift in Sources */,
@@ -1015,7 +1117,9 @@
 				B2024F6E1F9220EA0083B813 /* WelcomeScreenViewController.swift in Sources */,
 				B2F029D01F9CA60E0006A5A0 /* NavigationController.swift in Sources */,
 				B2024F761F93652E0083B813 /* SignUpNameView.swift in Sources */,
+				B24B9F291FBF643A00810ED6 /* DetailCellView.swift in Sources */,
 				B20CA6381F9CC1BA0018208A /* SignUpPasswordViewController.swift in Sources */,
+				B24B9F251FBF615F00810ED6 /* AddEducationDetailCellManager.swift in Sources */,
 				35EB19591F1E3D3E00DD3AA5 /* TitleCell.swift in Sources */,
 				3572CF6C1F1DFDC2004FC883 /* NetworkingContainer.swift in Sources */,
 				3572CF701F1DFDEB004FC883 /* CellManagerContainer.swift in Sources */,

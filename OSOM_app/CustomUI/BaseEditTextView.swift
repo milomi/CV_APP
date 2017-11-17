@@ -29,6 +29,7 @@ fileprivate struct Constants {
             static let top = 21
         }
     }
+
 }
 
 class BaseEditTextView: UIView {

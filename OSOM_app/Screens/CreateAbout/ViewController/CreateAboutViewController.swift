@@ -138,7 +138,7 @@ extension CreateAboutViewController: UIImagePickerControllerDelegate, UINavigati
 
 extension CreateAboutViewController: ValidationDelegate {
     func validationSuccessful() {
-        let vc = ViewControllerContainer.shared.getCreateAbout()
+        let vc = ViewControllerContainer.shared.getAddEducation()
         self.navigationController?.pushViewController(vc, animated: false)
     }
     
@@ -154,4 +154,3 @@ extension CreateAboutViewController: ValidationDelegate {
         //validator.registerField(mainView.personalStatement.textField as! ValidatableField, rules: [RequiredRule()])
     }
 }
-

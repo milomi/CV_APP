@@ -75,10 +75,24 @@ class BaseEditField: UIView {
         return textField
     }()
     
+    let errorLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .red
+        label.text = " "
+        label.font = UIFont.getFontWithSizeAndType(12, type: .bold)
+        label.numberOfLines = 0
+        return label
+    }()
+    
     func setupView() {
         setupHeader()
         setupSeparator()
         setupTextField()
+        setupErrorLabel()
+    }
+    
+    func clearError() {
+        errorLabel.text = " "
     }
     
     func fadeIn(completion: (() -> Void)? = nil) {
@@ -102,11 +116,11 @@ class BaseEditField: UIView {
         })
     }
     
-    func setAttributedPlaceholder(string: String) -> NSAttributedString {
+    func setAttributedPlaceholder(string: String) {
         let attributedString = NSAttributedString(string: string,
                                                   attributes: [NSAttributedStringKey.foregroundColor: UIColor.white,
                                                                NSAttributedStringKey.font : UIFont.getFontWithSizeAndType(20, type: .bold)])
-        return attributedString
+        self.textField.attributedPlaceholder = attributedString
     }
     
     private func setupHeader() {
@@ -132,8 +146,17 @@ class BaseEditField: UIView {
         
         textField.snp.makeConstraints { (make) in
             make.leading.equalToSuperview()
-            make.trailing.lessThanOrEqualToSuperview()
+            make.trailing.equalToSuperview()
             make.top.equalTo(separator.snp.bottom).offset(Constants.TextField.Constraints.top)
+        }
+    }
+    
+    private func setupErrorLabel() {
+        addSubview(errorLabel)
+        
+        errorLabel.snp.makeConstraints { (make) in
+            make.leading.trailing.equalToSuperview()
+            make.top.equalTo(textField.snp.bottom).offset(5)
             make.bottom.equalToSuperview()
         }
     }

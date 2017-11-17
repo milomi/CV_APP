@@ -36,8 +36,7 @@ final class SignUpNameView: BaseSignUpView {
     let nameEditField: BaseEditField = {
         let field = BaseEditField()
         field.alpha = 0.0
-        field.headerLabel.text = Constants.NameEditField.title.localized()
-        field.textField.attributedPlaceholder = field.setAttributedPlaceholder(string: Constants.NameEditField.placeholder.localized())
+        field.setAttributedPlaceholder(string: Constants.NameEditField.placeholder.localized())
         return field
     }()
     
@@ -45,7 +44,7 @@ final class SignUpNameView: BaseSignUpView {
         let field = BaseEditField()
         field.alpha = 0.0
         field.headerLabel.text = Constants.SurnameEditField.title.localized()
-        field.textField.attributedPlaceholder = field.setAttributedPlaceholder(string:  Constants.SurnameEditField.placeholder.localized())
+        field.setAttributedPlaceholder(string:  Constants.SurnameEditField.placeholder.localized())
         return field
     }()
     
@@ -53,6 +52,11 @@ final class SignUpNameView: BaseSignUpView {
         super.setupView()
         setupNameEditField()
         setupSurnameEditField()
+    }
+    
+    func clearErrorLabels() {
+        nameEditField.clearError()
+        surnameEditField.clearError()
     }
     
     func fadeIn() {

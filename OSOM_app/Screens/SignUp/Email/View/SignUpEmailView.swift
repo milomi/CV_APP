@@ -27,13 +27,17 @@ final class SignUpEmailView: BaseSignUpView {
     let emailEditField: BaseEditField = {
         let field = BaseEditField()
         field.headerLabel.text = Constants.EmailEditField.title.localized()
-        field.textField.attributedPlaceholder = field.setAttributedPlaceholder(string: Constants.EmailEditField.placeholder.localized())
+        field.setAttributedPlaceholder(string: Constants.EmailEditField.placeholder.localized())
         return field
     }()
     
     override func setupView() {
         super.setupView()
         setupEmailEditField()
+    }
+    
+    func clearErrorLabels() {
+        emailEditField.clearError()
     }
     
     func fadeIn() {
