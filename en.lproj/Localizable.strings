@@ -77,12 +77,26 @@
 "addWorkDetail.jobTitle.placeholder" = "what did you do?";
 "addWorkDetail.detailedInfo.placeholder" = "what have you worked on?";
 
-// Mark: Workplace
-"workplace.nav.title" = "WORK";
-
 // Mark: Skills
 "skills.nav.title" = "SKILLS";
 
+// Mark: Detailed Skills
+"addSkillsDetail.name.title" = "NAME OF SKILL";
+"addSkillsDetail.name.placeholder" = "skills";
+
 // Mark: Contact
 "contacts.nav.title" = "CONTACT";
+
+"contacts.phone.title" = "PHONE";
+"contacts.mail.title" = "MAIL";
+"contacts.city.title" = "CITY";
+"contacts.portfolio.title" = "PORTFOLIO";
+"contacts.linkedin.title" = "LINKEDIN";
+"contacts.facebook.title" = "FACEBOOK";
+"contacts.phone.placeholder" = "NAME OF THE WORKPLACE";
+"contacts.mail.placeholder" = "STARTING TIME";
+"contacts.city.placeholder" = "where did u work?";
+"contacts.portfolio.placeholder" = "NAME OF THE WORKPLACE";
+"contacts.linkedin.placeholder" = "STARTING TIME";
+"contacts.facebook.placeholder" = "where did u work?";
 

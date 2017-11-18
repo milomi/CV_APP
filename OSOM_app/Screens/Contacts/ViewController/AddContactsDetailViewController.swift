@@ -61,7 +61,7 @@ extension AddContactsDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return AddContactsDetailCellType.detailedInfo.rawValue + 1
+        return AddContactsDetailCellType.CellCount.rawValue
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

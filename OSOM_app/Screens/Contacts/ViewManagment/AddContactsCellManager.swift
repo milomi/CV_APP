@@ -9,24 +9,29 @@ import Foundation
 import UIKit
 
 fileprivate struct LocalizedStrings {
-    static let nameTitle = "addWorkDetail.name.title"
-    static let startDate = "addWorkDetail.startDate.title"
-    static let endDate = "addWorkDetail.endDate.title"
-    static let courseTitle = "addWorkDetail.jobTitle.title"
-    static let detailedInfoTitle = "addWorkDetail.detailedInfo.title"
-    static let namePlaceholder = "addWorkDetail.name.placeholder"
-    static let startDatePlaceholder = "addWorkDetail.startDate.placeholder"
-    static let endDatePlaceholder = "addWorkDetail.endDate.placeholder"
-    static let courseTitlePlaceholder = "addWorkDetail.jobTitle.placeholder"
-    static let detailedInfoPlaceholder = "addWorkDetail.detailedInfo.placeholder"
+    static let phoneTitle = "contacts.phone.title"
+    static let mailTitle = "contacts.mail.title"
+    static let cityTitle = "contacts.city.title"
+    static let portfolioTitle = "contacts.portfolio.title"
+    static let linkedinTitle = "contacts.linkedin.title"
+    static let facebookTitle = "contacts.facebook.title"
+    static let phonePlaceholder = "contacts.phone.placeholder"
+    static let mailPlaceholder = "contacts.mail.placeholder"
+    static let cityPlaceholder = "contacts.city.placeholder"
+    static let portfolioPlaceholder = "contacts.portfolio.placeholder"
+    static let linkedinPlaceholder = "contacts.linkedin.placeholder"
+    static let facebookPlaceholder = "contacts.facebook.placeholder"
+
 }
 
 enum AddContactsDetailCellType: Int {
-    case name = 0
-    case startDate
-    case endDate
-    case courseTitle
-    case detailedInfo
+    case phone = 0
+    case mail
+    case city
+    case portfolio
+    case linkedin
+    case facebook
+    case CellCount
 }
 
 
@@ -55,16 +60,18 @@ final class AddContactsDetailCellManagerImpl: AddContactsDetailCellManager {
         
         
         switch indexPath.row {
-        case AddContactsDetailCellType.name.rawValue:
-            return createCell(header: LocalizedStrings.nameTitle, placeholder: LocalizedStrings.namePlaceholder)
-        case AddContactsDetailCellType.startDate.rawValue:
-            return createCell(header: LocalizedStrings.startDate, placeholder: LocalizedStrings.startDatePlaceholder)
-        case AddContactsDetailCellType.endDate.rawValue:
-            return createCell(header: LocalizedStrings.endDate, placeholder: LocalizedStrings.endDatePlaceholder)
-        case AddContactsDetailCellType.courseTitle.rawValue:
-            return createCell(header: LocalizedStrings.courseTitle, placeholder: LocalizedStrings.courseTitlePlaceholder)
-        case AddContactsDetailCellType.detailedInfo.rawValue:
-            return createCell(header: LocalizedStrings.detailedInfoTitle, placeholder: LocalizedStrings.detailedInfoPlaceholder)
+        case AddContactsDetailCellType.phone.rawValue:
+            return createCell(header: LocalizedStrings.phoneTitle, placeholder: LocalizedStrings.phonePlaceholder)
+        case AddContactsDetailCellType.mail.rawValue:
+            return createCell(header: LocalizedStrings.mailTitle, placeholder: LocalizedStrings.mailPlaceholder)
+        case AddContactsDetailCellType.city.rawValue:
+            return createCell(header: LocalizedStrings.cityTitle, placeholder: LocalizedStrings.cityPlaceholder)
+        case AddContactsDetailCellType.portfolio.rawValue:
+            return createCell(header: LocalizedStrings.portfolioTitle, placeholder: LocalizedStrings.portfolioPlaceholder)
+        case AddContactsDetailCellType.linkedin.rawValue:
+            return createCell(header: LocalizedStrings.linkedinTitle, placeholder: LocalizedStrings.linkedinPlaceholder)
+        case AddContactsDetailCellType.facebook.rawValue:
+            return createCell(header: LocalizedStrings.facebookTitle, placeholder: LocalizedStrings.facebookPlaceholder)
         default:
             break
         }
