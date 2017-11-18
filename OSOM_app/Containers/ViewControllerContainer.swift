@@ -49,7 +49,7 @@ class ViewControllerContainer {
     func getAddEducation() -> AddEducationViewController {
         let view = viewContainer.addEducation()
         let cellManager = AddEducationCellManagerImpl(tableView: view.tableView)
-        return AddEducationViewController(view: view, cellManager: cellManager)
+        return AddEducationViewController(view: view, cellManager: cellManager, viewModel: AddEducationViewModelImpl())
     }
     
     func getAddEducationDetail() -> AddEducationDetailViewController {
@@ -61,7 +61,7 @@ class ViewControllerContainer {
     func getAddWorkplace() -> AddWorkplaceViewController {
         let view = viewContainer.addWorkplace()
         let cellManager = AddWorkplaceCellManagerImpl(tableView: view.tableView)
-        return AddWorkplaceViewController(view: view, cellManager: cellManager)
+        return AddWorkplaceViewController(view: view, cellManager: cellManager, viewModel: AddWorkplaceViewModelImpl())
     }
     
     func getAddWorkplaceDetail() -> AddWorkplaceDetailViewController {
@@ -70,4 +70,27 @@ class ViewControllerContainer {
         return AddWorkplaceDetailViewController(view: view, cellManager: cellManager)
     }
     
+    func getAddSkills() -> AddSkillsViewController {
+        let view = viewContainer.addSkills()
+        let cellManager = AddSkillsCellManagerImpl(tableView: view.tableView)
+        return AddSkillsViewController(view: view, cellManager: cellManager, viewModel: AddSkillsViewModelImpl())
+    }
+    
+    func getAddSkillsDetail() -> AddSkillsDetailViewController {
+        let view = viewContainer.addSkills()
+        let cellManager = AddSkillsDetailCellManagerImpl(tableView: view.tableView)
+        return AddSkillsDetailViewController(view: view, cellManager: cellManager)
+    }
+    
+    func getAddContactsDetail() -> AddContactsDetailViewController {
+        let view = viewContainer.addContacts()
+        let cellManager = AddContactsDetailCellManagerImpl(tableView: view.tableView)
+        return AddContactsDetailViewController(view: view, cellManager: cellManager)
+    }
+    
+    func getHelloViewController() -> HelloViewController {
+        let view = HelloView()
+
+        return HelloViewController(mainView: view)
+    }
 }

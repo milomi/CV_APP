@@ -1,21 +1,21 @@
 //
-//  AddWorkplace.swift
+//  AddSkillsViewController.swift
 //  OSOM_app
 //
-//  Created by Miłosz Bugla on 17.11.2017.
+//  Created by Miłosz Bugla on 18.11.2017.
 //
 
 import Foundation
 import UIKit
 
-class AddWorkplaceViewController: UIViewController {
+final class AddSkillsViewController: UIViewController {
     
-    fileprivate let mainView: AddWorkplaceView
-    fileprivate let viewModel: AddWorkplaceViewModel
-    fileprivate let cellManager: AddWorkplaceCellManager
+    fileprivate let mainView: AddSkillsView
+    fileprivate let viewModel: AddSkillsViewModel
+    fileprivate let cellManager: AddSkillsCellManager
     fileprivate var navigator: NavigationController?
     
-    init(view: AddWorkplaceView, cellManager: AddWorkplaceCellManager, viewModel: AddWorkplaceViewModel) {
+    init(view: AddSkillsView, cellManager: AddSkillsCellManager, viewModel: AddSkillsViewModel) {
         self.mainView = view
         self.viewModel = viewModel
         self.cellManager = cellManager
@@ -47,17 +47,17 @@ class AddWorkplaceViewController: UIViewController {
     }
 }
 
-extension AddWorkplaceViewController: NavigationControllerDelegate {
+extension AddSkillsViewController: NavigationControllerDelegate {
     
     fileprivate func setupNavigation() {
         navigator = NavigationController(navigationView: mainView.navigation, navigationController: navigationController)
-        mainView.navigation.title.text = "workplace.nav.title".localized()
+        mainView.navigation.title.text = "skills.nav.title".localized()
         navigator?.delegate = self
     }
     
     func rightAction() {
         animateCellsFadeOut(tableView: mainView.tableView) {
-            let vc = ViewControllerContainer.shared.getAddSkills()
+            let vc = ViewControllerContainer.shared.getAddContactsDetail()
             self.navigationController?.pushViewController(vc, animated: false)
         }
     }
@@ -69,7 +69,7 @@ extension AddWorkplaceViewController: NavigationControllerDelegate {
     }
 }
 
-extension AddWorkplaceViewController: UITableViewDataSource {
+extension AddSkillsViewController: UITableViewDataSource {
     
     fileprivate func setupDataSource() {
         mainView.tableView.dataSource = self
@@ -85,14 +85,14 @@ extension AddWorkplaceViewController: UITableViewDataSource {
     
 }
 
-extension AddWorkplaceViewController: UITableViewDelegate {
+extension AddSkillsViewController: UITableViewDelegate {
     
 }
 
-extension AddWorkplaceViewController: AddEducationCellDelegate {
+extension AddSkillsViewController: AddEducationCellDelegate {
     func onButton(_ sender: UIButton) {
         animateCellsFadeOut(tableView: mainView.tableView) {
-            let vc = ViewControllerContainer.shared.getAddWorkplaceDetail()
+            let vc = ViewControllerContainer.shared.getAddSkillsDetail()
             self.navigationController?.pushViewController(vc, animated: false)
             print(sender.tag)
         }

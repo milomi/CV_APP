@@ -36,6 +36,8 @@ final class AddEducationCellManagerImpl: AddEducationCellManager {
         cell.mainView.label.headerLabel.text = "NAME OF THE SCHOOL"
         cell.mainView.label.textField.text = "school"
         cell.mainView.addButton.tag = indexPath.row
+        
+        cell.mainView.setData(title: "Skalna")
         cell.delegate = viewController
         return cell
         

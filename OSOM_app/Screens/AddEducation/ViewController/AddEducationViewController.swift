@@ -12,11 +12,13 @@ class AddEducationViewController: UIViewController {
     
     fileprivate let mainView: AddEducationView
     fileprivate let cellManager: AddEducationCellManager
+    fileprivate let viewModel: AddEducationViewModel
     fileprivate var navigator: NavigationController?
     
-    init(view: AddEducationView, cellManager: AddEducationCellManager) {
+    init(view: AddEducationView, cellManager: AddEducationCellManager, viewModel: AddEducationViewModel) {
         self.mainView = view
         self.cellManager = cellManager
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         setupView()
         setupNavigation()
@@ -30,6 +32,11 @@ class AddEducationViewController: UIViewController {
         view = mainView
         mainView.setupView()
         setupDataSource()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        mainView.tableView.alpha = 0.0
     }
     
     override func viewDidAppear(_ animated: Bool) {

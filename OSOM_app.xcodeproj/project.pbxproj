@@ -54,6 +54,19 @@
 		B24B9F381FBF84A700810ED6 /* AddWorkplaceDetailCellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F371FBF84A700810ED6 /* AddWorkplaceDetailCellManager.swift */; };
 		B24B9F3B1FBF84DE00810ED6 /* AddWorkplaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F3A1FBF84DE00810ED6 /* AddWorkplaceDetailViewController.swift */; };
 		B24B9F3D1FBF876A00810ED6 /* UIViewController+Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F3C1FBF876A00810ED6 /* UIViewController+Animate.swift */; };
+		B24B9F3F1FC06DD400810ED6 /* AddEducationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F3E1FC06DD400810ED6 /* AddEducationViewModel.swift */; };
+		B24B9F421FC06EC100810ED6 /* AddWorkplaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F411FC06EC100810ED6 /* AddWorkplaceViewModel.swift */; };
+		B24B9F491FC0719100810ED6 /* AddSkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F481FC0719100810ED6 /* AddSkillsViewController.swift */; };
+		B24B9F4B1FC071C500810ED6 /* AddSkillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F4A1FC071C500810ED6 /* AddSkillsView.swift */; };
+		B24B9F4D1FC0720900810ED6 /* AddSkillsCellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F4C1FC0720900810ED6 /* AddSkillsCellManager.swift */; };
+		B24B9F4F1FC0738400810ED6 /* AddSkillsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F4E1FC0738400810ED6 /* AddSkillsViewModel.swift */; };
+		B24B9F551FC073F900810ED6 /* AddSkillsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F541FC073F900810ED6 /* AddSkillsDetailViewController.swift */; };
+		B24B9F581FC0741F00810ED6 /* AddSkillsDetailCellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F571FC0741F00810ED6 /* AddSkillsDetailCellManager.swift */; };
+		B24B9F5E1FC0771E00810ED6 /* AddContactsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F5D1FC0771E00810ED6 /* AddContactsDetailViewController.swift */; };
+		B24B9F601FC0775100810ED6 /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F5F1FC0775100810ED6 /* AddContactView.swift */; };
+		B24B9F631FC0778500810ED6 /* AddContactsCellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F621FC0778500810ED6 /* AddContactsCellManager.swift */; };
+		B24B9F681FC07D2400810ED6 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F671FC07D2400810ED6 /* HelloViewController.swift */; };
+		B24B9F6A1FC07D9D00810ED6 /* HelloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F691FC07D9D00810ED6 /* HelloView.swift */; };
 		B2C48FED1F9367F600DFECA4 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */; };
 		B2C48FF01F936A9F00DFECA4 /* BaseEditField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */; };
 		B2C48FF81F937B8400DFECA4 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF31F937B8400DFECA4 /* Montserrat-Bold.otf */; };
@@ -153,6 +166,19 @@
 		B24B9F371FBF84A700810ED6 /* AddWorkplaceDetailCellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkplaceDetailCellManager.swift; sourceTree = "<group>"; };
 		B24B9F3A1FBF84DE00810ED6 /* AddWorkplaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkplaceDetailViewController.swift; sourceTree = "<group>"; };
 		B24B9F3C1FBF876A00810ED6 /* UIViewController+Animate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Animate.swift"; sourceTree = "<group>"; };
+		B24B9F3E1FC06DD400810ED6 /* AddEducationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationViewModel.swift; sourceTree = "<group>"; };
+		B24B9F411FC06EC100810ED6 /* AddWorkplaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkplaceViewModel.swift; sourceTree = "<group>"; };
+		B24B9F481FC0719100810ED6 /* AddSkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillsViewController.swift; sourceTree = "<group>"; };
+		B24B9F4A1FC071C500810ED6 /* AddSkillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillsView.swift; sourceTree = "<group>"; };
+		B24B9F4C1FC0720900810ED6 /* AddSkillsCellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillsCellManager.swift; sourceTree = "<group>"; };
+		B24B9F4E1FC0738400810ED6 /* AddSkillsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillsViewModel.swift; sourceTree = "<group>"; };
+		B24B9F541FC073F900810ED6 /* AddSkillsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillsDetailViewController.swift; sourceTree = "<group>"; };
+		B24B9F571FC0741F00810ED6 /* AddSkillsDetailCellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillsDetailCellManager.swift; sourceTree = "<group>"; };
+		B24B9F5D1FC0771E00810ED6 /* AddContactsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactsDetailViewController.swift; sourceTree = "<group>"; };
+		B24B9F5F1FC0775100810ED6 /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
+		B24B9F621FC0778500810ED6 /* AddContactsCellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactsCellManager.swift; sourceTree = "<group>"; };
+		B24B9F671FC07D2400810ED6 /* HelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
+		B24B9F691FC07D9D00810ED6 /* HelloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloView.swift; sourceTree = "<group>"; };
 		B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEditField.swift; sourceTree = "<group>"; };
 		B2C48FF31F937B8400DFECA4 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
@@ -288,6 +314,10 @@
 		3572CF711F1E01F5004FC883 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				B24B9F641FC07CFE00810ED6 /* HelloViewController */,
+				B24B9F591FC076CF00810ED6 /* Contacts */,
+				B24B9F501FC073C600810ED6 /* AddSkillsDetail */,
+				B24B9F431FC0715700810ED6 /* AddSkills */,
 				B24B9F351FBF847600810ED6 /* AddWorkplaceDetail */,
 				B24B9F2A1FBF820400810ED6 /* AddWorkplace */,
 				B24B9F1C1FBF607300810ED6 /* AddEducationDetail */,
@@ -605,6 +635,7 @@
 		B24B9F2A1FBF820400810ED6 /* AddWorkplace */ = {
 			isa = PBXGroup;
 			children = (
+				B24B9F401FC06EB200810ED6 /* ViewModel */,
 				B24B9F321FBF832700810ED6 /* ViewManagment */,
 				B24B9F2C1FBF822500810ED6 /* ViewController */,
 				B24B9F2B1FBF821E00810ED6 /* View */,
@@ -659,6 +690,165 @@
 				B24B9F3A1FBF84DE00810ED6 /* AddWorkplaceDetailViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B24B9F401FC06EB200810ED6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F411FC06EC100810ED6 /* AddWorkplaceViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B24B9F431FC0715700810ED6 /* AddSkills */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F471FC0717B00810ED6 /* ViewModel */,
+				B24B9F461FC0716D00810ED6 /* ViewManagment */,
+				B24B9F451FC0716800810ED6 /* ViewController */,
+				B24B9F441FC0716400810ED6 /* View */,
+			);
+			path = AddSkills;
+			sourceTree = "<group>";
+		};
+		B24B9F441FC0716400810ED6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F4A1FC071C500810ED6 /* AddSkillsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B24B9F451FC0716800810ED6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F481FC0719100810ED6 /* AddSkillsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B24B9F461FC0716D00810ED6 /* ViewManagment */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F4C1FC0720900810ED6 /* AddSkillsCellManager.swift */,
+			);
+			path = ViewManagment;
+			sourceTree = "<group>";
+		};
+		B24B9F471FC0717B00810ED6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F4E1FC0738400810ED6 /* AddSkillsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B24B9F501FC073C600810ED6 /* AddSkillsDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F561FC0740D00810ED6 /* ViewManagment */,
+				B24B9F531FC073D900810ED6 /* ViewModel */,
+				B24B9F521FC073D400810ED6 /* ViewController */,
+				B24B9F511FC073D000810ED6 /* View */,
+			);
+			path = AddSkillsDetail;
+			sourceTree = "<group>";
+		};
+		B24B9F511FC073D000810ED6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B24B9F521FC073D400810ED6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F541FC073F900810ED6 /* AddSkillsDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B24B9F531FC073D900810ED6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B24B9F561FC0740D00810ED6 /* ViewManagment */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F571FC0741F00810ED6 /* AddSkillsDetailCellManager.swift */,
+			);
+			path = ViewManagment;
+			sourceTree = "<group>";
+		};
+		B24B9F591FC076CF00810ED6 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F611FC0777200810ED6 /* ViewManagment */,
+				B24B9F5C1FC076E400810ED6 /* ViewController */,
+				B24B9F5B1FC076DF00810ED6 /* ViewModel */,
+				B24B9F5A1FC076DB00810ED6 /* View */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		B24B9F5A1FC076DB00810ED6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F5F1FC0775100810ED6 /* AddContactView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B24B9F5B1FC076DF00810ED6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B24B9F5C1FC076E400810ED6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F5D1FC0771E00810ED6 /* AddContactsDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B24B9F611FC0777200810ED6 /* ViewManagment */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F621FC0778500810ED6 /* AddContactsCellManager.swift */,
+			);
+			path = ViewManagment;
+			sourceTree = "<group>";
+		};
+		B24B9F641FC07CFE00810ED6 /* HelloViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F661FC07D1700810ED6 /* View */,
+				B24B9F651FC07D1100810ED6 /* ViewController */,
+			);
+			path = HelloViewController;
+			sourceTree = "<group>";
+		};
+		B24B9F651FC07D1100810ED6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F671FC07D2400810ED6 /* HelloViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B24B9F661FC07D1700810ED6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F691FC07D9D00810ED6 /* HelloView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B29FF8A61FB4FA5C00E935A1 /* SchoolForm */ = {
@@ -801,6 +991,7 @@
 		B2E6324B1FAF66AA009D837E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B24B9F3E1FC06DD400810ED6 /* AddEducationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1159,17 +1350,21 @@
 				3572CF321F1DEAF9004FC883 /* OSOM_app.xcdatamodeld in Sources */,
 				3572CF641F1DFD7B004FC883 /* ViewControllerContainer.swift in Sources */,
 				B2E6325B1FAF6E1A009D837E /* UITableView+Register.swift in Sources */,
+				B24B9F581FC0741F00810ED6 /* AddSkillsDetailCellManager.swift in Sources */,
 				B20CA6411F9D073C0018208A /* LogInViewController.swift in Sources */,
 				B2E632351FAF410E009D837E /* UIImage+resize.swift in Sources */,
 				B2C48FF01F936A9F00DFECA4 /* BaseEditField.swift in Sources */,
 				B24B9F221FBF60F800810ED6 /* AddEducationDetailViewController.swift in Sources */,
 				B2C48FED1F9367F600DFECA4 /* UIColor+extension.swift in Sources */,
 				B24B9F3D1FBF876A00810ED6 /* UIViewController+Animate.swift in Sources */,
+				B24B9F4D1FC0720900810ED6 /* AddSkillsCellManager.swift in Sources */,
+				B24B9F5E1FC0771E00810ED6 /* AddContactsDetailViewController.swift in Sources */,
 				B24B9F381FBF84A700810ED6 /* AddWorkplaceDetailCellManager.swift in Sources */,
 				35EB195C1F1E3D7C00DD3AA5 /* TitleCellView.swift in Sources */,
 				B2E632471FAF5E04009D837E /* UIView+shake.swift in Sources */,
 				B2024F741F9365090083B813 /* SignUpNameViewController.swift in Sources */,
 				3572CF2A1F1DEAF9004FC883 /* AppDelegate.swift in Sources */,
+				B24B9F551FC073F900810ED6 /* AddSkillsDetailViewController.swift in Sources */,
 				35EB194F1F1E34C100DD3AA5 /* String+Localized.swift in Sources */,
 				3577D8061F1F3565001BCD63 /* UIView+Shadow.swift in Sources */,
 				3572CF681F1DFD93004FC883 /* ViewContainer.swift in Sources */,
@@ -1183,8 +1378,10 @@
 				B2E632591FAF6BA9009D837E /* AddEducationCellView.swift in Sources */,
 				35EB194C1F1E32DA00DD3AA5 /* CutomButton.swift in Sources */,
 				B2F029CE1F9C9BB10006A5A0 /* NavigationView.swift in Sources */,
+				B24B9F6A1FC07D9D00810ED6 /* HelloView.swift in Sources */,
 				B2E632271FADB169009D837E /* CreateAboutView.swift in Sources */,
 				3572CF771F1E036E004FC883 /* WelcomeView.swift in Sources */,
+				B24B9F601FC0775100810ED6 /* AddContactView.swift in Sources */,
 				B24B9F271FBF619300810ED6 /* AddEducationDetailCell.swift in Sources */,
 				3572CF6E1F1DFDCD004FC883 /* SerializerContainer.swift in Sources */,
 				B24B9F301FBF827E00810ED6 /* AddWorkplaceView.swift in Sources */,
@@ -1192,9 +1389,11 @@
 				B2F029CB1F9C8DEC0006A5A0 /* UIDevice+extension.swift in Sources */,
 				B2024F781F9365B10083B813 /* BaseSignUpView.swift in Sources */,
 				3572CF661F1DFD89004FC883 /* ViewModelContainer.swift in Sources */,
+				B24B9F491FC0719100810ED6 /* AddSkillsViewController.swift in Sources */,
 				B2E6322D1FADB1B8009D837E /* BaseCreateView.swift in Sources */,
 				35EB195E1F1E3DAD00DD3AA5 /* Int+ConstraintMaker.swift in Sources */,
 				B2024F6E1F9220EA0083B813 /* WelcomeScreenViewController.swift in Sources */,
+				B24B9F681FC07D2400810ED6 /* HelloViewController.swift in Sources */,
 				B2F029D01F9CA60E0006A5A0 /* NavigationController.swift in Sources */,
 				B2024F761F93652E0083B813 /* SignUpNameView.swift in Sources */,
 				B24B9F291FBF643A00810ED6 /* DetailCellView.swift in Sources */,
@@ -1202,9 +1401,14 @@
 				B24B9F251FBF615F00810ED6 /* AddEducationDetailCellManager.swift in Sources */,
 				35EB19591F1E3D3E00DD3AA5 /* TitleCell.swift in Sources */,
 				3572CF6C1F1DFDC2004FC883 /* NetworkingContainer.swift in Sources */,
+				B24B9F631FC0778500810ED6 /* AddContactsCellManager.swift in Sources */,
+				B24B9F3F1FC06DD400810ED6 /* AddEducationViewModel.swift in Sources */,
 				3572CF701F1DFDEB004FC883 /* CellManagerContainer.swift in Sources */,
 				B2E632521FAF68DA009D837E /* AddEducationCellManager.swift in Sources */,
+				B24B9F421FC06EC100810ED6 /* AddWorkplaceViewModel.swift in Sources */,
+				B24B9F4F1FC0738400810ED6 /* AddSkillsViewModel.swift in Sources */,
 				B20CA63B1F9CC1FA0018208A /* SignUpPasswordView.swift in Sources */,
+				B24B9F4B1FC071C500810ED6 /* AddSkillsView.swift in Sources */,
 				B20CA6301F9CBFF50018208A /* SignUpEmailView.swift in Sources */,
 				35EB19601F1E3DE200DD3AA5 /* Fonts.swift in Sources */,
 				35EB19491F1E2BBE00DD3AA5 /* WelcomeScreenViewModel.swift in Sources */,

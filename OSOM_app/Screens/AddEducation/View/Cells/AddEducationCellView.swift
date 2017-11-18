@@ -11,6 +11,7 @@ import UIKit
 fileprivate struct Constants {
     struct AddButton {
         static let image = "plusSmall"
+        static let dataFilled = "tick"
         struct Constraints {
             static let leading = 35
             static let size = 57
@@ -36,7 +37,7 @@ class AddEducationCellView: UIView {
         button.imageView?.contentMode = .scaleAspectFill
         button.contentMode = .scaleAspectFill
         button.layer.borderColor = UIColor.black.cgColor
-        button.layer.borderWidth = 2.0
+        button.layer.borderWidth = 4.0
         return button
     }()
     
@@ -51,6 +52,22 @@ class AddEducationCellView: UIView {
         setupSelf()
         setupButton()
         setupLabel()
+    }
+    
+    func clearData() {
+        addButton.setImage(UIImage(named: Constants.AddButton.image), for: .normal)
+        addButton.layer.borderColor = UIColor.black.cgColor
+        label.textField.textColor = UIColor.white
+        label.textField.text = ""
+    }
+    
+    func setData(title: String) {
+        addButton.setImage(UIImage(named: Constants.AddButton.dataFilled), for: .normal)
+        addButton.layer.borderColor = UIColor.buttonGray.cgColor
+        
+        label.textField.text = title
+        label.textField.textColor = UIColor.black
+
     }
     
     private func setupSelf() {

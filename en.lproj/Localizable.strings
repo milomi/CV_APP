@@ -77,3 +77,12 @@
 "addWorkDetail.jobTitle.placeholder" = "what did you do?";
 "addWorkDetail.detailedInfo.placeholder" = "what have you worked on?";
 
+// Mark: Workplace
+"workplace.nav.title" = "WORK";
+
+// Mark: Skills
+"skills.nav.title" = "SKILLS";
+
+// Mark: Contact
+"contacts.nav.title" = "CONTACT";
+

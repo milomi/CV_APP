@@ -43,5 +43,13 @@ class ViewContainer {
     func addWorkplace() -> AddWorkplaceView {
         return AddWorkplaceView()
     }
+    
+    func addSkills() -> AddSkillsView {
+        return AddSkillsView()
+    }
+    
+    func addContacts() -> AddContactsView {
+        return AddContactsView()
+    }
 
 }

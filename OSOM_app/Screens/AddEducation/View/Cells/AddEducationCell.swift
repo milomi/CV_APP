@@ -36,6 +36,8 @@ class AddEducationCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        mainView.clearData()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
