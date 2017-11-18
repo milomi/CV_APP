@@ -32,6 +32,7 @@ class AddSkillsDetailViewController: UIViewController {
         mainView.setupView()
         setupDataSource()
     }
+    
 }
 
 extension AddSkillsDetailViewController: NavigationControllerDelegate {
@@ -57,7 +58,7 @@ extension AddSkillsDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return AddSkillsDetailCellType.detailedInfo.rawValue + 1
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

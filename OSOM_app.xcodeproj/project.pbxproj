@@ -67,6 +67,8 @@
 		B24B9F631FC0778500810ED6 /* AddContactsCellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F621FC0778500810ED6 /* AddContactsCellManager.swift */; };
 		B24B9F681FC07D2400810ED6 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F671FC07D2400810ED6 /* HelloViewController.swift */; };
 		B24B9F6A1FC07D9D00810ED6 /* HelloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F691FC07D9D00810ED6 /* HelloView.swift */; };
+		B24B9F6C1FC0C49800810ED6 /* AddSkillsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F6B1FC0C49800810ED6 /* AddSkillsCellView.swift */; };
+		B24B9F6E1FC0C87000810ED6 /* AddSkillsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F6D1FC0C87000810ED6 /* AddSkillsCell.swift */; };
 		B2C48FED1F9367F600DFECA4 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */; };
 		B2C48FF01F936A9F00DFECA4 /* BaseEditField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */; };
 		B2C48FF81F937B8400DFECA4 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF31F937B8400DFECA4 /* Montserrat-Bold.otf */; };
@@ -179,6 +181,8 @@
 		B24B9F621FC0778500810ED6 /* AddContactsCellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactsCellManager.swift; sourceTree = "<group>"; };
 		B24B9F671FC07D2400810ED6 /* HelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
 		B24B9F691FC07D9D00810ED6 /* HelloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloView.swift; sourceTree = "<group>"; };
+		B24B9F6B1FC0C49800810ED6 /* AddSkillsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillsCellView.swift; sourceTree = "<group>"; };
+		B24B9F6D1FC0C87000810ED6 /* AddSkillsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillsCell.swift; sourceTree = "<group>"; };
 		B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEditField.swift; sourceTree = "<group>"; };
 		B2C48FF31F937B8400DFECA4 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
@@ -757,6 +761,8 @@
 		B24B9F511FC073D000810ED6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B24B9F6B1FC0C49800810ED6 /* AddSkillsCellView.swift */,
+				B24B9F6D1FC0C87000810ED6 /* AddSkillsCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1365,6 +1371,7 @@
 				B2024F741F9365090083B813 /* SignUpNameViewController.swift in Sources */,
 				3572CF2A1F1DEAF9004FC883 /* AppDelegate.swift in Sources */,
 				B24B9F551FC073F900810ED6 /* AddSkillsDetailViewController.swift in Sources */,
+				B24B9F6C1FC0C49800810ED6 /* AddSkillsCellView.swift in Sources */,
 				35EB194F1F1E34C100DD3AA5 /* String+Localized.swift in Sources */,
 				3577D8061F1F3565001BCD63 /* UIView+Shadow.swift in Sources */,
 				3572CF681F1DFD93004FC883 /* ViewContainer.swift in Sources */,
@@ -1393,6 +1400,7 @@
 				B2E6322D1FADB1B8009D837E /* BaseCreateView.swift in Sources */,
 				35EB195E1F1E3DAD00DD3AA5 /* Int+ConstraintMaker.swift in Sources */,
 				B2024F6E1F9220EA0083B813 /* WelcomeScreenViewController.swift in Sources */,
+				B24B9F6E1FC0C87000810ED6 /* AddSkillsCell.swift in Sources */,
 				B24B9F681FC07D2400810ED6 /* HelloViewController.swift in Sources */,
 				B2F029D01F9CA60E0006A5A0 /* NavigationController.swift in Sources */,
 				B2024F761F93652E0083B813 /* SignUpNameView.swift in Sources */,
