@@ -91,7 +91,6 @@ class AddSkillsCellView: UIView {
     }
     
     @objc func onChange() {
-        
         guard let sliderLabel = sliderLabel else {
             if let handleView = slider.subviews.last as? UIImageView {
                 let label = UILabel(frame: handleView.bounds)
@@ -107,11 +106,8 @@ class AddSkillsCellView: UIView {
             return
         }
     
-            //set label font, size, color, etc.
             sliderLabel.text = "\(Int(slider.value))"
     }
-    
-    
     
 }
 

@@ -69,6 +69,18 @@
 		B24B9F6A1FC07D9D00810ED6 /* HelloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F691FC07D9D00810ED6 /* HelloView.swift */; };
 		B24B9F6C1FC0C49800810ED6 /* AddSkillsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F6B1FC0C49800810ED6 /* AddSkillsCellView.swift */; };
 		B24B9F6E1FC0C87000810ED6 /* AddSkillsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F6D1FC0C87000810ED6 /* AddSkillsCell.swift */; };
+		B24E43861FCAA79900ADD404 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24E43851FCAA79900ADD404 /* HTTPRequest.swift */; };
+		B24E43881FCAA7C500ADD404 /* BaseNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24E43871FCAA7C500ADD404 /* BaseNetworking.swift */; };
+		B24E438A1FCAA7D500ADD404 /* AuthorizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24E43891FCAA7D500ADD404 /* AuthorizationHelper.swift */; };
+		B24E438C1FCAA7FA00ADD404 /* ParamsHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24E438B1FCAA7FA00ADD404 /* ParamsHeaders.swift */; };
+		B24E438F1FCAA99300ADD404 /* AuthorizationSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24E438E1FCAA99300ADD404 /* AuthorizationSerializer.swift */; };
+		B24E43911FCAAAE900ADD404 /* AuthorizateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24E43901FCAAAE900ADD404 /* AuthorizateUser.swift */; };
+		B24E43931FCAAB1200ADD404 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24E43921FCAAB1200ADD404 /* UserDefaultsHelper.swift */; };
+		B24E43961FCAAB8600ADD404 /* AuthorizationNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24E43951FCAAB8600ADD404 /* AuthorizationNetworking.swift */; };
+		B24E43981FCAAEBD00ADD404 /* Dictionary+Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24E43971FCAAEBD00ADD404 /* Dictionary+Serializer.swift */; };
+		B278D0F71FC7228100A6D34B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278D0F61FC7228100A6D34B /* User.swift */; };
+		B278D0F91FC7281F00A6D34B /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278D0F81FC7281F00A6D34B /* School.swift */; };
+		B278D0FD1FC72CD500A6D34B /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278D0FC1FC72CD500A6D34B /* Work.swift */; };
 		B2C48FED1F9367F600DFECA4 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */; };
 		B2C48FF01F936A9F00DFECA4 /* BaseEditField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */; };
 		B2C48FF81F937B8400DFECA4 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF31F937B8400DFECA4 /* Montserrat-Bold.otf */; };
@@ -183,6 +195,18 @@
 		B24B9F691FC07D9D00810ED6 /* HelloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloView.swift; sourceTree = "<group>"; };
 		B24B9F6B1FC0C49800810ED6 /* AddSkillsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillsCellView.swift; sourceTree = "<group>"; };
 		B24B9F6D1FC0C87000810ED6 /* AddSkillsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillsCell.swift; sourceTree = "<group>"; };
+		B24E43851FCAA79900ADD404 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		B24E43871FCAA7C500ADD404 /* BaseNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworking.swift; sourceTree = "<group>"; };
+		B24E43891FCAA7D500ADD404 /* AuthorizationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationHelper.swift; sourceTree = "<group>"; };
+		B24E438B1FCAA7FA00ADD404 /* ParamsHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsHeaders.swift; sourceTree = "<group>"; };
+		B24E438E1FCAA99300ADD404 /* AuthorizationSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationSerializer.swift; sourceTree = "<group>"; };
+		B24E43901FCAAAE900ADD404 /* AuthorizateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizateUser.swift; sourceTree = "<group>"; };
+		B24E43921FCAAB1200ADD404 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		B24E43951FCAAB8600ADD404 /* AuthorizationNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationNetworking.swift; sourceTree = "<group>"; };
+		B24E43971FCAAEBD00ADD404 /* Dictionary+Serializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Serializer.swift"; sourceTree = "<group>"; };
+		B278D0F61FC7228100A6D34B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B278D0F81FC7281F00A6D34B /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
+		B278D0FC1FC72CD500A6D34B /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
 		B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEditField.swift; sourceTree = "<group>"; };
 		B2C48FF31F937B8400DFECA4 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
@@ -267,6 +291,8 @@
 		3572CF281F1DEAF9004FC883 /* OSOM_app */ = {
 			isa = PBXGroup;
 			children = (
+				B24E43831FCAA77300ADD404 /* Services */,
+				B278D0F51FC7225400A6D34B /* Model */,
 				B2C48FF11F937B5400DFECA4 /* Resources */,
 				B2024F6B1F92206C0083B813 /* Info.plist */,
 				35EB19541F1E371200DD3AA5 /* Localizable.strings */,
@@ -390,6 +416,8 @@
 				B2E632461FAF5E04009D837E /* UIView+shake.swift */,
 				B2E6325A1FAF6E1A009D837E /* UITableView+Register.swift */,
 				B24B9F3C1FBF876A00810ED6 /* UIViewController+Animate.swift */,
+				B24E43921FCAAB1200ADD404 /* UserDefaultsHelper.swift */,
+				B24E43971FCAAEBD00ADD404 /* Dictionary+Serializer.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -855,6 +883,54 @@
 				B24B9F691FC07D9D00810ED6 /* HelloView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B24E43831FCAA77300ADD404 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B24E438D1FCAA96E00ADD404 /* Serializers */,
+				B24E43841FCAA77B00ADD404 /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B24E43841FCAA77B00ADD404 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B24E43941FCAAB7100ADD404 /* AuthorizationNetworking */,
+				B24E43851FCAA79900ADD404 /* HTTPRequest.swift */,
+				B24E43871FCAA7C500ADD404 /* BaseNetworking.swift */,
+				B24E43891FCAA7D500ADD404 /* AuthorizationHelper.swift */,
+				B24E438B1FCAA7FA00ADD404 /* ParamsHeaders.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B24E438D1FCAA96E00ADD404 /* Serializers */ = {
+			isa = PBXGroup;
+			children = (
+				B24E438E1FCAA99300ADD404 /* AuthorizationSerializer.swift */,
+			);
+			path = Serializers;
+			sourceTree = "<group>";
+		};
+		B24E43941FCAAB7100ADD404 /* AuthorizationNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				B24E43951FCAAB8600ADD404 /* AuthorizationNetworking.swift */,
+			);
+			path = AuthorizationNetworking;
+			sourceTree = "<group>";
+		};
+		B278D0F51FC7225400A6D34B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B278D0F61FC7228100A6D34B /* User.swift */,
+				B278D0F81FC7281F00A6D34B /* School.swift */,
+				B278D0FC1FC72CD500A6D34B /* Work.swift */,
+				B24E43901FCAAAE900ADD404 /* AuthorizateUser.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B29FF8A61FB4FA5C00E935A1 /* SchoolForm */ = {
@@ -1375,17 +1451,24 @@
 				35EB194F1F1E34C100DD3AA5 /* String+Localized.swift in Sources */,
 				3577D8061F1F3565001BCD63 /* UIView+Shadow.swift in Sources */,
 				3572CF681F1DFD93004FC883 /* ViewContainer.swift in Sources */,
+				B278D0FD1FC72CD500A6D34B /* Work.swift in Sources */,
+				B24E438F1FCAA99300ADD404 /* AuthorizationSerializer.swift in Sources */,
 				B24B9F2E1FBF824A00810ED6 /* AddWorkplaceViewController.swift in Sources */,
+				B24E438C1FCAA7FA00ADD404 /* ParamsHeaders.swift in Sources */,
 				3572CF6A1F1DFDA5004FC883 /* ValidatorContainer.swift in Sources */,
 				B20CA6321F9CC0750018208A /* SignUpEmailViewController.swift in Sources */,
+				B24E43881FCAA7C500ADD404 /* BaseNetworking.swift in Sources */,
+				B24E43981FCAAEBD00ADD404 /* Dictionary+Serializer.swift in Sources */,
 				B20CA6431F9D075E0018208A /* LogInView.swift in Sources */,
 				B2E632311FADFDBD009D837E /* CreateAboutViewController.swift in Sources */,
 				B2E6322F1FADB442009D837E /* CreationStageHeader.swift in Sources */,
 				B2E632331FAE107C009D837E /* BaseEditTextView.swift in Sources */,
 				B2E632591FAF6BA9009D837E /* AddEducationCellView.swift in Sources */,
 				35EB194C1F1E32DA00DD3AA5 /* CutomButton.swift in Sources */,
+				B24E43961FCAAB8600ADD404 /* AuthorizationNetworking.swift in Sources */,
 				B2F029CE1F9C9BB10006A5A0 /* NavigationView.swift in Sources */,
 				B24B9F6A1FC07D9D00810ED6 /* HelloView.swift in Sources */,
+				B24E438A1FCAA7D500ADD404 /* AuthorizationHelper.swift in Sources */,
 				B2E632271FADB169009D837E /* CreateAboutView.swift in Sources */,
 				3572CF771F1E036E004FC883 /* WelcomeView.swift in Sources */,
 				B24B9F601FC0775100810ED6 /* AddContactView.swift in Sources */,
@@ -1403,15 +1486,19 @@
 				B24B9F6E1FC0C87000810ED6 /* AddSkillsCell.swift in Sources */,
 				B24B9F681FC07D2400810ED6 /* HelloViewController.swift in Sources */,
 				B2F029D01F9CA60E0006A5A0 /* NavigationController.swift in Sources */,
+				B24E43911FCAAAE900ADD404 /* AuthorizateUser.swift in Sources */,
 				B2024F761F93652E0083B813 /* SignUpNameView.swift in Sources */,
+				B24E43931FCAAB1200ADD404 /* UserDefaultsHelper.swift in Sources */,
 				B24B9F291FBF643A00810ED6 /* DetailCellView.swift in Sources */,
 				B20CA6381F9CC1BA0018208A /* SignUpPasswordViewController.swift in Sources */,
 				B24B9F251FBF615F00810ED6 /* AddEducationDetailCellManager.swift in Sources */,
+				B278D0F71FC7228100A6D34B /* User.swift in Sources */,
 				35EB19591F1E3D3E00DD3AA5 /* TitleCell.swift in Sources */,
 				3572CF6C1F1DFDC2004FC883 /* NetworkingContainer.swift in Sources */,
 				B24B9F631FC0778500810ED6 /* AddContactsCellManager.swift in Sources */,
 				B24B9F3F1FC06DD400810ED6 /* AddEducationViewModel.swift in Sources */,
 				3572CF701F1DFDEB004FC883 /* CellManagerContainer.swift in Sources */,
+				B24E43861FCAA79900ADD404 /* HTTPRequest.swift in Sources */,
 				B2E632521FAF68DA009D837E /* AddEducationCellManager.swift in Sources */,
 				B24B9F421FC06EC100810ED6 /* AddWorkplaceViewModel.swift in Sources */,
 				B24B9F4F1FC0738400810ED6 /* AddSkillsViewModel.swift in Sources */,
@@ -1419,6 +1506,7 @@
 				B24B9F4B1FC071C500810ED6 /* AddSkillsView.swift in Sources */,
 				B20CA6301F9CBFF50018208A /* SignUpEmailView.swift in Sources */,
 				35EB19601F1E3DE200DD3AA5 /* Fonts.swift in Sources */,
+				B278D0F91FC7281F00A6D34B /* School.swift in Sources */,
 				35EB19491F1E2BBE00DD3AA5 /* WelcomeScreenViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

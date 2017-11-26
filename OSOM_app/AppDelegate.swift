@@ -10,6 +10,10 @@ import UIKit
 import CoreData
 import IQKeyboardManager
 
+extension Notification.Name {
+    static let invalidToken = Notification.Name("invalidToken")
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

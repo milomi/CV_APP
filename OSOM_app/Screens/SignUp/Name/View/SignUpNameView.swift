@@ -36,6 +36,7 @@ final class SignUpNameView: BaseSignUpView {
     let nameEditField: BaseEditField = {
         let field = BaseEditField()
         field.alpha = 0.0
+        field.headerLabel.text = Constants.NameEditField.title.localized()
         field.setAttributedPlaceholder(string: Constants.NameEditField.placeholder.localized())
         return field
     }()

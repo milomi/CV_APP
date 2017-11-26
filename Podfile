@@ -4,6 +4,7 @@
 def networking_pods
     pod 'Alamofire'
     pod 'SwiftyJSON'
+    pod 'SwiftyBeaver'
 end
 
 def ux_design

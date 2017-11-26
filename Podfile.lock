@@ -10,6 +10,7 @@ PODS:
     - Imaginary (~> 3.0)
   - SnapKit (4.0.0)
   - SwiftValidator (4.0.0)
+  - SwiftyBeaver (1.4.3)
   - SwiftyJSON (3.1.4)
   - TTTAttributedLabel (2.0.0)
 
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - Lightbox (~> 2.0.0)
   - SnapKit
   - SwiftValidator (from `https://github.com/milomi/SwiftValidator.git`, commit `96061eca93f5016681679fbb2af84949c1e11d19`)
+  - SwiftyBeaver
   - SwiftyJSON
   - TTTAttributedLabel
 
@@ -41,9 +43,10 @@ SPEC CHECKSUMS:
   Lightbox: b72d18d05b57ba55dbac2eb0d7dafdc934205cf3
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
+  SwiftyBeaver: e10b1668e0512229c36c34769b97eed3dfae2ca3
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
 
-PODFILE CHECKSUM: f16120b8e59e3d32c478beab61bc1c8bc6c3f778
+PODFILE CHECKSUM: 9c98ef4e15edc8f3dedf09b2d9f830dc637fa20b
 
 COCOAPODS: 1.2.0
