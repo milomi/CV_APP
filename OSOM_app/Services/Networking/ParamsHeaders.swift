@@ -9,13 +9,14 @@ import Foundation
 import Foundation
 
 struct Endpoints {
-    static let baseUrl = "http://carrierviewer.azurewebsites.net"
-    static let register = "register"
+    static let baseUrl = "https://carrierviewer.azurewebsites.net/"
+    static let register = "api/accounts/create"
     static let login = "oauth/token"
     static let refreshToken = "refresh"
     static let session = "session"
     static let teams = "teams"
     static let addTeam = "team/assign"
+    static let emailValidator = "api/accounts/email"
 }
 
 struct SuccessCodes {

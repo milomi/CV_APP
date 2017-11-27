@@ -12,11 +12,13 @@ import SwiftValidator
 final class SignUpEmailViewController: UIViewController {
     
     fileprivate let mainView: SignUpEmailView
+    fileprivate let viewModel: SignUpEmailViewModel
     fileprivate var navigator: NavigationController?
     fileprivate let validator = Validator()
     
-    init(mainView: SignUpEmailView) {
+    init(mainView: SignUpEmailView, viewModel: SignUpEmailViewModel) {
         self.mainView = mainView
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -64,10 +66,7 @@ extension SignUpEmailViewController: NavigationControllerDelegate {
 extension SignUpEmailViewController: ValidationDelegate {
     func validationSuccessful() {
         mainView.clearErrorLabels()
-        mainView.animate(entry: true, completion: {
-            let vc = ViewControllerContainer.shared.getSignUpPassword()
-            self.navigationController?.pushViewController(vc, animated: false)
-        })
+        viewModel.checkEmail(email: mainView.emailEditField.textField.text ?? "")
     }
     
     func validationFailed(_ errors: [(Validatable, ValidationError)]) {
@@ -83,4 +82,21 @@ extension SignUpEmailViewController: ValidationDelegate {
     fileprivate func registerValidatableFields() {
         validator.registerField(mainView.emailEditField.textField, errorLabel: mainView.emailEditField.errorLabel, rules: [RequiredRule(), EmailRule()])
     }
+}
+
+extension SignUpEmailViewController: SignUpEmailViewModelDelegate {
+    
+    func badEmail(_ response: String) {
+        mainView.clearErrorLabels()
+        mainView.emailEditField.textField.text = response
+    }
+    
+    func emailIsAvailable() {
+        mainView.animate(entry: true, completion: {
+            let vc = ViewControllerContainer.shared.getSignUpPassword()
+            self.navigationController?.pushViewController(vc, animated: false)
+        })
+    }
+    
+    
 }

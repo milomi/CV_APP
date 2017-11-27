@@ -14,6 +14,7 @@ struct AuthorizationSerializerParameters {
     static let email = "email"
     static let password = "password"
     static let name = "name"
+    static let surname = "surname"
     static let timezone = "timezone"
     static let error = "error"
 }
@@ -22,8 +23,10 @@ protocol AuthorizationSerializer {
     func unserialize(json: JSON?) -> Bool
     func unserializeError(json: JSON?) -> String?
     func serializeRefreshToken() -> [String: Any]
-    func serializeLogin(_ user: AuthorizateUser) -> [String: Any]
-    func serializeSignUp(_ user: AuthorizateUser) -> [String: Any]
+    func serializeAnonymusToken() -> [String: Any]
+    func serializeLogin(_ user: SignUpUserModel) -> [String: Any]
+    func serializeSignUp(_ user: SignUpUserModel) -> [String: Any]
+    func unserializeAnonymusToken(json: JSON?) -> Bool 
 }
 
 final class AuthorizationSerializerImpl: AuthorizationSerializer {
@@ -38,6 +41,18 @@ final class AuthorizationSerializerImpl: AuthorizationSerializer {
         UserDefaults.Authorization.set(accessToken, forKey: .accessToken)
         UserDefaults.Authorization.set(refreshToken, forKey: .refreshToken)
         UserDefaults.AccountStatus.set(.logged, forKey: .currentStatus)
+        return true
+    }
+    
+    func unserializeAnonymusToken(json: JSON?) -> Bool {
+        guard let json = json,
+            let accessToken = json[AuthorizationSerializerParameters.accessToken].string else {
+                return false
+        }
+        
+        UserDefaults.Authorization.set(accessToken, forKey: .accessToken)
+        UserDefaults.Authorization.set(nil, forKey: .refreshToken)
+        UserDefaults.AccountStatus.set(.anonymus, forKey: .currentStatus)
         return true
     }
     
@@ -63,24 +78,31 @@ final class AuthorizationSerializerImpl: AuthorizationSerializer {
         return dictionary
     }
     
-    func serializeLogin(_ user: AuthorizateUser) -> [String : Any] {
+    func serializeLogin(_ user: SignUpUserModel) -> [String : Any] {
         var dictionary: [String: Any] = [:]
         dictionary.serializeItem(AuthorizationSerializerParameters.email, value: user.email)
         dictionary.serializeItem(AuthorizationSerializerParameters.password, value: user.password)
         return dictionary
     }
     
-    func serializeSignUp(_ user: AuthorizateUser) -> [String : Any] {
+    func serializeSignUp(_ user: SignUpUserModel) -> [String : Any] {
         var dictionary: [String: Any] = [:]
         
-        if let name = user.firstName, let lastName = user.lastName {
-            let userName = "\(name) \(lastName)"
-            dictionary.serializeItem(AuthorizationSerializerParameters.name, value: userName)
-        }
+        dictionary.serializeItem(AuthorizationSerializerParameters.name, value: user.name)
+        dictionary.serializeItem(AuthorizationSerializerParameters.surname, value: user.surname)
         dictionary.serializeItem(AuthorizationSerializerParameters.email, value: user.email)
         dictionary.serializeItem(AuthorizationSerializerParameters.password, value: user.password)
-        dictionary.serializeItem(AuthorizationSerializerParameters.timezone, value: TimeZone.current.identifier)
         return dictionary
+    }
+    
+    func serializeAnonymusToken() -> [String : Any] {
+        var dictionary: [String: Any] = [:]
+
+        dictionary.serializeItem(HeadersKeys.GrantType.name, value: HeadersKeys.GrantType.clientCredentials)
+        dictionary.serializeItem(HeadersKeys.ClientId.name, value: HeadersKeys.ClientId.value)
+        
+        return dictionary
+        
     }
     
 }

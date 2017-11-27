@@ -1,5 +1,5 @@
 //
-//  AuthorizationNetworking.swift
+//  RefreshTokenNetworking.swift
 //  OSOM_app
 //
 //  Created by Miłosz Bugla on 26.11.2017.
@@ -9,22 +9,22 @@ import Foundation
 import SwiftyJSON
 import Alamofire
 
-protocol AuthorizationNetworking: class {
+protocol RefreshTokenNetworking: class {
     
-    weak var delegate: AuthorizationNetworkingDelegate? { get set }
+    weak var delegate: RefreshTokenNetworkingDelegate? { get set }
     
-    func getTokenClientCredentials(parameters: [String: Any])
+    func getAccessTokenFromRefresh(parameters: [String: Any])
 }
 
-protocol AuthorizationNetworkingDelegate: class {
+protocol RefreshTokenNetworkingDelegate: class {
     func unknownErrorOccured()
     func noInternetConnection()
-    func handleClientCredentialsSuccess(_ json: JSON)
+    func success(_ json: JSON)
 }
 
-final class AuthorizationNetworkingImpl: BaseNetworking {
+final class RefreshTokenNetworkingImpl: BaseNetworking {
     
-    weak var delegate: AuthorizationNetworkingDelegate?
+    weak var delegate: RefreshTokenNetworkingDelegate?
     
     override func handleUnknownError() {
         delegate?.unknownErrorOccured()
@@ -40,7 +40,7 @@ final class AuthorizationNetworkingImpl: BaseNetworking {
     
     override func handleResponseSuccess(json: JSON?) {
         if let json = json {
-            delegate?.handleClientCredentialsSuccess(json)
+            delegate?.success(json)
         } else {
             print("error")
         }
@@ -48,9 +48,9 @@ final class AuthorizationNetworkingImpl: BaseNetworking {
     
 }
 
-extension AuthorizationNetworkingImpl: AuthorizationNetworking {
+extension RefreshTokenNetworkingImpl: RefreshTokenNetworking {
     
-    func getTokenClientCredentials(parameters: [String: Any]) {
+    func getAccessTokenFromRefresh(parameters: [String: Any]) {
         makeRequest(request: getRequest(parameters))
     }
     
@@ -59,7 +59,7 @@ extension AuthorizationNetworkingImpl: AuthorizationNetworking {
     }
     
     fileprivate func getUrl() -> String {
-        return Endpoints.baseUrl + Endpoints.login
+        return Endpoints.baseUrl + Endpoints.refreshToken
     }
     
 }

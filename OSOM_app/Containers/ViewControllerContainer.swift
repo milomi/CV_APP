@@ -26,9 +26,10 @@ class ViewControllerContainer {
         return SignUpNameViewController(mainView: view)
     }
     
-    func getSignUpEmail() -> SignUpEmailViewController {
+    func getSignUpEmail(user: SignUpUserModel) -> SignUpEmailViewController {
         let view = ViewContainer.shared.signUpEmail()
-        return SignUpEmailViewController(mainView: view)
+        let viewModel = viewModelContainer.getEmail(user: user)
+        return SignUpEmailViewController(mainView: view, viewModel: viewModel)
     }
     
     func getSignUpPassword() -> SignUpPasswordViewController {

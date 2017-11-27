@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         IQKeyboardManager.shared().isEnabled = true
         IQKeyboardManager.shared().keyboardDistanceFromTextField = 60
+        
+        checkLogIn()
         return true
     }
 
@@ -106,5 +108,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          return ViewControllerContainer.shared.getWelcome()
     }
 
+}
+
+extension AppDelegate {
+    
+    fileprivate func checkLogIn() {
+        
+        let authorizationHelper = AuthorizationHelperImpl()
+        
+        guard let userStatus = UserDefaults.AccountStatus.status(forKey: .currentStatus)  else {
+                authorizationHelper.requestClientCredentialsToken()
+                return
+        }
+        
+        switch userStatus {
+        case AccountStatus.logged.rawValue:
+            authorizationHelper.requestAccessTokenFromRefreshToken()
+        case AccountStatus.notLogged.rawValue, AccountStatus.anonymus.rawValue:
+            authorizationHelper.requestClientCredentialsToken()
+        default:
+            break
+        }
+
+    }
 }
 

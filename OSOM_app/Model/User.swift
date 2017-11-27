@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CreateUserModel {
+protocol SignUpUserModel {
     var name: String { get set }
     var surname: String { get set }
     var email: String { get set }
@@ -19,7 +19,7 @@ protocol UserPersonalDataModel {
     var personalStatement: String? { get set }
 }
 
-class User: CreateUserModel {
+class User: SignUpUserModel {
     var name: String = ""
     var surname: String = ""
     var email: String = ""

@@ -65,7 +65,11 @@ extension SignUpNameViewController: ValidationDelegate {
         mainView.clearErrorLabels()
         DispatchQueue.main.async(execute: {
             self.mainView.animate(entry: true, completion: {
-                let vc = ViewControllerContainer.shared.getSignUpEmail()
+                let user = User()
+                user.name = self.mainView.nameEditField.textField.text ?? ""
+                user.surname = self.mainView.surnameEditField.textField.text ?? ""
+
+                let vc = ViewControllerContainer.shared.getSignUpEmail(user: user)
                 self.navigationController?.pushViewController(vc, animated: false)
             })
         })

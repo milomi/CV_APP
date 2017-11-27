@@ -14,4 +14,8 @@ class ViewModelContainer {
         return WelcomeScreenViewModelImpl()
     }
     
+    func getEmail(user: SignUpUserModel) -> SignUpEmailViewModel {
+        return SignUpEmailViewModelImpl(user: user, repository: RepositoryContainer.shared.getSignUp())
+    }
+    
 }
