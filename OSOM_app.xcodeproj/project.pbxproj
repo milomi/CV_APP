@@ -44,6 +44,8 @@
 		B20CA63B1F9CC1FA0018208A /* SignUpPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CA63A1F9CC1FA0018208A /* SignUpPasswordView.swift */; };
 		B20CA6411F9D073C0018208A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CA6401F9D073C0018208A /* LogInViewController.swift */; };
 		B20CA6431F9D075E0018208A /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CA6421F9D075E0018208A /* LogInView.swift */; };
+		B23C0A0F1FD2157600C62426 /* RepeatPasswordRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C0A0E1FD2157600C62426 /* RepeatPasswordRule.swift */; };
+		B23C0A111FD216C000C62426 /* SignUpPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C0A101FD216C000C62426 /* SignUpPasswordViewModel.swift */; };
 		B24B9F221FBF60F800810ED6 /* AddEducationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F211FBF60F800810ED6 /* AddEducationDetailViewController.swift */; };
 		B24B9F251FBF615F00810ED6 /* AddEducationDetailCellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F241FBF615F00810ED6 /* AddEducationDetailCellManager.swift */; };
 		B24B9F271FBF619300810ED6 /* AddEducationDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F261FBF619300810ED6 /* AddEducationDetailCell.swift */; };
@@ -177,6 +179,8 @@
 		B20CA63A1F9CC1FA0018208A /* SignUpPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswordView.swift; sourceTree = "<group>"; };
 		B20CA6401F9D073C0018208A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		B20CA6421F9D075E0018208A /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		B23C0A0E1FD2157600C62426 /* RepeatPasswordRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatPasswordRule.swift; sourceTree = "<group>"; };
+		B23C0A101FD216C000C62426 /* SignUpPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswordViewModel.swift; sourceTree = "<group>"; };
 		B24B9F211FBF60F800810ED6 /* AddEducationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationDetailViewController.swift; sourceTree = "<group>"; };
 		B24B9F241FBF615F00810ED6 /* AddEducationDetailCellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationDetailCellManager.swift; sourceTree = "<group>"; };
 		B24B9F261FBF619300810ED6 /* AddEducationDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationDetailCell.swift; sourceTree = "<group>"; };
@@ -575,6 +579,7 @@
 		B20CA6351F9CC1A30018208A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B23C0A101FD216C000C62426 /* SignUpPasswordViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -627,6 +632,14 @@
 				B20CA6401F9D073C0018208A /* LogInViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B23C0A0D1FD2156800C62426 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				B23C0A0E1FD2157600C62426 /* RepeatPasswordRule.swift */,
+			);
+			path = Validator;
 			sourceTree = "<group>";
 		};
 		B24B9F1C1FBF607300810ED6 /* AddEducationDetail */ = {
@@ -904,6 +917,7 @@
 		B24E43831FCAA77300ADD404 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B23C0A0D1FD2156800C62426 /* Validator */,
 				B287AB161FCB2E7500EC3416 /* Repositories */,
 				B24E438D1FCAA96E00ADD404 /* Serializers */,
 				B24E43841FCAA77B00ADD404 /* Networking */,
@@ -1499,6 +1513,7 @@
 				B24B9F381FBF84A700810ED6 /* AddWorkplaceDetailCellManager.swift in Sources */,
 				35EB195C1F1E3D7C00DD3AA5 /* TitleCellView.swift in Sources */,
 				B2E632471FAF5E04009D837E /* UIView+shake.swift in Sources */,
+				B23C0A111FD216C000C62426 /* SignUpPasswordViewModel.swift in Sources */,
 				B2024F741F9365090083B813 /* SignUpNameViewController.swift in Sources */,
 				B287AB191FCB2ED000EC3416 /* SignUpRepository.swift in Sources */,
 				3572CF2A1F1DEAF9004FC883 /* AppDelegate.swift in Sources */,
@@ -1549,6 +1564,7 @@
 				B2024F761F93652E0083B813 /* SignUpNameView.swift in Sources */,
 				B24E43931FCAAB1200ADD404 /* UserDefaultsHelper.swift in Sources */,
 				B24B9F291FBF643A00810ED6 /* DetailCellView.swift in Sources */,
+				B23C0A0F1FD2157600C62426 /* RepeatPasswordRule.swift in Sources */,
 				B20CA6381F9CC1BA0018208A /* SignUpPasswordViewController.swift in Sources */,
 				B24B9F251FBF615F00810ED6 /* AddEducationDetailCellManager.swift in Sources */,
 				B278D0F71FC7228100A6D34B /* User.swift in Sources */,

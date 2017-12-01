@@ -32,9 +32,10 @@ class ViewControllerContainer {
         return SignUpEmailViewController(mainView: view, viewModel: viewModel)
     }
     
-    func getSignUpPassword() -> SignUpPasswordViewController {
+    func getSignUpPassword(user: SignUpUserModel) -> SignUpPasswordViewController {
         let view = ViewContainer.shared.signUpPassword()
-        return SignUpPasswordViewController(mainView: view)
+        let viewModel = viewModelContainer.getPassword(user: user)
+        return SignUpPasswordViewController(mainView: view, viewModel: viewModel)
     }
     
     func getLogIn() -> LogInViewController {
@@ -91,7 +92,8 @@ class ViewControllerContainer {
     
     func getHelloViewController() -> HelloViewController {
         let view = HelloView()
-
+        
         return HelloViewController(mainView: view)
     }
+    
 }

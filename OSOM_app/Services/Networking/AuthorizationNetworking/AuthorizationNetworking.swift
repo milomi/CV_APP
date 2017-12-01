@@ -24,7 +24,11 @@ protocol AuthorizationNetworkingDelegate: class {
 
 final class AuthorizationNetworkingImpl: BaseNetworking {
     
-    weak var delegate: AuthorizationNetworkingDelegate?
+    weak var delegate: AuthorizationNetworkingDelegate? {
+        didSet {
+            print("Delegate set")
+        }
+    }
     
     override func handleUnknownError() {
         delegate?.unknownErrorOccured()

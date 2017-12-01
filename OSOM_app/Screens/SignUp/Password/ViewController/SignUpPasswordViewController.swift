@@ -12,13 +12,16 @@ import SwiftValidator
 final class SignUpPasswordViewController: UIViewController {
     
     fileprivate let mainView: SignUpPasswordView
+    fileprivate let viewModel: SignUpPasswordViewModel
     fileprivate var navigator: NavigationController?
     fileprivate let validator = Validator()
 
     
-    init(mainView: SignUpPasswordView) {
+    init(mainView: SignUpPasswordView, viewModel: SignUpPasswordViewModel) {
         self.mainView = mainView
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        self.viewModel.delegate = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -51,10 +54,7 @@ final class SignUpPasswordViewController: UIViewController {
 
 extension SignUpPasswordViewController: NavigationControllerDelegate {
     func rightAction() {
-        mainView.animate(entry: true, completion: {
-            let vc = ViewControllerContainer.shared.getCreateAbout()
-            self.navigationController?.pushViewController(vc, animated: false)
-        })
+        validator.validate(self)
     }
     
     func backAction() {
@@ -67,10 +67,7 @@ extension SignUpPasswordViewController: NavigationControllerDelegate {
 extension SignUpPasswordViewController: ValidationDelegate {
     func validationSuccessful() {
         mainView.clearsErrorLabels()
-        mainView.animate(entry: true, completion: {
-            let vc = ViewControllerContainer.shared.getSignUpPassword()
-            self.navigationController?.pushViewController(vc, animated: false)
-        })
+        viewModel.register(password: mainView.passwordEditField.textField.text ?? "")
     }
     
     func validationFailed(_ errors: [(Validatable, ValidationError)]) {
@@ -84,8 +81,25 @@ extension SignUpPasswordViewController: ValidationDelegate {
     }
     
     fileprivate func registerValidatableFields() {
-        validator.registerField(mainView.passwordEditField.textField, errorLabel: mainView.passwordEditField.errorLabel, rules: [RequiredRule(), PasswordRule()])
-        validator.registerField(mainView.repeatPasswordEditField.textField, errorLabel: mainView.repeatPasswordEditField.errorLabel, rules: [RequiredRule(), PasswordRule()])
+        let repeatPasswordRule = RepeatPasswordRule(compareField: mainView.passwordEditField.textField)
+        let minLenght = MinLengthRule(length: 6)
 
+        validator.registerField(mainView.passwordEditField.textField, errorLabel: mainView.passwordEditField.errorLabel, rules: [RequiredRule(), minLenght])
+        validator.registerField(mainView.repeatPasswordEditField.textField, errorLabel: mainView.repeatPasswordEditField.errorLabel, rules: [RequiredRule(), repeatPasswordRule])
+
+    }
+}
+
+extension SignUpPasswordViewController: SignUpPasswordViewModelDelegate {
+    func signUpSuccessed() {
+        mainView.animate(entry: true, completion: {
+            let vc = ViewControllerContainer.shared.getCreateAbout()
+            self.navigationController?.pushViewController(vc, animated: false)
+        })
+        
+    }
+    
+    func signUpFailed() {
+        print("SignUp f")
     }
 }

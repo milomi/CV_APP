@@ -29,6 +29,7 @@ final class SignUpEmailViewController: UIViewController {
     override func viewDidLoad() {
         setupView()
         setupNavigation()
+        viewModel.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -88,12 +89,12 @@ extension SignUpEmailViewController: SignUpEmailViewModelDelegate {
     
     func badEmail(_ response: String) {
         mainView.clearErrorLabels()
-        mainView.emailEditField.textField.text = response
+        mainView.emailEditField.errorLabel.text = response
     }
     
     func emailIsAvailable() {
         mainView.animate(entry: true, completion: {
-            let vc = ViewControllerContainer.shared.getSignUpPassword()
+            let vc = ViewControllerContainer.shared.getSignUpPassword(user: self.viewModel.getUser())
             self.navigationController?.pushViewController(vc, animated: false)
         })
     }

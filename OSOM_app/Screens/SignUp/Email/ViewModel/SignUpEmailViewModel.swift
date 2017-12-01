@@ -13,15 +13,14 @@ protocol SignUpEmailViewModelDelegate: class {
     func emailIsAvailable()
 }
 
-
 protocol SignUpEmailViewModel: class {
     weak var delegate: SignUpEmailViewModelDelegate? { get set }
 
     func checkEmail(email: String)
+    func getUser() -> SignUpUserModel
 }
 
-final class SignUpEmailViewModelImpl: SignUpEmailViewModel {
-    
+final class SignUpEmailViewModelImpl: SignUpEmailViewModel
     
     weak var delegate: SignUpEmailViewModelDelegate?
     

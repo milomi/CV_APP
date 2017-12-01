@@ -18,7 +18,7 @@ extension Notification.Name {
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let authorizationHelper = AuthorizationHelperImpl()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -113,8 +113,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     
     fileprivate func checkLogIn() {
-        
-        let authorizationHelper = AuthorizationHelperImpl()
         
         guard let userStatus = UserDefaults.AccountStatus.status(forKey: .currentStatus)  else {
                 authorizationHelper.requestClientCredentialsToken()

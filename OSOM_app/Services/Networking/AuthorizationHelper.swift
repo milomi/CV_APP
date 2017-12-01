@@ -76,8 +76,4 @@ extension AuthorizationHelperImpl: AuthorizationNetworkingDelegate {
             delegate?.handleClientCredentialsSuccess(success: false)
         }
     }
-    
-
-    
-    
 }

@@ -15,7 +15,14 @@ class ViewModelContainer {
     }
     
     func getEmail(user: SignUpUserModel) -> SignUpEmailViewModel {
-        return SignUpEmailViewModelImpl(user: user, repository: RepositoryContainer.shared.getSignUp())
+        let repository = RepositoryContainer.shared.getSignUp()
+
+        return SignUpEmailViewModelImpl(user: user, repository: repository)
+    }
+    
+    func getPassword(user: SignUpUserModel) -> SignUpPasswordViewModel {
+        let repository = RepositoryContainer.shared.getSignUp()
+        return SignUpPasswordViewModelImpl(user: user, repository: repository)
     }
     
 }
