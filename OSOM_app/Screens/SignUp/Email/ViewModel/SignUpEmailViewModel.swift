@@ -20,7 +20,7 @@ protocol SignUpEmailViewModel: class {
     func getUser() -> SignUpUserModel
 }
 
-final class SignUpEmailViewModelImpl: SignUpEmailViewModel
+final class SignUpEmailViewModelImpl: SignUpEmailViewModel {
     
     weak var delegate: SignUpEmailViewModelDelegate?
     
@@ -55,6 +55,5 @@ extension SignUpEmailViewModelImpl: EmailValidatorDelegate {
         HUD.flash(.success)
         delegate?.emailIsAvailable()
     }
-    
     
 }

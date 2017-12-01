@@ -10,7 +10,7 @@ import SwiftyJSON
 
 struct AuthorizationSerializerParameters {
     static let accessToken = "access_token"
-    static let refreshToken = "token"
+    static let refreshToken = "refresh_token"
     static let email = "email"
     static let password = "password"
     static let name = "name"
@@ -20,7 +20,7 @@ struct AuthorizationSerializerParameters {
 }
 
 protocol AuthorizationSerializer {
-    func unserialize(json: JSON?) -> Bool
+    func unserialize(json: JSON) -> Bool
     func unserializeError(json: JSON?) -> String?
     func serializeRefreshToken() -> [String: Any]
     func serializeAnonymusToken() -> [String: Any]
@@ -31,10 +31,9 @@ protocol AuthorizationSerializer {
 
 final class AuthorizationSerializerImpl: AuthorizationSerializer {
     
-    func unserialize(json: JSON?) -> Bool {
-        guard let json = json,
-            let accessToken = json[AuthorizationSerializerParameters.accessToken].string,
-            let refreshToken = json[AuthorizationSerializerParameters.refreshToken].string else {
+    func unserialize(json: JSON) -> Bool {
+        guard let accessToken = json[AuthorizationSerializerParameters.accessToken].string,
+                let refreshToken = json[AuthorizationSerializerParameters.refreshToken].string else {
                 return false
         }
         

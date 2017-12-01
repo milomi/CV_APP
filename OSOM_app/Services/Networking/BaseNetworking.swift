@@ -199,7 +199,12 @@ class BaseNetworking: Networking {
 
 extension BaseNetworking: AuthorizationHelperDelegate {
     func handleClientCredentialsSuccess(success: Bool) {
-        print("anonymus success")
+        for request in unauthorizedRequests {
+            request.headers = nil
+            makeRequest(request: request)
+        }
+        unauthorizedRequests.removeAll()
+        
     }
     
     
@@ -212,7 +217,7 @@ extension BaseNetworking: AuthorizationHelperDelegate {
             unauthorizedRequests.removeAll()
             
         } else {
-            
+            authorizationHelper?.requestClientCredentialsToken()
             UserDefaults.userLoggedOut()
             NotificationCenter.default.post(name: .invalidToken, object: nil)
         }

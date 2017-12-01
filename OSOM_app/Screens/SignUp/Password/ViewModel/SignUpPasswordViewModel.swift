@@ -48,7 +48,7 @@ final class SignUpPasswordViewModelImpl: SignUpPasswordViewModel {
 
 extension SignUpPasswordViewModelImpl: SignUpRepositoryDelegate {
     
-    func accountRegistered(_ json: JSON) {
+    func accountRegistered() {
         HUD.flash(.success)
         delegate?.signUpSuccessed()
     }

@@ -11,7 +11,7 @@ import SwiftyJSON
 import Foundation
 
 protocol SignUpRepositoryDelegate: class {
-    func accountRegistered(_ json: JSON)
+    func accountRegistered()
     func errorOccured(_ error: String?)
     func noInternetConnection()
     func unknownErrorOccured()
@@ -94,7 +94,11 @@ extension SignUpRepositoryImpl: EmailValidationNetworkingDelegate {
 extension SignUpRepositoryImpl: SignUpNetworkingDelegate {
     
     func registered(_ json: JSON) {
-        delegate?.accountRegistered(json)
+        if authorizationSerializer.unserialize(json: json) {
+            delegate?.accountRegistered()
+        } else {
+            delegate?.unknownErrorOccured()
+        }
     }
     
 }
