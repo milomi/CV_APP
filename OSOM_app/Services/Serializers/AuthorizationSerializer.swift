@@ -79,6 +79,8 @@ final class AuthorizationSerializerImpl: AuthorizationSerializer {
     
     func serializeLogin(_ user: SignUpUserModel) -> [String : Any] {
         var dictionary: [String: Any] = [:]
+        dictionary.serializeItem(HeadersKeys.GrantType.name, value: HeadersKeys.GrantType.password)
+        dictionary.serializeItem(HeadersKeys.ClientId.name, value: HeadersKeys.ClientId.value)
         dictionary.serializeItem(AuthorizationSerializerParameters.email, value: user.email)
         dictionary.serializeItem(AuthorizationSerializerParameters.password, value: user.password)
         return dictionary

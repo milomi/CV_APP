@@ -14,6 +14,7 @@ protocol AuthorizationNetworking: class {
     weak var delegate: AuthorizationNetworkingDelegate? { get set }
     
     func getTokenClientCredentials(parameters: [String: Any])
+    func getUserCredentials(parameters: [String: Any])
 }
 
 protocol AuthorizationNetworkingDelegate: class {
@@ -55,6 +56,10 @@ final class AuthorizationNetworkingImpl: BaseNetworking {
 extension AuthorizationNetworkingImpl: AuthorizationNetworking {
     
     func getTokenClientCredentials(parameters: [String: Any]) {
+        makeRequest(request: getRequest(parameters))
+    }
+    
+    func getUserCredentials(parameters: [String : Any]) {
         makeRequest(request: getRequest(parameters))
     }
     

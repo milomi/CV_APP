@@ -13,6 +13,7 @@ protocol AuthorizationHelper: class {
     
     func requestAccessTokenFromRefreshToken()
     func requestClientCredentialsToken()
+    func requestUserToken(user: SignUpUserModel)
 }
 
 protocol AuthorizationHelperDelegate: class {
@@ -45,6 +46,10 @@ extension AuthorizationHelperImpl: AuthorizationHelper {
     
     func requestClientCredentialsToken() {
         authorizationNetworking.getTokenClientCredentials(parameters: authorizationSerializer.serializeAnonymusToken())
+    }
+    
+    func requestUserToken(user: SignUpUserModel) {
+        authorizationNetworking.getUserCredentials(parameters: authorizationSerializer.serializeLogin(user))
     }
     
 }
