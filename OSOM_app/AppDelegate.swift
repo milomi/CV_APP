@@ -10,20 +10,24 @@ import UIKit
 import CoreData
 import IQKeyboardManager
 
+extension Notification.Name {
+    static let invalidToken = Notification.Name("invalidToken")
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let authorizationHelper = AuthorizationHelperImpl()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
-        let nav = UINavigationController(rootViewController: setRootViewController())
-        window?.rootViewController = nav
-        window?.makeKeyAndVisible()
         IQKeyboardManager.shared().isEnabled = true
         IQKeyboardManager.shared().keyboardDistanceFromTextField = 60
+        
+        checkLogIn()
+        setRootViewController()
         return true
     }
 
@@ -98,9 +102,55 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: Fileprifate functions
     
-    fileprivate func setRootViewController() -> UIViewController {
-        return ViewControllerContainer().getWelcome()
+    fileprivate func setRootViewController() {
+        
+        var vc: UIViewController
+        
+        guard let userStatus = UserDefaults.AccountStatus.status(forKey: .currentStatus)  else {
+            authorizationHelper.requestClientCredentialsToken()
+            vc = ViewControllerContainer.shared.getWelcome()
+            let nav = UINavigationController(rootViewController: vc)
+            nav.isNavigationBarHidden = true
+            window?.rootViewController = nav
+            window?.makeKeyAndVisible()
+            return
+        }
+        
+        switch userStatus {
+        case AccountStatus.logged.rawValue:
+            vc = ViewControllerContainer.shared.getCreateAbout()
+        case AccountStatus.notLogged.rawValue, AccountStatus.anonymus.rawValue:
+            vc = ViewControllerContainer.shared.getWelcome()
+        default:
+            vc = ViewControllerContainer.shared.getWelcome()
+        }
+        
+            let nav = UINavigationController(rootViewController: vc)
+            window?.rootViewController = nav
+            window?.makeKeyAndVisible()
     }
 
+}
+
+extension AppDelegate {
+    
+    fileprivate func checkLogIn() {
+        
+        guard let userStatus = UserDefaults.AccountStatus.status(forKey: .currentStatus)  else {
+                authorizationHelper.requestClientCredentialsToken()
+                return
+        }
+        
+        switch userStatus {
+        case AccountStatus.logged.rawValue:
+            authorizationHelper.requestAccessTokenFromRefreshToken()
+        case AccountStatus.notLogged.rawValue, AccountStatus.anonymus.rawValue:
+            authorizationHelper.requestClientCredentialsToken()
+        default:
+            break
+        }
+
+    }
+    
 }
 

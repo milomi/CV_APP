@@ -32,4 +32,24 @@ class ViewContainer {
         return LogInView()
     }
     
+    func createAbout() -> CreateAboutView {
+        return CreateAboutView()
+    }
+    
+    func addEducation() -> AddEducationView {
+        return AddEducationView()
+    }
+    
+    func addWorkplace() -> AddWorkplaceView {
+        return AddWorkplaceView()
+    }
+    
+    func addSkills() -> AddSkillsView {
+        return AddSkillsView()
+    }
+    
+    func addContacts() -> AddContactsView {
+        return AddContactsView()
+    }
+
 }

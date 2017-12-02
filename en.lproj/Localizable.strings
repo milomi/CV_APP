@@ -8,7 +8,7 @@
 
 // Welcome view
 "mainView.logIn" = "LOG IN";
-"mainView.facebook" = "USE FACEBOOK";
+"mainView.qrCode" = "QR CODE";
 "mainView.signUp" = "SIGN UP";
 
 // Sign Up
@@ -25,7 +25,79 @@
 "signUp.password.placeholder" = "8Characters#";
 "signUp.repeatPassword.placeholder" = "yup, once again...";
 
+// About
+"signUp.about.title" = "ABOUT";
+"signUp.about.rightButton" = "SAVE";
+"signUp.about.photoHeader" = "Photo";
+"signUp.about.photoPlaceholder" = "Add photo";
+"signUp.about.photoText" = "Nice one!";
+"signUp.about.personal" = "PERSONAL STATEMENT";
+"signUp.about.personal.placeholder" = "Write few sentences about yourself";
+
 // Log In
 "LogIn.title" = "LOG IN";
 "LogIn.password.placeholder" = "fill it up";
 "LogIn.email.placeholder" = "fill it up";
+"logIn.error" = "Nieprawidłowy e-mail lub hasło!";
+
+// MARK: Settings image picker
+"settings.actionSheet.title" = "Edit Photo";
+"settings.actionSheet.message" = "Select Photo Source";
+"settings.actionSheet.camera" = "Take Photo";
+"settings.actionSheet.library" = "Choose from library";
+"settings.actionSheet.delete" = "Delete";
+"settings.actionSheet.cancel" = "Cancel";
+
+// Mark: Education
+"education.nav.title" = "EDUCATION";
+
+// Mark: Detailed Education
+"addDetailEdu.name.title" = "NAME OF THE SCHOOL";
+"addDetailEdu.startDate.title" = "STARTING TIME";
+"addDetailEdu.endDate.title" = "ENDING TIME";
+"addDetailEdu.courseTitle.title" = "COURSE TITLE";
+"addDetailEdu.detailedInfo.title" = "DETAILED INFO";
+"addDetailEdu.name.placeholder" = "where did you go?";
+"addDetailEdu.startDate.placeholder" = "started when?";
+"addDetailEdu.endDate.placeholder" = "finished when?";
+"addDetailEdu.courseTitle.placeholder" = "what did you study?";
+"addDetailEdu.detailedInfo.placeholder" = "what have you learned?";
+
+// Mark: Workplace
+"workplace.nav.title" = "WORK";
+
+// Mark: Detailed Education
+"addWorkDetail.name.title" = "NAME OF THE WORKPLACE";
+"addWorkDetail.startDate.title" = "STARTING TIME";
+"addWorkDetail.endDate.title" = "ENDING TIME";
+"addWorkDetail.jobTitle.title" = "JOB TITLE";
+"addWorkDetail.detailedInfo.title" = "DETAILED INFO";
+"addWorkDetail.name.placeholder" = "where did u work?";
+"addWorkDetail.startDate.placeholder" = "started when?";
+"addWorkDetail.endDate.placeholder" = "finished when?";
+"addWorkDetail.jobTitle.placeholder" = "what did you do?";
+"addWorkDetail.detailedInfo.placeholder" = "what have you worked on?";
+
+// Mark: Skills
+"skills.nav.title" = "SKILLS";
+
+// Mark: Detailed Skills
+"addSkillsDetail.name.title" = "NAME OF SKILL";
+"addSkillsDetail.name.placeholder" = "skills";
+
+// Mark: Contact
+"contacts.nav.title" = "CONTACT";
+
+"contacts.phone.title" = "PHONE";
+"contacts.mail.title" = "MAIL";
+"contacts.city.title" = "CITY";
+"contacts.portfolio.title" = "PORTFOLIO";
+"contacts.linkedin.title" = "LINKEDIN";
+"contacts.facebook.title" = "FACEBOOK";
+"contacts.phone.placeholder" = "NAME OF THE WORKPLACE";
+"contacts.mail.placeholder" = "STARTING TIME";
+"contacts.city.placeholder" = "where did u work?";
+"contacts.portfolio.placeholder" = "NAME OF THE WORKPLACE";
+"contacts.linkedin.placeholder" = "STARTING TIME";
+"contacts.facebook.placeholder" = "where did u work?";
+

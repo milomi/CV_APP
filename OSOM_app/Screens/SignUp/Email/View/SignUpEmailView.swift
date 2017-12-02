@@ -27,13 +27,17 @@ final class SignUpEmailView: BaseSignUpView {
     let emailEditField: BaseEditField = {
         let field = BaseEditField()
         field.headerLabel.text = Constants.EmailEditField.title.localized()
-        field.textField.attributedPlaceholder = field.setAttributedPlaceholder(string: Constants.EmailEditField.placeholder.localized())
+        field.setAttributedPlaceholder(string: Constants.EmailEditField.placeholder.localized())
         return field
     }()
     
     override func setupView() {
         super.setupView()
         setupEmailEditField()
+    }
+    
+    func clearErrorLabels() {
+        emailEditField.clearError()
     }
     
     func fadeIn() {
@@ -55,7 +59,7 @@ final class SignUpEmailView: BaseSignUpView {
         emailEditField.snp.makeConstraints { (make) in
             make.top.equalTo(Constants.EmailEditField.Constraints.top)
             make.leading.equalTo(Constants.EmailEditField.Constraints.padding)
-            make.trailing.equalTo(-Constants.EmailEditField.Constraints.padding)
+            make.trailing.equalTo(headerImage.snp.trailing).offset(-Constants.EmailEditField.Constraints.padding)
         }
     }
     

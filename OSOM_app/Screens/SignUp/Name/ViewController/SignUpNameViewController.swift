@@ -7,11 +7,13 @@
 
 import Foundation
 import UIKit
+import SwiftValidator
 
 final class SignUpNameViewController: UIViewController {
     
-    private let mainView: SignUpNameView
-    var navigator: NavigationController?
+    fileprivate let mainView: SignUpNameView
+    fileprivate var navigator: NavigationController?
+    fileprivate let validator = Validator()
 
     init(mainView: SignUpNameView) {
         self.mainView = mainView
@@ -41,22 +43,50 @@ final class SignUpNameViewController: UIViewController {
     private func setupView() {
         view = mainView
         mainView.setupView()
+        registerValidatableFields()
     }
+    
 }
 
 extension SignUpNameViewController: NavigationControllerDelegate {
     func rightAction() {
-        DispatchQueue.main.async(execute: {
-            self.mainView.animate(entry: true, completion: {
-                let vc = ViewControllerContainer.shared.getSignUpEmail()
-                self.navigationController?.pushViewController(vc, animated: false)
-            })
-        })
+        validator.validate(self)
     }
     
     func backAction() {
         mainView.animate(entry: false, completion: {
             self.navigationController?.popViewController(animated: false)
         })
+    }
+}
+
+extension SignUpNameViewController: ValidationDelegate {
+    func validationSuccessful() {
+        mainView.clearErrorLabels()
+        DispatchQueue.main.async(execute: {
+            self.mainView.animate(entry: true, completion: {
+                let user = User()
+                user.name = self.mainView.nameEditField.textField.text ?? ""
+                user.surname = self.mainView.surnameEditField.textField.text ?? ""
+
+                let vc = ViewControllerContainer.shared.getSignUpEmail(user: user)
+                self.navigationController?.pushViewController(vc, animated: false)
+            })
+        })
+    }
+    
+    func validationFailed(_ errors: [(Validatable, ValidationError)]) {
+        mainView.clearErrorLabels()
+        for (field, error) in errors {
+            if let field = field as? UITextField {
+                error.errorLabel?.text = error.errorMessage
+                field.shake()
+            }
+        }
+    }
+    
+    fileprivate func registerValidatableFields() {
+        validator.registerField(mainView.nameEditField.textField, errorLabel: mainView.nameEditField.errorLabel, rules: [RequiredRule()])
+        validator.registerField(mainView.surnameEditField.textField, errorLabel: mainView.surnameEditField.errorLabel, rules: [RequiredRule()])
     }
 }

@@ -7,14 +7,18 @@
 
 import Foundation
 import UIKit
+import SwiftValidator
 
 final class SignUpEmailViewController: UIViewController {
     
-    private let mainView: SignUpEmailView
-    var navigator: NavigationController?
+    fileprivate let mainView: SignUpEmailView
+    fileprivate let viewModel: SignUpEmailViewModel
+    fileprivate var navigator: NavigationController?
+    fileprivate let validator = Validator()
     
-    init(mainView: SignUpEmailView) {
+    init(mainView: SignUpEmailView, viewModel: SignUpEmailViewModel) {
         self.mainView = mainView
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -25,6 +29,7 @@ final class SignUpEmailViewController: UIViewController {
     override func viewDidLoad() {
         setupView()
         setupNavigation()
+        viewModel.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -41,15 +46,13 @@ final class SignUpEmailViewController: UIViewController {
     private func setupView() {
         view = mainView
         mainView.setupView()
+        registerValidatableFields()
     }
 }
 
 extension SignUpEmailViewController: NavigationControllerDelegate {
     func rightAction() {
-        mainView.animate(entry: true, completion: {
-            let vc = ViewControllerContainer.shared.getSignUpPassword()
-            self.navigationController?.pushViewController(vc, animated: false)
-        })
+        validator.validate(self)
     }
     
     func backAction() {
@@ -58,4 +61,43 @@ extension SignUpEmailViewController: NavigationControllerDelegate {
         })
     }
         
+}
+
+
+extension SignUpEmailViewController: ValidationDelegate {
+    func validationSuccessful() {
+        mainView.clearErrorLabels()
+        viewModel.checkEmail(email: mainView.emailEditField.textField.text ?? "")
+    }
+    
+    func validationFailed(_ errors: [(Validatable, ValidationError)]) {
+        mainView.clearErrorLabels()
+        for (field, error) in errors {
+            if let field = field as? UITextField {
+                error.errorLabel?.text = error.errorMessage
+                field.shake()
+            }
+        }
+    }
+    
+    fileprivate func registerValidatableFields() {
+        validator.registerField(mainView.emailEditField.textField, errorLabel: mainView.emailEditField.errorLabel, rules: [RequiredRule(), EmailRule()])
+    }
+}
+
+extension SignUpEmailViewController: SignUpEmailViewModelDelegate {
+    
+    func badEmail(_ response: String) {
+        mainView.clearErrorLabels()
+        mainView.emailEditField.errorLabel.text = response
+    }
+    
+    func emailIsAvailable() {
+        mainView.animate(entry: true, completion: {
+            let vc = ViewControllerContainer.shared.getSignUpPassword(user: self.viewModel.getUser())
+            self.navigationController?.pushViewController(vc, animated: false)
+        })
+    }
+    
+    
 }

@@ -42,7 +42,7 @@ final class LogInView: BaseSignUpView {
         let field = BaseEditField()
         field.alpha = 0.0
         field.headerLabel.text = Constants.PasswordEditField.title.localized()
-        field.textField.attributedPlaceholder = field.setAttributedPlaceholder(string: Constants.PasswordEditField.placeholder.localized())
+        field.setAttributedPlaceholder(string: Constants.PasswordEditField.placeholder.localized())
         return field
     }()
     
@@ -50,7 +50,7 @@ final class LogInView: BaseSignUpView {
         let field = BaseEditField()
         field.alpha = 0.0
         field.headerLabel.text = Constants.EmailEditField.title.localized()
-        field.textField.attributedPlaceholder = field.setAttributedPlaceholder(string: Constants.EmailEditField.placeholder.localized())
+        field.setAttributedPlaceholder(string: Constants.EmailEditField.placeholder.localized())
         return field
     }()
     
@@ -69,6 +69,12 @@ final class LogInView: BaseSignUpView {
         setupEmailEditField()
         setupPasswordEditField()
     }
+    
+    func clearsErrorLabels() {
+        passwordEditField.clearError()
+        emailEditField.clearError()
+    }
+    
     
     func fadeIn() {
         emailEditField.fadeIn()
@@ -119,7 +125,7 @@ final class LogInView: BaseSignUpView {
         emailEditField.snp.makeConstraints { (make) in
             make.top.equalTo(Constants.PasswordEditField.Constraints.top)
             make.leading.equalTo(Constants.PasswordEditField.Constraints.padding)
-            make.trailing.equalTo(-Constants.PasswordEditField.Constraints.padding)
+            make.trailing.equalTo(headerImage.snp.trailing).offset(-Constants.EmailEditField.Constraints.padding)
         }
     }
 }

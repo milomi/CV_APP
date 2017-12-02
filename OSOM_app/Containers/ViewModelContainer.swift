@@ -14,4 +14,26 @@ class ViewModelContainer {
         return WelcomeScreenViewModelImpl()
     }
     
+    func getEmail(user: SignUpUserModel) -> SignUpEmailViewModel {
+        let repository = RepositoryContainer.shared.getSignUp()
+
+        return SignUpEmailViewModelImpl(user: user, repository: repository)
+    }
+    
+    func getPassword(user: SignUpUserModel) -> SignUpPasswordViewModel {
+        let repository = RepositoryContainer.shared.getSignUp()
+        return SignUpPasswordViewModelImpl(user: user, repository: repository)
+    }
+    
+    func getCreateAbout() -> CreateAboutViewModel {
+        let networking = PersonalNetworkingImpl()
+        let serializer = PersonalSerializerImpl()
+        return CreateAboutViewModelImpl(networking: networking, serializer: serializer)
+    }
+    
+    func getLogin() -> LoginViewModel {
+        let repository = RepositoryContainer.shared.getLogin()
+        return LoginViewModelImpl(repository: repository)
+    }
+    
 }

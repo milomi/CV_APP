@@ -4,12 +4,16 @@
 def networking_pods
     pod 'Alamofire'
     pod 'SwiftyJSON'
+    pod 'SwiftyBeaver'
 end
 
 def ux_design
     pod 'SnapKit'
     pod 'IQKeyboardManager'
     pod 'TTTAttributedLabel'
+    pod 'Lightbox', '~> 2.0.0'
+    pod 'SwiftValidator', :git => "https://github.com/milomi/SwiftValidator.git", :commit => '96061eca93f5016681679fbb2af84949c1e11d19'
+    pod 'PKHUD'
 end
 
 target 'OSOM_app' do

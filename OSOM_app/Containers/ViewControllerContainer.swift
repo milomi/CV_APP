@@ -26,19 +26,80 @@ class ViewControllerContainer {
         return SignUpNameViewController(mainView: view)
     }
     
-    func getSignUpEmail() -> SignUpEmailViewController {
+    func getSignUpEmail(user: SignUpUserModel) -> SignUpEmailViewController {
         let view = ViewContainer.shared.signUpEmail()
-        return SignUpEmailViewController(mainView: view)
+        let viewModel = viewModelContainer.getEmail(user: user)
+        return SignUpEmailViewController(mainView: view, viewModel: viewModel)
     }
     
-    func getSignUpPassword() -> SignUpPasswordViewController {
+    func getSignUpPassword(user: SignUpUserModel) -> SignUpPasswordViewController {
         let view = ViewContainer.shared.signUpPassword()
-        return SignUpPasswordViewController(mainView: view)
+        let viewModel = viewModelContainer.getPassword(user: user)
+        return SignUpPasswordViewController(mainView: view, viewModel: viewModel)
     }
     
     func getLogIn() -> LogInViewController {
         let view = ViewContainer.shared.logIn()
-        return LogInViewController(mainView: view)
+        let viewModel = viewModelContainer.getLogin()
+        return LogInViewController(mainView: view, viewModel: viewModel)
+    }
+    
+    func getCreateAbout() -> CreateAboutViewController {
+        let view = ViewContainer.shared.createAbout()
+        let viewModel = viewModelContainer.getCreateAbout()
+        return CreateAboutViewController(view: view, viewModel: viewModel)
+    }
+    
+    func getAddEducation() -> AddEducationViewController {
+        let view = viewContainer.addEducation()
+        let cellManager = AddEducationCellManagerImpl(tableView: view.tableView)
+        return AddEducationViewController(view: view, cellManager: cellManager, viewModel: AddEducationViewModelImpl())
+    }
+    
+    func getAddEducationDetail() -> AddEducationDetailViewController {
+        let view = viewContainer.addEducation()
+        let cellManager = AddEducationDetailCellManagerImpl(tableView: view.tableView)
+        return AddEducationDetailViewController(view: view, cellManager: cellManager)
+    }
+    
+    func getAddWorkplace() -> AddWorkplaceViewController {
+        let view = viewContainer.addWorkplace()
+        let cellManager = AddWorkplaceCellManagerImpl(tableView: view.tableView)
+        return AddWorkplaceViewController(view: view, cellManager: cellManager, viewModel: AddWorkplaceViewModelImpl())
+    }
+    
+    func getAddWorkplaceDetail() -> AddWorkplaceDetailViewController {
+        let view = viewContainer.addWorkplace()
+        let cellManager = AddWorkplaceDetailCellManagerImpl(tableView: view.tableView)
+        return AddWorkplaceDetailViewController(view: view, cellManager: cellManager)
+    }
+    
+    func getAddSkills() -> AddSkillsViewController {
+        let view = viewContainer.addSkills()
+        let cellManager = AddSkillsCellManagerImpl(tableView: view.tableView)
+        return AddSkillsViewController(view: view, cellManager: cellManager, viewModel: AddSkillsViewModelImpl())
+    }
+    
+    func getAddSkillsDetail() -> AddSkillsDetailViewController {
+        let view = viewContainer.addSkills()
+        let cellManager = AddSkillsDetailCellManagerImpl(tableView: view.tableView)
+        return AddSkillsDetailViewController(view: view, cellManager: cellManager)
+    }
+    
+    func getAddContactsDetail() -> AddContactsDetailViewController {
+        let view = viewContainer.addContacts()
+        let cellManager = AddContactsDetailCellManagerImpl(tableView: view.tableView)
+        return AddContactsDetailViewController(view: view, cellManager: cellManager)
+    }
+    
+    func getHelloViewController() -> HelloViewController {
+        let view = HelloView()
+        
+        return HelloViewController(mainView: view)
+    }
+    
+    func getQRCodeReader() -> QRReaderViewController {        
+        return QRReaderViewController()
     }
     
 }

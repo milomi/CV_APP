@@ -37,7 +37,7 @@ final class SignUpPasswordView: BaseSignUpView {
         let field = BaseEditField()
         field.alpha = 0.0
         field.headerLabel.text = Constants.PasswordEditField.title.localized()
-        field.textField.attributedPlaceholder = field.setAttributedPlaceholder(string: Constants.PasswordEditField.placeholder.localized())
+        field.setAttributedPlaceholder(string: Constants.PasswordEditField.placeholder.localized())
         return field
     }()
     
@@ -45,7 +45,7 @@ final class SignUpPasswordView: BaseSignUpView {
         let field = BaseEditField()
         field.alpha = 0.0
         field.headerLabel.text = Constants.RepeatPasswordEditField.title.localized()
-        field.textField.attributedPlaceholder = field.setAttributedPlaceholder(string:  Constants.RepeatPasswordEditField.placeholder.localized())
+        field.setAttributedPlaceholder(string:  Constants.RepeatPasswordEditField.placeholder.localized())
         return field
     }()
     
@@ -53,6 +53,11 @@ final class SignUpPasswordView: BaseSignUpView {
         super.setupView()
         setupPasswordEditField()
         setupRepeatPasswordEditField()
+    }
+    
+    func clearsErrorLabels() {
+        passwordEditField.clearError()
+        repeatPasswordEditField.clearError()
     }
     
     func fadeIn() {
@@ -85,7 +90,7 @@ final class SignUpPasswordView: BaseSignUpView {
         passwordEditField.snp.makeConstraints { (make) in
             make.top.equalTo(Constants.PasswordEditField.Constraints.top)
             make.leading.equalTo(Constants.PasswordEditField.Constraints.padding)
-            make.trailing.equalTo(-Constants.PasswordEditField.Constraints.padding)
+            make.trailing.equalTo(headerImage.snp.trailing).offset(-Constants.PasswordEditField.Constraints.padding)
         }
         
         self.passwordEditField.center.x -= contentView.bounds.width

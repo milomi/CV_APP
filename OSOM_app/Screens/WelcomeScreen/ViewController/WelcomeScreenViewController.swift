@@ -11,6 +11,8 @@ import UIKit
 fileprivate extension Selector {
     static let logIn = #selector(WelcomeScreenViewController.logIn)
     static let signUp = #selector(WelcomeScreenViewController.signUp)
+    static let QRCode = #selector(WelcomeScreenViewController.QRCode)
+
 }
 
 class WelcomeScreenViewController: UIViewController {
@@ -42,6 +44,7 @@ class WelcomeScreenViewController: UIViewController {
         self.view = mainView
         mainView.logIn.button.addTarget(self, action: .logIn, for: .touchUpInside)
         mainView.signUp.button.addTarget(self, action: .signUp, for: .touchUpInside)
+        mainView.QRCodeButton.button.addTarget(self, action: .QRCode, for: .touchUpInside)
         mainView.setupView()
     }
     
@@ -58,6 +61,11 @@ extension WelcomeScreenViewController {
     @objc func signUp() {
         let controller = ViewControllerContainer.shared.getSignUpName()
         self.navigationController?.pushViewController(controller, animated: false)
+    }
+    
+    @objc func QRCode() {
+        let controller = ViewControllerContainer.shared.getQRCodeReader()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
 }

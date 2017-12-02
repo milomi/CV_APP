@@ -37,7 +37,7 @@ final class SignUpNameView: BaseSignUpView {
         let field = BaseEditField()
         field.alpha = 0.0
         field.headerLabel.text = Constants.NameEditField.title.localized()
-        field.textField.attributedPlaceholder = field.setAttributedPlaceholder(string: Constants.NameEditField.placeholder.localized())
+        field.setAttributedPlaceholder(string: Constants.NameEditField.placeholder.localized())
         return field
     }()
     
@@ -45,7 +45,7 @@ final class SignUpNameView: BaseSignUpView {
         let field = BaseEditField()
         field.alpha = 0.0
         field.headerLabel.text = Constants.SurnameEditField.title.localized()
-        field.textField.attributedPlaceholder = field.setAttributedPlaceholder(string:  Constants.SurnameEditField.placeholder.localized())
+        field.setAttributedPlaceholder(string:  Constants.SurnameEditField.placeholder.localized())
         return field
     }()
     
@@ -53,6 +53,11 @@ final class SignUpNameView: BaseSignUpView {
         super.setupView()
         setupNameEditField()
         setupSurnameEditField()
+    }
+    
+    func clearErrorLabels() {
+        nameEditField.clearError()
+        surnameEditField.clearError()
     }
     
     func fadeIn() {
@@ -84,7 +89,7 @@ final class SignUpNameView: BaseSignUpView {
         nameEditField.snp.makeConstraints { (make) in
             make.top.equalTo(Constants.NameEditField.Constraints.top)
             make.leading.equalTo(Constants.NameEditField.Constraints.padding)
-            make.trailing.equalTo(-Constants.NameEditField.Constraints.padding)
+            make.trailing.equalTo(headerImage.snp.trailing).offset(-Constants.NameEditField.Constraints.padding)
         }
     }
     
