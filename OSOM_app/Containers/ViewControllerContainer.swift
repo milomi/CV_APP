@@ -98,4 +98,8 @@ class ViewControllerContainer {
         return HelloViewController(mainView: view)
     }
     
+    func getQRCodeReader() -> QRReaderViewController {        
+        return QRReaderViewController()
+    }
+    
 }

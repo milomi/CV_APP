@@ -92,6 +92,9 @@
 		B25B81571FD339220041D0A9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B81561FD339220041D0A9 /* LoginViewModel.swift */; };
 		B25B815A1FD339C50041D0A9 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B81591FD339C50041D0A9 /* LoginRepository.swift */; };
 		B25B815C1FD3404F0041D0A9 /* UIViewController+ChengeRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B815B1FD3404F0041D0A9 /* UIViewController+ChengeRoot.swift */; };
+		B25B81621FD347890041D0A9 /* QRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B81611FD347890041D0A9 /* QRReaderViewController.swift */; };
+		B25B81641FD34BC40041D0A9 /* QRReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B81631FD34BC40041D0A9 /* QRReaderView.swift */; };
+		B25B81681FD35D190041D0A9 /* QRReaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B81671FD35D190041D0A9 /* QRReaderViewModel.swift */; };
 		B278D0F71FC7228100A6D34B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278D0F61FC7228100A6D34B /* User.swift */; };
 		B278D0F91FC7281F00A6D34B /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278D0F81FC7281F00A6D34B /* School.swift */; };
 		B278D0FD1FC72CD500A6D34B /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278D0FC1FC72CD500A6D34B /* Work.swift */; };
@@ -238,6 +241,9 @@
 		B25B81561FD339220041D0A9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B25B81591FD339C50041D0A9 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
 		B25B815B1FD3404F0041D0A9 /* UIViewController+ChengeRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ChengeRoot.swift"; sourceTree = "<group>"; };
+		B25B81611FD347890041D0A9 /* QRReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderViewController.swift; sourceTree = "<group>"; };
+		B25B81631FD34BC40041D0A9 /* QRReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderView.swift; sourceTree = "<group>"; };
+		B25B81671FD35D190041D0A9 /* QRReaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderViewModel.swift; sourceTree = "<group>"; };
 		B278D0F61FC7228100A6D34B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B278D0F81FC7281F00A6D34B /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		B278D0FC1FC72CD500A6D34B /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
@@ -385,6 +391,7 @@
 		3572CF711F1E01F5004FC883 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				B25B815D1FD3474C0041D0A9 /* QRReaderViewController */,
 				B24B9F641FC07CFE00810ED6 /* HelloViewController */,
 				B24B9F591FC076CF00810ED6 /* Contacts */,
 				B24B9F501FC073C600810ED6 /* AddSkillsDetail */,
@@ -1020,6 +1027,40 @@
 			path = LoginRepository;
 			sourceTree = "<group>";
 		};
+		B25B815D1FD3474C0041D0A9 /* QRReaderViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B25B81601FD347740041D0A9 /* View */,
+				B25B815F1FD3476F0041D0A9 /* ViewModel */,
+				B25B815E1FD347680041D0A9 /* ViewController */,
+			);
+			path = QRReaderViewController;
+			sourceTree = "<group>";
+		};
+		B25B815E1FD347680041D0A9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B25B81611FD347890041D0A9 /* QRReaderViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B25B815F1FD3476F0041D0A9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B25B81671FD35D190041D0A9 /* QRReaderViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B25B81601FD347740041D0A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B25B81631FD34BC40041D0A9 /* QRReaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B278D0F51FC7225400A6D34B /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1561,6 +1602,7 @@
 				B2E6324F1FAF678F009D837E /* AddEducationView.swift in Sources */,
 				B2F029C91F9C7ECD0006A5A0 /* BaseView.swift in Sources */,
 				B24B9F3B1FBF84DE00810ED6 /* AddWorkplaceDetailViewController.swift in Sources */,
+				B25B81621FD347890041D0A9 /* QRReaderViewController.swift in Sources */,
 				B2E6324D1FAF66C6009D837E /* AddEducationViewController.swift in Sources */,
 				3572CF321F1DEAF9004FC883 /* OSOM_app.xcdatamodeld in Sources */,
 				3572CF641F1DFD7B004FC883 /* ViewControllerContainer.swift in Sources */,
@@ -1575,6 +1617,7 @@
 				B2C48FED1F9367F600DFECA4 /* UIColor+extension.swift in Sources */,
 				B24B9F3D1FBF876A00810ED6 /* UIViewController+Animate.swift in Sources */,
 				B24B9F4D1FC0720900810ED6 /* AddSkillsCellManager.swift in Sources */,
+				B25B81641FD34BC40041D0A9 /* QRReaderView.swift in Sources */,
 				B24B9F5E1FC0771E00810ED6 /* AddContactsDetailViewController.swift in Sources */,
 				B23C0A191FD2249200C62426 /* PersonalSerializer.swift in Sources */,
 				B24B9F381FBF84A700810ED6 /* AddWorkplaceDetailCellManager.swift in Sources */,
@@ -1653,6 +1696,7 @@
 				B2E632521FAF68DA009D837E /* AddEducationCellManager.swift in Sources */,
 				B24B9F421FC06EC100810ED6 /* AddWorkplaceViewModel.swift in Sources */,
 				B24B9F4F1FC0738400810ED6 /* AddSkillsViewModel.swift in Sources */,
+				B25B81681FD35D190041D0A9 /* QRReaderViewModel.swift in Sources */,
 				B20CA63B1F9CC1FA0018208A /* SignUpPasswordView.swift in Sources */,
 				B24B9F4B1FC071C500810ED6 /* AddSkillsView.swift in Sources */,
 				B20CA6301F9CBFF50018208A /* SignUpEmailView.swift in Sources */,

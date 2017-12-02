@@ -8,7 +8,7 @@
 
 // Welcome view
 "mainView.logIn" = "LOG IN";
-"mainView.facebook" = "USE FACEBOOK";
+"mainView.qrCode" = "QR CODE";
 "mainView.signUp" = "SIGN UP";
 
 // Sign Up

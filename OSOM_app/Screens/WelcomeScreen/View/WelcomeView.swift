@@ -15,7 +15,7 @@ fileprivate struct Constants {
     fileprivate struct LocalizableKeys {
         static let signUp = "mainView.signUp"
         static let logIn = "mainView.logIn"
-        static let fb = "mainView.facebook"
+        static let qrCode = "mainView.qrCode"
     }
     
     struct headerImage {
@@ -86,11 +86,11 @@ class WelcomeView: BaseView {
         return signUp
     }()
     
-    let facebookButton: CustomButton = {
-        let facebookButton = CustomButton()
-        facebookButton.button.setTitle(Constants.LocalizableKeys.fb.localized(), for: .normal)
-        facebookButton.separator.alpha = 0.0
-        return facebookButton
+    let QRCodeButton: CustomButton = {
+        let QRCodeButton = CustomButton()
+        QRCodeButton.button.setTitle(Constants.LocalizableKeys.qrCode.localized(), for: .normal)
+        QRCodeButton.separator.alpha = 0.0
+        return QRCodeButton
     }()
     
     override init(frame: CGRect) {
@@ -107,7 +107,7 @@ class WelcomeView: BaseView {
         setupContentView()
         setupSignIn()
         setupSignUp()
-        setupFbButton()
+        setupScanQR()
     }
     
     private func setupHeaderImage() {
@@ -142,8 +142,8 @@ class WelcomeView: BaseView {
         contentView.addArrangedSubview(logIn)
     }
     
-    fileprivate func setupFbButton() {
-        contentView.addArrangedSubview(facebookButton)
+    fileprivate func setupScanQR() {
+        contentView.addArrangedSubview(QRCodeButton)
     }
     
 }
