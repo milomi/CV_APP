@@ -25,4 +25,10 @@ class ViewModelContainer {
         return SignUpPasswordViewModelImpl(user: user, repository: repository)
     }
     
+    func getCreateAbout() -> CreateAboutViewModel {
+        let networking = PersonalNetworkingImpl()
+        let serializer = PersonalSerializerImpl()
+        return CreateAboutViewModelImpl(networking: networking, serializer: serializer)
+    }
+    
 }

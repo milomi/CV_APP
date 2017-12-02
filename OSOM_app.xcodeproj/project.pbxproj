@@ -46,6 +46,14 @@
 		B20CA6431F9D075E0018208A /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CA6421F9D075E0018208A /* LogInView.swift */; };
 		B23C0A0F1FD2157600C62426 /* RepeatPasswordRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C0A0E1FD2157600C62426 /* RepeatPasswordRule.swift */; };
 		B23C0A111FD216C000C62426 /* SignUpPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C0A101FD216C000C62426 /* SignUpPasswordViewModel.swift */; };
+		B23C0A131FD223B100C62426 /* CreateAboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C0A121FD223B100C62426 /* CreateAboutViewModel.swift */; };
+		B23C0A171FD2240800C62426 /* PersonalNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C0A161FD2240800C62426 /* PersonalNetworking.swift */; };
+		B23C0A191FD2249200C62426 /* PersonalSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C0A181FD2249200C62426 /* PersonalSerializer.swift */; };
+		B23C0A1B1FD2261600C62426 /* UIImage+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C0A1A1FD2261600C62426 /* UIImage+Base64.swift */; };
+		B23C0A1E1FD235EB00C62426 /* AddEducationNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C0A1D1FD235EB00C62426 /* AddEducationNetworking.swift */; };
+		B23C0A201FD236A200C62426 /* EducationSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C0A1F1FD236A200C62426 /* EducationSerializer.swift */; };
+		B23C0A221FD2378300C62426 /* SkillsSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C0A211FD2378300C62426 /* SkillsSerializer.swift */; };
+		B23C0A251FD2388800C62426 /* SkillsNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C0A241FD2388800C62426 /* SkillsNetworking.swift */; };
 		B24B9F221FBF60F800810ED6 /* AddEducationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F211FBF60F800810ED6 /* AddEducationDetailViewController.swift */; };
 		B24B9F251FBF615F00810ED6 /* AddEducationDetailCellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F241FBF615F00810ED6 /* AddEducationDetailCellManager.swift */; };
 		B24B9F271FBF619300810ED6 /* AddEducationDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B9F261FBF619300810ED6 /* AddEducationDetailCell.swift */; };
@@ -181,6 +189,14 @@
 		B20CA6421F9D075E0018208A /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		B23C0A0E1FD2157600C62426 /* RepeatPasswordRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatPasswordRule.swift; sourceTree = "<group>"; };
 		B23C0A101FD216C000C62426 /* SignUpPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswordViewModel.swift; sourceTree = "<group>"; };
+		B23C0A121FD223B100C62426 /* CreateAboutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAboutViewModel.swift; sourceTree = "<group>"; };
+		B23C0A161FD2240800C62426 /* PersonalNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalNetworking.swift; sourceTree = "<group>"; };
+		B23C0A181FD2249200C62426 /* PersonalSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalSerializer.swift; sourceTree = "<group>"; };
+		B23C0A1A1FD2261600C62426 /* UIImage+Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Base64.swift"; sourceTree = "<group>"; };
+		B23C0A1D1FD235EB00C62426 /* AddEducationNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationNetworking.swift; sourceTree = "<group>"; };
+		B23C0A1F1FD236A200C62426 /* EducationSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationSerializer.swift; sourceTree = "<group>"; };
+		B23C0A211FD2378300C62426 /* SkillsSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsSerializer.swift; sourceTree = "<group>"; };
+		B23C0A241FD2388800C62426 /* SkillsNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsNetworking.swift; sourceTree = "<group>"; };
 		B24B9F211FBF60F800810ED6 /* AddEducationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationDetailViewController.swift; sourceTree = "<group>"; };
 		B24B9F241FBF615F00810ED6 /* AddEducationDetailCellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationDetailCellManager.swift; sourceTree = "<group>"; };
 		B24B9F261FBF619300810ED6 /* AddEducationDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationDetailCell.swift; sourceTree = "<group>"; };
@@ -437,6 +453,7 @@
 				B24B9F3C1FBF876A00810ED6 /* UIViewController+Animate.swift */,
 				B24E43921FCAAB1200ADD404 /* UserDefaultsHelper.swift */,
 				B24E43971FCAAEBD00ADD404 /* Dictionary+Serializer.swift */,
+				B23C0A1A1FD2261600C62426 /* UIImage+Base64.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -640,6 +657,30 @@
 				B23C0A0E1FD2157600C62426 /* RepeatPasswordRule.swift */,
 			);
 			path = Validator;
+			sourceTree = "<group>";
+		};
+		B23C0A151FD223F000C62426 /* CreateAbout */ = {
+			isa = PBXGroup;
+			children = (
+				B23C0A161FD2240800C62426 /* PersonalNetworking.swift */,
+			);
+			path = CreateAbout;
+			sourceTree = "<group>";
+		};
+		B23C0A1C1FD235CE00C62426 /* AddEducation */ = {
+			isa = PBXGroup;
+			children = (
+				B23C0A1D1FD235EB00C62426 /* AddEducationNetworking.swift */,
+			);
+			path = AddEducation;
+			sourceTree = "<group>";
+		};
+		B23C0A231FD2387B00C62426 /* Skills */ = {
+			isa = PBXGroup;
+			children = (
+				B23C0A241FD2388800C62426 /* SkillsNetworking.swift */,
+			);
+			path = Skills;
 			sourceTree = "<group>";
 		};
 		B24B9F1C1FBF607300810ED6 /* AddEducationDetail */ = {
@@ -928,6 +969,9 @@
 		B24E43841FCAA77B00ADD404 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				B23C0A231FD2387B00C62426 /* Skills */,
+				B23C0A1C1FD235CE00C62426 /* AddEducation */,
+				B23C0A151FD223F000C62426 /* CreateAbout */,
 				B287AB1A1FCB2F1F00EC3416 /* SignUp */,
 				B287AB131FCB2D1200EC3416 /* ValidateEmail */,
 				B24E43941FCAAB7100ADD404 /* AuthorizationNetworking */,
@@ -944,6 +988,9 @@
 			children = (
 				B24E438E1FCAA99300ADD404 /* AuthorizationSerializer.swift */,
 				B287AB1D1FCB2F6C00EC3416 /* EmailValidationSerializer.swift */,
+				B23C0A181FD2249200C62426 /* PersonalSerializer.swift */,
+				B23C0A1F1FD236A200C62426 /* EducationSerializer.swift */,
+				B23C0A211FD2378300C62426 /* SkillsSerializer.swift */,
 			);
 			path = Serializers;
 			sourceTree = "<group>";
@@ -1097,6 +1144,7 @@
 		B2E6322A1FADB174009D837E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B23C0A121FD223B100C62426 /* CreateAboutViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1510,6 +1558,7 @@
 				B24B9F3D1FBF876A00810ED6 /* UIViewController+Animate.swift in Sources */,
 				B24B9F4D1FC0720900810ED6 /* AddSkillsCellManager.swift in Sources */,
 				B24B9F5E1FC0771E00810ED6 /* AddContactsDetailViewController.swift in Sources */,
+				B23C0A191FD2249200C62426 /* PersonalSerializer.swift in Sources */,
 				B24B9F381FBF84A700810ED6 /* AddWorkplaceDetailCellManager.swift in Sources */,
 				35EB195C1F1E3D7C00DD3AA5 /* TitleCellView.swift in Sources */,
 				B2E632471FAF5E04009D837E /* UIView+shake.swift in Sources */,
@@ -1523,6 +1572,7 @@
 				3577D8061F1F3565001BCD63 /* UIView+Shadow.swift in Sources */,
 				3572CF681F1DFD93004FC883 /* ViewContainer.swift in Sources */,
 				B278D0FD1FC72CD500A6D34B /* Work.swift in Sources */,
+				B23C0A221FD2378300C62426 /* SkillsSerializer.swift in Sources */,
 				B24E438F1FCAA99300ADD404 /* AuthorizationSerializer.swift in Sources */,
 				B24B9F2E1FBF824A00810ED6 /* AddWorkplaceViewController.swift in Sources */,
 				B24E438C1FCAA7FA00ADD404 /* ParamsHeaders.swift in Sources */,
@@ -1538,6 +1588,7 @@
 				B2E632331FAE107C009D837E /* BaseEditTextView.swift in Sources */,
 				B2E632591FAF6BA9009D837E /* AddEducationCellView.swift in Sources */,
 				B287AB151FCB2D2C00EC3416 /* ValidateEmailNetworking.swift in Sources */,
+				B23C0A1E1FD235EB00C62426 /* AddEducationNetworking.swift in Sources */,
 				35EB194C1F1E32DA00DD3AA5 /* CutomButton.swift in Sources */,
 				B24E43961FCAAB8600ADD404 /* RefreshTokenNetworking.swift in Sources */,
 				B2F029CE1F9C9BB10006A5A0 /* NavigationView.swift in Sources */,
@@ -1553,21 +1604,26 @@
 				B2F029CB1F9C8DEC0006A5A0 /* UIDevice+extension.swift in Sources */,
 				B2024F781F9365B10083B813 /* BaseSignUpView.swift in Sources */,
 				3572CF661F1DFD89004FC883 /* ViewModelContainer.swift in Sources */,
+				B23C0A171FD2240800C62426 /* PersonalNetworking.swift in Sources */,
 				B24B9F491FC0719100810ED6 /* AddSkillsViewController.swift in Sources */,
 				B2E6322D1FADB1B8009D837E /* BaseCreateView.swift in Sources */,
 				35EB195E1F1E3DAD00DD3AA5 /* Int+ConstraintMaker.swift in Sources */,
 				B2024F6E1F9220EA0083B813 /* WelcomeScreenViewController.swift in Sources */,
 				B24B9F6E1FC0C87000810ED6 /* AddSkillsCell.swift in Sources */,
 				B24B9F681FC07D2400810ED6 /* HelloViewController.swift in Sources */,
+				B23C0A131FD223B100C62426 /* CreateAboutViewModel.swift in Sources */,
 				B2F029D01F9CA60E0006A5A0 /* NavigationController.swift in Sources */,
 				B24E43911FCAAAE900ADD404 /* AuthorizateUser.swift in Sources */,
 				B2024F761F93652E0083B813 /* SignUpNameView.swift in Sources */,
 				B24E43931FCAAB1200ADD404 /* UserDefaultsHelper.swift in Sources */,
+				B23C0A1B1FD2261600C62426 /* UIImage+Base64.swift in Sources */,
 				B24B9F291FBF643A00810ED6 /* DetailCellView.swift in Sources */,
 				B23C0A0F1FD2157600C62426 /* RepeatPasswordRule.swift in Sources */,
 				B20CA6381F9CC1BA0018208A /* SignUpPasswordViewController.swift in Sources */,
 				B24B9F251FBF615F00810ED6 /* AddEducationDetailCellManager.swift in Sources */,
+				B23C0A201FD236A200C62426 /* EducationSerializer.swift in Sources */,
 				B278D0F71FC7228100A6D34B /* User.swift in Sources */,
+				B23C0A251FD2388800C62426 /* SkillsNetworking.swift in Sources */,
 				35EB19591F1E3D3E00DD3AA5 /* TitleCell.swift in Sources */,
 				B24E439A1FCAB73B00ADD404 /* AuthorizationNetworking.swift in Sources */,
 				3572CF6C1F1DFDC2004FC883 /* NetworkingContainer.swift in Sources */,

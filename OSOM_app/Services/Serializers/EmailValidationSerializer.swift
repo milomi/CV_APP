@@ -16,7 +16,7 @@ protocol EmailValidationSerializer: class {
     func serialize(_ email: String?) -> [String: Any]
 }
 
-class EmailValidationSerializerImpl: EmailValidationSerializer {
+final class EmailValidationSerializerImpl: EmailValidationSerializer {
     
     func serialize(_ email: String?) -> [String: Any] {
         var dictionary: [String: Any] = [:]

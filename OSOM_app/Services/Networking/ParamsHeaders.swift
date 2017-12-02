@@ -12,11 +12,16 @@ struct Endpoints {
     static let baseUrl = "https://carrierviewer.azurewebsites.net/"
     static let register = "api/accounts/create"
     static let login = "oauth/token"
-    static let refreshToken = "refresh"
+    static let refreshToken = "oauth/token"
     static let session = "session"
     static let teams = "teams"
     static let addTeam = "team/assign"
     static let emailValidator = "api/accounts/email"
+    static let personal = "api/accounts/data/personal"
+    static let education = "api/data/school"
+    static let section = "api/data/section"
+    static let skill = "api/data/skill"
+    static let work = "api/data/work"
 }
 
 struct SuccessCodes {

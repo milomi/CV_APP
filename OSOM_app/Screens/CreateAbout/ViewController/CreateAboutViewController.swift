@@ -36,13 +36,17 @@ fileprivate extension Selector {
 final class CreateAboutViewController: UIViewController {
     
     fileprivate let mainView: CreateAboutView
+    fileprivate let viewModel: CreateAboutViewModel
     fileprivate var navigator: NavigationController?
     fileprivate let validator = Validator()
 
     
-    init(view: CreateAboutView) {
+    init(view: CreateAboutView, viewModel: CreateAboutViewModel) {
         mainView = view
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        viewModel.delegate = self
+    
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -52,6 +56,7 @@ final class CreateAboutViewController: UIViewController {
     override func viewDidLoad() {
         setupView()
         setupNavigation()
+        navigationController?.isNavigationBarHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -126,7 +131,7 @@ extension CreateAboutViewController: UIImagePickerControllerDelegate, UINavigati
         
         let resizedImage = chosenImage.resize(Constants.maxImageSize)
         mainView.photoButton.setImage(resizedImage, for: .normal)
-        //viewModel.updateUserPhoto(image: resizedImage)
+        viewModel.updateUserPhoto(image: resizedImage)
         picker.dismiss(animated: true, completion: nil)
     }
     
@@ -138,8 +143,7 @@ extension CreateAboutViewController: UIImagePickerControllerDelegate, UINavigati
 
 extension CreateAboutViewController: ValidationDelegate {
     func validationSuccessful() {
-        let vc = ViewControllerContainer.shared.getAddEducation()
-        self.navigationController?.pushViewController(vc, animated: false)
+        viewModel.saveData(mainView.personalStatement.textField.text)
     }
     
     func validationFailed(_ errors: [(Validatable, ValidationError)]) {
@@ -154,3 +158,17 @@ extension CreateAboutViewController: ValidationDelegate {
         //validator.registerField(mainView.personalStatement.textField as! ValidatableField, rules: [RequiredRule()])
     }
 }
+
+extension CreateAboutViewController: CreateAboutViewModelDelegate {
+    func savedWithSuccess() {
+        let vc = ViewControllerContainer.shared.getAddEducation()
+        self.navigationController?.pushViewController(vc, animated: false)
+    }
+    
+    func saveFailed() {
+        print("CreateAboutViewController saved error")
+    }
+    
+    
+}
+
