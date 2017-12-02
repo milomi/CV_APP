@@ -9,7 +9,7 @@ protocol EmailValidationNetworkingDelegate: class {
     func unknownErrorOccured()
     func noInternetConnection()
     func errorOccured(_ json: JSON)
-    func emailIsAvailable()
+    func responseSuccess(_ json: JSON)
 }
 
 class EmailValidationNetworkingImpl: BaseNetworking {
@@ -33,7 +33,11 @@ class EmailValidationNetworkingImpl: BaseNetworking {
     }
     
     override func handleResponseSuccess(json: JSON?) {
-        delegate?.emailIsAvailable()
+        if let json = json {
+            delegate?.responseSuccess(json)
+        } else {
+            delegate?.unknownErrorOccured()
+        }
     }
     
 }

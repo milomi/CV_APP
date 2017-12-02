@@ -89,6 +89,9 @@
 		B24E43961FCAAB8600ADD404 /* RefreshTokenNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24E43951FCAAB8600ADD404 /* RefreshTokenNetworking.swift */; };
 		B24E43981FCAAEBD00ADD404 /* Dictionary+Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24E43971FCAAEBD00ADD404 /* Dictionary+Serializer.swift */; };
 		B24E439A1FCAB73B00ADD404 /* AuthorizationNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24E43991FCAB73B00ADD404 /* AuthorizationNetworking.swift */; };
+		B25B81571FD339220041D0A9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B81561FD339220041D0A9 /* LoginViewModel.swift */; };
+		B25B815A1FD339C50041D0A9 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B81591FD339C50041D0A9 /* LoginRepository.swift */; };
+		B25B815C1FD3404F0041D0A9 /* UIViewController+ChengeRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B815B1FD3404F0041D0A9 /* UIViewController+ChengeRoot.swift */; };
 		B278D0F71FC7228100A6D34B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278D0F61FC7228100A6D34B /* User.swift */; };
 		B278D0F91FC7281F00A6D34B /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278D0F81FC7281F00A6D34B /* School.swift */; };
 		B278D0FD1FC72CD500A6D34B /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278D0FC1FC72CD500A6D34B /* Work.swift */; };
@@ -232,6 +235,9 @@
 		B24E43951FCAAB8600ADD404 /* RefreshTokenNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenNetworking.swift; sourceTree = "<group>"; };
 		B24E43971FCAAEBD00ADD404 /* Dictionary+Serializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Serializer.swift"; sourceTree = "<group>"; };
 		B24E43991FCAB73B00ADD404 /* AuthorizationNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationNetworking.swift; sourceTree = "<group>"; };
+		B25B81561FD339220041D0A9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B25B81591FD339C50041D0A9 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		B25B815B1FD3404F0041D0A9 /* UIViewController+ChengeRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ChengeRoot.swift"; sourceTree = "<group>"; };
 		B278D0F61FC7228100A6D34B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B278D0F81FC7281F00A6D34B /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		B278D0FC1FC72CD500A6D34B /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
@@ -454,6 +460,7 @@
 				B24E43921FCAAB1200ADD404 /* UserDefaultsHelper.swift */,
 				B24E43971FCAAEBD00ADD404 /* Dictionary+Serializer.swift */,
 				B23C0A1A1FD2261600C62426 /* UIImage+Base64.swift */,
+				B25B815B1FD3404F0041D0A9 /* UIViewController+ChengeRoot.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -639,6 +646,7 @@
 		B20CA63E1F9D07020018208A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B25B81561FD339220041D0A9 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1004,6 +1012,14 @@
 			path = AuthorizationNetworking;
 			sourceTree = "<group>";
 		};
+		B25B81581FD339B30041D0A9 /* LoginRepository */ = {
+			isa = PBXGroup;
+			children = (
+				B25B81591FD339C50041D0A9 /* LoginRepository.swift */,
+			);
+			path = LoginRepository;
+			sourceTree = "<group>";
+		};
 		B278D0F51FC7225400A6D34B /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1026,6 +1042,7 @@
 		B287AB161FCB2E7500EC3416 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				B25B81581FD339B30041D0A9 /* LoginRepository */,
 				B287AB171FCB2EC500EC3416 /* SignUpRepository */,
 			);
 			path = Repositories;
@@ -1539,6 +1556,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B24B9F341FBF833D00810ED6 /* AddWorkplaceCellManager.swift in Sources */,
+				B25B815A1FD339C50041D0A9 /* LoginRepository.swift in Sources */,
 				3577D8081F1F35B6001BCD63 /* ColorSchameHelper.swift in Sources */,
 				B2E6324F1FAF678F009D837E /* AddEducationView.swift in Sources */,
 				B2F029C91F9C7ECD0006A5A0 /* BaseView.swift in Sources */,
@@ -1590,6 +1608,7 @@
 				B287AB151FCB2D2C00EC3416 /* ValidateEmailNetworking.swift in Sources */,
 				B23C0A1E1FD235EB00C62426 /* AddEducationNetworking.swift in Sources */,
 				35EB194C1F1E32DA00DD3AA5 /* CutomButton.swift in Sources */,
+				B25B815C1FD3404F0041D0A9 /* UIViewController+ChengeRoot.swift in Sources */,
 				B24E43961FCAAB8600ADD404 /* RefreshTokenNetworking.swift in Sources */,
 				B2F029CE1F9C9BB10006A5A0 /* NavigationView.swift in Sources */,
 				B24B9F6A1FC07D9D00810ED6 /* HelloView.swift in Sources */,
@@ -1637,6 +1656,7 @@
 				B20CA63B1F9CC1FA0018208A /* SignUpPasswordView.swift in Sources */,
 				B24B9F4B1FC071C500810ED6 /* AddSkillsView.swift in Sources */,
 				B20CA6301F9CBFF50018208A /* SignUpEmailView.swift in Sources */,
+				B25B81571FD339220041D0A9 /* LoginViewModel.swift in Sources */,
 				35EB19601F1E3DE200DD3AA5 /* Fonts.swift in Sources */,
 				B278D0F91FC7281F00A6D34B /* School.swift in Sources */,
 				35EB19491F1E2BBE00DD3AA5 /* WelcomeScreenViewModel.swift in Sources */,

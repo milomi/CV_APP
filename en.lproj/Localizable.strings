@@ -38,6 +38,7 @@
 "LogIn.title" = "LOG IN";
 "LogIn.password.placeholder" = "fill it up";
 "LogIn.email.placeholder" = "fill it up";
+"logIn.error" = "Nieprawidłowy e-mail lub hasło!";
 
 // MARK: Settings image picker
 "settings.actionSheet.title" = "Edit Photo";

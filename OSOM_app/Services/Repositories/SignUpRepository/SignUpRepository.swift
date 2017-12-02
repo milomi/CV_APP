@@ -69,8 +69,12 @@ class SignUpRepositoryImpl: SignUpRepository {
 
 extension SignUpRepositoryImpl: EmailValidationNetworkingDelegate {
     
-    func emailIsAvailable() {
-        emailValidatorDelegate?.emailIsAvailable()
+    func responseSuccess(_ json: JSON) {
+        if emailValidationSerializer.unserialize(json: json) {
+            emailValidatorDelegate?.emailIsAvailable()
+        } else {
+            emailValidatorDelegate?.badEmail("Bad email")
+        }
     }
     
     func errorOccured(_ json: JSON) {

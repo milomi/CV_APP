@@ -11,7 +11,7 @@ import SwiftyJSON
 struct AuthorizationSerializerParameters {
     static let accessToken = "access_token"
     static let refreshToken = "refresh_token"
-    static let email = "email"
+    static let email = "username"
     static let password = "password"
     static let name = "name"
     static let surname = "surname"

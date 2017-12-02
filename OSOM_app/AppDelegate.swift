@@ -108,7 +108,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         guard let userStatus = UserDefaults.AccountStatus.status(forKey: .currentStatus)  else {
             authorizationHelper.requestClientCredentialsToken()
-            vc = ViewControllerContainer.shared.getCreateAbout()
+            vc = ViewControllerContainer.shared.getWelcome()
             let nav = UINavigationController(rootViewController: vc)
             nav.isNavigationBarHidden = true
             window?.rootViewController = nav

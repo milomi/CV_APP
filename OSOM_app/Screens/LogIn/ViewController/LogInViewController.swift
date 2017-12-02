@@ -9,15 +9,22 @@ import Foundation
 import UIKit
 import SwiftValidator
 
+fileprivate struct LocalizedStrings {
+    static let loginError = "logIn.error"
+}
+
 final class LogInViewController: UIViewController {
     
     fileprivate let mainView: LogInView
+    fileprivate let viewModel: LoginViewModel
     var navigator: NavigationController?
     fileprivate let validator = Validator()
     
-    init(mainView: LogInView) {
+    init(mainView: LogInView, viewModel: LoginViewModel) {
         self.mainView = mainView
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        viewModel.delegate = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -61,10 +68,8 @@ extension LogInViewController: NavigationControllerDelegate {
 
 extension LogInViewController: ValidationDelegate {
     func validationSuccessful() {
-        mainView.animate(entry: true, completion: {
-//            let vc = ViewControllerContainer.shared.getSignUpPassword()
-//            self.navigationController?.pushViewController(vc, animated: false)
-        })
+        viewModel.login(email: mainView.emailEditField.textField.text ?? "",
+                        password: mainView.passwordEditField.textField.text ?? "")
     }
     
     func validationFailed(_ errors: [(Validatable, ValidationError)]) {
@@ -77,9 +82,21 @@ extension LogInViewController: ValidationDelegate {
     }
     
     fileprivate func registerValidatableFields() {
-        validator.registerField(mainView.emailEditField.textField, errorLabel: mainView.emailEditField.errorLabel, rules: [RequiredRule(), PasswordRule()])
-        validator.registerField(mainView.passwordEditField.textField, errorLabel: mainView.passwordEditField.errorLabel, rules: [RequiredRule(), PasswordRule()])
+        validator.registerField(mainView.emailEditField.textField, errorLabel: mainView.emailEditField.errorLabel, rules: [RequiredRule()])
+        validator.registerField(mainView.passwordEditField.textField, errorLabel: mainView.passwordEditField.errorLabel, rules: [RequiredRule()])
         
     }
+}
+
+extension LogInViewController: LoginViewModelDelegate {
+    func loginSuccessed() {
+        let vc = ViewControllerContainer.shared.getCreateAbout()
+        changeRootVC(newViewController: vc)
+    }
+    
+    func loginFailed() {
+        mainView.passwordEditField.errorLabel.text = LocalizedStrings.loginError.localized()
+    }
+    
 }
 

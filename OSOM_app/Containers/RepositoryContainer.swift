@@ -15,4 +15,11 @@ class RepositoryContainer {
     func getSignUp() -> SignUpRepository {
         return SignUpRepositoryImpl(emailValidationNetworking: EmailValidationNetworkingImpl(), emailValidationSerializer: EmailValidationSerializerImpl(), signUpNetworking: SignUpNetworkingImpl(), authorizationSerializer: AuthorizationSerializerImpl())
     }
+    
+
+    func getLogin() -> LoginRepository {
+        let networking = AuthorizationNetworkingImpl()
+        let serializer = AuthorizationSerializerImpl()
+        return LoginRepositoryImpl(authorizationNetworking: networking, authorizationSerializer: serializer)
+    }
 }

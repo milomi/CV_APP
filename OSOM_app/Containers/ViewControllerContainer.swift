@@ -40,7 +40,8 @@ class ViewControllerContainer {
     
     func getLogIn() -> LogInViewController {
         let view = ViewContainer.shared.logIn()
-        return LogInViewController(mainView: view)
+        let viewModel = viewModelContainer.getLogin()
+        return LogInViewController(mainView: view, viewModel: viewModel)
     }
     
     func getCreateAbout() -> CreateAboutViewController {

@@ -31,4 +31,9 @@ class ViewModelContainer {
         return CreateAboutViewModelImpl(networking: networking, serializer: serializer)
     }
     
+    func getLogin() -> LoginViewModel {
+        let repository = RepositoryContainer.shared.getLogin()
+        return LoginViewModelImpl(repository: repository)
+    }
+    
 }
