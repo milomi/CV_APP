@@ -73,6 +73,8 @@ final class AuthorizationSerializerImpl: AuthorizationSerializer {
         dictionary.serializeItem(HeadersKeys.ContentType.name, value: HeadersKeys.ContentType.value)
         dictionary.serializeItem(HeadersKeys.Accept.name, value: HeadersKeys.Accept.value)
         dictionary.serializeItem(HeadersKeys.Authorization.name, value: HeadersKeys.Authorization.value + refreshToken)
+        dictionary.serializeItem(HeadersKeys.ClientId.name, value: HeadersKeys.ClientId.value)
+        dictionary.serializeItem(HeadersKeys.ClientSecret.name, value: HeadersKeys.ClientSecret.value)
         
         return dictionary
     }
@@ -81,6 +83,7 @@ final class AuthorizationSerializerImpl: AuthorizationSerializer {
         var dictionary: [String: Any] = [:]
         dictionary.serializeItem(HeadersKeys.GrantType.name, value: HeadersKeys.GrantType.password)
         dictionary.serializeItem(HeadersKeys.ClientId.name, value: HeadersKeys.ClientId.value)
+        dictionary.serializeItem(HeadersKeys.ClientSecret.name, value: HeadersKeys.ClientSecret.value)
         dictionary.serializeItem(AuthorizationSerializerParameters.email, value: user.email)
         dictionary.serializeItem(AuthorizationSerializerParameters.password, value: user.password)
         return dictionary
@@ -101,6 +104,7 @@ final class AuthorizationSerializerImpl: AuthorizationSerializer {
 
         dictionary.serializeItem(HeadersKeys.GrantType.name, value: HeadersKeys.GrantType.clientCredentials)
         dictionary.serializeItem(HeadersKeys.ClientId.name, value: HeadersKeys.ClientId.value)
+        dictionary.serializeItem(HeadersKeys.ClientSecret.name, value: HeadersKeys.ClientSecret.value)
         
         return dictionary
         

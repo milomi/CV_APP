@@ -67,4 +67,9 @@ struct HeadersKeys {
         static let name = "client_id"
         static let value = "iOSApp"
     }
+    
+    struct ClientSecret {
+        static let name = "client_secret"
+        static let value = "qMCdFDQuF23RV1Y-1Gq9L3cF3VmuFwVbam4fMTdAfpo"
+    }
 }
