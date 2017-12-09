@@ -36,4 +36,9 @@ class ViewModelContainer {
         return LoginViewModelImpl(repository: repository)
     }
     
+    func getAddEduction() -> AddEducationViewModelImpl {
+        let repository = RepositoryContainer.shared.getAddEducation()
+        return AddEducationViewModelImpl(repository: repository)
+    }
+    
 }

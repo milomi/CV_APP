@@ -207,7 +207,6 @@ extension BaseNetworking: AuthorizationHelperDelegate {
         
     }
     
-    
     func tokenRefreshingDone(success: Bool) {
         if success {
             for request in unauthorizedRequests {

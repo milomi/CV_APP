@@ -6,16 +6,28 @@
 //
 
 import Foundation
+import RealmSwift
 
 protocol AddEducationViewModel: class {
-    
+    func getSchools() -> Results<School>
 }
 
 class AddEducationViewModelImpl: AddEducationViewModel {
     
-    private let user: User
+    private let schools: Results<School>
+    private let repository: AddEducationRepository
     
-    init() {
-        
+    init(repository: AddEducationRepository) {
+        self.repository = repository
+        self.schools = repository.getSchools()
     }
+    
+    func getSchools() -> Results<School> {
+        return schools
+    }
+    
+    func addSchool(school: School) {
+        repository.addSchool(school: school)
+    }
+    
 }

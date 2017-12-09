@@ -19,20 +19,20 @@ struct EducationSerializerParameters {
 }
 
 protocol EducationSerializer: class {
-    func serialize() -> [String: Any]
+    func serialize(school: AddSchoolObject) -> [String: Any]
 }
 
 final class EducationSerializerImpl: EducationSerializer {
     
     typealias parameters = EducationSerializerParameters
     
-    func serialize() -> [String: Any] {
+    func serialize(school: AddSchoolObject) -> [String: Any] {
         var dictionary: [String: Any] = [:]
-        dictionary.serializeItem(parameters.name, value: "")
-        dictionary.serializeItem(parameters.startingTime, value: Date())
-        dictionary.serializeItem(parameters.endingTime, value: Date())
-        dictionary.serializeItem(parameters.courseTitle, value: "")
-        dictionary.serializeItem(parameters.detailedInfo, value: "")
+        dictionary.serializeItem(parameters.name, value: school.name)
+        dictionary.serializeItem(parameters.startingTime, value: school.startingTime)
+        dictionary.serializeItem(parameters.endingTime, value: school.endingTime)
+        dictionary.serializeItem(parameters.courseTitle, value: school.courseTitle)
+        dictionary.serializeItem(parameters.detailedInfo, value: school.detailedInfo ?? "")
 
         return dictionary
     }

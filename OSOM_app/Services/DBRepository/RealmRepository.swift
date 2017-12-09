@@ -52,7 +52,7 @@ class RealmRepositoryImpl<T>: RealmRepository where T:Object {
     }
     
     func getObject() -> RealmEntityType? {
-        let object = realm.objects(RealmEntityType).first
+        let object = realm.objects(RealmEntityType.self).first
         return object
     }
     

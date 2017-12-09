@@ -22,4 +22,11 @@ class RepositoryContainer {
         let serializer = AuthorizationSerializerImpl()
         return LoginRepositoryImpl(authorizationNetworking: networking, authorizationSerializer: serializer)
     }
+    
+    func getAddEducation() -> AddEducationRepository {
+        let dbRepository = SchoolDBRepositoryImpl()
+        let networking = AddEducationNetworkingImpl()
+        let serializer = EducationSerializerImpl()
+        return AddEducationRepositoryImpl(schoolDBRepository: dbRepository, networking: networking, serializer: serializer)
+    }
 }

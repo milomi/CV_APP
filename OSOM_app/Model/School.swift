@@ -8,11 +8,23 @@
 import Foundation
 import RealmSwift
 
-class School: Object {
-    var id: Int?
-    var name: String = ""
-    var startingTime: String = ""
-    var endingTime: String = ""
-    var courseTitle: String = ""
-    var detailedInfo: String? 
+protocol AddSchoolObject {
+    var name: String { get set }
+    var startingTime: Date { get set }
+    var endingTime: Date { get set }
+    var courseTitle: String { get set }
+    var detailedInfo: String? { get set }
 }
+
+class School: Object, AddSchoolObject {
+    var schoolID: Int?
+    var name: String = ""
+    var startingTime: Date = Date()
+    var endingTime: Date = Date()
+    var courseTitle: String = ""
+    var detailedInfo: String?
+
+}
+
+
+

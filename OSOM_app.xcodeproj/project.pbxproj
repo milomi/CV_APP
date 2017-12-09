@@ -47,6 +47,7 @@
 		B22DE7961FDBEBD10007838C /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22DE7951FDBEBD10007838C /* RealmRepository.swift */; };
 		B22DE7991FDBF7610007838C /* UserDBRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22DE7981FDBF7610007838C /* UserDBRepository.swift */; };
 		B22DE79C1FDBF9150007838C /* AddEducationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22DE79B1FDBF9150007838C /* AddEducationRepository.swift */; };
+		B22DE7A01FDBFBA90007838C /* SchoolDBRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22DE79F1FDBFBA90007838C /* SchoolDBRepository.swift */; };
 		B23C0A0F1FD2157600C62426 /* RepeatPasswordRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C0A0E1FD2157600C62426 /* RepeatPasswordRule.swift */; };
 		B23C0A111FD216C000C62426 /* SignUpPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C0A101FD216C000C62426 /* SignUpPasswordViewModel.swift */; };
 		B23C0A131FD223B100C62426 /* CreateAboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C0A121FD223B100C62426 /* CreateAboutViewModel.swift */; };
@@ -200,6 +201,7 @@
 		B22DE7951FDBEBD10007838C /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
 		B22DE7981FDBF7610007838C /* UserDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDBRepository.swift; sourceTree = "<group>"; };
 		B22DE79B1FDBF9150007838C /* AddEducationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationRepository.swift; sourceTree = "<group>"; };
+		B22DE79F1FDBFBA90007838C /* SchoolDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDBRepository.swift; sourceTree = "<group>"; };
 		B23C0A0E1FD2157600C62426 /* RepeatPasswordRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatPasswordRule.swift; sourceTree = "<group>"; };
 		B23C0A101FD216C000C62426 /* SignUpPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswordViewModel.swift; sourceTree = "<group>"; };
 		B23C0A121FD223B100C62426 /* CreateAboutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAboutViewModel.swift; sourceTree = "<group>"; };
@@ -677,6 +679,7 @@
 		B22DE7941FDBEB960007838C /* DBRepository */ = {
 			isa = PBXGroup;
 			children = (
+				B22DE79E1FDBFB960007838C /* SchoolsRepository */,
 				B22DE7971FDBF74A0007838C /* UserRepository */,
 				B22DE7951FDBEBD10007838C /* RealmRepository.swift */,
 			);
@@ -697,6 +700,14 @@
 				B22DE79B1FDBF9150007838C /* AddEducationRepository.swift */,
 			);
 			path = AddEducationRepository;
+			sourceTree = "<group>";
+		};
+		B22DE79E1FDBFB960007838C /* SchoolsRepository */ = {
+			isa = PBXGroup;
+			children = (
+				B22DE79F1FDBFBA90007838C /* SchoolDBRepository.swift */,
+			);
+			path = SchoolsRepository;
 			sourceTree = "<group>";
 		};
 		B23C0A0D1FD2156800C62426 /* Validator */ = {
@@ -1720,6 +1731,7 @@
 				B2024F6E1F9220EA0083B813 /* WelcomeScreenViewController.swift in Sources */,
 				B24B9F6E1FC0C87000810ED6 /* AddSkillsCell.swift in Sources */,
 				B24B9F681FC07D2400810ED6 /* HelloViewController.swift in Sources */,
+				B22DE7A01FDBFBA90007838C /* SchoolDBRepository.swift in Sources */,
 				B23C0A131FD223B100C62426 /* CreateAboutViewModel.swift in Sources */,
 				B2F029D01F9CA60E0006A5A0 /* NavigationController.swift in Sources */,
 				B24E43911FCAAAE900ADD404 /* AuthorizateUser.swift in Sources */,
