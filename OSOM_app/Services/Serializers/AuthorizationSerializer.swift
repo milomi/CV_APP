@@ -96,6 +96,7 @@ final class AuthorizationSerializerImpl: AuthorizationSerializer {
         dictionary.serializeItem(AuthorizationSerializerParameters.surname, value: user.surname)
         dictionary.serializeItem(AuthorizationSerializerParameters.email, value: user.email)
         dictionary.serializeItem(AuthorizationSerializerParameters.password, value: user.password)
+        dictionary.serializeItem(HeadersKeys.ClientSecret.name, value: HeadersKeys.ClientSecret.value)
         return dictionary
     }
     
