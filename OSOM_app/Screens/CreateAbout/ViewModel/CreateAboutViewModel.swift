@@ -18,6 +18,7 @@ protocol CreateAboutViewModelDelegate: class {
 protocol CreateAboutViewModel: class {
     weak var delegate: CreateAboutViewModelDelegate? { get set }
     func saveData(_ personalStatment: String)
+    func fetchData()
     func updateUserPhoto(image: UIImage)
 
 }
@@ -39,7 +40,13 @@ final class CreateAboutViewModelImpl: CreateAboutViewModel {
         networking.delegate = self
     }
     
+    func fetchData() {
+        HUD.show(.progress)
+        networking.getPersonalData()
+    }
+    
     func updateUserPhoto(image: UIImage) {
+        HUD.show(.progress)
         self.userPhoto = image
     }
     
@@ -49,7 +56,7 @@ final class CreateAboutViewModelImpl: CreateAboutViewModel {
             return
         }
         
-        networking.setPersonalData(parameters: serializer.serialize(userPhoto,personalStatment))
+        networking.postPersonalData(parameters: serializer.serialize(userPhoto,personalStatment))
     }
 
 }
@@ -66,8 +73,9 @@ extension CreateAboutViewModelImpl: PersonalNetworkingDelegate {
     }
     
     func success(_ json: JSON) {
+        let data = serializer.unserializeData(json: json)
         HUD.flash(.success)
-        delegate?.savedWithSuccess()
+        delegate?.savedWithSuccess()    
     }
     
 }

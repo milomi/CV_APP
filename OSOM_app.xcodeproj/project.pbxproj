@@ -111,6 +111,7 @@
 		B2C48FFA1F937B8400DFECA4 /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF51F937B8400DFECA4 /* Montserrat-Medium.otf */; };
 		B2C48FFB1F937B8400DFECA4 /* Montserrat-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF61F937B8400DFECA4 /* Montserrat-ExtraBold.otf */; };
 		B2C48FFC1F937B8400DFECA4 /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF71F937B8400DFECA4 /* Montserrat-Light.otf */; };
+		B2DE37EB1FD3FE1900FF4F46 /* CreateAboutRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DE37EA1FD3FE1900FF4F46 /* CreateAboutRepository.swift */; };
 		B2E632271FADB169009D837E /* CreateAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E632261FADB169009D837E /* CreateAboutView.swift */; };
 		B2E6322D1FADB1B8009D837E /* BaseCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E6322C1FADB1B8009D837E /* BaseCreateView.swift */; };
 		B2E6322F1FADB442009D837E /* CreationStageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E6322E1FADB442009D837E /* CreationStageHeader.swift */; };
@@ -260,6 +261,7 @@
 		B2C48FF51F937B8400DFECA4 /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.otf"; sourceTree = "<group>"; };
 		B2C48FF61F937B8400DFECA4 /* Montserrat-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.otf"; sourceTree = "<group>"; };
 		B2C48FF71F937B8400DFECA4 /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
+		B2DE37EA1FD3FE1900FF4F46 /* CreateAboutRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAboutRepository.swift; sourceTree = "<group>"; };
 		B2E632261FADB169009D837E /* CreateAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAboutView.swift; sourceTree = "<group>"; };
 		B2E6322C1FADB1B8009D837E /* BaseCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCreateView.swift; sourceTree = "<group>"; };
 		B2E6322E1FADB442009D837E /* CreationStageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationStageHeader.swift; sourceTree = "<group>"; };
@@ -1083,6 +1085,7 @@
 		B287AB161FCB2E7500EC3416 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				B2DE37E91FD3FE0200FF4F46 /* CreateAboutRepository */,
 				B25B81581FD339B30041D0A9 /* LoginRepository */,
 				B287AB171FCB2EC500EC3416 /* SignUpRepository */,
 			);
@@ -1171,6 +1174,14 @@
 				B2C48FF41F937B8400DFECA4 /* Montserrat-Regular.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B2DE37E91FD3FE0200FF4F46 /* CreateAboutRepository */ = {
+			isa = PBXGroup;
+			children = (
+				B2DE37EA1FD3FE1900FF4F46 /* CreateAboutRepository.swift */,
+			);
+			path = CreateAboutRepository;
 			sourceTree = "<group>";
 		};
 		B2E632251FADB0E0009D837E /* CreateAbout */ = {
@@ -1643,6 +1654,7 @@
 				B24E43881FCAA7C500ADD404 /* BaseNetworking.swift in Sources */,
 				B24E43981FCAAEBD00ADD404 /* Dictionary+Serializer.swift in Sources */,
 				B287AB121FCB2AA900EC3416 /* SignUpEmailViewModel.swift in Sources */,
+				B2DE37EB1FD3FE1900FF4F46 /* CreateAboutRepository.swift in Sources */,
 				B20CA6431F9D075E0018208A /* LogInView.swift in Sources */,
 				B2E632311FADFDBD009D837E /* CreateAboutViewController.swift in Sources */,
 				B2E6322F1FADB442009D837E /* CreationStageHeader.swift in Sources */,

@@ -57,6 +57,7 @@ final class CreateAboutViewController: UIViewController {
         setupView()
         setupNavigation()
         navigationController?.isNavigationBarHidden = true
+        viewModel.fetchData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
