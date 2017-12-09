@@ -46,7 +46,7 @@ final class CreateAboutViewModelImpl: CreateAboutViewModel {
     }
     
     func updateUserPhoto(image: UIImage) {
-        HUD.show(.progress)
+        //HUD.show(.progress)
         self.userPhoto = image
     }
     

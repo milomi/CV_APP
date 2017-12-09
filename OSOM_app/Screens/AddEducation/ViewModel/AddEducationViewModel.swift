@@ -13,5 +13,9 @@ protocol AddEducationViewModel: class {
 
 class AddEducationViewModelImpl: AddEducationViewModel {
     
+    private let user: User
     
+    init() {
+        
+    }
 }

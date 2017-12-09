@@ -16,6 +16,10 @@ def ux_design
     pod 'PKHUD'
 end
 
+def dataBase
+    pod 'RealmSwift'
+end
+
 target 'OSOM_app' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
@@ -23,6 +27,7 @@ target 'OSOM_app' do
   # Pods for OSOM_app
   networking_pods
   ux_design
+  dataBase
 
   target 'OSOM_appTests' do
     inherit! :search_paths

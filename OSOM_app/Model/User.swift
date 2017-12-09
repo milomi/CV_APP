@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 protocol SignUpUserModel {
     var name: String { get set }
@@ -19,9 +20,10 @@ protocol UserPersonalDataModel {
     var personalStatement: String? { get set }
 }
 
-class User: SignUpUserModel {
+class User: Object, SignUpUserModel {
     var name: String = ""
     var surname: String = ""
     var email: String = ""
     var password: String = ""
+    var schoolList: List<School> = List()
 }

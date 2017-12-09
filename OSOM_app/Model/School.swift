@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import RealmSwift
 
-class School {
+class School: Object {
     var id: Int?
     var name: String = ""
     var startingTime: String = ""
