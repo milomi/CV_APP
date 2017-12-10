@@ -7,10 +7,16 @@
 
 import Foundation
 import RealmSwift
+import SwiftyJSON
 
-protocol AddEducationRepository {
+protocol AddEducationRepositoryDelegate: class {
+    
+}
+
+protocol AddEducationRepository: class {
     func getSchools() -> Results<School>
     func addSchool(school: School)
+    func getSchool(with: Int) -> School?
 }
 
 class AddEducationRepositoryImpl: AddEducationRepository {
@@ -33,4 +39,23 @@ class AddEducationRepositoryImpl: AddEducationRepository {
     func addSchool(school: School) {
         networking.setAddEducationData(parameters: serializer.serialize(school: school))
     }
+    
+    func getSchool(with id: Int) -> School? {
+       return schoolDBRepository.getSchool(with: id)
+    }
+}
+
+extension AddEducationRepositoryImpl: AddEducationNetworkingDelegate {
+    func unknownErrorOccured() {
+        
+    }
+    
+    func noInternetConnection() {
+    }
+    
+    func success(_ json: JSON) {
+    
+    }
+    
+
 }

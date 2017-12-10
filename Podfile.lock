@@ -14,6 +14,12 @@ PODS:
   - Realm/Headers (3.0.2)
   - RealmSwift (3.0.2):
     - Realm (= 3.0.2)
+  - RxCocoa (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxRealm (0.7.5):
+    - RealmSwift (~> 3.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.0.0)
   - SnapKit (4.0.0)
   - SwiftValidator (4.0.0)
   - SwiftyBeaver (1.4.3)
@@ -25,7 +31,9 @@ DEPENDENCIES:
   - IQKeyboardManager
   - Lightbox (~> 2.0.0)
   - PKHUD
-  - RealmSwift
+  - RxCocoa
+  - RxRealm
+  - RxSwift
   - SnapKit
   - SwiftValidator (from `https://github.com/milomi/SwiftValidator.git`, commit `96061eca93f5016681679fbb2af84949c1e11d19`)
   - SwiftyBeaver
@@ -52,12 +60,15 @@ SPEC CHECKSUMS:
   PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
   Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
   RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
+  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
+  RxRealm: a6c6c0a07cb61f34209969ca6657734edfdfff30
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
   SwiftyBeaver: e10b1668e0512229c36c34769b97eed3dfae2ca3
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
 
-PODFILE CHECKSUM: 87306ff5e32830586b3979a2faa6a86f757d7a37
+PODFILE CHECKSUM: 20e3245fee2e49b0ff59abab544c36a547cac62c
 
 COCOAPODS: 1.2.0

@@ -16,8 +16,10 @@ def ux_design
     pod 'PKHUD'
 end
 
-def dataBase
-    pod 'RealmSwift'
+def rxSwift
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    pod 'RxRealm'
 end
 
 target 'OSOM_app' do
@@ -27,7 +29,7 @@ target 'OSOM_app' do
   # Pods for OSOM_app
   networking_pods
   ux_design
-  dataBase
+  rxSwift
 
   target 'OSOM_appTests' do
     inherit! :search_paths

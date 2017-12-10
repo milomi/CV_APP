@@ -77,7 +77,10 @@ extension AddEducationViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return cellManager.buildCell(indexPath: indexPath, viewController: self)
+        guard let school = viewModel.getSchool(for: indexPath.row) else {
+            return cellManager.buildCell(indexPath: indexPath, viewController: self, nil)
+        }
+        return cellManager.buildCell(indexPath: indexPath, viewController: self, school)
     }
     
 }

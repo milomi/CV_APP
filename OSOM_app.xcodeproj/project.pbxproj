@@ -48,6 +48,7 @@
 		B22DE7991FDBF7610007838C /* UserDBRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22DE7981FDBF7610007838C /* UserDBRepository.swift */; };
 		B22DE79C1FDBF9150007838C /* AddEducationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22DE79B1FDBF9150007838C /* AddEducationRepository.swift */; };
 		B22DE7A01FDBFBA90007838C /* SchoolDBRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22DE79F1FDBFBA90007838C /* SchoolDBRepository.swift */; };
+		B22DE7A41FDC373A0007838C /* AddEducationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22DE7A31FDC373A0007838C /* AddEducationDetailViewModel.swift */; };
 		B23C0A0F1FD2157600C62426 /* RepeatPasswordRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C0A0E1FD2157600C62426 /* RepeatPasswordRule.swift */; };
 		B23C0A111FD216C000C62426 /* SignUpPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C0A101FD216C000C62426 /* SignUpPasswordViewModel.swift */; };
 		B23C0A131FD223B100C62426 /* CreateAboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C0A121FD223B100C62426 /* CreateAboutViewModel.swift */; };
@@ -202,6 +203,7 @@
 		B22DE7981FDBF7610007838C /* UserDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDBRepository.swift; sourceTree = "<group>"; };
 		B22DE79B1FDBF9150007838C /* AddEducationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationRepository.swift; sourceTree = "<group>"; };
 		B22DE79F1FDBFBA90007838C /* SchoolDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDBRepository.swift; sourceTree = "<group>"; };
+		B22DE7A31FDC373A0007838C /* AddEducationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationDetailViewModel.swift; sourceTree = "<group>"; };
 		B23C0A0E1FD2157600C62426 /* RepeatPasswordRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatPasswordRule.swift; sourceTree = "<group>"; };
 		B23C0A101FD216C000C62426 /* SignUpPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswordViewModel.swift; sourceTree = "<group>"; };
 		B23C0A121FD223B100C62426 /* CreateAboutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAboutViewModel.swift; sourceTree = "<group>"; };
@@ -772,6 +774,7 @@
 		B24B9F1F1FBF609800810ED6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B22DE7A31FDC373A0007838C /* AddEducationDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1659,6 +1662,7 @@
 				B24B9F3B1FBF84DE00810ED6 /* AddWorkplaceDetailViewController.swift in Sources */,
 				B25B81621FD347890041D0A9 /* QRReaderViewController.swift in Sources */,
 				B2E6324D1FAF66C6009D837E /* AddEducationViewController.swift in Sources */,
+				B22DE7A41FDC373A0007838C /* AddEducationDetailViewModel.swift in Sources */,
 				3572CF321F1DEAF9004FC883 /* OSOM_app.xcdatamodeld in Sources */,
 				3572CF641F1DFD7B004FC883 /* ViewControllerContainer.swift in Sources */,
 				B2E6325B1FAF6E1A009D837E /* UITableView+Register.swift in Sources */,

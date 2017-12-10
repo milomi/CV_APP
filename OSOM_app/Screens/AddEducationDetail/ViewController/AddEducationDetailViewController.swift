@@ -8,15 +8,17 @@
 import Foundation
 import UIKit
 
-class AddEducationDetailViewController: UIViewController {
+final class AddEducationDetailViewController: UIViewController {
     
     fileprivate let mainView: AddEducationView
+    fileprivate let viewModel: AddEducationDetailViewModel
     fileprivate let cellManager: AddEducationDetailCellManager
     fileprivate var navigator: NavigationController?
     
-    init(view: AddEducationView, cellManager: AddEducationDetailCellManager) {
+    init(view: AddEducationView, viewModel: AddEducationDetailViewModel, cellManager: AddEducationDetailCellManager) {
         self.mainView = view
         self.cellManager = cellManager
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         setupView()
         setupNavigation()
