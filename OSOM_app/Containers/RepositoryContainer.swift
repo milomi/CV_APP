@@ -29,4 +29,11 @@ class RepositoryContainer {
         let serializer = EducationSerializerImpl()
         return AddEducationRepositoryImpl(schoolDBRepository: dbRepository, networking: networking, serializer: serializer)
     }
+    
+    func getCreateAbout() -> CreateAboutRepository {
+        let networking = PersonalNetworkingImpl()
+        let serializer = PersonalSerializerImpl()
+        let createNetworking = CreateAboutNetworkingImpl()
+        return CreateAboutRepositoryImpl(networking: networking, createNetworking: createNetworking, serializer: serializer)
+    }
 }

@@ -132,6 +132,7 @@ extension CreateAboutViewController: UIImagePickerControllerDelegate, UINavigati
         
         let resizedImage = chosenImage.resize(Constants.maxImageSize)
         mainView.photoButton.setImage(resizedImage, for: .normal)
+        mainView.photoLabel.textField.text = "signUp.about.photoText".localized()
         viewModel.updateUserPhoto(image: resizedImage)
         picker.dismiss(animated: true, completion: nil)
     }
@@ -164,6 +165,7 @@ extension CreateAboutViewController: CreateAboutViewModelDelegate {
     func reloadData() {
         if let photo = viewModel.getUserPhoto() {
             mainView.photoButton.setImage(photo, for: .normal)
+            mainView.photoLabel.textField.text = "signUp.about.photoText".localized()
         }
         mainView.personalStatement.setText(string: viewModel.getPersonalStatment())
     }

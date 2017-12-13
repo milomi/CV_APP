@@ -16,14 +16,16 @@ protocol SignUpUserModel {
 }
 
 protocol UserPersonalDataModel {
-    var profilePhoto: Data? { get set }
+    var profilePhoto: UIImage? { get set }
     var personalStatement: String? { get set }
 }
 
-class User: Object, SignUpUserModel {
+class User: Object, SignUpUserModel, UserPersonalDataModel {
     var name: String = ""
     var surname: String = ""
     var email: String = ""
     var password: String = ""
+    var personalStatement: String?
+    var profilePhoto: UIImage?
     var schoolList: List<School> = List()
 }

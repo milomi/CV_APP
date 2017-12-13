@@ -1,32 +1,31 @@
 //
-//  PersonalNetworking.swift
+//  CreateAboutNetworking.swift
 //  OSOM_app
 //
-//  Created by Miłosz Bugla on 02.12.2017.
+//  Created by Miłosz Bugla on 13.12.2017.
 //
 
 import Foundation
 import SwiftyJSON
 import Alamofire
 
-protocol PersonalNetworking: class {
+protocol CreateAboutNetworking: class {
     
-    weak var delegate: PersonalNetworkingDelegate? { get set }
+    weak var delegate: CreateAboutNetworkingDelegate? { get set }
     
     func postPersonalData(parameters: [String: Any])
-    func getPersonalData()
-
+    
 }
 
-protocol PersonalNetworkingDelegate: class {
+protocol CreateAboutNetworkingDelegate: class {
     func unknownErrorOccured()
     func noInternetConnection()
-    func success(_ json: JSON)
+    func createdSuccess(_ json: JSON)
 }
 
-final class PersonalNetworkingImpl: BaseNetworking {
+final class CreateAboutNetworkingImpl: BaseNetworking {
     
-    weak var delegate: PersonalNetworkingDelegate?
+    weak var delegate: CreateAboutNetworkingDelegate?
     
     override func handleUnknownError() {
         delegate?.unknownErrorOccured()
@@ -42,7 +41,7 @@ final class PersonalNetworkingImpl: BaseNetworking {
     
     override func handleResponseSuccess(json: JSON?) {
         if let json = json {
-            delegate?.success(json)
+            delegate?.createdSuccess(json)
         } else {
             delegate?.unknownErrorOccured()
         }
@@ -50,13 +49,9 @@ final class PersonalNetworkingImpl: BaseNetworking {
     
 }
 
-extension PersonalNetworkingImpl: PersonalNetworking {
+extension CreateAboutNetworkingImpl: CreateAboutNetworking {
     func postPersonalData(parameters: [String : Any]) {
         makeRequest(request: getRequest(.post, parameters))
-    }
-    
-    func getPersonalData() {
-        makeRequest(request: getRequest(.get))
     }
     
     fileprivate func getRequest(_ method: HTTPMethod, _ parameters: [String: Any]? = nil) -> HTTPRequest {

@@ -30,30 +30,23 @@ final class CreateAboutViewModelImpl: CreateAboutViewModel {
     
     weak var delegate: CreateAboutViewModelDelegate?
     
-    fileprivate let networking: PersonalNetworking
-    fileprivate let serializer: PersonalSerializer
+    fileprivate let repository: CreateAboutRepository
     
     private var userPhoto: UIImage?
     private var personalStatment: String?
     
-    private var getQueue = DispatchGroup()
     
-    init(networking: PersonalNetworking, serializer: PersonalSerializer) {
-        self.networking = networking
-        self.serializer = serializer
+    init(repository: CreateAboutRepository) {
+        self.repository = repository
         
-        networking.delegate = self
+        repository.delegate = self
     }
     
     func fetchData() {
-        getQueue.enter()
-        HUD.show(.progress)
-        networking.getPersonalData()
-        notifyWhenFetchingData()
+        repository.getPersonalData()
     }
     
     func updateUserPhoto(image: UIImage) {
-        HUD.show(.progress)
         self.userPhoto = image
     }
     
@@ -72,20 +65,25 @@ final class CreateAboutViewModelImpl: CreateAboutViewModel {
             return
         }
         
-        networking.postPersonalData(parameters: serializer.serialize(userPhoto,personalStatment))
-    }
-    
-    func notifyWhenFetchingData() {
-        
-        getQueue.notify(queue: DispatchQueue.main) {
-            HUD.hide()
-            self.delegate?.reloadData()
-        }
+        repository.createAbout(userPhoto, personalStatment)
     }
 
 }
 
-extension CreateAboutViewModelImpl: PersonalNetworkingDelegate {
+extension CreateAboutViewModelImpl: CreateAboutRepositoryDelegate {
+    
+    func postSuccess() {
+        HUD.flash(.success)
+        delegate?.savedWithSuccess()
+    }
+    
+    
+    func getAboutSuccessed(photo: UIImage, personalStatment: String) {
+        userPhoto = photo
+        self.personalStatment = personalStatment
+        delegate?.reloadData()
+    }
+    
     func unknownErrorOccured() {
         HUD.flash(.error)
         delegate?.saveFailed()
@@ -96,19 +94,9 @@ extension CreateAboutViewModelImpl: PersonalNetworkingDelegate {
         delegate?.saveFailed()
     }
     
-    func success(_ json: JSON) {
-        
-        let data = serializer.unserializeData(json: json)
-        
-        guard let photo = data.0, let statment = data.1 else {
-            HUD.flash(.success)
-            delegate?.savedWithSuccess()
-            return
-        }
-        
-        getQueue.leave()
-        userPhoto = photo
-        personalStatment = statment
+    func errorOccured(_ error: String?) {
+        HUD.flash(.error)
+        delegate?.saveFailed()
     }
     
 }

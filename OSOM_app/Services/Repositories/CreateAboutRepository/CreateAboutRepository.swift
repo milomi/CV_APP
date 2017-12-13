@@ -10,16 +10,18 @@ import SwiftyJSON
 import Foundation
 
 protocol CreateAboutRepositoryDelegate: class {
-    func CreateAboutSuccessed()
+    func getAboutSuccessed(photo: UIImage, personalStatment: String)
     func errorOccured(_ error: String?)
     func noInternetConnection()
     func unknownErrorOccured()
+    func postSuccess()
 }
 
 protocol CreateAboutRepository: class {
     weak var delegate: CreateAboutRepositoryDelegate? { get set }
     
-    func createAbout(createAboutUser: SignUpUserModel)
+    func createAbout(_ photo: UIImage, _ personalStatement: String)
+    func getPersonalData() 
 }
 
 class CreateAboutRepositoryImpl: CreateAboutRepository {
@@ -28,32 +30,42 @@ class CreateAboutRepositoryImpl: CreateAboutRepository {
     
     fileprivate var networking: PersonalNetworking
     fileprivate var serializer: PersonalSerializer
+    fileprivate var createNetworking: CreateAboutNetworking
     
     init(networking: PersonalNetworking,
+         createNetworking: CreateAboutNetworking,
          serializer: PersonalSerializer) {
         self.networking = networking
+        self.createNetworking = createNetworking
         self.serializer = serializer
         setupDelegates()
     }
 
     fileprivate func setupDelegates() {
         networking.delegate = self
+        createNetworking.delegate = self
     }
     
-    func createAbout(createAboutUser: SignUpUserModel) {
-        
+    func createAbout(_ photo: UIImage, _ personalStatement: String) {
+        createNetworking.postPersonalData(parameters: serializer.serialize(photo, personalStatement))
+    }
+    
+    func getPersonalData() {
+        networking.getPersonalData()
     }
     
 }
 
 extension CreateAboutRepositoryImpl: PersonalNetworkingDelegate {
     func success(_ json: JSON) {
+        let data = serializer.unserializeData(json: json)
         
-    }
-    
-    func handleClientCredentialsSuccess(_ json: JSON) {
-        let personalData =  serializer.unserializeData(json: json)
-        delegate?.CreateAboutSuccessed()
+        guard let photo = data.0, let statment = data.1 else {
+            delegate?.unknownErrorOccured()
+            return
+        }
+        
+        delegate?.getAboutSuccessed(photo: photo, personalStatment: statment)
     }
     
     func errorOccured(_ json: JSON) {
@@ -66,8 +78,15 @@ extension CreateAboutRepositoryImpl: PersonalNetworkingDelegate {
     
     func unknownErrorOccured() {
         delegate?.unknownErrorOccured()
-        
     }
+    
+}
+
+extension CreateAboutRepositoryImpl: CreateAboutNetworkingDelegate {
+    func createdSuccess(_ json: JSON) {
+        delegate?.postSuccess()
+    }
+
 }
 
 

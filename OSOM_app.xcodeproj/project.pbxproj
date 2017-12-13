@@ -100,6 +100,7 @@
 		B25B81621FD347890041D0A9 /* QRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B81611FD347890041D0A9 /* QRReaderViewController.swift */; };
 		B25B81641FD34BC40041D0A9 /* QRReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B81631FD34BC40041D0A9 /* QRReaderView.swift */; };
 		B25B81681FD35D190041D0A9 /* QRReaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B81671FD35D190041D0A9 /* QRReaderViewModel.swift */; };
+		B26631DD1FE1D209004D7327 /* CreateAboutNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26631DC1FE1D209004D7327 /* CreateAboutNetworking.swift */; };
 		B278D0F71FC7228100A6D34B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278D0F61FC7228100A6D34B /* User.swift */; };
 		B278D0F91FC7281F00A6D34B /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278D0F81FC7281F00A6D34B /* School.swift */; };
 		B278D0FD1FC72CD500A6D34B /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278D0FC1FC72CD500A6D34B /* Work.swift */; };
@@ -255,6 +256,7 @@
 		B25B81611FD347890041D0A9 /* QRReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderViewController.swift; sourceTree = "<group>"; };
 		B25B81631FD34BC40041D0A9 /* QRReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderView.swift; sourceTree = "<group>"; };
 		B25B81671FD35D190041D0A9 /* QRReaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderViewModel.swift; sourceTree = "<group>"; };
+		B26631DC1FE1D209004D7327 /* CreateAboutNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAboutNetworking.swift; sourceTree = "<group>"; };
 		B278D0F61FC7228100A6D34B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B278D0F81FC7281F00A6D34B /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		B278D0FC1FC72CD500A6D34B /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
@@ -724,6 +726,7 @@
 			isa = PBXGroup;
 			children = (
 				B23C0A161FD2240800C62426 /* PersonalNetworking.swift */,
+				B26631DC1FE1D209004D7327 /* CreateAboutNetworking.swift */,
 			);
 			path = CreateAbout;
 			sourceTree = "<group>";
@@ -1658,6 +1661,7 @@
 				B25B815A1FD339C50041D0A9 /* LoginRepository.swift in Sources */,
 				3577D8081F1F35B6001BCD63 /* ColorSchameHelper.swift in Sources */,
 				B2E6324F1FAF678F009D837E /* AddEducationView.swift in Sources */,
+				B26631DD1FE1D209004D7327 /* CreateAboutNetworking.swift in Sources */,
 				B2F029C91F9C7ECD0006A5A0 /* BaseView.swift in Sources */,
 				B24B9F3B1FBF84DE00810ED6 /* AddWorkplaceDetailViewController.swift in Sources */,
 				B25B81621FD347890041D0A9 /* QRReaderViewController.swift in Sources */,

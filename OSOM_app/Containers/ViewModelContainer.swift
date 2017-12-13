@@ -26,9 +26,8 @@ class ViewModelContainer {
     }
     
     func getCreateAbout() -> CreateAboutViewModel {
-        let networking = PersonalNetworkingImpl()
-        let serializer = PersonalSerializerImpl()
-        return CreateAboutViewModelImpl(networking: networking, serializer: serializer)
+        let repository = RepositoryContainer.shared.getCreateAbout()
+        return CreateAboutViewModelImpl(repository: repository)
     }
     
     func getLogin() -> LoginViewModel {
