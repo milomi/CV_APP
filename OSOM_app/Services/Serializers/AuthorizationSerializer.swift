@@ -11,7 +11,8 @@ import SwiftyJSON
 struct AuthorizationSerializerParameters {
     static let accessToken = "access_token"
     static let refreshToken = "refresh_token"
-    static let email = "username"
+    static let email = "email"
+    static let username = "username"
     static let password = "password"
     static let name = "name"
     static let surname = "surname"
@@ -84,7 +85,7 @@ final class AuthorizationSerializerImpl: AuthorizationSerializer {
         dictionary.serializeItem(HeadersKeys.GrantType.name, value: HeadersKeys.GrantType.password)
         dictionary.serializeItem(HeadersKeys.ClientId.name, value: HeadersKeys.ClientId.value)
         dictionary.serializeItem(HeadersKeys.ClientSecret.name, value: HeadersKeys.ClientSecret.value)
-        dictionary.serializeItem(AuthorizationSerializerParameters.email, value: user.email)
+        dictionary.serializeItem(AuthorizationSerializerParameters.username, value: user.email)
         dictionary.serializeItem(AuthorizationSerializerParameters.password, value: user.password)
         return dictionary
     }
