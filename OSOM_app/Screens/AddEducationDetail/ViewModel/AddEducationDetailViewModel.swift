@@ -31,7 +31,7 @@ final class AddEducationDetailViewModelImpl: AddEducationDetailViewModel {
             repository.addSchool(school: school)
             return school
         }
-        
+        return school
     }
     
 }

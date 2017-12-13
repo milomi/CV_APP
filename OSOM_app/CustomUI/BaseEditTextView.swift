@@ -75,6 +75,15 @@ class BaseEditTextView: UIView {
         textField.delegate = self
     }
     
+    func setText(string: String?) {
+        guard let string = string else {
+            return
+        }
+        placeholderLabel.alpha = 0.0
+        textField.text = string
+
+    }
+    
     func fadeIn(completion: (() -> Void)? = nil) {
         UIView.animate(withDuration: 0.5, animations: {
             self.alpha = 1.0

@@ -161,6 +161,13 @@ extension CreateAboutViewController: ValidationDelegate {
 }
 
 extension CreateAboutViewController: CreateAboutViewModelDelegate {
+    func reloadData() {
+        if let photo = viewModel.getUserPhoto() {
+            mainView.photoButton.setImage(photo, for: .normal)
+        }
+        mainView.personalStatement.setText(string: viewModel.getPersonalStatment())
+    }
+    
     func savedWithSuccess() {
         let vc = ViewControllerContainer.shared.getAddEducation()
         self.navigationController?.pushViewController(vc, animated: false)

@@ -60,7 +60,8 @@ class ViewControllerContainer {
     func getAddEducationDetail() -> AddEducationDetailViewController {
         let view = viewContainer.addEducation()
         let cellManager = AddEducationDetailCellManagerImpl(tableView: view.tableView)
-        return AddEducationDetailViewController(view: view, cellManager: cellManager)
+        let viewModel = viewModelContainer.getAddEductionDetail()
+        return AddEducationDetailViewController(view: view, viewModel: viewModel, cellManager: cellManager)
     }
     
     func getAddWorkplace() -> AddWorkplaceViewController {

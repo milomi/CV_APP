@@ -10,8 +10,8 @@ import SwiftyJSON
 import UIKit
 
 struct PersonalSerializerParameters {
-    static let profilePhoto = "ProfilePhoto"
-    static let personalStatement = "PersonalStatement"
+    static let profilePhoto = "profilePhoto"
+    static let personalStatement = "personalStatement"
 }
 
 protocol PersonalSerializer: class {

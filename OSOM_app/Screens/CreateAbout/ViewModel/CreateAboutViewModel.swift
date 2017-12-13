@@ -13,6 +13,7 @@ import SwiftyJSON
 protocol CreateAboutViewModelDelegate: class {
     func savedWithSuccess()
     func saveFailed()
+    func reloadData()
 }
 
 protocol CreateAboutViewModel: class {
@@ -20,6 +21,8 @@ protocol CreateAboutViewModel: class {
     func saveData(_ personalStatment: String)
     func fetchData()
     func updateUserPhoto(image: UIImage)
+    func getUserPhoto() -> UIImage?
+    func getPersonalStatment() -> String?
 
 }
 
@@ -33,6 +36,8 @@ final class CreateAboutViewModelImpl: CreateAboutViewModel {
     private var userPhoto: UIImage?
     private var personalStatment: String?
     
+    private var getQueue = DispatchGroup()
+    
     init(networking: PersonalNetworking, serializer: PersonalSerializer) {
         self.networking = networking
         self.serializer = serializer
@@ -41,22 +46,41 @@ final class CreateAboutViewModelImpl: CreateAboutViewModel {
     }
     
     func fetchData() {
+        getQueue.enter()
         HUD.show(.progress)
         networking.getPersonalData()
+        notifyWhenFetchingData()
     }
     
     func updateUserPhoto(image: UIImage) {
-        //HUD.show(.progress)
+        HUD.show(.progress)
         self.userPhoto = image
     }
     
+    func getUserPhoto() -> UIImage? {
+        return userPhoto
+    }
+    
+    func getPersonalStatment() -> String? {
+        return personalStatment
+    }
+    
     func saveData(_ personalStatment: String) {
+        HUD.show(.progress)
         guard let userPhoto = userPhoto else {
             delegate?.saveFailed()
             return
         }
         
         networking.postPersonalData(parameters: serializer.serialize(userPhoto,personalStatment))
+    }
+    
+    func notifyWhenFetchingData() {
+        
+        getQueue.notify(queue: DispatchQueue.main) {
+            HUD.hide()
+            self.delegate?.reloadData()
+        }
     }
 
 }
@@ -73,9 +97,18 @@ extension CreateAboutViewModelImpl: PersonalNetworkingDelegate {
     }
     
     func success(_ json: JSON) {
+        
         let data = serializer.unserializeData(json: json)
-        HUD.flash(.success)
-        delegate?.savedWithSuccess()    
+        
+        guard let photo = data.0, let statment = data.1 else {
+            HUD.flash(.success)
+            delegate?.savedWithSuccess()
+            return
+        }
+        
+        getQueue.leave()
+        userPhoto = photo
+        personalStatment = statment
     }
     
 }

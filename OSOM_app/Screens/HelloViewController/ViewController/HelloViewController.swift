@@ -28,7 +28,12 @@ final class HelloViewController: UIViewController {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
+        let when = DispatchTime.now() + 2 // change 2 to desired number of seconds
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            self.navigationController?.popViewController(animated: true)
+        }
+        
     }
     
     fileprivate func setupView() {
