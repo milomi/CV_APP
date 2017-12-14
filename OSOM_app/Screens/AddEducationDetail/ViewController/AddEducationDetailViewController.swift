@@ -53,6 +53,9 @@ extension AddEducationDetailViewController: NavigationControllerDelegate {
     }
     
     func rightAction() {
+        let school = School()
+        
+        viewModel.saveSchool(school: school)
     }
     
     func backAction() {

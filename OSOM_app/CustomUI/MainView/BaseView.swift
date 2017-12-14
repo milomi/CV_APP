@@ -65,8 +65,5 @@ class BaseView: UIView {
             make.trailing.equalTo(-Constants.ContentFrame.Constraints.padding)
         }
     }
-    
-
-    
 
 }
