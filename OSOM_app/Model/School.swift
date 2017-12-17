@@ -13,18 +13,14 @@ protocol AddSchoolObject {
     var startingTime: Date { get set }
     var endingTime: Date { get set }
     var courseTitle: String { get set }
-    var detailedInfo: String? { get set }
+    var detailedInfo: String { get set }
 }
 
 class School: Object, AddSchoolObject {
-    var schoolID: Int?
-    var name: String = ""
-    var startingTime: Date = Date()
-    var endingTime: Date = Date()
-    var courseTitle: String = ""
-    var detailedInfo: String?
-
+    @objc dynamic var schoolID: Int = -1
+    @objc dynamic var name: String = ""
+    @objc dynamic var startingTime: Date = Date()
+    @objc dynamic var endingTime: Date = Date()
+    @objc dynamic var courseTitle: String = ""
+    @objc dynamic var detailedInfo: String = ""
 }
-
-
-

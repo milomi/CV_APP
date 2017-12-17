@@ -53,9 +53,9 @@ extension AddEducationDetailViewController: NavigationControllerDelegate {
     }
     
     func rightAction() {
-        let school = School()
-        
-        viewModel.saveSchool(school: school)
+        if !cellManager.validateAll() {
+            viewModel.saveSchool(school: cellManager.getSchool())
+        }
     }
     
     func backAction() {
@@ -74,7 +74,8 @@ extension AddEducationDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return cellManager.buildCell(indexPath: indexPath, viewController: self)
+        
+        return cellManager.buildCell(indexPath: indexPath, school: viewModel.getSchool())
     }
     
 }

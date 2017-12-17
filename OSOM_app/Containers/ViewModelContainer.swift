@@ -40,9 +40,9 @@ class ViewModelContainer {
         return AddEducationViewModelImpl(repository: repository)
     }
     
-    func getAddEductionDetail() -> AddEducationDetailViewModelImpl {
+    func getAddEductionDetail(_ schoolId: Int?) -> AddEducationDetailViewModelImpl {
         let repository = RepositoryContainer.shared.getAddEducation()
-        return AddEducationDetailViewModelImpl(repository: repository)
+        return AddEducationDetailViewModelImpl(schoolId: schoolId, repository: repository)
     }
     
 }

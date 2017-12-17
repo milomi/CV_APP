@@ -10,7 +10,8 @@ import RealmSwift
 
 protocol SchoolDBRepository: class {
     func getSchools() -> Results<School>
-    func getSchool(with id: Int) -> School? 
+    func getSchool(with id: Int) -> School?
+    func addSchools(schools: [School]) 
 }
 
 final class SchoolDBRepositoryImpl: RealmRepositoryImpl<School>, SchoolDBRepository {
@@ -20,8 +21,17 @@ final class SchoolDBRepositoryImpl: RealmRepositoryImpl<School>, SchoolDBReposit
     }
     
     func getSchool(with id: Int) -> School? {
-        let predicate = "id = \(id)"
+        let predicate = "schoolID = \(id)"
         return getObjects(withPredicate: predicate).first
     }
+    
+    func addSchools(schools: [School]) {
+        let results = getSchools()
+        remove(list: results)
+        schools.forEach { (school) in
+            addObject(object: school)
+        }
+    }
+
     
 }

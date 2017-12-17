@@ -22,6 +22,7 @@ class AddEducationViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         setupView()
         setupNavigation()
+        viewModel.delegate = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -37,6 +38,7 @@ class AddEducationViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         mainView.tableView.alpha = 0.0
+        viewModel.fetchSchools()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -94,10 +96,18 @@ extension AddEducationViewController: UITableViewDelegate {
 extension AddEducationViewController: AddEducationCellDelegate {
     func onButton(_ sender: UIButton) {
         animateCellsFadeOut(tableView: mainView.tableView) {
-            let vc = ViewControllerContainer.shared.getAddEducationDetail()
+            let school = self.viewModel.getSchool(for: sender.tag)
+            let vc = ViewControllerContainer.shared.getAddEducationDetail(schoolId: school?.schoolID)
             self.navigationController?.pushViewController(vc, animated: false)
             print(sender.tag)
         }
 
     }
+}
+
+extension AddEducationViewController: AddEducationViewModelDelegate {
+    func reloadData() {
+        mainView.tableView.reloadData()
+    }
+    
 }

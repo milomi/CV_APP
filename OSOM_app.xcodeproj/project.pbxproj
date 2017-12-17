@@ -44,6 +44,7 @@
 		B20CA63B1F9CC1FA0018208A /* SignUpPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CA63A1F9CC1FA0018208A /* SignUpPasswordView.swift */; };
 		B20CA6411F9D073C0018208A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CA6401F9D073C0018208A /* LogInViewController.swift */; };
 		B20CA6431F9D075E0018208A /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CA6421F9D075E0018208A /* LogInView.swift */; };
+		B20F12691FE67AC200F82F0F /* DateFormaterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F12681FE67AC200F82F0F /* DateFormaterHelper.swift */; };
 		B22DE7961FDBEBD10007838C /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22DE7951FDBEBD10007838C /* RealmRepository.swift */; };
 		B22DE7991FDBF7610007838C /* UserDBRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22DE7981FDBF7610007838C /* UserDBRepository.swift */; };
 		B22DE79C1FDBF9150007838C /* AddEducationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22DE79B1FDBF9150007838C /* AddEducationRepository.swift */; };
@@ -101,6 +102,7 @@
 		B25B81641FD34BC40041D0A9 /* QRReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B81631FD34BC40041D0A9 /* QRReaderView.swift */; };
 		B25B81681FD35D190041D0A9 /* QRReaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B81671FD35D190041D0A9 /* QRReaderViewModel.swift */; };
 		B26631DD1FE1D209004D7327 /* CreateAboutNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26631DC1FE1D209004D7327 /* CreateAboutNetworking.swift */; };
+		B26D843D1FE5AA2000BEF3C7 /* SchoolsNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D843C1FE5AA2000BEF3C7 /* SchoolsNetworking.swift */; };
 		B278D0F71FC7228100A6D34B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278D0F61FC7228100A6D34B /* User.swift */; };
 		B278D0F91FC7281F00A6D34B /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278D0F81FC7281F00A6D34B /* School.swift */; };
 		B278D0FD1FC72CD500A6D34B /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278D0FC1FC72CD500A6D34B /* Work.swift */; };
@@ -200,6 +202,7 @@
 		B20CA63A1F9CC1FA0018208A /* SignUpPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswordView.swift; sourceTree = "<group>"; };
 		B20CA6401F9D073C0018208A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		B20CA6421F9D075E0018208A /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		B20F12681FE67AC200F82F0F /* DateFormaterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormaterHelper.swift; sourceTree = "<group>"; };
 		B22DE7951FDBEBD10007838C /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
 		B22DE7981FDBF7610007838C /* UserDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDBRepository.swift; sourceTree = "<group>"; };
 		B22DE79B1FDBF9150007838C /* AddEducationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationRepository.swift; sourceTree = "<group>"; };
@@ -257,6 +260,7 @@
 		B25B81631FD34BC40041D0A9 /* QRReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderView.swift; sourceTree = "<group>"; };
 		B25B81671FD35D190041D0A9 /* QRReaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderViewModel.swift; sourceTree = "<group>"; };
 		B26631DC1FE1D209004D7327 /* CreateAboutNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAboutNetworking.swift; sourceTree = "<group>"; };
+		B26D843C1FE5AA2000BEF3C7 /* SchoolsNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsNetworking.swift; sourceTree = "<group>"; };
 		B278D0F61FC7228100A6D34B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B278D0F81FC7281F00A6D34B /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		B278D0FC1FC72CD500A6D34B /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
@@ -482,6 +486,7 @@
 				B24E43971FCAAEBD00ADD404 /* Dictionary+Serializer.swift */,
 				B23C0A1A1FD2261600C62426 /* UIImage+Base64.swift */,
 				B25B815B1FD3404F0041D0A9 /* UIViewController+ChengeRoot.swift */,
+				B20F12681FE67AC200F82F0F /* DateFormaterHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -735,6 +740,7 @@
 			isa = PBXGroup;
 			children = (
 				B23C0A1D1FD235EB00C62426 /* AddEducationNetworking.swift */,
+				B26D843C1FE5AA2000BEF3C7 /* SchoolsNetworking.swift */,
 			);
 			path = AddEducation;
 			sourceTree = "<group>";
@@ -1670,6 +1676,7 @@
 				3572CF321F1DEAF9004FC883 /* OSOM_app.xcdatamodeld in Sources */,
 				3572CF641F1DFD7B004FC883 /* ViewControllerContainer.swift in Sources */,
 				B2E6325B1FAF6E1A009D837E /* UITableView+Register.swift in Sources */,
+				B20F12691FE67AC200F82F0F /* DateFormaterHelper.swift in Sources */,
 				B287AB1C1FCB2F3800EC3416 /* SignUpNetworking.swift in Sources */,
 				B22DE79C1FDBF9150007838C /* AddEducationRepository.swift in Sources */,
 				B287AB1E1FCB2F6C00EC3416 /* EmailValidationSerializer.swift in Sources */,
@@ -1734,6 +1741,7 @@
 				B23C0A171FD2240800C62426 /* PersonalNetworking.swift in Sources */,
 				B24B9F491FC0719100810ED6 /* AddSkillsViewController.swift in Sources */,
 				B2E6322D1FADB1B8009D837E /* BaseCreateView.swift in Sources */,
+				B26D843D1FE5AA2000BEF3C7 /* SchoolsNetworking.swift in Sources */,
 				35EB195E1F1E3DAD00DD3AA5 /* Int+ConstraintMaker.swift in Sources */,
 				B22DE7991FDBF7610007838C /* UserDBRepository.swift in Sources */,
 				B2024F6E1F9220EA0083B813 /* WelcomeScreenViewController.swift in Sources */,

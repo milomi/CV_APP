@@ -8,10 +8,10 @@
 import Foundation
 
 class Work {
-    var id: Int?
-    var name: String = ""
-    var startingTime: String = ""
-    var endingTime: String = ""
-    var jobTitle: String?
-    var detailedInfo: String?
+    @objc dynamic var id: Int = -1
+    @objc dynamic var name: String = ""
+    @objc dynamic var startingTime: String = ""
+    @objc dynamic var endingTime: String = ""
+    @objc dynamic var jobTitle: String?
+    @objc dynamic var detailedInfo: String?
 }

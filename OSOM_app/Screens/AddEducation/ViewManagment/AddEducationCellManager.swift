@@ -8,6 +8,12 @@
 import Foundation
 import UIKit
 
+fileprivate struct Constants {
+    struct LocalizedString {
+        
+    }
+}
+
 protocol AddEducationCellManagerDelegate: class {
     
 }

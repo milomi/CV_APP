@@ -26,8 +26,9 @@ class RepositoryContainer {
     func getAddEducation() -> AddEducationRepository {
         let dbRepository = SchoolDBRepositoryImpl()
         let networking = AddEducationNetworkingImpl()
+        let schoolNetworking = SchoolsNetworkingImpl()
         let serializer = EducationSerializerImpl()
-        return AddEducationRepositoryImpl(schoolDBRepository: dbRepository, networking: networking, serializer: serializer)
+        return AddEducationRepositoryImpl(schoolDBRepository: dbRepository, networking: networking, schoolsNetworking: schoolNetworking, serializer: serializer)
     }
     
     func getCreateAbout() -> CreateAboutRepository {

@@ -61,6 +61,7 @@ final class CreateAboutViewModelImpl: CreateAboutViewModel {
     func saveData(_ personalStatment: String) {
         HUD.show(.progress)
         guard let userPhoto = userPhoto else {
+            HUD.flash(.labeledError(title: "error", subtitle: "No photo"))
             delegate?.saveFailed()
             return
         }

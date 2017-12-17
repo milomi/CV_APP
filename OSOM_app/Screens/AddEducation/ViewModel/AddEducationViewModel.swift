@@ -17,6 +17,7 @@ protocol AddEducationViewModel: class {
 
     func getSchools() -> Results<School>
     func getSchool(for index: Int) -> School?
+    func fetchSchools() 
 }
 
 class AddEducationViewModelImpl: AddEducationViewModel {
@@ -54,6 +55,11 @@ class AddEducationViewModelImpl: AddEducationViewModel {
         notificationToken = schools.observe { (changes: RealmCollectionChange) in
             self.delegate?.reloadData()
         }
+    
+    }
+    
+    func fetchSchools() {
+        repository.fetchSchools()
     }
     
 }

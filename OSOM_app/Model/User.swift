@@ -21,11 +21,10 @@ protocol UserPersonalDataModel {
 }
 
 class User: Object, SignUpUserModel, UserPersonalDataModel {
-    var name: String = ""
-    var surname: String = ""
-    var email: String = ""
-    var password: String = ""
-    var personalStatement: String?
+    @objc dynamic var name: String = ""
+    @objc dynamic var surname: String = ""
+    @objc dynamic var email: String = ""
+    @objc dynamic var password: String = ""
+    @objc dynamic var personalStatement: String?
     var profilePhoto: UIImage?
-    var schoolList: List<School> = List()
 }
