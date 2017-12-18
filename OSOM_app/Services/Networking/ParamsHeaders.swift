@@ -22,7 +22,9 @@ struct Endpoints {
     static let section = "api/data/section"
     static let skill = "api/data/skill"
     static let work = "api/data/work"
+    static let works = "api/data/works"
     static let schools = "api/data/schools"
+    
 }
 
 struct SuccessCodes {

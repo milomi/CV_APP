@@ -45,6 +45,12 @@
 		B20CA6411F9D073C0018208A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CA6401F9D073C0018208A /* LogInViewController.swift */; };
 		B20CA6431F9D075E0018208A /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CA6421F9D075E0018208A /* LogInView.swift */; };
 		B20F12691FE67AC200F82F0F /* DateFormaterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F12681FE67AC200F82F0F /* DateFormaterHelper.swift */; };
+		B2202C3A1FE6F780007DF39E /* AddWorksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2202C391FE6F780007DF39E /* AddWorksRepository.swift */; };
+		B2202C3D1FE6F7B1007DF39E /* WorksNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2202C3C1FE6F7B1007DF39E /* WorksNetworking.swift */; };
+		B2202C3F1FE6F814007DF39E /* AddWorkNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2202C3E1FE6F814007DF39E /* AddWorkNetworking.swift */; };
+		B2202C421FE6F958007DF39E /* WorkDBRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2202C411FE6F958007DF39E /* WorkDBRepository.swift */; };
+		B2202C441FE6F9BC007DF39E /* WorkSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2202C431FE6F9BC007DF39E /* WorkSerializer.swift */; };
+		B2202C471FE7AD0B007DF39E /* AddWorkDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2202C461FE7AD0B007DF39E /* AddWorkDetailViewModel.swift */; };
 		B22DE7961FDBEBD10007838C /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22DE7951FDBEBD10007838C /* RealmRepository.swift */; };
 		B22DE7991FDBF7610007838C /* UserDBRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22DE7981FDBF7610007838C /* UserDBRepository.swift */; };
 		B22DE79C1FDBF9150007838C /* AddEducationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22DE79B1FDBF9150007838C /* AddEducationRepository.swift */; };
@@ -203,6 +209,12 @@
 		B20CA6401F9D073C0018208A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		B20CA6421F9D075E0018208A /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		B20F12681FE67AC200F82F0F /* DateFormaterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormaterHelper.swift; sourceTree = "<group>"; };
+		B2202C391FE6F780007DF39E /* AddWorksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorksRepository.swift; sourceTree = "<group>"; };
+		B2202C3C1FE6F7B1007DF39E /* WorksNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksNetworking.swift; sourceTree = "<group>"; };
+		B2202C3E1FE6F814007DF39E /* AddWorkNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkNetworking.swift; sourceTree = "<group>"; };
+		B2202C411FE6F958007DF39E /* WorkDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDBRepository.swift; sourceTree = "<group>"; };
+		B2202C431FE6F9BC007DF39E /* WorkSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSerializer.swift; sourceTree = "<group>"; };
+		B2202C461FE7AD0B007DF39E /* AddWorkDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkDetailViewModel.swift; sourceTree = "<group>"; };
 		B22DE7951FDBEBD10007838C /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
 		B22DE7981FDBF7610007838C /* UserDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDBRepository.swift; sourceTree = "<group>"; };
 		B22DE79B1FDBF9150007838C /* AddEducationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEducationRepository.swift; sourceTree = "<group>"; };
@@ -685,9 +697,43 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		B2202C381FE6F72F007DF39E /* AddWorksRepository */ = {
+			isa = PBXGroup;
+			children = (
+				B2202C391FE6F780007DF39E /* AddWorksRepository.swift */,
+			);
+			path = AddWorksRepository;
+			sourceTree = "<group>";
+		};
+		B2202C3B1FE6F79A007DF39E /* Works */ = {
+			isa = PBXGroup;
+			children = (
+				B2202C3C1FE6F7B1007DF39E /* WorksNetworking.swift */,
+				B2202C3E1FE6F814007DF39E /* AddWorkNetworking.swift */,
+			);
+			path = Works;
+			sourceTree = "<group>";
+		};
+		B2202C401FE6F93B007DF39E /* WorksRepository */ = {
+			isa = PBXGroup;
+			children = (
+				B2202C411FE6F958007DF39E /* WorkDBRepository.swift */,
+			);
+			path = WorksRepository;
+			sourceTree = "<group>";
+		};
+		B2202C451FE7ACF4007DF39E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B2202C461FE7AD0B007DF39E /* AddWorkDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		B22DE7941FDBEB960007838C /* DBRepository */ = {
 			isa = PBXGroup;
 			children = (
+				B2202C401FE6F93B007DF39E /* WorksRepository */,
 				B22DE79E1FDBFB960007838C /* SchoolsRepository */,
 				B22DE7971FDBF74A0007838C /* UserRepository */,
 				B22DE7951FDBEBD10007838C /* RealmRepository.swift */,
@@ -843,6 +889,7 @@
 		B24B9F351FBF847600810ED6 /* AddWorkplaceDetail */ = {
 			isa = PBXGroup;
 			children = (
+				B2202C451FE7ACF4007DF39E /* ViewModel */,
 				B24B9F391FBF84CA00810ED6 /* ViewController */,
 				B24B9F361FBF848A00810ED6 /* ViewManagment */,
 			);
@@ -1041,6 +1088,7 @@
 		B24E43841FCAA77B00ADD404 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				B2202C3B1FE6F79A007DF39E /* Works */,
 				B23C0A231FD2387B00C62426 /* Skills */,
 				B23C0A1C1FD235CE00C62426 /* AddEducation */,
 				B23C0A151FD223F000C62426 /* CreateAbout */,
@@ -1063,6 +1111,7 @@
 				B23C0A181FD2249200C62426 /* PersonalSerializer.swift */,
 				B23C0A1F1FD236A200C62426 /* EducationSerializer.swift */,
 				B23C0A211FD2378300C62426 /* SkillsSerializer.swift */,
+				B2202C431FE6F9BC007DF39E /* WorkSerializer.swift */,
 			);
 			path = Serializers;
 			sourceTree = "<group>";
@@ -1140,6 +1189,7 @@
 		B287AB161FCB2E7500EC3416 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				B2202C381FE6F72F007DF39E /* AddWorksRepository */,
 				B22DE79A1FDBF8E40007838C /* AddEducationRepository */,
 				B2DE37E91FD3FE0200FF4F46 /* CreateAboutRepository */,
 				B25B81581FD339B30041D0A9 /* LoginRepository */,
@@ -1687,6 +1737,7 @@
 				B24B9F221FBF60F800810ED6 /* AddEducationDetailViewController.swift in Sources */,
 				B2C48FED1F9367F600DFECA4 /* UIColor+extension.swift in Sources */,
 				B24B9F3D1FBF876A00810ED6 /* UIViewController+Animate.swift in Sources */,
+				B2202C3A1FE6F780007DF39E /* AddWorksRepository.swift in Sources */,
 				B24B9F4D1FC0720900810ED6 /* AddSkillsCellManager.swift in Sources */,
 				B25B81641FD34BC40041D0A9 /* QRReaderView.swift in Sources */,
 				B24B9F5E1FC0771E00810ED6 /* AddContactsDetailViewController.swift in Sources */,
@@ -1701,6 +1752,8 @@
 				B24B9F551FC073F900810ED6 /* AddSkillsDetailViewController.swift in Sources */,
 				B24B9F6C1FC0C49800810ED6 /* AddSkillsCellView.swift in Sources */,
 				35EB194F1F1E34C100DD3AA5 /* String+Localized.swift in Sources */,
+				B2202C3D1FE6F7B1007DF39E /* WorksNetworking.swift in Sources */,
+				B2202C471FE7AD0B007DF39E /* AddWorkDetailViewModel.swift in Sources */,
 				3577D8061F1F3565001BCD63 /* UIView+Shadow.swift in Sources */,
 				3572CF681F1DFD93004FC883 /* ViewContainer.swift in Sources */,
 				B278D0FD1FC72CD500A6D34B /* Work.swift in Sources */,
@@ -1743,6 +1796,7 @@
 				B2E6322D1FADB1B8009D837E /* BaseCreateView.swift in Sources */,
 				B26D843D1FE5AA2000BEF3C7 /* SchoolsNetworking.swift in Sources */,
 				35EB195E1F1E3DAD00DD3AA5 /* Int+ConstraintMaker.swift in Sources */,
+				B2202C421FE6F958007DF39E /* WorkDBRepository.swift in Sources */,
 				B22DE7991FDBF7610007838C /* UserDBRepository.swift in Sources */,
 				B2024F6E1F9220EA0083B813 /* WelcomeScreenViewController.swift in Sources */,
 				B24B9F6E1FC0C87000810ED6 /* AddSkillsCell.swift in Sources */,
@@ -1763,6 +1817,7 @@
 				B23C0A251FD2388800C62426 /* SkillsNetworking.swift in Sources */,
 				35EB19591F1E3D3E00DD3AA5 /* TitleCell.swift in Sources */,
 				B24E439A1FCAB73B00ADD404 /* AuthorizationNetworking.swift in Sources */,
+				B2202C3F1FE6F814007DF39E /* AddWorkNetworking.swift in Sources */,
 				3572CF6C1F1DFDC2004FC883 /* NetworkingContainer.swift in Sources */,
 				B24B9F631FC0778500810ED6 /* AddContactsCellManager.swift in Sources */,
 				B24B9F3F1FC06DD400810ED6 /* AddEducationViewModel.swift in Sources */,
@@ -1777,6 +1832,7 @@
 				B20CA6301F9CBFF50018208A /* SignUpEmailView.swift in Sources */,
 				B22DE7961FDBEBD10007838C /* RealmRepository.swift in Sources */,
 				B25B81571FD339220041D0A9 /* LoginViewModel.swift in Sources */,
+				B2202C441FE6F9BC007DF39E /* WorkSerializer.swift in Sources */,
 				35EB19601F1E3DE200DD3AA5 /* Fonts.swift in Sources */,
 				B278D0F91FC7281F00A6D34B /* School.swift in Sources */,
 				35EB19491F1E2BBE00DD3AA5 /* WelcomeScreenViewModel.swift in Sources */,

@@ -33,5 +33,4 @@ final class SchoolDBRepositoryImpl: RealmRepositoryImpl<School>, SchoolDBReposit
         }
     }
 
-    
 }

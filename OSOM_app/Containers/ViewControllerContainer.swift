@@ -67,19 +67,22 @@ class ViewControllerContainer {
     func getAddWorkplace() -> AddWorkplaceViewController {
         let view = viewContainer.addWorkplace()
         let cellManager = AddWorkplaceCellManagerImpl(tableView: view.tableView)
-        return AddWorkplaceViewController(view: view, cellManager: cellManager, viewModel: AddWorkplaceViewModelImpl())
+        let repository = RepositoryContainer.shared.getAddWork()
+        return AddWorkplaceViewController(view: view, cellManager: cellManager, viewModel: AddWorkplaceViewModelImpl(repository: repository))
     }
     
-    func getAddWorkplaceDetail() -> AddWorkplaceDetailViewController {
+    func getAddWorkplaceDetail(workId: Int? = nil) -> AddWorkplaceDetailViewController {
         let view = viewContainer.addWorkplace()
         let cellManager = AddWorkplaceDetailCellManagerImpl(tableView: view.tableView)
-        return AddWorkplaceDetailViewController(view: view, cellManager: cellManager)
+        let viewModel = viewModelContainer.getAddWorkDetail(workId)
+        return AddWorkplaceDetailViewController(view: view, viewModel: viewModel, cellManager: cellManager)
     }
     
     func getAddSkills() -> AddSkillsViewController {
         let view = viewContainer.addSkills()
         let cellManager = AddSkillsCellManagerImpl(tableView: view.tableView)
-        return AddSkillsViewController(view: view, cellManager: cellManager, viewModel: AddSkillsViewModelImpl())
+        let viewModel = AddSkillsViewModelImpl()
+        return AddSkillsViewController(view: view, cellManager: cellManager, viewModel: viewModel )
     }
     
     func getAddSkillsDetail() -> AddSkillsDetailViewController {

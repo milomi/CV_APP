@@ -35,7 +35,6 @@ final class CreateAboutViewModelImpl: CreateAboutViewModel {
     private var userPhoto: UIImage?
     private var personalStatment: String?
     
-    
     init(repository: CreateAboutRepository) {
         self.repository = repository
         

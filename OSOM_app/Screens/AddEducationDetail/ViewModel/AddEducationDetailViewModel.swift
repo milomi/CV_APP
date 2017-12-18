@@ -33,9 +33,11 @@ final class AddEducationDetailViewModelImpl: AddEducationDetailViewModel {
     init(schoolId: Int?, repository: AddEducationRepository) {
         self.repository = repository
         self.schoolId = schoolId ?? -1
+        repository.delegate = self 
     }
     
     func saveSchool(school: School) {
+        HUD.show(.progress)
         if schoolId == -1 {
             repository.addSchool(school: school)
         } else {
@@ -55,15 +57,17 @@ final class AddEducationDetailViewModelImpl: AddEducationDetailViewModel {
 }
 
 extension AddEducationDetailViewModelImpl: AddEducationRepositoryDelegate {
-    func schoolsDataDownloaded() {}
+    func schoolUpdated() {
+        HUD.flash(.success)
+        delegate?.dataSaved()
+    }
     
     func noInternetConnection() {
-        
+        HUD.flash(.error)
     }
     
     func unknownErrorOccured() {
-        
+        HUD.flash(.error)
     }
-    
     
 }

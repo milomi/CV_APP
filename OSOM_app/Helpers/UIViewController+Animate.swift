@@ -15,7 +15,7 @@ extension UIViewController {
         tableView.alpha = 1.0
         tableView.reloadData()
         let cells = tableView.visibleCells
-        tableView.isScrollEnabled = false
+        //tableView.isScrollEnabled = false
         
         transformCells(cells, tableHeight: tableHeight)
         
@@ -24,7 +24,9 @@ extension UIViewController {
             if let afterAnimations = afterAnimations {
                 afterAnimations()
             }
-            tableView.isScrollEnabled = true
+            
+           // tableView.isScrollEnabled = true
+            
         })
         
     }

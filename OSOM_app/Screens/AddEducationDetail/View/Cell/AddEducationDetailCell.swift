@@ -15,7 +15,6 @@ fileprivate extension Selector {
 
 class AddEducationDetailCell: UITableViewCell {
     let mainView = DetailCellView()
-    var type: AddEducationDetailCellType?
     
     var picker: UIDatePicker?
 

@@ -39,7 +39,7 @@ protocol AddEducationDetailCellManager: class {
     
     weak var delegate: AddEducationDetailCellManagerDelegate? { get set }
 
-    func validateAll() -> Bool
+    func isValidate() -> Bool
     func buildCell(indexPath: IndexPath, school: School?) -> UITableViewCell
     func getSchool() -> School 
 }
@@ -83,7 +83,6 @@ final class AddEducationDetailCellManagerImpl: AddEducationDetailCellManager {
             return UITableViewCell()
         }
         cell.setupDatePicker()
-        cell.type = type
         if let date = date {
             cell.mainView.label.textField.text = DateFormatterHelper.getFormatedDateString(date)
         }
@@ -98,7 +97,6 @@ final class AddEducationDetailCellManagerImpl: AddEducationDetailCellManager {
             return UITableViewCell()
         }
         
-        cell.type = type
         cell.mainView.label.textField.text = text ?? ""
         cell.mainView.label.headerLabel.text = header.localized()
         cell.mainView.label.setAttributedPlaceholder(string: placeholder.localized())
@@ -106,7 +104,7 @@ final class AddEducationDetailCellManagerImpl: AddEducationDetailCellManager {
         return cell
     }
     
-    func validateAll() -> Bool {
+    func isValidate() -> Bool {
         
         var isError = false
         
@@ -116,7 +114,7 @@ final class AddEducationDetailCellManagerImpl: AddEducationDetailCellManager {
                 isError = !cell.validator.errors.isEmpty
             }
         }
-        return isError
+        return !isError
     }
     
     func getSchool() -> School {

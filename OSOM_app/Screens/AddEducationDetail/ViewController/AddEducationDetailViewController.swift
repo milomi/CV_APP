@@ -41,6 +41,7 @@ final class AddEducationDetailViewController: UIViewController {
         mainView.tableView.contentInset = UIEdgeInsetsMake(15.0, 0, 0, 0)
         mainView.setupView()
         setupDataSource()
+        viewModel.delegate = self
     }
 }
 
@@ -53,7 +54,7 @@ extension AddEducationDetailViewController: NavigationControllerDelegate {
     }
     
     func rightAction() {
-        if !cellManager.validateAll() {
+        if cellManager.isValidate() {
             viewModel.saveSchool(school: cellManager.getSchool())
         }
     }
@@ -81,6 +82,15 @@ extension AddEducationDetailViewController: UITableViewDataSource {
 }
 
 extension AddEducationDetailViewController: UITableViewDelegate {
+    
+}
+
+extension AddEducationDetailViewController: AddEducationDetailViewModelDelegate {
+    func dataSaved() {
+        self.navigationController?.popViewController(animated: false)
+    }
+    
+    func errorOccured() {}
     
 }
 

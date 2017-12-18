@@ -10,9 +10,15 @@ import RealmSwift
 import SwiftyJSON
 
 protocol AddEducationRepositoryDelegate: class {
+    func schoolUpdated()
     func schoolsDataDownloaded()
     func noInternetConnection()
     func unknownErrorOccured()
+}
+
+extension AddEducationRepositoryDelegate {
+    func schoolUpdated() {}
+    func schoolsDataDownloaded() {}
 }
 
 protocol AddEducationRepository: class {
@@ -42,6 +48,7 @@ class AddEducationRepositoryImpl: AddEducationRepository {
         self.schoolsNetworking = schoolsNetworking
         self.serializer = serializer
         schoolsNetworking.delegate = self
+        networking.delegate = self
     }
     
     func getSchools() -> Results<School> {
@@ -75,7 +82,7 @@ extension AddEducationRepositoryImpl: AddEducationNetworkingDelegate {
     }
     
     func success(_ json: JSON) {
-        delegate?.schoolsDataDownloaded()
+        delegate?.schoolUpdated()
     }
     
 

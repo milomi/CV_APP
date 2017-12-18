@@ -16,7 +16,6 @@ class RepositoryContainer {
         return SignUpRepositoryImpl(emailValidationNetworking: EmailValidationNetworkingImpl(), emailValidationSerializer: EmailValidationSerializerImpl(), signUpNetworking: SignUpNetworkingImpl(), authorizationSerializer: AuthorizationSerializerImpl())
     }
     
-
     func getLogin() -> LoginRepository {
         let networking = AuthorizationNetworkingImpl()
         let serializer = AuthorizationSerializerImpl()
@@ -36,5 +35,17 @@ class RepositoryContainer {
         let serializer = PersonalSerializerImpl()
         let createNetworking = CreateAboutNetworkingImpl()
         return CreateAboutRepositoryImpl(networking: networking, createNetworking: createNetworking, serializer: serializer)
+    }
+    
+    func getAddWork() -> AddWorkRepository {
+        let addNetworking = AddWorkNetworkingImpl()
+        let serializer = WorkSerializerImpl()
+        let dbRepository = WorkDBRepositoryImpl()
+        let networking = WorksNetworkingImpl()
+        
+        return AddWorkRepositoryImpl(workDBRepository: dbRepository,
+                                     networking: addNetworking,
+                                     worksNetworking: networking,
+                                     serializer: serializer)
     }
 }
