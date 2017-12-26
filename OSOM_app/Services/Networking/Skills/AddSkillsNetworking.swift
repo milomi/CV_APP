@@ -1,30 +1,30 @@
 //
-//  SkillsNetworking.swift
+//  AddSkillsNetworking.swift
 //  OSOM_app
 //
-//  Created by Miłosz Bugla on 02.12.2017.
+//  Created by Miłosz Bugla on 24.12.2017.
 //
 
 import Foundation
 import SwiftyJSON
 import Alamofire
 
-protocol SkillsNetworking: class {
+protocol AddSkillsNetworking: class {
     
-    weak var delegate: SkillsNetworkingDelegate? { get set }
+    weak var delegate: AddSkillsNetworkingDelegate? { get set }
     
-    func setSkillsData(parameters: [String: Any])
+    func setAddSkillsData(parameters: [String: Any])
 }
 
-protocol SkillsNetworkingDelegate: class {
+protocol AddSkillsNetworkingDelegate: class {
     func unknownErrorOccured()
     func noInternetConnection()
-    func success(_ json: JSON)
+    func successUploaded(_ json: JSON)
 }
 
-final class SkillsNetworkingImpl: BaseNetworking {
+final class AddSkillsNetworkingImpl: BaseNetworking {
     
-    weak var delegate: SkillsNetworkingDelegate?
+    weak var delegate: AddSkillsNetworkingDelegate?
     
     override func handleUnknownError() {
         delegate?.unknownErrorOccured()
@@ -40,7 +40,7 @@ final class SkillsNetworkingImpl: BaseNetworking {
     
     override func handleResponseSuccess(json: JSON?) {
         if let json = json {
-            delegate?.success(json)
+            delegate?.successUploaded(json)
         } else {
             delegate?.unknownErrorOccured()
         }
@@ -48,8 +48,8 @@ final class SkillsNetworkingImpl: BaseNetworking {
     
 }
 
-extension SkillsNetworkingImpl: SkillsNetworking {
-    func setSkillsData(parameters: [String : Any]) {
+extension AddSkillsNetworkingImpl: AddSkillsNetworking {
+    func setAddSkillsData(parameters: [String : Any]) {
         makeRequest(request: getRequest(parameters))
     }
     

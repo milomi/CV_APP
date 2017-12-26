@@ -48,4 +48,22 @@ class RepositoryContainer {
                                      worksNetworking: networking,
                                      serializer: serializer)
     }
+    
+    func getSkillsSection() -> AddSkillSectionRepository {
+        let skillsSectionDB = SkillsSectionDBRepositoryImpl()
+        let skillsSectionNetworking = AddSkillsSectionNetworkingImpl()
+        let sectionsNetworking = SkillsSectionsNetworkingImpl()
+        let skillsSerializer = SkillsSerializerImpl()
+        
+        return AddSkillSectionRepositoryImpl(sectionsDBRepository: skillsSectionDB, networking: skillsSectionNetworking, sectionsNetworking: sectionsNetworking, serializer: skillsSerializer)
+    }
+    
+    func getSkillDetailRepository() -> AddSkillsDetailRepository {
+        let skillsDBRepository = SkillsDBRepositoryImpl()
+        let networking = SkillsNetworkingImpl()
+        let addSkillsNetworking = AddSkillsNetworkingImpl()
+        let skillsSerializer = SkillsSerializerImpl()
+        
+        return AddSkillsDetailRepositoryImpl(skillsSectionDBRepository: skillsDBRepository, networking: networking, addSkillsNetworking: addSkillsNetworking, serializer: skillsSerializer)
+    }
 }

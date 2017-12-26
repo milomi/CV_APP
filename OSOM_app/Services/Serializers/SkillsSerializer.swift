@@ -10,37 +10,67 @@ import SwiftyJSON
 import UIKit
 
 struct SkillsSerializerParameters {
-    static let id = "Id"
-    static let name = "Name"
-    static let skills = "Skills"
-    static let experienceValue = "ExperienceValue"
-    static let sectionId = "SectionId"
+    static let id = "id"
+    static let name = "name"
+    static let skills = "skills"
+    static let experienceValue = "experienceValue"
+    static let sectionId = "sectionId"
+    static let skillsSections = "skillsSections"
+    static let skillSectionId = "skillsSectionId"
 }
 
 protocol SkillsSerializer: class {
-    func serializeSkill() -> [String: Any]
-    func serializeSection() -> [String: Any] 
+    func serializeSkill(skill: Skill) -> [String: Any]
+    func serializeSection(section: SkillsSection) -> [String: Any]
+    func unserialize(json: JSON) -> [SkillsSection]?
+    func unserializeSectionId(json: JSON) -> Int? 
 }
 
 final class SkillsSerializerImpl: SkillsSerializer {
     
     typealias parameters = SkillsSerializerParameters
     
-    func serializeSkill() -> [String: Any] {
+    func serializeSkill(skill: Skill) -> [String: Any] {
         var dictionary: [String: Any] = [:]
         dictionary.serializeItem(parameters.name, value: "")
         dictionary.serializeItem(parameters.experienceValue, value: Date())
         return dictionary
     }
     
-    func serializeSection() -> [String: Any] {
+    func serializeSection(section: SkillsSection) -> [String: Any] {
         var dictionary: [String: Any] = [:]
-        dictionary.serializeItem(parameters.name, value: "")
+        dictionary.serializeItem(parameters.name, value: section.name)
         return dictionary
     }
     
-    func unserialize(json: JSON) -> Bool {
-        return true
+    func unserialize(json: JSON) -> [SkillsSection]? {
+        guard let objects = json[parameters.skillsSections].array else {
+            return nil
+        }
+        
+        var sections = [SkillsSection]()
+        
+        objects.forEach { (object) in
+            let section = SkillsSection()
+            section.id = object[parameters.id].int ?? -1
+            section.name = object[parameters.name].string ?? ""
+            
+            if let skillsJson = object[parameters.skills].array {
+                
+            }
+            sections.append(section)
+        }
+        
+        return sections
+        
+    }
+    
+    func unserializeSectionId(json: JSON) -> Int?  {
+        guard let sectionId = json[parameters.skillSectionId].int else {
+            return nil
+        }
+        
+        return sectionId
     }
     
 }

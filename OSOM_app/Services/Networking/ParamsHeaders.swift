@@ -19,11 +19,12 @@ struct Endpoints {
     static let emailValidator = "api/accounts/email"
     static let personal = "api/accounts/data/personal"
     static let education = "api/data/school"
-    static let section = "api/data/section"
     static let skill = "api/data/skill"
     static let work = "api/data/work"
     static let works = "api/data/works"
     static let schools = "api/data/schools"
+    static let section = "api/data/section"
+    static let sections = "api/data/sections"
     
 }
 

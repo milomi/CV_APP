@@ -50,4 +50,9 @@ class ViewModelContainer {
         return AddWorkDetailViewModelImpl(workId: workId, repository: repository)
     }
     
+    func getSkillDetails(_ sectionId: Int) -> AddSkillsDetailViewModel {
+        let repository = RepositoryContainer.shared.getSkillDetailRepository()
+        return AddSkillsDetailViewModelImpl(repository: repository, sectionId: sectionId)
+    }
+    
 }

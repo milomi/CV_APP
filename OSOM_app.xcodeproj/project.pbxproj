@@ -45,6 +45,10 @@
 		B20CA6411F9D073C0018208A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CA6401F9D073C0018208A /* LogInViewController.swift */; };
 		B20CA6431F9D075E0018208A /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CA6421F9D075E0018208A /* LogInView.swift */; };
 		B20F12691FE67AC200F82F0F /* DateFormaterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20F12681FE67AC200F82F0F /* DateFormaterHelper.swift */; };
+		B21BB43F1FEF0CF40043C997 /* AddSkillsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21BB43E1FEF0CF40043C997 /* AddSkillsDetailViewModel.swift */; };
+		B21BB4421FEF0D950043C997 /* AddSkillsDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21BB4411FEF0D950043C997 /* AddSkillsDetailRepository.swift */; };
+		B21BB4441FEF19D10043C997 /* AddSkillsNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21BB4431FEF19D10043C997 /* AddSkillsNetworking.swift */; };
+		B21BB4461FEF93790043C997 /* SkillsDBRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21BB4451FEF93790043C997 /* SkillsDBRepository.swift */; };
 		B2202C3A1FE6F780007DF39E /* AddWorksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2202C391FE6F780007DF39E /* AddWorksRepository.swift */; };
 		B2202C3D1FE6F7B1007DF39E /* WorksNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2202C3C1FE6F7B1007DF39E /* WorksNetworking.swift */; };
 		B2202C3F1FE6F814007DF39E /* AddWorkNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2202C3E1FE6F814007DF39E /* AddWorkNetworking.swift */; };
@@ -125,6 +129,12 @@
 		B2C48FFA1F937B8400DFECA4 /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF51F937B8400DFECA4 /* Montserrat-Medium.otf */; };
 		B2C48FFB1F937B8400DFECA4 /* Montserrat-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF61F937B8400DFECA4 /* Montserrat-ExtraBold.otf */; };
 		B2C48FFC1F937B8400DFECA4 /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF71F937B8400DFECA4 /* Montserrat-Light.otf */; };
+		B2D004291FE7BF660097C79C /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D004281FE7BF660097C79C /* Skill.swift */; };
+		B2D0042B1FE7C0170097C79C /* SkillsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D0042A1FE7C0170097C79C /* SkillsSection.swift */; };
+		B2D0042E1FE7C20A0097C79C /* SkillsSectionDBRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D0042D1FE7C20A0097C79C /* SkillsSectionDBRepository.swift */; };
+		B2D004311FE7C5140097C79C /* AddSkillSectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D004301FE7C5140097C79C /* AddSkillSectionRepository.swift */; };
+		B2D004341FE7C8A20097C79C /* SkillsSectionNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D004331FE7C8A20097C79C /* SkillsSectionNetworking.swift */; };
+		B2D004361FE7C9080097C79C /* AddSkillSectionNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D004351FE7C9080097C79C /* AddSkillSectionNetworking.swift */; };
 		B2DE37EB1FD3FE1900FF4F46 /* CreateAboutRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DE37EA1FD3FE1900FF4F46 /* CreateAboutRepository.swift */; };
 		B2E632271FADB169009D837E /* CreateAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E632261FADB169009D837E /* CreateAboutView.swift */; };
 		B2E6322D1FADB1B8009D837E /* BaseCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E6322C1FADB1B8009D837E /* BaseCreateView.swift */; };
@@ -209,6 +219,10 @@
 		B20CA6401F9D073C0018208A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		B20CA6421F9D075E0018208A /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		B20F12681FE67AC200F82F0F /* DateFormaterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormaterHelper.swift; sourceTree = "<group>"; };
+		B21BB43E1FEF0CF40043C997 /* AddSkillsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillsDetailViewModel.swift; sourceTree = "<group>"; };
+		B21BB4411FEF0D950043C997 /* AddSkillsDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillsDetailRepository.swift; sourceTree = "<group>"; };
+		B21BB4431FEF19D10043C997 /* AddSkillsNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillsNetworking.swift; sourceTree = "<group>"; };
+		B21BB4451FEF93790043C997 /* SkillsDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsDBRepository.swift; sourceTree = "<group>"; };
 		B2202C391FE6F780007DF39E /* AddWorksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorksRepository.swift; sourceTree = "<group>"; };
 		B2202C3C1FE6F7B1007DF39E /* WorksNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksNetworking.swift; sourceTree = "<group>"; };
 		B2202C3E1FE6F814007DF39E /* AddWorkNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkNetworking.swift; sourceTree = "<group>"; };
@@ -289,6 +303,12 @@
 		B2C48FF51F937B8400DFECA4 /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.otf"; sourceTree = "<group>"; };
 		B2C48FF61F937B8400DFECA4 /* Montserrat-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.otf"; sourceTree = "<group>"; };
 		B2C48FF71F937B8400DFECA4 /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
+		B2D004281FE7BF660097C79C /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
+		B2D0042A1FE7C0170097C79C /* SkillsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsSection.swift; sourceTree = "<group>"; };
+		B2D0042D1FE7C20A0097C79C /* SkillsSectionDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsSectionDBRepository.swift; sourceTree = "<group>"; };
+		B2D004301FE7C5140097C79C /* AddSkillSectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillSectionRepository.swift; sourceTree = "<group>"; };
+		B2D004331FE7C8A20097C79C /* SkillsSectionNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsSectionNetworking.swift; sourceTree = "<group>"; };
+		B2D004351FE7C9080097C79C /* AddSkillSectionNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillSectionNetworking.swift; sourceTree = "<group>"; };
 		B2DE37EA1FD3FE1900FF4F46 /* CreateAboutRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAboutRepository.swift; sourceTree = "<group>"; };
 		B2E632261FADB169009D837E /* CreateAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAboutView.swift; sourceTree = "<group>"; };
 		B2E6322C1FADB1B8009D837E /* BaseCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCreateView.swift; sourceTree = "<group>"; };
@@ -697,6 +717,14 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		B21BB4401FEF0D7E0043C997 /* AddSkillsDetailRepository */ = {
+			isa = PBXGroup;
+			children = (
+				B21BB4411FEF0D950043C997 /* AddSkillsDetailRepository.swift */,
+			);
+			path = AddSkillsDetailRepository;
+			sourceTree = "<group>";
+		};
 		B2202C381FE6F72F007DF39E /* AddWorksRepository */ = {
 			isa = PBXGroup;
 			children = (
@@ -733,6 +761,7 @@
 		B22DE7941FDBEB960007838C /* DBRepository */ = {
 			isa = PBXGroup;
 			children = (
+				B2D0042C1FE7C1FA0097C79C /* SkillsRepository */,
 				B2202C401FE6F93B007DF39E /* WorksRepository */,
 				B22DE79E1FDBFB960007838C /* SchoolsRepository */,
 				B22DE7971FDBF74A0007838C /* UserRepository */,
@@ -795,6 +824,7 @@
 			isa = PBXGroup;
 			children = (
 				B23C0A241FD2388800C62426 /* SkillsNetworking.swift */,
+				B21BB4431FEF19D10043C997 /* AddSkillsNetworking.swift */,
 			);
 			path = Skills;
 			sourceTree = "<group>";
@@ -994,6 +1024,7 @@
 		B24B9F531FC073D900810ED6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B21BB43E1FEF0CF40043C997 /* AddSkillsDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1088,6 +1119,7 @@
 		B24E43841FCAA77B00ADD404 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				B2D004321FE7C88F0097C79C /* SkillsSection */,
 				B2202C3B1FE6F79A007DF39E /* Works */,
 				B23C0A231FD2387B00C62426 /* Skills */,
 				B23C0A1C1FD235CE00C62426 /* AddEducation */,
@@ -1174,6 +1206,8 @@
 				B278D0F81FC7281F00A6D34B /* School.swift */,
 				B278D0FC1FC72CD500A6D34B /* Work.swift */,
 				B24E43901FCAAAE900ADD404 /* AuthorizateUser.swift */,
+				B2D004281FE7BF660097C79C /* Skill.swift */,
+				B2D0042A1FE7C0170097C79C /* SkillsSection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1189,6 +1223,8 @@
 		B287AB161FCB2E7500EC3416 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				B21BB4401FEF0D7E0043C997 /* AddSkillsDetailRepository */,
+				B2D0042F1FE7C4FA0097C79C /* AddSkillSectionRepository */,
 				B2202C381FE6F72F007DF39E /* AddWorksRepository */,
 				B22DE79A1FDBF8E40007838C /* AddEducationRepository */,
 				B2DE37E91FD3FE0200FF4F46 /* CreateAboutRepository */,
@@ -1280,6 +1316,32 @@
 				B2C48FF41F937B8400DFECA4 /* Montserrat-Regular.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B2D0042C1FE7C1FA0097C79C /* SkillsRepository */ = {
+			isa = PBXGroup;
+			children = (
+				B2D0042D1FE7C20A0097C79C /* SkillsSectionDBRepository.swift */,
+				B21BB4451FEF93790043C997 /* SkillsDBRepository.swift */,
+			);
+			path = SkillsRepository;
+			sourceTree = "<group>";
+		};
+		B2D0042F1FE7C4FA0097C79C /* AddSkillSectionRepository */ = {
+			isa = PBXGroup;
+			children = (
+				B2D004301FE7C5140097C79C /* AddSkillSectionRepository.swift */,
+			);
+			path = AddSkillSectionRepository;
+			sourceTree = "<group>";
+		};
+		B2D004321FE7C88F0097C79C /* SkillsSection */ = {
+			isa = PBXGroup;
+			children = (
+				B2D004331FE7C8A20097C79C /* SkillsSectionNetworking.swift */,
+				B2D004351FE7C9080097C79C /* AddSkillSectionNetworking.swift */,
+			);
+			path = SkillsSection;
 			sourceTree = "<group>";
 		};
 		B2DE37E91FD3FE0200FF4F46 /* CreateAboutRepository */ = {
@@ -1720,15 +1782,19 @@
 				B26631DD1FE1D209004D7327 /* CreateAboutNetworking.swift in Sources */,
 				B2F029C91F9C7ECD0006A5A0 /* BaseView.swift in Sources */,
 				B24B9F3B1FBF84DE00810ED6 /* AddWorkplaceDetailViewController.swift in Sources */,
+				B21BB4441FEF19D10043C997 /* AddSkillsNetworking.swift in Sources */,
 				B25B81621FD347890041D0A9 /* QRReaderViewController.swift in Sources */,
 				B2E6324D1FAF66C6009D837E /* AddEducationViewController.swift in Sources */,
 				B22DE7A41FDC373A0007838C /* AddEducationDetailViewModel.swift in Sources */,
 				3572CF321F1DEAF9004FC883 /* OSOM_app.xcdatamodeld in Sources */,
 				3572CF641F1DFD7B004FC883 /* ViewControllerContainer.swift in Sources */,
 				B2E6325B1FAF6E1A009D837E /* UITableView+Register.swift in Sources */,
+				B2D004291FE7BF660097C79C /* Skill.swift in Sources */,
 				B20F12691FE67AC200F82F0F /* DateFormaterHelper.swift in Sources */,
+				B2D004311FE7C5140097C79C /* AddSkillSectionRepository.swift in Sources */,
 				B287AB1C1FCB2F3800EC3416 /* SignUpNetworking.swift in Sources */,
 				B22DE79C1FDBF9150007838C /* AddEducationRepository.swift in Sources */,
+				B21BB4461FEF93790043C997 /* SkillsDBRepository.swift in Sources */,
 				B287AB1E1FCB2F6C00EC3416 /* EmailValidationSerializer.swift in Sources */,
 				B24B9F581FC0741F00810ED6 /* AddSkillsDetailCellManager.swift in Sources */,
 				B20CA6411F9D073C0018208A /* LogInViewController.swift in Sources */,
@@ -1736,10 +1802,13 @@
 				B2C48FF01F936A9F00DFECA4 /* BaseEditField.swift in Sources */,
 				B24B9F221FBF60F800810ED6 /* AddEducationDetailViewController.swift in Sources */,
 				B2C48FED1F9367F600DFECA4 /* UIColor+extension.swift in Sources */,
+				B21BB43F1FEF0CF40043C997 /* AddSkillsDetailViewModel.swift in Sources */,
 				B24B9F3D1FBF876A00810ED6 /* UIViewController+Animate.swift in Sources */,
 				B2202C3A1FE6F780007DF39E /* AddWorksRepository.swift in Sources */,
 				B24B9F4D1FC0720900810ED6 /* AddSkillsCellManager.swift in Sources */,
+				B2D0042B1FE7C0170097C79C /* SkillsSection.swift in Sources */,
 				B25B81641FD34BC40041D0A9 /* QRReaderView.swift in Sources */,
+				B21BB4421FEF0D950043C997 /* AddSkillsDetailRepository.swift in Sources */,
 				B24B9F5E1FC0771E00810ED6 /* AddContactsDetailViewController.swift in Sources */,
 				B23C0A191FD2249200C62426 /* PersonalSerializer.swift in Sources */,
 				B24B9F381FBF84A700810ED6 /* AddWorkplaceDetailCellManager.swift in Sources */,
@@ -1794,6 +1863,7 @@
 				B23C0A171FD2240800C62426 /* PersonalNetworking.swift in Sources */,
 				B24B9F491FC0719100810ED6 /* AddSkillsViewController.swift in Sources */,
 				B2E6322D1FADB1B8009D837E /* BaseCreateView.swift in Sources */,
+				B2D0042E1FE7C20A0097C79C /* SkillsSectionDBRepository.swift in Sources */,
 				B26D843D1FE5AA2000BEF3C7 /* SchoolsNetworking.swift in Sources */,
 				35EB195E1F1E3DAD00DD3AA5 /* Int+ConstraintMaker.swift in Sources */,
 				B2202C421FE6F958007DF39E /* WorkDBRepository.swift in Sources */,
@@ -1812,6 +1882,7 @@
 				B23C0A0F1FD2157600C62426 /* RepeatPasswordRule.swift in Sources */,
 				B20CA6381F9CC1BA0018208A /* SignUpPasswordViewController.swift in Sources */,
 				B24B9F251FBF615F00810ED6 /* AddEducationDetailCellManager.swift in Sources */,
+				B2D004341FE7C8A20097C79C /* SkillsSectionNetworking.swift in Sources */,
 				B23C0A201FD236A200C62426 /* EducationSerializer.swift in Sources */,
 				B278D0F71FC7228100A6D34B /* User.swift in Sources */,
 				B23C0A251FD2388800C62426 /* SkillsNetworking.swift in Sources */,
@@ -1831,6 +1902,7 @@
 				B24B9F4B1FC071C500810ED6 /* AddSkillsView.swift in Sources */,
 				B20CA6301F9CBFF50018208A /* SignUpEmailView.swift in Sources */,
 				B22DE7961FDBEBD10007838C /* RealmRepository.swift in Sources */,
+				B2D004361FE7C9080097C79C /* AddSkillSectionNetworking.swift in Sources */,
 				B25B81571FD339220041D0A9 /* LoginViewModel.swift in Sources */,
 				B2202C441FE6F9BC007DF39E /* WorkSerializer.swift in Sources */,
 				35EB19601F1E3DE200DD3AA5 /* Fonts.swift in Sources */,

@@ -81,14 +81,16 @@ class ViewControllerContainer {
     func getAddSkills() -> AddSkillsViewController {
         let view = viewContainer.addSkills()
         let cellManager = AddSkillsCellManagerImpl(tableView: view.tableView)
-        let viewModel = AddSkillsViewModelImpl()
-        return AddSkillsViewController(view: view, cellManager: cellManager, viewModel: viewModel )
+        let repository = RepositoryContainer.shared.getSkillsSection()
+        let viewModel = AddSkillsViewModelImpl(repository: repository)
+        return AddSkillsViewController(view: view, cellManager: cellManager, viewModel: viewModel)
     }
     
-    func getAddSkillsDetail() -> AddSkillsDetailViewController {
+    func getAddSkillsDetail(_ sectionId: Int) -> AddSkillsDetailViewController {
         let view = viewContainer.addSkills()
         let cellManager = AddSkillsDetailCellManagerImpl(tableView: view.tableView)
-        return AddSkillsDetailViewController(view: view, cellManager: cellManager)
+        let viewModel = viewModelContainer.getSkillDetails(sectionId)
+        return AddSkillsDetailViewController(view: view, viewModel: viewModel, cellManager: cellManager)
     }
     
     func getAddContactsDetail() -> AddContactsDetailViewController {

@@ -1,30 +1,30 @@
 //
-//  SkillsNetworking.swift
+//  SkillsSectionNetworking.swift
 //  OSOM_app
 //
-//  Created by Miłosz Bugla on 02.12.2017.
+//  Created by Miłosz Bugla on 18.12.2017.
 //
 
 import Foundation
 import SwiftyJSON
 import Alamofire
 
-protocol SkillsNetworking: class {
+protocol SkillsSectionsNetworking: class {
     
-    weak var delegate: SkillsNetworkingDelegate? { get set }
+    weak var delegate: SkillsSectionsNetworkingDelegate? { get set }
     
-    func setSkillsData(parameters: [String: Any])
+    func getSkillsSections()
 }
 
-protocol SkillsNetworkingDelegate: class {
+protocol SkillsSectionsNetworkingDelegate: class {
     func unknownErrorOccured()
     func noInternetConnection()
-    func success(_ json: JSON)
+    func skillsSectionsDownloaded(_ json: JSON)
 }
 
-final class SkillsNetworkingImpl: BaseNetworking {
+final class SkillsSectionsNetworkingImpl: BaseNetworking {
     
-    weak var delegate: SkillsNetworkingDelegate?
+    weak var delegate: SkillsSectionsNetworkingDelegate?
     
     override func handleUnknownError() {
         delegate?.unknownErrorOccured()
@@ -40,7 +40,7 @@ final class SkillsNetworkingImpl: BaseNetworking {
     
     override func handleResponseSuccess(json: JSON?) {
         if let json = json {
-            delegate?.success(json)
+            delegate?.skillsSectionsDownloaded(json)
         } else {
             delegate?.unknownErrorOccured()
         }
@@ -48,17 +48,17 @@ final class SkillsNetworkingImpl: BaseNetworking {
     
 }
 
-extension SkillsNetworkingImpl: SkillsNetworking {
-    func setSkillsData(parameters: [String : Any]) {
-        makeRequest(request: getRequest(parameters))
+extension SkillsSectionsNetworkingImpl: SkillsSectionsNetworking {
+    func getSkillsSections() {
+        makeRequest(request: getRequest())
     }
     
     fileprivate func getRequest(_ parameters: [String: Any]? = nil) -> HTTPRequest {
-        return HTTPRequest(url: getUrl(), method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        return HTTPRequest(url: getUrl(), method: .get, parameters: parameters, encoding: JSONEncoding.default)
     }
     
     fileprivate func getUrl() -> String {
-        return Endpoints.baseUrl + Endpoints.skill
+        return Endpoints.baseUrl + Endpoints.sections
     }
     
 }
