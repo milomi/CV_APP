@@ -37,8 +37,8 @@ class AddSkillsDetailViewModelImpl: AddSkillsDetailViewModel {
     }
 
 
-    func addSection(work: SkillsSection) {
-        //        repository.addWork(work: work)
+    func addSkill(skill: SkillsSection) {
+        
     }
     
     func setupObserver() {
@@ -52,7 +52,7 @@ class AddSkillsDetailViewModelImpl: AddSkillsDetailViewModel {
     }
     
     func getSkill(for index: Int) -> Skill? {
-        if index <= skills.count + 1 {
+        if index < skills.count {
             return skills[index]
         } else {
             return nil

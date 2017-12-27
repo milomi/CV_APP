@@ -30,7 +30,10 @@ final class SkillsSectionDBRepositoryImpl: RealmRepositoryImpl<SkillsSection>, S
         remove(list: results)
         SkillsSections.forEach { (SkillsSection) in
             addObject(object: SkillsSection)
+            commitWrite()
+
         }
+        
     }
     
 }

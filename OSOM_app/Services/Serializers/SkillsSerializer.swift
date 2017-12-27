@@ -16,7 +16,7 @@ struct SkillsSerializerParameters {
     static let experienceValue = "experienceValue"
     static let sectionId = "sectionId"
     static let skillsSections = "skillsSections"
-    static let skillSectionId = "skillsSectionId"
+    static let skillSectionId = "skillSectionId"
 }
 
 protocol SkillsSerializer: class {
@@ -32,8 +32,9 @@ final class SkillsSerializerImpl: SkillsSerializer {
     
     func serializeSkill(skill: Skill) -> [String: Any] {
         var dictionary: [String: Any] = [:]
-        dictionary.serializeItem(parameters.name, value: "")
-        dictionary.serializeItem(parameters.experienceValue, value: Date())
+        dictionary.serializeItem(parameters.name, value: skill.name)
+        dictionary.serializeItem(parameters.experienceValue, value: skill.experienceValue)
+        dictionary.serializeItem(parameters.sectionId, value: skill.sectionId)
         return dictionary
     }
     
@@ -57,7 +58,15 @@ final class SkillsSerializerImpl: SkillsSerializer {
             
             if let skillsJson = object[parameters.skills].array {
                 
+                skillsJson.forEach({ (skillJson) in
+                    let skill = Skill()
+                    skill.sectionId = section.id
+                    section.skills.append(skill)
+                    sections.append(section)
+                })
+                
             }
+            
             sections.append(section)
         }
         

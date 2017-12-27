@@ -11,6 +11,6 @@ import RealmSwift
 class Skill: Object {
     @objc dynamic var id: Int = -1
     @objc dynamic var name: String = ""
-    @objc dynamic var ExperienceValue: Int = 0
+    @objc dynamic var experienceValue: Int = 0
     @objc dynamic var sectionId: Int = -1
 }

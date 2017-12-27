@@ -50,6 +50,10 @@ class AddSkillsDetailRepositoryImpl: AddSkillsDetailRepository {
         return skillsDBRepository.getSkillsInSection(id: id)
     }
     
+    func addSkillToSection(skill: Skill) {
+        addSkillsNetworking.setAddSkillsData(parameters: serializer.serializeSkill(skill: skill))
+    }
+    
 }
 
 extension AddSkillsDetailRepositoryImpl: SkillsNetworkingDelegate {
@@ -68,7 +72,7 @@ extension AddSkillsDetailRepositoryImpl: SkillsNetworkingDelegate {
 
 extension AddSkillsDetailRepositoryImpl: AddSkillsNetworkingDelegate {
     func successUploaded(_ json: JSON) {
-        
+        delegate?.sectionUpdated()
     }
     
     

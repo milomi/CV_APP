@@ -11,4 +11,5 @@ import RealmSwift
 class SkillsSection: Object {
     @objc dynamic var id: Int = -1
     @objc dynamic var name: String = ""
+    let skills = List<Skill>()
 }
