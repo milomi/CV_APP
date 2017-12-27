@@ -22,6 +22,8 @@ final class AddSkillsViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         setupView()
         setupNavigation()
+        viewModel.delegate = self
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -31,6 +33,7 @@ final class AddSkillsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         mainView.tableView.alpha = 0.0
+        viewModel.fetchSections()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -45,6 +48,7 @@ final class AddSkillsViewController: UIViewController {
         mainView.setupView()
         setupDataSource()
     }
+    
 }
 
 extension AddSkillsViewController: NavigationControllerDelegate {
@@ -76,25 +80,51 @@ extension AddSkillsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.getSections().count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return cellManager.buildCell(indexPath: indexPath, viewController: self)
+        return cellManager.buildCell(indexPath: indexPath, delegate: self, skillsSection: viewModel.getSkillsSection(for: indexPath.row))
     }
     
 }
 
 extension AddSkillsViewController: UITableViewDelegate {
     
+    
 }
 
 extension AddSkillsViewController: AddEducationCellDelegate {
     func onButton(_ sender: UIButton) {
-        animateCellsFadeOut(tableView: mainView.tableView) {
-            let vc = ViewControllerContainer.shared.getAddSkillsDetail()
-            self.navigationController?.pushViewController(vc, animated: false)
-            print(sender.tag)
+        if cellManager.checkCellAtRow(row: sender.tag) {
+            guard let section = viewModel.getSkillsSection(for: sender.tag)  else {
+                if let name = cellManager.getSkillNameFor(row: sender.tag) {
+                    viewModel.addSection(with: name)
+                }
+                return
+            }
+            
+            animateToSkillsDetail(sectionId: section.id)
+        
         }
+    }
+    
+    func animateToSkillsDetail(sectionId: Int) {
+        animateCellsFadeOut(tableView: mainView.tableView) {
+            let vc = ViewControllerContainer.shared.getAddSkillsDetail(sectionId)
+            self.navigationController?.pushViewController(vc, animated: false)
+        }
+    }
+    
+}
+
+extension AddSkillsViewController: AddSkillsViewModelDelegate {
+    
+    func reloadData() {
+        mainView.tableView.reloadData()
+    }
+    
+    func sectionUpdated(sectionId: Int) {
+        animateToSkillsDetail(sectionId: sectionId)
     }
 }

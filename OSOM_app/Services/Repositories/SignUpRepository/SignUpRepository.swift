@@ -73,7 +73,7 @@ extension SignUpRepositoryImpl: EmailValidationNetworkingDelegate {
         if emailValidationSerializer.unserialize(json: json) {
             emailValidatorDelegate?.emailIsAvailable()
         } else {
-            emailValidatorDelegate?.badEmail("Bad email")
+            emailValidatorDelegate?.badEmail("Email not available")
         }
     }
     

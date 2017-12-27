@@ -26,14 +26,33 @@ class ViewModelContainer {
     }
     
     func getCreateAbout() -> CreateAboutViewModel {
-        let networking = PersonalNetworkingImpl()
-        let serializer = PersonalSerializerImpl()
-        return CreateAboutViewModelImpl(networking: networking, serializer: serializer)
+        let repository = RepositoryContainer.shared.getCreateAbout()
+        return CreateAboutViewModelImpl(repository: repository)
     }
     
     func getLogin() -> LoginViewModel {
         let repository = RepositoryContainer.shared.getLogin()
         return LoginViewModelImpl(repository: repository)
+    }
+    
+    func getAddEduction() -> AddEducationViewModelImpl {
+        let repository = RepositoryContainer.shared.getAddEducation()
+        return AddEducationViewModelImpl(repository: repository)
+    }
+    
+    func getAddEductionDetail(_ schoolId: Int?) -> AddEducationDetailViewModelImpl {
+        let repository = RepositoryContainer.shared.getAddEducation()
+        return AddEducationDetailViewModelImpl(schoolId: schoolId, repository: repository)
+    }
+    
+    func getAddWorkDetail(_ workId: Int?) -> AddWorkDetailViewModelImpl {
+        let repository = RepositoryContainer.shared.getAddWork()
+        return AddWorkDetailViewModelImpl(workId: workId, repository: repository)
+    }
+    
+    func getSkillDetails(_ sectionId: Int) -> AddSkillsDetailViewModel {
+        let repository = RepositoryContainer.shared.getSkillDetailRepository()
+        return AddSkillsDetailViewModelImpl(repository: repository, sectionId: sectionId)
     }
     
 }

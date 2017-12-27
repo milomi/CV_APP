@@ -8,12 +8,18 @@
 import Foundation
 import UIKit
 
+fileprivate struct Constants {
+    struct LocalizedString {
+        
+    }
+}
+
 protocol AddEducationCellManagerDelegate: class {
     
 }
 
 protocol AddEducationCellManager: class {
-    func buildCell(indexPath: IndexPath, viewController: AddEducationViewController) -> UITableViewCell
+    func buildCell(indexPath: IndexPath, viewController: AddEducationViewController, _ school: School?) -> UITableViewCell
 }
 
 final class AddEducationCellManagerImpl: AddEducationCellManager {
@@ -28,7 +34,7 @@ final class AddEducationCellManagerImpl: AddEducationCellManager {
         tableView.registerCell(AddEducationCell.self)
     }
     
-    func buildCell(indexPath: IndexPath, viewController: AddEducationViewController) -> UITableViewCell {
+    func buildCell(indexPath: IndexPath, viewController: AddEducationViewController, _ school: School? = nil) -> UITableViewCell {
         
         guard let cell = tableView.getCell(AddEducationCell.self) else {
             return UITableViewCell()
@@ -37,7 +43,9 @@ final class AddEducationCellManagerImpl: AddEducationCellManager {
         cell.mainView.label.textField.text = "school"
         cell.mainView.addButton.tag = indexPath.row
         
-        cell.mainView.setData(title: "Skalna")
+        if let school = school {
+            cell.mainView.setData(title: school.name)
+        }
         cell.delegate = viewController
         return cell
         

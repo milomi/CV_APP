@@ -43,6 +43,7 @@ final class LogInView: BaseSignUpView {
         field.alpha = 0.0
         field.headerLabel.text = Constants.PasswordEditField.title.localized()
         field.setAttributedPlaceholder(string: Constants.PasswordEditField.placeholder.localized())
+        field.textField.isSecureTextEntry = true
         return field
     }()
     

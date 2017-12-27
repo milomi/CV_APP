@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Work {
-    var id: Int?
-    var name: String = ""
-    var startingTime: String = ""
-    var endingTime: String = ""
-    var jobTitle: String?
-    var detailedInfo: String?
+class Work: Object {
+    @objc dynamic var id: Int = -1
+    @objc dynamic var name: String = ""
+    @objc dynamic var startingTime: Date = Date()
+    @objc dynamic var endingTime: Date = Date()
+    @objc dynamic var jobTitle: String = ""
+    @objc dynamic var detailedInfo: String = "" 
 }

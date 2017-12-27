@@ -47,12 +47,12 @@ final class SignUpEmailViewModelImpl: SignUpEmailViewModel {
 
 extension SignUpEmailViewModelImpl: EmailValidatorDelegate {
     func badEmail(_ response: String) {
-        HUD.flash(.labeledError(title: "error", subtitle: nil), delay: 1)
+        HUD.hide()
         delegate?.badEmail(response)
     }
     
     func emailIsAvailable() {
-        HUD.flash(.success)
+        HUD.hide()
         delegate?.emailIsAvailable()
     }
     

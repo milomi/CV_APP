@@ -12,14 +12,17 @@ class AddWorkplaceDetailViewController: UIViewController {
     
     fileprivate let mainView: AddWorkplaceView
     fileprivate let cellManager: AddWorkplaceDetailCellManager
+    fileprivate let viewModel: AddWorkDetailViewModel
     fileprivate var navigator: NavigationController?
     
-    init(view: AddWorkplaceView, cellManager: AddWorkplaceDetailCellManager) {
+    init(view: AddWorkplaceView, viewModel: AddWorkDetailViewModel, cellManager: AddWorkplaceDetailCellManager) {
         self.mainView = view
         self.cellManager = cellManager
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         setupView()
         setupNavigation()
+        viewModel.delegate = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -43,6 +46,9 @@ extension AddWorkplaceDetailViewController: NavigationControllerDelegate {
     }
     
     func rightAction() {
+        if cellManager.isValidate() {
+            viewModel.saveWork(work: cellManager.getWork())
+        }
     }
     
     func backAction() {
@@ -61,12 +67,21 @@ extension AddWorkplaceDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return cellManager.buildCell(indexPath: indexPath, viewController: self)
+        return cellManager.buildCell(indexPath: indexPath, work: viewModel.getWork())
     }
     
 }
 
-extension AddWorkplaceDetailViewController: UITableViewDelegate {
+extension AddWorkplaceDetailViewController: AddWorkDetailViewModelDelegate {
+    func dataSaved() {
+        self.navigationController?.popViewController(animated: false)
+    }
+    
+    func errorOccured() {
+        
+    }
+    
     
 }
+
 

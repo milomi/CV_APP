@@ -31,6 +31,7 @@ class AddWorkplaceViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         mainView.tableView.alpha = 0.0
+        viewModel.fetchWorks()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -76,11 +77,15 @@ extension AddWorkplaceViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.getWorks().count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return cellManager.buildCell(indexPath: indexPath, viewController: self)
+        guard let work = viewModel.getWork(for: indexPath.row) else {
+            return cellManager.buildCell(indexPath: indexPath, viewController: self, nil)
+        }
+        return cellManager.buildCell(indexPath: indexPath, viewController: self, work)
+        
     }
     
 }
@@ -92,7 +97,8 @@ extension AddWorkplaceViewController: UITableViewDelegate {
 extension AddWorkplaceViewController: AddEducationCellDelegate {
     func onButton(_ sender: UIButton) {
         animateCellsFadeOut(tableView: mainView.tableView) {
-            let vc = ViewControllerContainer.shared.getAddWorkplaceDetail()
+            let work = self.viewModel.getWork(for: sender.tag)
+            let vc = ViewControllerContainer.shared.getAddWorkplaceDetail(workId: work?.id)
             self.navigationController?.pushViewController(vc, animated: false)
             print(sender.tag)
         }

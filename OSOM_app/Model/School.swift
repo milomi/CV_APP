@@ -6,12 +6,21 @@
 //
 
 import Foundation
+import RealmSwift
 
-class School {
-    var id: Int?
-    var name: String = ""
-    var startingTime: String = ""
-    var endingTime: String = ""
-    var courseTitle: String = ""
-    var detailedInfo: String? 
+protocol AddSchoolObject {
+    var name: String { get set }
+    var startingTime: Date { get set }
+    var endingTime: Date { get set }
+    var courseTitle: String { get set }
+    var detailedInfo: String { get set }
+}
+
+class School: Object, AddSchoolObject {
+    @objc dynamic var schoolID: Int = -1
+    @objc dynamic var name: String = ""
+    @objc dynamic var startingTime: Date = Date()
+    @objc dynamic var endingTime: Date = Date()
+    @objc dynamic var courseTitle: String = ""
+    @objc dynamic var detailedInfo: String = ""
 }

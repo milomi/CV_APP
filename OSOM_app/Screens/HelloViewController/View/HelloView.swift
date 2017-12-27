@@ -54,6 +54,7 @@ final class HelloView: BaseView {
         label.textColor = Constants.AllSetLabel.color
         label.text = Constants.AllSetLabel.text
         label.contentMode = .center
+        label.textAlignment = .center
         return label
     }()
     

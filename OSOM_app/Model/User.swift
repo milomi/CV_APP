@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 protocol SignUpUserModel {
     var name: String { get set }
@@ -15,13 +16,15 @@ protocol SignUpUserModel {
 }
 
 protocol UserPersonalDataModel {
-    var profilePhoto: Data? { get set }
+    var profilePhoto: UIImage? { get set }
     var personalStatement: String? { get set }
 }
 
-class User: SignUpUserModel {
-    var name: String = ""
-    var surname: String = ""
-    var email: String = ""
-    var password: String = ""
+class User: Object, SignUpUserModel, UserPersonalDataModel {
+    @objc dynamic var name: String = ""
+    @objc dynamic var surname: String = ""
+    @objc dynamic var email: String = ""
+    @objc dynamic var password: String = ""
+    @objc dynamic var personalStatement: String?
+    var profilePhoto: UIImage?
 }

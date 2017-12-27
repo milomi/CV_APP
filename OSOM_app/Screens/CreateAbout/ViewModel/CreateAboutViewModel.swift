@@ -13,12 +13,16 @@ import SwiftyJSON
 protocol CreateAboutViewModelDelegate: class {
     func savedWithSuccess()
     func saveFailed()
+    func reloadData()
 }
 
 protocol CreateAboutViewModel: class {
     weak var delegate: CreateAboutViewModelDelegate? { get set }
     func saveData(_ personalStatment: String)
+    func fetchData()
     func updateUserPhoto(image: UIImage)
+    func getUserPhoto() -> UIImage?
+    func getPersonalStatment() -> String?
 
 }
 
@@ -26,35 +30,60 @@ final class CreateAboutViewModelImpl: CreateAboutViewModel {
     
     weak var delegate: CreateAboutViewModelDelegate?
     
-    fileprivate let networking: PersonalNetworking
-    fileprivate let serializer: PersonalSerializer
+    fileprivate let repository: CreateAboutRepository
     
     private var userPhoto: UIImage?
     private var personalStatment: String?
     
-    init(networking: PersonalNetworking, serializer: PersonalSerializer) {
-        self.networking = networking
-        self.serializer = serializer
+    init(repository: CreateAboutRepository) {
+        self.repository = repository
         
-        networking.delegate = self
+        repository.delegate = self
+    }
+    
+    func fetchData() {
+        repository.getPersonalData()
     }
     
     func updateUserPhoto(image: UIImage) {
         self.userPhoto = image
     }
     
+    func getUserPhoto() -> UIImage? {
+        return userPhoto
+    }
+    
+    func getPersonalStatment() -> String? {
+        return personalStatment
+    }
+    
     func saveData(_ personalStatment: String) {
+        HUD.show(.progress)
         guard let userPhoto = userPhoto else {
+            HUD.flash(.labeledError(title: "error", subtitle: "No photo"))
             delegate?.saveFailed()
             return
         }
         
-        networking.setPersonalData(parameters: serializer.serialize(userPhoto,personalStatment))
+        repository.createAbout(userPhoto, personalStatment)
     }
 
 }
 
-extension CreateAboutViewModelImpl: PersonalNetworkingDelegate {
+extension CreateAboutViewModelImpl: CreateAboutRepositoryDelegate {
+    
+    func postSuccess() {
+        HUD.flash(.success)
+        delegate?.savedWithSuccess()
+    }
+    
+    
+    func getAboutSuccessed(photo: UIImage, personalStatment: String) {
+        userPhoto = photo
+        self.personalStatment = personalStatment
+        delegate?.reloadData()
+    }
+    
     func unknownErrorOccured() {
         HUD.flash(.error)
         delegate?.saveFailed()
@@ -65,9 +94,9 @@ extension CreateAboutViewModelImpl: PersonalNetworkingDelegate {
         delegate?.saveFailed()
     }
     
-    func success(_ json: JSON) {
-        HUD.flash(.success)
-        delegate?.savedWithSuccess()
+    func errorOccured(_ error: String?) {
+        HUD.flash(.error)
+        delegate?.saveFailed()
     }
     
 }

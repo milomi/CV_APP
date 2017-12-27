@@ -118,7 +118,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         switch userStatus {
         case AccountStatus.logged.rawValue:
-            vc = ViewControllerContainer.shared.getCreateAbout()
+            vc = ViewControllerContainer.shared.getAddSkills()
         case AccountStatus.notLogged.rawValue, AccountStatus.anonymus.rawValue:
             vc = ViewControllerContainer.shared.getWelcome()
         default:

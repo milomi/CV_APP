@@ -56,15 +56,14 @@ class BaseView: UIView {
         contentFrame.snp.makeConstraints { (make) in
             if #available(iOS 11, *) {
                 make.top.equalTo(safeAreaLayoutGuide.snp.topMargin).offset(Constants.ContentFrame.Constraints.padding)
+                    make.bottom.equalTo(safeAreaLayoutGuide.snp.bottomMargin).offset(-Constants.ContentFrame.Constraints.padding)
             } else {
                 make.top.equalTo(self.snp.topMargin).offset(Constants.ContentFrame.Constraints.padding)
+                    make.bottom.equalTo(-Constants.ContentFrame.Constraints.padding)
             }
             make.leading.equalTo(Constants.ContentFrame.Constraints.padding)
-            make.trailing.bottom.equalTo(-Constants.ContentFrame.Constraints.padding)
+            make.trailing.equalTo(-Constants.ContentFrame.Constraints.padding)
         }
     }
-    
-
-    
 
 }

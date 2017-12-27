@@ -32,7 +32,7 @@ class BaseNetworking: Networking {
     
     init() {
         let configuraion = URLSessionConfiguration.default
-        configuraion.timeoutIntervalForRequest = 20
+        configuraion.timeoutIntervalForRequest = 7
         self.manager = Alamofire.SessionManager(configuration: configuraion)
     }
     
@@ -206,7 +206,6 @@ extension BaseNetworking: AuthorizationHelperDelegate {
         unauthorizedRequests.removeAll()
         
     }
-    
     
     func tokenRefreshingDone(success: Bool) {
         if success {

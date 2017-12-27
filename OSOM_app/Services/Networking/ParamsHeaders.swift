@@ -19,9 +19,13 @@ struct Endpoints {
     static let emailValidator = "api/accounts/email"
     static let personal = "api/accounts/data/personal"
     static let education = "api/data/school"
-    static let section = "api/data/section"
     static let skill = "api/data/skill"
     static let work = "api/data/work"
+    static let works = "api/data/works"
+    static let schools = "api/data/schools"
+    static let section = "api/data/section"
+    static let sections = "api/data/sections"
+    
 }
 
 struct SuccessCodes {
@@ -66,5 +70,10 @@ struct HeadersKeys {
     struct ClientId {
         static let name = "client_id"
         static let value = "iOSApp"
+    }
+    
+    struct ClientSecret {
+        static let name = "client_secret"
+        static let value = "qMCdFDQuF23RV1Y-1Gq9L3cF3VmuFwVbam4fMTdAfpo"
     }
 }

@@ -13,7 +13,9 @@ protocol PersonalNetworking: class {
     
     weak var delegate: PersonalNetworkingDelegate? { get set }
     
-    func setPersonalData(parameters: [String: Any])
+    func postPersonalData(parameters: [String: Any])
+    func getPersonalData()
+
 }
 
 protocol PersonalNetworkingDelegate: class {
@@ -42,19 +44,23 @@ final class PersonalNetworkingImpl: BaseNetworking {
         if let json = json {
             delegate?.success(json)
         } else {
-            print("error")
+            delegate?.unknownErrorOccured()
         }
     }
     
 }
 
 extension PersonalNetworkingImpl: PersonalNetworking {
-    func setPersonalData(parameters: [String : Any]) {
-        makeRequest(request: getRequest(parameters))
+    func postPersonalData(parameters: [String : Any]) {
+        makeRequest(request: getRequest(.post, parameters))
     }
     
-    fileprivate func getRequest(_ parameters: [String: Any]? = nil) -> HTTPRequest {
-        return HTTPRequest(url: getUrl(), method: .post, parameters: parameters, encoding: JSONEncoding.default)
+    func getPersonalData() {
+        makeRequest(request: getRequest(.get))
+    }
+    
+    fileprivate func getRequest(_ method: HTTPMethod, _ parameters: [String: Any]? = nil) -> HTTPRequest {
+        return HTTPRequest(url: getUrl(), method: method, parameters: parameters, encoding: JSONEncoding.default)
     }
     
     fileprivate func getUrl() -> String {

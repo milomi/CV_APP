@@ -165,14 +165,13 @@ class BaseEditField: UIView {
 
 extension BaseEditField: UITextFieldDelegate {
     
-    func setupTextFieldDelegate() {
-        textField.delegate = self
+    func setupTextFieldDelegate(delegate: UITextFieldDelegate? = nil) {
+        textField.delegate = delegate ?? self
         textField.addTarget(self, action: .textDidEndEditing, for: .editingDidEnd)
         textField.addTarget(self, action: .textDidEdit, for: .editingChanged)
     }
     
     @objc func textFieldDidEndEditing(_ textField: UITextField) {
-        
     }
     
     
@@ -183,4 +182,5 @@ extension BaseEditField: UITextFieldDelegate {
     @objc func securePasswordEyeChanged() {
         
     }
+    
 }

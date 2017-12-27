@@ -8,15 +8,17 @@
 import Foundation
 import UIKit
 
-class AddEducationDetailViewController: UIViewController {
+final class AddEducationDetailViewController: UIViewController {
     
     fileprivate let mainView: AddEducationView
+    fileprivate let viewModel: AddEducationDetailViewModel
     fileprivate let cellManager: AddEducationDetailCellManager
     fileprivate var navigator: NavigationController?
     
-    init(view: AddEducationView, cellManager: AddEducationDetailCellManager) {
+    init(view: AddEducationView, viewModel: AddEducationDetailViewModel, cellManager: AddEducationDetailCellManager) {
         self.mainView = view
         self.cellManager = cellManager
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         setupView()
         setupNavigation()
@@ -39,6 +41,7 @@ class AddEducationDetailViewController: UIViewController {
         mainView.tableView.contentInset = UIEdgeInsetsMake(15.0, 0, 0, 0)
         mainView.setupView()
         setupDataSource()
+        viewModel.delegate = self
     }
 }
 
@@ -51,6 +54,9 @@ extension AddEducationDetailViewController: NavigationControllerDelegate {
     }
     
     func rightAction() {
+        if cellManager.isValidate() {
+            viewModel.saveSchool(school: cellManager.getSchool())
+        }
     }
     
     func backAction() {
@@ -69,12 +75,22 @@ extension AddEducationDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return cellManager.buildCell(indexPath: indexPath, viewController: self)
+        
+        return cellManager.buildCell(indexPath: indexPath, school: viewModel.getSchool())
     }
     
 }
 
 extension AddEducationDetailViewController: UITableViewDelegate {
+    
+}
+
+extension AddEducationDetailViewController: AddEducationDetailViewModelDelegate {
+    func dataSaved() {
+        self.navigationController?.popViewController(animated: false)
+    }
+    
+    func errorOccured() {}
     
 }
 

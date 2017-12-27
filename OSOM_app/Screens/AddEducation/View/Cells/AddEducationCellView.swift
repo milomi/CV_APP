@@ -43,7 +43,6 @@ class AddEducationCellView: UIView {
     
     let label: BaseEditField = {
         let label = BaseEditField()
-        label.textField.textColor = UIColor.white
         label.textField.isUserInteractionEnabled = false
         return label
     }()
@@ -57,7 +56,6 @@ class AddEducationCellView: UIView {
     func clearData() {
         addButton.setImage(UIImage(named: Constants.AddButton.image), for: .normal)
         addButton.layer.borderColor = UIColor.black.cgColor
-        label.textField.textColor = UIColor.white
         label.textField.text = ""
     }
     

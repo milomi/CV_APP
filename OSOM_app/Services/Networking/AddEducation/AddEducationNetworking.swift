@@ -14,6 +14,7 @@ protocol AddEducationNetworking: class {
     weak var delegate: AddEducationNetworkingDelegate? { get set }
     
     func setAddEducationData(parameters: [String: Any])
+    func updateEducationData(parameters: [String : Any])
 }
 
 protocol AddEducationNetworkingDelegate: class {
@@ -53,8 +54,12 @@ extension AddEducationNetworkingImpl: AddEducationNetworking {
         makeRequest(request: getRequest(parameters))
     }
     
-    fileprivate func getRequest(_ parameters: [String: Any]? = nil) -> HTTPRequest {
-        return HTTPRequest(url: getUrl(), method: .post, parameters: parameters, encoding: JSONEncoding.default)
+    func updateEducationData(parameters: [String : Any]) {
+        makeRequest(request: getRequest(parameters, method: .put))
+    }
+    
+    fileprivate func getRequest(_ parameters: [String: Any]? = nil, method: HTTPMethod = .post) -> HTTPRequest {
+        return HTTPRequest(url: getUrl(), method: method, parameters: parameters, encoding: JSONEncoding.default)
     }
     
     fileprivate func getUrl() -> String {

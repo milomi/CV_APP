@@ -12,14 +12,17 @@ class AddSkillsDetailViewController: UIViewController {
     
     fileprivate let mainView: AddSkillsView
     fileprivate let cellManager: AddSkillsDetailCellManager
+    fileprivate let viewModel: AddSkillsDetailViewModel
     fileprivate var navigator: NavigationController?
     
-    init(view: AddSkillsView, cellManager: AddSkillsDetailCellManager) {
+    init(view: AddSkillsView, viewModel: AddSkillsDetailViewModel, cellManager: AddSkillsDetailCellManager) {
         self.mainView = view
         self.cellManager = cellManager
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         setupView()
         setupNavigation()
+        viewModel.delegate = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -58,16 +61,23 @@ extension AddSkillsDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel.getSkills().count + 1 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return cellManager.buildCell(indexPath: indexPath, viewController: self)
+        let skill = viewModel.getSkill(for: indexPath.row)
+        return cellManager.buildCell(indexPath: indexPath, viewController: self, skill: skill)
     }
     
 }
 
-extension AddSkillsDetailViewController: UITableViewDelegate {
+extension AddSkillsDetailViewController: AddSkillsDetailViewModelDelegate {
+    func reloadData() {
+        mainView.tableView.reloadData()
+    }
+    
     
 }
+
+
 

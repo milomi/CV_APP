@@ -42,7 +42,7 @@ final class SkillsNetworkingImpl: BaseNetworking {
         if let json = json {
             delegate?.success(json)
         } else {
-            print("error")
+            delegate?.unknownErrorOccured()
         }
     }
     
