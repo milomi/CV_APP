@@ -11,7 +11,7 @@ import UIKit
 final class TabBarBuilder {
     
     func getAbout() -> UINavigationController {
-        let controller = ViewControllerContainer.shared.getCreateAbout()
+        let controller = ViewControllerContainer.shared.getAbout()
         let navigationController = UINavigationController(rootViewController: controller)
         let icon = UITabBarItem(title: nil,
                                 image: getInactiveImage("profile"),

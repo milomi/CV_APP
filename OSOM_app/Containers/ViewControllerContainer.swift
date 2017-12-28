@@ -109,4 +109,10 @@ class ViewControllerContainer {
         return QRReaderViewController()
     }
     
+    func getAbout() -> AboutViewController {
+        let view = AboutView()
+        let viewModel = AboutViewModelImpl()
+        return AboutViewController(view: view, viewModel: viewModel)
+    }
+    
 }
