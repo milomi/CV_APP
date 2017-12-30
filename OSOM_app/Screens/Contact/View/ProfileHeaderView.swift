@@ -37,8 +37,8 @@ fileprivate struct Constants {
         static let font = UIFont.getFontWithSizeAndType(26, type: .bold)
         
         struct Constraints {
-            static let bottom = 29
-            static let top = 25
+            static let bottom = 20
+            static let top = 20
         }
     }
 }

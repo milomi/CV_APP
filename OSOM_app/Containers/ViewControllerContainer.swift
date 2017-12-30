@@ -111,7 +111,7 @@ class ViewControllerContainer {
     
     func getAbout() -> AboutViewController {
         let view = AboutView()
-        let viewModel = AboutViewModelImpl()
+        let viewModel = AboutViewModelImpl(repository: UserDBRepositoryImpl())
         return AboutViewController(view: view, viewModel: viewModel)
     }
     

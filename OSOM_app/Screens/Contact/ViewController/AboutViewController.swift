@@ -56,6 +56,8 @@ final class AboutViewController: UIViewController {
     fileprivate func setupView() {
         view = mainView
         mainView.setupView()
+        mainView.fillView(user: viewModel.getUser())
+        
     }
 }
 

@@ -14,98 +14,126 @@ fileprivate struct Constants {
         static let backgroundColor = UIColor.mainGrey
         
     }
-    
-    struct ContentImage {
-        static let imageName = "about"
-        
-        struct Constraints {
-            static let padding = 2
-            static let height = 166
-            
-        }
-    }
-    
-    
-    struct ProfileImage {
-        struct Constraints {
-            static let size = 136
-        }
-    }
-    
-    struct UserNameLabel {
+
+    struct HeaderLabel {
         static let textColor = UIColor.darkText
-        static let font = UIFont.getFontWithSizeAndType(26, type: .bold)
+        static let font = UIFont.getFontWithSizeAndType(18, type: .bold)
+        static let text = "Personal Statement"
         
         struct Constraints {
-            static let bottom = 29
+            static let bottom = 20
+            static let top = 20
+        }
+    }
+    
+    struct Separator {
+        static let color = UIColor.black
+        
+        struct Constraints {
             static let top = 25
+        }
+    }
+    
+    struct DescriptionLabel {
+        static let textColor = UIColor.darkGray
+        static let font = UIFont.getFontWithSizeAndType(16, type: .light)
+        
+        struct Constraints {
+            static let padding = 15
+            static let bottom = 24
+            static let top = 16
         }
     }
 }
 
 class PersonalStatmentView: UIView {
     
-    let contentImage: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: Constants.ContentImage.imageName)
-        imageView.contentMode = .scaleAspectFill
-        return imageView
-    }()
-    
-    let profileImage: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
-        imageView.addShadow()
-        return imageView
-    }()
-    
-    let userNameLabel: UILabel = {
+    let headerLabel: UILabel = {
         let label = UILabel()
-        label.textColor = Constants.UserNameLabel.textColor
-        label.font = Constants.UserNameLabel.font
-        label.textAlignment = .center
+        label.textColor = Constants.HeaderLabel.textColor
+        label.font = Constants.HeaderLabel.font
+        label.text = Constants.HeaderLabel.text
+        label.textAlignment = .left
+        return label
+    }()
+    
+    let separator: UIView = {
+        let view = UIView()
+        view.backgroundColor = .black
+        return view
+    }()
+    
+    let scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.backgroundColor = UIColor.white
+        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.showsVerticalScrollIndicator = false
+        return scrollView
+    }()
+    
+    
+    let descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = Constants.DescriptionLabel.textColor
+        label.font = Constants.DescriptionLabel.font
+        label.textAlignment = .left
+        label.numberOfLines = 0
         return label
     }()
     
     
     func setupView() {
         setupSelf()
-        setupContentImage()
-        setupProfileImage()
-        setupUserNameLabel()
+        setupHeaderLabel()
+        setupSeparator()
+        setupScrollView()
+        setupDescriptionLabel()
     }
     
     private func setupSelf() {
-        backgroundColor = UIColor.mainGrey
+        backgroundColor = UIColor.white
         self.clipsToBounds = true
     }
     
-    private func setupContentImage() {
-        addSubview(contentImage)
+    private func setupHeaderLabel() {
+        addSubview(headerLabel)
         
-        contentImage.snp.makeConstraints { (make) in
-            make.leading.trailing.top.equalToSuperview()
-            make.height.equalTo(Constants.ContentImage.Constraints.height)
+        headerLabel.snp.makeConstraints { (make) in
+            make.trailing.equalToSuperview()
+            make.leading.equalTo(Constants.DescriptionLabel.Constraints.padding)
+            make.top.equalTo(0).offset(Constants.HeaderLabel.Constraints.top)
         }
     }
     
-    private func setupProfileImage() {
-        addSubview(profileImage)
+    private func setupSeparator() {
+        addSubview(separator)
         
-        profileImage.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview()
-            make.top.equalToSuperview().offset(65)
-            make.height.width.equalTo(Constants.ProfileImage.Constraints.size)
-        }
-    }
-    
-    private func setupUserNameLabel() {
-        addSubview(userNameLabel)
-        
-        userNameLabel.snp.makeConstraints { (make) in
+        separator.snp.makeConstraints { (make) in
             make.leading.trailing.equalToSuperview()
-            make.bottom.equalToSuperview().offset(-Constants.UserNameLabel.Constraints.bottom)
-            make.top.equalTo(profileImage.snp.bottom).offset(Constants.UserNameLabel.Constraints.top)
+            make.top.equalTo(headerLabel.snp.bottom).offset(Constants.Separator.Constraints.top)
+            make.height.equalTo(2)
+        }
+    }
+    
+    
+    private func setupScrollView() {
+        addSubview(scrollView)
+        
+        scrollView.snp.makeConstraints { (make) in
+            make.leading.trailing.bottom.equalToSuperview()
+            make.top.equalTo(separator.snp.bottom)
+        }
+    }
+    
+    
+    private func setupDescriptionLabel() {
+        scrollView.addSubview(descriptionLabel)
+        
+        descriptionLabel.snp.makeConstraints { (make) in
+            make.leading.equalTo(Constants.DescriptionLabel.Constraints.padding)
+            make.trailing.equalTo(self.snp.trailing).offset(-Constants.DescriptionLabel.Constraints.padding)
+            make.top.equalToSuperview().offset(Constants.DescriptionLabel.Constraints.top)
+            make.bottom.equalToSuperview().offset(-Constants.DescriptionLabel.Constraints.padding)
         }
     }
     

@@ -17,15 +17,6 @@ fileprivate struct Constants {
         static let qrCode = "mainView.qrCode"
     }
     
-    struct headerImage {
-        static let image = "cvLogo"
-        
-        struct Constraints {
-            static let height = 336
-            static let height4 = 266
-        }
-    }
-    
     struct ContentView {
         static let backgroundColor = UIColor.white
         struct Constraints {
@@ -54,12 +45,7 @@ fileprivate struct Constants {
 
 class AboutView: BaseView {
     
-    let scrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-        scrollView.backgroundColor = UIColor.white
-        return scrollView
-    }()
-    
+
     private let header: ProfileHeaderView = {
         let header = ProfileHeaderView()
         header.setupView()
@@ -67,7 +53,15 @@ class AboutView: BaseView {
         header.profileImage.image = #imageLiteral(resourceName: "mia")
         return header
     }()
-
+    
+    private let personalStatementView: PersonalStatmentView = {
+        let view = PersonalStatmentView()
+        view.setupView()
+       
+        return view
+    }()
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -79,8 +73,15 @@ class AboutView: BaseView {
     override func setupView() {
         super.setupView()
         setupHeader()
+        setupPersonalStatement()
+        
     }
     
+    func fillView(user: User) {
+        header.userNameLabel.text = "\(user.name) \(user.surname)"
+        personalStatementView.descriptionLabel.text = user.personalStatement
+    }
+
     private func setupHeader() {
         contentFrame.addSubview(header)
         
@@ -88,11 +89,19 @@ class AboutView: BaseView {
             make.leading.equalTo(5)
             make.trailing.equalTo(-5)
             make.top.equalToSuperview()
-            if UIDevice.current.isScreen4inch() {
-                make.height.equalTo(Constants.headerImage.Constraints.height4)
-            } else {
-                make.height.equalTo(Constants.headerImage.Constraints.height)
-            }
+        }
+    }
+    
+    private func setupPersonalStatement() {
+        
+        contentFrame.addSubview(personalStatementView)
+        
+        personalStatementView.snp.makeConstraints { (make) in
+            make.leading.equalToSuperview().offset(5)
+            make.trailing.equalToSuperview().offset(-5)
+            make.top.equalTo(header.snp.bottom).offset(5)
+            make.bottom.equalToSuperview().offset(-5)
+            
         }
     }
     
