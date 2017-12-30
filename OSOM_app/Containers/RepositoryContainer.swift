@@ -66,4 +66,11 @@ class RepositoryContainer {
         
         return AddSkillsDetailRepositoryImpl(skillsSectionDBRepository: skillsDBRepository, networking: networking, addSkillsNetworking: addSkillsNetworking, serializer: skillsSerializer)
     }
+    
+    func getQRCodeRepository() -> QRCodeRepository {
+        
+        let networking = CVNetworkingImpl()
+        
+        return QRCodeRepositoryImpl(networking: networking)
+    }
 }

@@ -6,15 +6,60 @@
 //
 
 import Foundation
+import PKHUD
+
+protocol QRReaderViewModelDelegate: class {
+    func downloadSuccessed()
+    func error()
+}
 
 protocol QRReaderViewModel: class {
-    func openProfile(with url: String)
+    
+    var delegate: QRReaderViewModelDelegate? { get set }
+    
+    func openProfile(with url: String?)
 }
 
 final class QRReaderViewModelImpl: QRReaderViewModel {
+    
+    weak var delegate: QRReaderViewModelDelegate?
    
-    func openProfile(with url: String) {
-        print(url)
+    fileprivate let repository: QRCodeRepository
+    
+    init(repository: QRCodeRepository) {
+        self.repository = repository
+        repository.delegate = self
     }
+    
+    func openProfile(with url: String?) {
+        if let url = url {
+            HUD.show(.progress)
+            repository.getCV(url: url)
+        }
+    }
+    
+}
+
+extension QRReaderViewModelImpl: QRCodeRepositoryDelegate {
+    func downloadSuccessed() {
+        HUD.show(.success)
+        delegate?.downloadSuccessed()
+    }
+    
+    func errorOccured(_ error: String?) {
+        HUD.show(.error)
+        delegate?.error()
+    }
+    
+    func noInternetConnection() {
+        HUD.show(.error)
+        delegate?.error()
+    }
+    
+    func unknownErrorOccured() {
+        HUD.show(.error)
+        delegate?.error()
+    }
+    
     
 }

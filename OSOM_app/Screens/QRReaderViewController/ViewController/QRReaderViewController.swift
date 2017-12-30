@@ -12,7 +12,7 @@ import AVFoundation
 class QRReaderViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     fileprivate var mainView: QRReaderView?
-    fileprivate var viewModel: QRReaderViewModelImpl?
+    fileprivate var viewModel: QRReaderViewModel?
     
     var videoCaptureDevice = AVCaptureDevice.default(for: .video)
     var device = AVCaptureDevice.default(for: .video)
@@ -22,12 +22,16 @@ class QRReaderViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
     var captureSession = AVCaptureSession()
     var code: String?
     
+    var isProcessing: Bool = false
+    
     var scannedCode = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = ViewModelContainer().getQRReaderViewModel()
         setupCamera()
         addLabelForDisplayingCode()
+        viewModel?.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -97,7 +101,30 @@ class QRReaderViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
         for metadata in metadataObjects {
             let readableObject = metadata as! AVMetadataMachineReadableCodeObject
             let code = readableObject.stringValue
-            scannedCode.text = code
+            scannedCode.text = "Processing.."
+            
+            if !isProcessing {
+                isProcessing = true
+                viewModel?.openProfile(with: code)
+            }
+            
+            
         }
     }
+
+}
+
+extension QRReaderViewController: QRReaderViewModelDelegate {
+    func downloadSuccessed() {
+        isProcessing = false
+        let tabbar = TabBarController()
+        self.changeRootVC(newViewController: tabbar)
+    }
+    
+    func error() {
+        isProcessing = false
+        scannedCode.text = "Scanning...."
+    }
+    
+    
 }

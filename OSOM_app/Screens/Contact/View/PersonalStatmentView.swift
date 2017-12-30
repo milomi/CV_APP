@@ -43,7 +43,7 @@ fileprivate struct Constants {
     }
 }
 
-class ProfileHeaderView: UIView {
+class PersonalStatmentView: UIView {
     
     let contentImage: UIImageView = {
         let imageView = UIImageView()

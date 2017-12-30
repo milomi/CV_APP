@@ -55,4 +55,11 @@ class ViewModelContainer {
         return AddSkillsDetailViewModelImpl(repository: repository, sectionId: sectionId)
     }
     
+    func getQRReaderViewModel() -> QRReaderViewModel {
+        
+        let repostory = RepositoryContainer.shared.getQRCodeRepository()
+        
+        return QRReaderViewModelImpl(repository: repostory)
+    }
+    
 }
