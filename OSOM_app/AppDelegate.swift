@@ -111,7 +111,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             vc = ViewControllerContainer.shared.getWelcome()
             let nav = UINavigationController(rootViewController: vc)
             nav.isNavigationBarHidden = true
-            window?.rootViewController = nav
+            window?.rootViewController = TabBarController()
             window?.makeKeyAndVisible()
             return
         }
@@ -126,7 +126,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
             let nav = UINavigationController(rootViewController: vc)
-            window?.rootViewController = nav
+            window?.rootViewController = TabBarController()
             window?.makeKeyAndVisible()
     }
 

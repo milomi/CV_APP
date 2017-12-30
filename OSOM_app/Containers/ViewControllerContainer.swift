@@ -115,4 +115,13 @@ class ViewControllerContainer {
         return AboutViewController(view: view, viewModel: viewModel)
     }
     
+    func getEducation() -> EducationViewController {
+        let view = EducationView()
+        let viewModel = EducationViewModelImpl()
+        let cellManager = EducationCellManagerImpl(tableView: view.tableView)
+    
+        
+        return EducationViewController(view: view, cellManager: cellManager, viewModel: viewModel)
+    }
+    
 }

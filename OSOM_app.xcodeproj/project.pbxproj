@@ -129,12 +129,19 @@
 		B29F41AC1FF45BEF002A004F /* AboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29F41AB1FF45BEF002A004F /* AboutViewModel.swift */; };
 		B29F41AE1FF45CAD002A004F /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29F41AD1FF45CAD002A004F /* ProfileHeaderView.swift */; };
 		B29F41B21FF4FBE2002A004F /* PersonalStatmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29F41B11FF4FBE2002A004F /* PersonalStatmentView.swift */; };
+		B2B1BD761FF84A0B00B1F9CC /* CVDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B1BD751FF84A0B00B1F9CC /* CVDataCell.swift */; };
+		B2B1BD781FF84A1700B1F9CC /* CVDataCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B1BD771FF84A1700B1F9CC /* CVDataCellView.swift */; };
 		B2BAE28A1FF7076E0029107A /* QRCodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE2891FF7076E0029107A /* QRCodeRepository.swift */; };
 		B2BAE28C1FF708260029107A /* CVSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE28B1FF708260029107A /* CVSerializer.swift */; };
 		B2BAE28E1FF7090A0029107A /* ContactSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE28D1FF7090A0029107A /* ContactSerializer.swift */; };
 		B2BAE2911FF70ABE0029107A /* CVNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE2901FF70ABE0029107A /* CVNetworking.swift */; };
 		B2BAE2941FF795300029107A /* CVRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE2931FF795300029107A /* CVRepository.swift */; };
 		B2BAE2961FF796070029107A /* UserSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE2951FF796070029107A /* UserSerializer.swift */; };
+		B2BAE29E1FF7C3250029107A /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE29D1FF7C3250029107A /* EducationViewController.swift */; };
+		B2BAE2A01FF7C3750029107A /* EducationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE29F1FF7C3750029107A /* EducationView.swift */; };
+		B2BAE2A21FF7C3DE0029107A /* BasePresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE2A11FF7C3DE0029107A /* BasePresentationView.swift */; };
+		B2BAE2A41FF7D1310029107A /* EducationCellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE2A31FF7D1310029107A /* EducationCellManager.swift */; };
+		B2BAE2A61FF7D1400029107A /* EducationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE2A51FF7D1400029107A /* EducationViewModel.swift */; };
 		B2C48FED1F9367F600DFECA4 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */; };
 		B2C48FF01F936A9F00DFECA4 /* BaseEditField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */; };
 		B2C48FF81F937B8400DFECA4 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF31F937B8400DFECA4 /* Montserrat-Bold.otf */; };
@@ -316,12 +323,19 @@
 		B29F41AB1FF45BEF002A004F /* AboutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewModel.swift; sourceTree = "<group>"; };
 		B29F41AD1FF45CAD002A004F /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		B29F41B11FF4FBE2002A004F /* PersonalStatmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalStatmentView.swift; sourceTree = "<group>"; };
+		B2B1BD751FF84A0B00B1F9CC /* CVDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVDataCell.swift; sourceTree = "<group>"; };
+		B2B1BD771FF84A1700B1F9CC /* CVDataCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVDataCellView.swift; sourceTree = "<group>"; };
 		B2BAE2891FF7076E0029107A /* QRCodeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeRepository.swift; sourceTree = "<group>"; };
 		B2BAE28B1FF708260029107A /* CVSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSerializer.swift; sourceTree = "<group>"; };
 		B2BAE28D1FF7090A0029107A /* ContactSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSerializer.swift; sourceTree = "<group>"; };
 		B2BAE2901FF70ABE0029107A /* CVNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVNetworking.swift; sourceTree = "<group>"; };
 		B2BAE2931FF795300029107A /* CVRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVRepository.swift; sourceTree = "<group>"; };
 		B2BAE2951FF796070029107A /* UserSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSerializer.swift; sourceTree = "<group>"; };
+		B2BAE29D1FF7C3250029107A /* EducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
+		B2BAE29F1FF7C3750029107A /* EducationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationView.swift; sourceTree = "<group>"; };
+		B2BAE2A11FF7C3DE0029107A /* BasePresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresentationView.swift; sourceTree = "<group>"; };
+		B2BAE2A31FF7D1310029107A /* EducationCellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationCellManager.swift; sourceTree = "<group>"; };
+		B2BAE2A51FF7D1400029107A /* EducationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewModel.swift; sourceTree = "<group>"; };
 		B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEditField.swift; sourceTree = "<group>"; };
 		B2C48FF31F937B8400DFECA4 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
@@ -507,6 +521,7 @@
 		35EB194A1F1E329B00DD3AA5 /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
+				B2B1BD741FF849DD00B1F9CC /* CVDataCell */,
 				B2E6322B1FADB1AB009D837E /* CreateView */,
 				B2F029CC1F9C9AED0006A5A0 /* Navigation */,
 				B2F029C51F9B71E10006A5A0 /* MainView */,
@@ -538,6 +553,7 @@
 				B23C0A1A1FD2261600C62426 /* UIImage+Base64.swift */,
 				B25B815B1FD3404F0041D0A9 /* UIViewController+ChengeRoot.swift */,
 				B20F12681FE67AC200F82F0F /* DateFormaterHelper.swift */,
+				B2BAE2A11FF7C3DE0029107A /* BasePresentationView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1278,6 +1294,7 @@
 		B29F419C1FF45279002A004F /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
+				B2BAE2981FF7C2FC0029107A /* Education */,
 				B29F41A21FF458A3002A004F /* About */,
 				B29F419D1FF45294002A004F /* TabBarController.swift */,
 				B29F419F1FF452A1002A004F /* TabBarBuilder.swift */,
@@ -1360,6 +1377,15 @@
 			path = ViewManagment;
 			sourceTree = "<group>";
 		};
+		B2B1BD741FF849DD00B1F9CC /* CVDataCell */ = {
+			isa = PBXGroup;
+			children = (
+				B2B1BD751FF84A0B00B1F9CC /* CVDataCell.swift */,
+				B2B1BD771FF84A1700B1F9CC /* CVDataCellView.swift */,
+			);
+			path = CVDataCell;
+			sourceTree = "<group>";
+		};
 		B2BAE2881FF707400029107A /* QRCodeRepository */ = {
 			isa = PBXGroup;
 			children = (
@@ -1398,6 +1424,49 @@
 				B24B9F1C1FBF607300810ED6 /* AddEducationDetail */,
 			);
 			path = CreateCV;
+			sourceTree = "<group>";
+		};
+		B2BAE2981FF7C2FC0029107A /* Education */ = {
+			isa = PBXGroup;
+			children = (
+				B2BAE29C1FF7C3170029107A /* ViewManagment */,
+				B2BAE29B1FF7C3130029107A /* View */,
+				B2BAE29A1FF7C30D0029107A /* ViewModel */,
+				B2BAE2991FF7C3050029107A /* ViewController */,
+			);
+			path = Education;
+			sourceTree = "<group>";
+		};
+		B2BAE2991FF7C3050029107A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B2BAE29D1FF7C3250029107A /* EducationViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B2BAE29A1FF7C30D0029107A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B2BAE2A51FF7D1400029107A /* EducationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B2BAE29B1FF7C3130029107A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2BAE29F1FF7C3750029107A /* EducationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B2BAE29C1FF7C3170029107A /* ViewManagment */ = {
+			isa = PBXGroup;
+			children = (
+				B2BAE2A31FF7D1310029107A /* EducationCellManager.swift */,
+			);
+			path = ViewManagment;
 			sourceTree = "<group>";
 		};
 		B2C48FEE1F936A8900DFECA4 /* SignUp */ = {
@@ -1892,6 +1961,7 @@
 				B2E6324F1FAF678F009D837E /* AddEducationView.swift in Sources */,
 				B26631DD1FE1D209004D7327 /* CreateAboutNetworking.swift in Sources */,
 				B2F029C91F9C7ECD0006A5A0 /* BaseView.swift in Sources */,
+				B2B1BD761FF84A0B00B1F9CC /* CVDataCell.swift in Sources */,
 				B24B9F3B1FBF84DE00810ED6 /* AddWorkplaceDetailViewController.swift in Sources */,
 				B2BAE28A1FF7076E0029107A /* QRCodeRepository.swift in Sources */,
 				B21BB4441FEF19D10043C997 /* AddSkillsNetworking.swift in Sources */,
@@ -1903,6 +1973,7 @@
 				B2E6325B1FAF6E1A009D837E /* UITableView+Register.swift in Sources */,
 				B2D004291FE7BF660097C79C /* Skill.swift in Sources */,
 				B2BAE28E1FF7090A0029107A /* ContactSerializer.swift in Sources */,
+				B2BAE2A01FF7C3750029107A /* EducationView.swift in Sources */,
 				B20F12691FE67AC200F82F0F /* DateFormaterHelper.swift in Sources */,
 				B2D004311FE7C5140097C79C /* AddSkillSectionRepository.swift in Sources */,
 				B287AB1C1FCB2F3800EC3416 /* SignUpNetworking.swift in Sources */,
@@ -1923,6 +1994,7 @@
 				B29F41AC1FF45BEF002A004F /* AboutViewModel.swift in Sources */,
 				B2D0042B1FE7C0170097C79C /* SkillsSection.swift in Sources */,
 				B25B81641FD34BC40041D0A9 /* QRReaderView.swift in Sources */,
+				B2BAE29E1FF7C3250029107A /* EducationViewController.swift in Sources */,
 				B21BB4421FEF0D950043C997 /* AddSkillsDetailRepository.swift in Sources */,
 				B2BAE2961FF796070029107A /* UserSerializer.swift in Sources */,
 				B24B9F5E1FC0771E00810ED6 /* AddContactsDetailViewController.swift in Sources */,
@@ -1958,6 +2030,7 @@
 				B2E632311FADFDBD009D837E /* CreateAboutViewController.swift in Sources */,
 				B2E6322F1FADB442009D837E /* CreationStageHeader.swift in Sources */,
 				B2E632331FAE107C009D837E /* BaseEditTextView.swift in Sources */,
+				B2BAE2A61FF7D1400029107A /* EducationViewModel.swift in Sources */,
 				B2E632591FAF6BA9009D837E /* AddEducationCellView.swift in Sources */,
 				B29F41AA1FF45B2F002A004F /* AboutView.swift in Sources */,
 				B29F419E1FF45294002A004F /* TabBarController.swift in Sources */,
@@ -1970,6 +2043,7 @@
 				B24B9F6A1FC07D9D00810ED6 /* HelloView.swift in Sources */,
 				B24E438A1FCAA7D500ADD404 /* AuthorizationHelper.swift in Sources */,
 				B29F41AE1FF45CAD002A004F /* ProfileHeaderView.swift in Sources */,
+				B2BAE2A41FF7D1310029107A /* EducationCellManager.swift in Sources */,
 				B2BAE2941FF795300029107A /* CVRepository.swift in Sources */,
 				B2E632271FADB169009D837E /* CreateAboutView.swift in Sources */,
 				3572CF771F1E036E004FC883 /* WelcomeView.swift in Sources */,
@@ -2019,6 +2093,7 @@
 				3572CF701F1DFDEB004FC883 /* CellManagerContainer.swift in Sources */,
 				B24E43861FCAA79900ADD404 /* HTTPRequest.swift in Sources */,
 				B2E632521FAF68DA009D837E /* AddEducationCellManager.swift in Sources */,
+				B2B1BD781FF84A1700B1F9CC /* CVDataCellView.swift in Sources */,
 				B24B9F421FC06EC100810ED6 /* AddWorkplaceViewModel.swift in Sources */,
 				B24B9F4F1FC0738400810ED6 /* AddSkillsViewModel.swift in Sources */,
 				B25B81681FD35D190041D0A9 /* QRReaderViewModel.swift in Sources */,
@@ -2027,6 +2102,7 @@
 				B20CA6301F9CBFF50018208A /* SignUpEmailView.swift in Sources */,
 				B22DE7961FDBEBD10007838C /* RealmRepository.swift in Sources */,
 				B2D004361FE7C9080097C79C /* AddSkillSectionNetworking.swift in Sources */,
+				B2BAE2A21FF7C3DE0029107A /* BasePresentationView.swift in Sources */,
 				B25B81571FD339220041D0A9 /* LoginViewModel.swift in Sources */,
 				B2202C441FE6F9BC007DF39E /* WorkSerializer.swift in Sources */,
 				35EB19601F1E3DE200DD3AA5 /* Fonts.swift in Sources */,

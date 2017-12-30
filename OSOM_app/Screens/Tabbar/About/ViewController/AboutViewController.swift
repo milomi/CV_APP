@@ -48,6 +48,7 @@ final class AboutViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         setupView()
         navigationController?.isNavigationBarHidden = true
     }

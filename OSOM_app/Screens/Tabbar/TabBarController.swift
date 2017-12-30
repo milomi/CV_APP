@@ -22,7 +22,8 @@ final class TabBarController: UITabBarController {
         self.tabBar.isTranslucent = false
         self.tabBar.isOpaque = false
         setTabBarItems()
-        selectedIndex = 1
+        selectedIndex = 0
+        navigationController?.navigationBar.isHidden = true
     }
     
     override func viewWillLayoutSubviews() {
@@ -44,10 +45,10 @@ extension TabBarController {
     
     fileprivate func setTabBarItems() {
         let  about = tabBarBuilder.getAbout()
-        let  education = tabBarBuilder.getAbout()
-        let  work = tabBarBuilder.getAbout()
-        let  skills = tabBarBuilder.getAbout()
-        let  contact = tabBarBuilder.getAbout()
+        let  education = tabBarBuilder.getEducation()
+        let  work = tabBarBuilder.getWork()
+        let  skills = tabBarBuilder.getSkills()
+        let  contact = tabBarBuilder.getContact()
         
         self.viewControllers?.removeAll()
         
