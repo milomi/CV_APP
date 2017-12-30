@@ -44,12 +44,10 @@ fileprivate struct Constants {
 }
 
 class AboutView: BaseView {
-    
 
     private let header: ProfileHeaderView = {
         let header = ProfileHeaderView()
         header.setupView()
-        header.userNameLabel.text = "Milosz Bugla"
         header.profileImage.image = #imageLiteral(resourceName: "mia")
         return header
     }()
@@ -60,7 +58,6 @@ class AboutView: BaseView {
        
         return view
     }()
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -467,19 +467,10 @@
 		3572CF711F1E01F5004FC883 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				B29F41A21FF458A3002A004F /* Contact */,
+				B2BAE2971FF7C0B70029107A /* CreateCV */,
+				B24B9F641FC07CFE00810ED6 /* HelloViewController */,
 				B29F419C1FF45279002A004F /* Tabbar */,
 				B25B815D1FD3474C0041D0A9 /* QRReaderViewController */,
-				B24B9F641FC07CFE00810ED6 /* HelloViewController */,
-				B24B9F591FC076CF00810ED6 /* Contacts */,
-				B24B9F501FC073C600810ED6 /* AddSkillsDetail */,
-				B24B9F431FC0715700810ED6 /* AddSkills */,
-				B24B9F351FBF847600810ED6 /* AddWorkplaceDetail */,
-				B24B9F2A1FBF820400810ED6 /* AddWorkplace */,
-				B24B9F1C1FBF607300810ED6 /* AddEducationDetail */,
-				B29FF8A61FB4FA5C00E935A1 /* SchoolForm */,
-				B2E632481FAF6683009D837E /* AddEducation */,
-				B2E632251FADB0E0009D837E /* CreateAbout */,
 				B20CA63C1F9D06F20018208A /* LogIn */,
 				B2024F6F1F9364BA0083B813 /* SignUp */,
 				3572CF721F1E02B5004FC883 /* WelcomeScreen */,
@@ -1287,20 +1278,21 @@
 		B29F419C1FF45279002A004F /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
+				B29F41A21FF458A3002A004F /* About */,
 				B29F419D1FF45294002A004F /* TabBarController.swift */,
 				B29F419F1FF452A1002A004F /* TabBarBuilder.swift */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
 		};
-		B29F41A21FF458A3002A004F /* Contact */ = {
+		B29F41A21FF458A3002A004F /* About */ = {
 			isa = PBXGroup;
 			children = (
 				B29F41A51FF45910002A004F /* ViewModel */,
 				B29F41A41FF45905002A004F /* ViewController */,
 				B29F41A31FF45900002A004F /* View */,
 			);
-			path = Contact;
+			path = About;
 			sourceTree = "<group>";
 		};
 		B29F41A31FF45900002A004F /* View */ = {
@@ -1390,6 +1382,22 @@
 				B2BAE2931FF795300029107A /* CVRepository.swift */,
 			);
 			path = CV;
+			sourceTree = "<group>";
+		};
+		B2BAE2971FF7C0B70029107A /* CreateCV */ = {
+			isa = PBXGroup;
+			children = (
+				B24B9F591FC076CF00810ED6 /* Contacts */,
+				B2E632251FADB0E0009D837E /* CreateAbout */,
+				B29FF8A61FB4FA5C00E935A1 /* SchoolForm */,
+				B2E632481FAF6683009D837E /* AddEducation */,
+				B24B9F501FC073C600810ED6 /* AddSkillsDetail */,
+				B24B9F431FC0715700810ED6 /* AddSkills */,
+				B24B9F351FBF847600810ED6 /* AddWorkplaceDetail */,
+				B24B9F2A1FBF820400810ED6 /* AddWorkplace */,
+				B24B9F1C1FBF607300810ED6 /* AddEducationDetail */,
+			);
+			path = CreateCV;
 			sourceTree = "<group>";
 		};
 		B2C48FEE1F936A8900DFECA4 /* SignUp */ = {
