@@ -38,4 +38,15 @@ final class UserDBRepositoryImpl: RealmRepositoryImpl<User>, UserDBRepository {
         return user
     }
     
+    func addUser(user: User) {
+        if let userDB = getObject() {
+            realm.beginWrite()
+            realm.delete(userDB)
+            commitWrite()
+        }
+        
+        addObject(object: user)
+        
+    }
+    
 }

@@ -133,6 +133,8 @@
 		B2BAE28C1FF708260029107A /* CVSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE28B1FF708260029107A /* CVSerializer.swift */; };
 		B2BAE28E1FF7090A0029107A /* ContactSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE28D1FF7090A0029107A /* ContactSerializer.swift */; };
 		B2BAE2911FF70ABE0029107A /* CVNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE2901FF70ABE0029107A /* CVNetworking.swift */; };
+		B2BAE2941FF795300029107A /* CVRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE2931FF795300029107A /* CVRepository.swift */; };
+		B2BAE2961FF796070029107A /* UserSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE2951FF796070029107A /* UserSerializer.swift */; };
 		B2C48FED1F9367F600DFECA4 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */; };
 		B2C48FF01F936A9F00DFECA4 /* BaseEditField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */; };
 		B2C48FF81F937B8400DFECA4 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C48FF31F937B8400DFECA4 /* Montserrat-Bold.otf */; };
@@ -318,6 +320,8 @@
 		B2BAE28B1FF708260029107A /* CVSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSerializer.swift; sourceTree = "<group>"; };
 		B2BAE28D1FF7090A0029107A /* ContactSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSerializer.swift; sourceTree = "<group>"; };
 		B2BAE2901FF70ABE0029107A /* CVNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVNetworking.swift; sourceTree = "<group>"; };
+		B2BAE2931FF795300029107A /* CVRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVRepository.swift; sourceTree = "<group>"; };
+		B2BAE2951FF796070029107A /* UserSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSerializer.swift; sourceTree = "<group>"; };
 		B2C48FEC1F9367F600DFECA4 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		B2C48FEF1F936A9F00DFECA4 /* BaseEditField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEditField.swift; sourceTree = "<group>"; };
 		B2C48FF31F937B8400DFECA4 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
@@ -1171,6 +1175,7 @@
 				B2202C431FE6F9BC007DF39E /* WorkSerializer.swift */,
 				B2BAE28B1FF708260029107A /* CVSerializer.swift */,
 				B2BAE28D1FF7090A0029107A /* ContactSerializer.swift */,
+				B2BAE2951FF796070029107A /* UserSerializer.swift */,
 			);
 			path = Serializers;
 			sourceTree = "<group>";
@@ -1250,6 +1255,7 @@
 		B287AB161FCB2E7500EC3416 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				B2BAE2921FF795150029107A /* CV */,
 				B2BAE2881FF707400029107A /* QRCodeRepository */,
 				B21BB4401FEF0D7E0043C997 /* AddSkillsDetailRepository */,
 				B2D0042F1FE7C4FA0097C79C /* AddSkillSectionRepository */,
@@ -1376,6 +1382,14 @@
 				B2BAE2901FF70ABE0029107A /* CVNetworking.swift */,
 			);
 			path = CVNetworking;
+			sourceTree = "<group>";
+		};
+		B2BAE2921FF795150029107A /* CV */ = {
+			isa = PBXGroup;
+			children = (
+				B2BAE2931FF795300029107A /* CVRepository.swift */,
+			);
+			path = CV;
 			sourceTree = "<group>";
 		};
 		B2C48FEE1F936A8900DFECA4 /* SignUp */ = {
@@ -1902,6 +1916,7 @@
 				B2D0042B1FE7C0170097C79C /* SkillsSection.swift in Sources */,
 				B25B81641FD34BC40041D0A9 /* QRReaderView.swift in Sources */,
 				B21BB4421FEF0D950043C997 /* AddSkillsDetailRepository.swift in Sources */,
+				B2BAE2961FF796070029107A /* UserSerializer.swift in Sources */,
 				B24B9F5E1FC0771E00810ED6 /* AddContactsDetailViewController.swift in Sources */,
 				B23C0A191FD2249200C62426 /* PersonalSerializer.swift in Sources */,
 				B24B9F381FBF84A700810ED6 /* AddWorkplaceDetailCellManager.swift in Sources */,
@@ -1947,6 +1962,7 @@
 				B24B9F6A1FC07D9D00810ED6 /* HelloView.swift in Sources */,
 				B24E438A1FCAA7D500ADD404 /* AuthorizationHelper.swift in Sources */,
 				B29F41AE1FF45CAD002A004F /* ProfileHeaderView.swift in Sources */,
+				B2BAE2941FF795300029107A /* CVRepository.swift in Sources */,
 				B2E632271FADB169009D837E /* CreateAboutView.swift in Sources */,
 				3572CF771F1E036E004FC883 /* WelcomeView.swift in Sources */,
 				B24B9F601FC0775100810ED6 /* AddContactView.swift in Sources */,

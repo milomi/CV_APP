@@ -26,6 +26,7 @@ class QRCodeRepositoryImpl: QRCodeRepository {
     weak var delegate: QRCodeRepositoryDelegate?
     
     fileprivate let networking: CVNetworking
+    fileprivate let repository = CVRepositoryImpl()
 
     init(networking: CVNetworking) {
         self.networking = networking
@@ -44,6 +45,7 @@ class QRCodeRepositoryImpl: QRCodeRepository {
 
 extension QRCodeRepositoryImpl: CVNetworkingDelegate {
     func success(_ json: JSON) {
+        repository.deserializeToDB(json: json)
         delegate?.downloadSuccessed()
     }
     
