@@ -140,6 +140,10 @@
 		B2B1BD8E1FF8FCDC00B1F9CC /* SkillsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B1BD8D1FF8FCDC00B1F9CC /* SkillsViewModel.swift */; };
 		B2B1BD911FF8FCF200B1F9CC /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B1BD901FF8FCF200B1F9CC /* SkillsViewController.swift */; };
 		B2B1BD941FF8FD4D00B1F9CC /* SkillsCellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B1BD931FF8FD4D00B1F9CC /* SkillsCellManager.swift */; };
+		B2B1BD9B1FF8FF2300B1F9CC /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B1BD9A1FF8FF2300B1F9CC /* ContactView.swift */; };
+		B2B1BD9D1FF8FF3D00B1F9CC /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B1BD9C1FF8FF3D00B1F9CC /* ContactViewModel.swift */; };
+		B2B1BD9F1FF8FF4900B1F9CC /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B1BD9E1FF8FF4900B1F9CC /* ContactViewController.swift */; };
+		B2B1BDA11FF8FF5400B1F9CC /* ContactCellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B1BDA01FF8FF5400B1F9CC /* ContactCellManager.swift */; };
 		B2BAE28A1FF7076E0029107A /* QRCodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE2891FF7076E0029107A /* QRCodeRepository.swift */; };
 		B2BAE28C1FF708260029107A /* CVSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE28B1FF708260029107A /* CVSerializer.swift */; };
 		B2BAE28E1FF7090A0029107A /* ContactSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE28D1FF7090A0029107A /* ContactSerializer.swift */; };
@@ -343,6 +347,10 @@
 		B2B1BD8D1FF8FCDC00B1F9CC /* SkillsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewModel.swift; sourceTree = "<group>"; };
 		B2B1BD901FF8FCF200B1F9CC /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
 		B2B1BD931FF8FD4D00B1F9CC /* SkillsCellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsCellManager.swift; sourceTree = "<group>"; };
+		B2B1BD9A1FF8FF2300B1F9CC /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
+		B2B1BD9C1FF8FF3D00B1F9CC /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
+		B2B1BD9E1FF8FF4900B1F9CC /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		B2B1BDA01FF8FF5400B1F9CC /* ContactCellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCellManager.swift; sourceTree = "<group>"; };
 		B2BAE2891FF7076E0029107A /* QRCodeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeRepository.swift; sourceTree = "<group>"; };
 		B2BAE28B1FF708260029107A /* CVSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSerializer.swift; sourceTree = "<group>"; };
 		B2BAE28D1FF7090A0029107A /* ContactSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSerializer.swift; sourceTree = "<group>"; };
@@ -1313,6 +1321,7 @@
 		B29F419C1FF45279002A004F /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
+				B2B1BD951FF8FEF500B1F9CC /* Contact */,
 				B2B1BD881FF8FC9C00B1F9CC /* Skills */,
 				B2B1BD7B1FF8F43B00B1F9CC /* Work */,
 				B2BAE2981FF7C2FC0029107A /* Education */,
@@ -1489,6 +1498,49 @@
 			isa = PBXGroup;
 			children = (
 				B2B1BD931FF8FD4D00B1F9CC /* SkillsCellManager.swift */,
+			);
+			path = ViewManagment;
+			sourceTree = "<group>";
+		};
+		B2B1BD951FF8FEF500B1F9CC /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				B2B1BD991FF8FF0D00B1F9CC /* ViewManagment */,
+				B2B1BD981FF8FF0500B1F9CC /* ViewController */,
+				B2B1BD971FF8FF0100B1F9CC /* ViewModel */,
+				B2B1BD961FF8FEFE00B1F9CC /* View */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		B2B1BD961FF8FEFE00B1F9CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2B1BD9A1FF8FF2300B1F9CC /* ContactView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B2B1BD971FF8FF0100B1F9CC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B2B1BD9C1FF8FF3D00B1F9CC /* ContactViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B2B1BD981FF8FF0500B1F9CC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B2B1BD9E1FF8FF4900B1F9CC /* ContactViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B2B1BD991FF8FF0D00B1F9CC /* ViewManagment */ = {
+			isa = PBXGroup;
+			children = (
+				B2B1BDA01FF8FF5400B1F9CC /* ContactCellManager.swift */,
 			);
 			path = ViewManagment;
 			sourceTree = "<group>";
@@ -2071,6 +2123,7 @@
 				B2B1BD761FF84A0B00B1F9CC /* CVDataCell.swift in Sources */,
 				B24B9F3B1FBF84DE00810ED6 /* AddWorkplaceDetailViewController.swift in Sources */,
 				B2BAE28A1FF7076E0029107A /* QRCodeRepository.swift in Sources */,
+				B2B1BD9D1FF8FF3D00B1F9CC /* ContactViewModel.swift in Sources */,
 				B21BB4441FEF19D10043C997 /* AddSkillsNetworking.swift in Sources */,
 				B25B81621FD347890041D0A9 /* QRReaderViewController.swift in Sources */,
 				B2E6324D1FAF66C6009D837E /* AddEducationViewController.swift in Sources */,
@@ -2091,6 +2144,7 @@
 				B287AB1E1FCB2F6C00EC3416 /* EmailValidationSerializer.swift in Sources */,
 				B24B9F581FC0741F00810ED6 /* AddSkillsDetailCellManager.swift in Sources */,
 				B20CA6411F9D073C0018208A /* LogInViewController.swift in Sources */,
+				B2B1BD9B1FF8FF2300B1F9CC /* ContactView.swift in Sources */,
 				B2E632351FAF410E009D837E /* UIImage+resize.swift in Sources */,
 				B2C48FF01F936A9F00DFECA4 /* BaseEditField.swift in Sources */,
 				B24B9F221FBF60F800810ED6 /* AddEducationDetailViewController.swift in Sources */,
@@ -2104,6 +2158,7 @@
 				B2B1BD811FF8F4BD00B1F9CC /* WorkView.swift in Sources */,
 				B2D0042B1FE7C0170097C79C /* SkillsSection.swift in Sources */,
 				B25B81641FD34BC40041D0A9 /* QRReaderView.swift in Sources */,
+				B2B1BDA11FF8FF5400B1F9CC /* ContactCellManager.swift in Sources */,
 				B2BAE29E1FF7C3250029107A /* EducationViewController.swift in Sources */,
 				B21BB4421FEF0D950043C997 /* AddSkillsDetailRepository.swift in Sources */,
 				B2BAE2961FF796070029107A /* UserSerializer.swift in Sources */,
@@ -2209,6 +2264,7 @@
 				3572CF701F1DFDEB004FC883 /* CellManagerContainer.swift in Sources */,
 				B24E43861FCAA79900ADD404 /* HTTPRequest.swift in Sources */,
 				B2E632521FAF68DA009D837E /* AddEducationCellManager.swift in Sources */,
+				B2B1BD9F1FF8FF4900B1F9CC /* ContactViewController.swift in Sources */,
 				B2B1BD781FF84A1700B1F9CC /* CVDataCellView.swift in Sources */,
 				B24B9F421FC06EC100810ED6 /* AddWorkplaceViewModel.swift in Sources */,
 				B24B9F4F1FC0738400810ED6 /* AddSkillsViewModel.swift in Sources */,

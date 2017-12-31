@@ -56,7 +56,7 @@ final class TabBarBuilder {
     }
     
     func getContact() -> UINavigationController {
-        let controller = ViewControllerContainer.shared.getEducation()
+        let controller = ViewControllerContainer.shared.getContact()
         let navigationController = UINavigationController(rootViewController: controller)
         let icon = UITabBarItem(title: nil,
                                 image: getInactiveImage("contact"),

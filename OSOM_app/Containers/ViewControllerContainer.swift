@@ -142,4 +142,13 @@ class ViewControllerContainer {
         return SkillsViewController(view: view, cellManager: cellManager, viewModel: viewModel)
     }
     
+    func getContact() -> ContactViewController {
+        let view = ContactView()
+        let viewModel = ContactViewModelImpl(repository: UserDBRepositoryImpl())
+        let cellManager = ContactCellManagerImpl(tableView: view.tableView)
+        
+        
+        return ContactViewController(view: view, cellManager: cellManager, viewModel: viewModel)
+    }
+    
 }
