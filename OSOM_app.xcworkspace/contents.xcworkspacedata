@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:WorkViewModel.swift">
+   </FileRef>
+   <FileRef
       location = "group:OSOM_app.xcodeproj">
    </FileRef>
    <FileRef

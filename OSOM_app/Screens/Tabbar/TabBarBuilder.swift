@@ -34,7 +34,7 @@ final class TabBarBuilder {
     }
     
     func getWork() -> UINavigationController {
-        let controller = ViewControllerContainer.shared.getEducation()
+        let controller = ViewControllerContainer.shared.getWork()
         let navigationController = UINavigationController(rootViewController: controller)
         let icon = UITabBarItem(title: nil,
                                 image: getInactiveImage("work"),

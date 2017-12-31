@@ -124,4 +124,13 @@ class ViewControllerContainer {
         return EducationViewController(view: view, cellManager: cellManager, viewModel: viewModel)
     }
     
+    func getWork() -> WorkViewController {
+        let view = WorkView()
+        let viewModel = WorkViewModelImpl(repository: WorkDBRepositoryImpl())
+        let cellManager = WorkCellManagerImpl(tableView: view.tableView)
+        
+        
+        return WorkViewController(view: view, cellManager: cellManager, viewModel: viewModel)
+    }
+    
 }

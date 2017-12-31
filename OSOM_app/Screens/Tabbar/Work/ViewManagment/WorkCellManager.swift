@@ -1,8 +1,8 @@
 //
-//  EducationCellManager.swift
+//  WorkCellManager.swift
 //  OSOM_app
 //
-//  Created by Miłosz Bugla on 30.12.2017.
+//  Created by Miłosz Bugla on 31.12.2017.
 //
 
 import Foundation
@@ -14,16 +14,16 @@ fileprivate struct Constants {
     }
 }
 
-protocol EducationCellManagerDelegate: class {
+protocol WorkCellManagerDelegate: class {
     
 }
 
-protocol EducationCellManager: class {
-    func buildCell(indexPath: IndexPath, _ school: School?) -> UITableViewCell
+protocol WorkCellManager: class {
+    func buildCell(indexPath: IndexPath, _ work: Work?) -> UITableViewCell
     func getHeaderView() -> UIView
 }
 
-final class EducationCellManagerImpl: EducationCellManager {
+final class WorkCellManagerImpl: WorkCellManager {
     let tableView: UITableView
     
     init(tableView: UITableView) {
@@ -35,16 +35,16 @@ final class EducationCellManagerImpl: EducationCellManager {
         tableView.registerCell(CVDataCell.self)
     }
     
-    func buildCell(indexPath: IndexPath, _ school: School? = nil) -> UITableViewCell {
+    func buildCell(indexPath: IndexPath, _ work: Work? = nil) -> UITableViewCell {
         
         guard let cell = tableView.getCell(CVDataCell.self) else {
             return UITableViewCell()
         }
         
-        cell.mainView.headerLabel.text  = school?.name ?? ""
+        cell.mainView.headerLabel.text  = work?.name ?? ""
         cell.mainView.dateRangeLabel.text = "Oct. 2010 - Aug. 2012"
-        cell.mainView.infoLabel.text = school?.courseTitle ?? ""
-        cell.mainView.descriptionLabel.text = school?.description ?? ""
+        cell.mainView.infoLabel.text = work?.jobTitle ?? ""
+        cell.mainView.descriptionLabel.text = work?.description ?? ""
         return cell
         
     }
@@ -55,10 +55,10 @@ final class EducationCellManagerImpl: EducationCellManager {
         
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.image = UIImage(named: "education")
+        imageView.image = UIImage(named: "work")
         
         headerView.addSubview(imageView)
-      
+        
         imageView.snp.makeConstraints { (make) in
             make.height.equalTo(163)
             make.leading.trailing.top.bottom.equalToSuperview()

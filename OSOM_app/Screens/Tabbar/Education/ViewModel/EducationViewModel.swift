@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 protocol EducationViewModel: class {
     func getSchools() -> [School]
 }
