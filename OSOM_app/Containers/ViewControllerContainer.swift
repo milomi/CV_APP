@@ -133,4 +133,13 @@ class ViewControllerContainer {
         return WorkViewController(view: view, cellManager: cellManager, viewModel: viewModel)
     }
     
+    func getSkills() -> SkillsViewController {
+        let view = SkillsView()
+        let viewModel = SkillsViewModelImpl(repository: SkillsSectionDBRepositoryImpl())
+        let cellManager = SkillsCellManagerImpl(tableView: view.tableView)
+        
+        
+        return SkillsViewController(view: view, cellManager: cellManager, viewModel: viewModel)
+    }
+    
 }

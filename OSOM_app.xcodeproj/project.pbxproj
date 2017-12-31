@@ -136,6 +136,10 @@
 		B2B1BD831FF8F4FD00B1F9CC /* WorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B1BD821FF8F4FD00B1F9CC /* WorkViewModel.swift */; };
 		B2B1BD851FF8F54200B1F9CC /* WorkCellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B1BD841FF8F54200B1F9CC /* WorkCellManager.swift */; };
 		B2B1BD871FF8F5DC00B1F9CC /* WorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B1BD861FF8F5DC00B1F9CC /* WorkViewController.swift */; };
+		B2B1BD8B1FF8FCB600B1F9CC /* SkillsVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B1BD8A1FF8FCB600B1F9CC /* SkillsVIew.swift */; };
+		B2B1BD8E1FF8FCDC00B1F9CC /* SkillsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B1BD8D1FF8FCDC00B1F9CC /* SkillsViewModel.swift */; };
+		B2B1BD911FF8FCF200B1F9CC /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B1BD901FF8FCF200B1F9CC /* SkillsViewController.swift */; };
+		B2B1BD941FF8FD4D00B1F9CC /* SkillsCellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B1BD931FF8FD4D00B1F9CC /* SkillsCellManager.swift */; };
 		B2BAE28A1FF7076E0029107A /* QRCodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE2891FF7076E0029107A /* QRCodeRepository.swift */; };
 		B2BAE28C1FF708260029107A /* CVSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE28B1FF708260029107A /* CVSerializer.swift */; };
 		B2BAE28E1FF7090A0029107A /* ContactSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE28D1FF7090A0029107A /* ContactSerializer.swift */; };
@@ -335,6 +339,10 @@
 		B2B1BD821FF8F4FD00B1F9CC /* WorkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkViewModel.swift; sourceTree = "<group>"; };
 		B2B1BD841FF8F54200B1F9CC /* WorkCellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkCellManager.swift; sourceTree = "<group>"; };
 		B2B1BD861FF8F5DC00B1F9CC /* WorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkViewController.swift; sourceTree = "<group>"; };
+		B2B1BD8A1FF8FCB600B1F9CC /* SkillsVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsVIew.swift; sourceTree = "<group>"; };
+		B2B1BD8D1FF8FCDC00B1F9CC /* SkillsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewModel.swift; sourceTree = "<group>"; };
+		B2B1BD901FF8FCF200B1F9CC /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
+		B2B1BD931FF8FD4D00B1F9CC /* SkillsCellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsCellManager.swift; sourceTree = "<group>"; };
 		B2BAE2891FF7076E0029107A /* QRCodeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeRepository.swift; sourceTree = "<group>"; };
 		B2BAE28B1FF708260029107A /* CVSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSerializer.swift; sourceTree = "<group>"; };
 		B2BAE28D1FF7090A0029107A /* ContactSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSerializer.swift; sourceTree = "<group>"; };
@@ -1305,6 +1313,7 @@
 		B29F419C1FF45279002A004F /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
+				B2B1BD881FF8FC9C00B1F9CC /* Skills */,
 				B2B1BD7B1FF8F43B00B1F9CC /* Work */,
 				B2BAE2981FF7C2FC0029107A /* Education */,
 				B29F41A21FF458A3002A004F /* About */,
@@ -1437,6 +1446,49 @@
 			isa = PBXGroup;
 			children = (
 				B2B1BD841FF8F54200B1F9CC /* WorkCellManager.swift */,
+			);
+			path = ViewManagment;
+			sourceTree = "<group>";
+		};
+		B2B1BD881FF8FC9C00B1F9CC /* Skills */ = {
+			isa = PBXGroup;
+			children = (
+				B2B1BD921FF8FD3A00B1F9CC /* ViewManagment */,
+				B2B1BD8F1FF8FCE400B1F9CC /* ViewController */,
+				B2B1BD8C1FF8FCCD00B1F9CC /* ViewModel */,
+				B2B1BD891FF8FCAD00B1F9CC /* View */,
+			);
+			path = Skills;
+			sourceTree = "<group>";
+		};
+		B2B1BD891FF8FCAD00B1F9CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2B1BD8A1FF8FCB600B1F9CC /* SkillsVIew.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B2B1BD8C1FF8FCCD00B1F9CC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B2B1BD8D1FF8FCDC00B1F9CC /* SkillsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B2B1BD8F1FF8FCE400B1F9CC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B2B1BD901FF8FCF200B1F9CC /* SkillsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B2B1BD921FF8FD3A00B1F9CC /* ViewManagment */ = {
+			isa = PBXGroup;
+			children = (
+				B2B1BD931FF8FD4D00B1F9CC /* SkillsCellManager.swift */,
 			);
 			path = ViewManagment;
 			sourceTree = "<group>";
@@ -2035,6 +2087,7 @@
 				B287AB1C1FCB2F3800EC3416 /* SignUpNetworking.swift in Sources */,
 				B22DE79C1FDBF9150007838C /* AddEducationRepository.swift in Sources */,
 				B21BB4461FEF93790043C997 /* SkillsDBRepository.swift in Sources */,
+				B2B1BD911FF8FCF200B1F9CC /* SkillsViewController.swift in Sources */,
 				B287AB1E1FCB2F6C00EC3416 /* EmailValidationSerializer.swift in Sources */,
 				B24B9F581FC0741F00810ED6 /* AddSkillsDetailCellManager.swift in Sources */,
 				B20CA6411F9D073C0018208A /* LogInViewController.swift in Sources */,
@@ -2056,7 +2109,9 @@
 				B2BAE2961FF796070029107A /* UserSerializer.swift in Sources */,
 				B24B9F5E1FC0771E00810ED6 /* AddContactsDetailViewController.swift in Sources */,
 				B2B1BD831FF8F4FD00B1F9CC /* WorkViewModel.swift in Sources */,
+				B2B1BD8E1FF8FCDC00B1F9CC /* SkillsViewModel.swift in Sources */,
 				B23C0A191FD2249200C62426 /* PersonalSerializer.swift in Sources */,
+				B2B1BD941FF8FD4D00B1F9CC /* SkillsCellManager.swift in Sources */,
 				B24B9F381FBF84A700810ED6 /* AddWorkplaceDetailCellManager.swift in Sources */,
 				35EB195C1F1E3D7C00DD3AA5 /* TitleCellView.swift in Sources */,
 				B2E632471FAF5E04009D837E /* UIView+shake.swift in Sources */,
@@ -2096,6 +2151,7 @@
 				B29F419E1FF45294002A004F /* TabBarController.swift in Sources */,
 				B287AB151FCB2D2C00EC3416 /* ValidateEmailNetworking.swift in Sources */,
 				B23C0A1E1FD235EB00C62426 /* AddEducationNetworking.swift in Sources */,
+				B2B1BD8B1FF8FCB600B1F9CC /* SkillsVIew.swift in Sources */,
 				35EB194C1F1E32DA00DD3AA5 /* CutomButton.swift in Sources */,
 				B25B815C1FD3404F0041D0A9 /* UIViewController+ChengeRoot.swift in Sources */,
 				B24E43961FCAAB8600ADD404 /* RefreshTokenNetworking.swift in Sources */,

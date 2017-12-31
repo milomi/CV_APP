@@ -115,22 +115,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             vc = ViewControllerContainer.shared.getWelcome()
             let nav = UINavigationController(rootViewController: vc)
             nav.isNavigationBarHidden = true
-            window?.rootViewController = TabBarController()
+            window?.rootViewController = nav
             window?.makeKeyAndVisible()
             return
         }
         
+        var tabbar: TabBarController?  = nil
         switch userStatus {
         case AccountStatus.logged.rawValue:
-            vc = ViewControllerContainer.shared.getAddSkills()
+            tabbar = TabBarController()
+            vc = TabBarController()
         case AccountStatus.notLogged.rawValue, AccountStatus.anonymus.rawValue:
             vc = ViewControllerContainer.shared.getWelcome()
         default:
             vc = ViewControllerContainer.shared.getWelcome()
         }
         
+        if let tabbar = tabbar {
+            window?.rootViewController = tabbar
+        } else {
             let nav = UINavigationController(rootViewController: vc)
-            window?.rootViewController = TabBarController()
+            window?.rootViewController = nav
+        }
+
             window?.makeKeyAndVisible()
     }
 

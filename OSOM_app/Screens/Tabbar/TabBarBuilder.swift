@@ -45,7 +45,7 @@ final class TabBarBuilder {
     }
     
     func getSkills() -> UINavigationController {
-        let controller = ViewControllerContainer.shared.getEducation()
+        let controller = ViewControllerContainer.shared.getSkills()
         let navigationController = UINavigationController(rootViewController: controller)
         let icon = UITabBarItem(title: nil,
                                 image: getInactiveImage("skills"),

@@ -1,5 +1,5 @@
 //
-//  WorkViewController.swift
+//  SkillsViewController.swift
 //  OSOM_app
 //
 //  Created by Miłosz Bugla on 31.12.2017.
@@ -9,17 +9,17 @@ import Foundation
 import UIKit
 
 fileprivate struct LocalizedStrings {
-    static let title = "workplace.nav.title"
+    static let title = "Skillsplace.nav.title"
 }
 
-class WorkViewController: UIViewController {
+class SkillsViewController: UIViewController {
     
-    fileprivate let mainView: WorkView
-    fileprivate let cellManager: WorkCellManager
-    fileprivate let viewModel: WorkViewModel
+    fileprivate let mainView: SkillsView
+    fileprivate let cellManager: SkillsCellManager
+    fileprivate let viewModel: SkillsViewModel
     fileprivate var navigator: NavigationController?
     
-    init(view: WorkView, cellManager: WorkCellManager, viewModel: WorkViewModel) {
+    init(view: SkillsView, cellManager: SkillsCellManager, viewModel: SkillsViewModel) {
         self.mainView = view
         self.cellManager = cellManager
         self.viewModel = viewModel
@@ -45,7 +45,7 @@ class WorkViewController: UIViewController {
     }
 }
 
-extension WorkViewController: NavigationControllerDelegate {
+extension SkillsViewController: NavigationControllerDelegate {
     
     fileprivate func setupNavigation() {
         navigator = NavigationController(navigationView: mainView.navigation, navigationController: navigationController)
@@ -60,7 +60,7 @@ extension WorkViewController: NavigationControllerDelegate {
     func backAction() {}
 }
 
-extension WorkViewController: UITableViewDataSource, UITableViewDelegate {
+extension SkillsViewController: UITableViewDataSource, UITableViewDelegate {
     
     fileprivate func setupDataSource() {
         mainView.tableView.dataSource = self
@@ -68,15 +68,15 @@ extension WorkViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getWorks().count
+        return viewModel.getSkillsSections().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let work = viewModel.getWorks()[safe: indexPath.row] else {
+        guard let skillsSection = viewModel.getSkillsSections()[safe: indexPath.row] else {
             return UITableViewCell()
         }
         
-        return cellManager.buildCell(indexPath: indexPath, work)
+        return cellManager.buildCell(indexPath: indexPath, skillsSection)
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
