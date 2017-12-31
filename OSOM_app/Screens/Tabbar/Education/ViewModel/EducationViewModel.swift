@@ -7,11 +7,20 @@
 
 import Foundation
 
+
 protocol EducationViewModel: class {
-    
+    func getSchools() -> [School]
 }
 
 class EducationViewModelImpl: EducationViewModel {
     
+    fileprivate let repository: SchoolDBRepository
     
+    init(repository: SchoolDBRepository) {
+        self.repository = repository
+    }
+    
+    func getSchools() -> [School] {
+        return Array(repository.getSchools())
+    }
 }

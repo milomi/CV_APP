@@ -41,10 +41,10 @@ final class EducationCellManagerImpl: EducationCellManager {
             return UITableViewCell()
         }
         
-        cell.mainView.headerLabel.text  = "University of London"
+        cell.mainView.headerLabel.text  = school?.name ?? ""
         cell.mainView.dateRangeLabel.text = "Oct. 2010 - Aug. 2012"
-        cell.mainView.infoLabel.text = "Art & Multimedia"
-        cell.mainView.descriptionLabel.text = "I finished my masters in Graopici Design in Paula Scher classes, where I exceled in typography and visual communication.  "
+        cell.mainView.infoLabel.text = school?.courseTitle ?? ""
+        cell.mainView.descriptionLabel.text = school?.description ?? ""
         return cell
         
     }

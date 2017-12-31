@@ -14,6 +14,7 @@ protocol AuthorizationHelper: class {
     func requestAccessTokenFromRefreshToken()
     func requestClientCredentialsToken()
     func requestUserToken(user: SignUpUserModel)
+    func logOut() 
 }
 
 protocol AuthorizationHelperDelegate: class {
@@ -39,6 +40,10 @@ final class AuthorizationHelperImpl {
 }
 
 extension AuthorizationHelperImpl: AuthorizationHelper {
+    func logOut() {
+        NotificationCenter.default.post(name: .invalidToken, object: nil)
+    }
+    
     
     func requestAccessTokenFromRefreshToken() {
         refreshNetworking.getAccessTokenFromRefresh(parameters: authorizationSerializer.serializeRefreshToken())

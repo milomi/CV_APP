@@ -117,7 +117,7 @@ class ViewControllerContainer {
     
     func getEducation() -> EducationViewController {
         let view = EducationView()
-        let viewModel = EducationViewModelImpl()
+        let viewModel = EducationViewModelImpl(repository: SchoolDBRepositoryImpl())
         let cellManager = EducationCellManagerImpl(tableView: view.tableView)
     
         

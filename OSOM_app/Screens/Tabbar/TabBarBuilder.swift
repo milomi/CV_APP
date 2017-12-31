@@ -17,7 +17,6 @@ final class TabBarBuilder {
                                 image: getInactiveImage("profile"),
                                 selectedImage: getActiveImage("profile"))
         navigationController.tabBarItem = icon
-        icon.imageInsets = UIEdgeInsetsMake(13.5, 0.0, -13.5, 0.0)
         
         return navigationController
     }
@@ -30,7 +29,6 @@ final class TabBarBuilder {
                                 image: getInactiveImage("education"),
                                 selectedImage: getActiveImage("education"))
         navigationController.tabBarItem = icon
-        icon.imageInsets = UIEdgeInsetsMake(13.5, 0.0, -13.5, 0.0)
         
         return navigationController
     }
@@ -42,7 +40,6 @@ final class TabBarBuilder {
                                 image: getInactiveImage("work"),
                                 selectedImage: getActiveImage("work"))
         navigationController.tabBarItem = icon
-        icon.imageInsets = UIEdgeInsetsMake(13.5, 0.0, -13.5, 0.0)
         
         return navigationController
     }
@@ -54,7 +51,6 @@ final class TabBarBuilder {
                                 image: getInactiveImage("skills"),
                                 selectedImage: getActiveImage("skills"))
         navigationController.tabBarItem = icon
-        icon.imageInsets = UIEdgeInsetsMake(13.5, 0.0, -13.5, 0.0)
         
         return navigationController
     }
@@ -66,7 +62,6 @@ final class TabBarBuilder {
                                 image: getInactiveImage("contact"),
                                 selectedImage: getActiveImage("contact"))
         navigationController.tabBarItem = icon
-        icon.imageInsets = UIEdgeInsetsMake(13.5, 0.0, -13.5, 0.0)
         
         return navigationController
     }

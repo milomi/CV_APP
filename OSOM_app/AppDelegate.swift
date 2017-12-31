@@ -14,6 +14,10 @@ extension Notification.Name {
     static let invalidToken = Notification.Name("invalidToken")
 }
 
+fileprivate extension Selector {
+    static let userLoggedOut = #selector(AppDelegate.userLoggedOut)
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -25,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         IQKeyboardManager.shared().isEnabled = true
         IQKeyboardManager.shared().keyboardDistanceFromTextField = 60
-        
+        NotificationCenter.default.addObserver(self, selector: .userLoggedOut, name: .invalidToken, object: nil)
         checkLogIn()
         setRootViewController()
         return true
@@ -150,6 +154,17 @@ extension AppDelegate {
             break
         }
 
+    }
+    
+    @objc func userLoggedOut() {
+        UserDefaults.userLoggedOut()
+        authorizationHelper.requestClientCredentialsToken()
+        
+        if let rootVCSet = window?.rootViewController {
+            rootVCSet.presentedViewController?.dismiss(animated: true, completion: nil)
+        }
+       
+        setRootViewController()
     }
     
 }

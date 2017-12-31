@@ -54,10 +54,7 @@ extension EducationViewController: NavigationControllerDelegate {
     }
     
     func rightAction() {
-        animateCellsFadeOut(tableView: mainView.tableView) {
-            let vc = ViewControllerContainer.shared.getAddWorkplace()
-            self.navigationController?.pushViewController(vc, animated: false)
-        }
+        AuthorizationHelperImpl().logOut()
     }
     
     func backAction() {}
@@ -71,11 +68,15 @@ extension EducationViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModel.getSchools().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       return cellManager.buildCell(indexPath: indexPath, School())
+        guard let school = viewModel.getSchools()[safe: indexPath.row] else {
+            return UITableViewCell()
+        }
+        
+       return cellManager.buildCell(indexPath: indexPath, school)
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

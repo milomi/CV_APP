@@ -131,6 +131,7 @@
 		B29F41B21FF4FBE2002A004F /* PersonalStatmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29F41B11FF4FBE2002A004F /* PersonalStatmentView.swift */; };
 		B2B1BD761FF84A0B00B1F9CC /* CVDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B1BD751FF84A0B00B1F9CC /* CVDataCell.swift */; };
 		B2B1BD781FF84A1700B1F9CC /* CVDataCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B1BD771FF84A1700B1F9CC /* CVDataCellView.swift */; };
+		B2B1BD7A1FF85DDB00B1F9CC /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B1BD791FF85DDB00B1F9CC /* Collection+Safe.swift */; };
 		B2BAE28A1FF7076E0029107A /* QRCodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE2891FF7076E0029107A /* QRCodeRepository.swift */; };
 		B2BAE28C1FF708260029107A /* CVSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE28B1FF708260029107A /* CVSerializer.swift */; };
 		B2BAE28E1FF7090A0029107A /* ContactSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE28D1FF7090A0029107A /* ContactSerializer.swift */; };
@@ -325,6 +326,7 @@
 		B29F41B11FF4FBE2002A004F /* PersonalStatmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalStatmentView.swift; sourceTree = "<group>"; };
 		B2B1BD751FF84A0B00B1F9CC /* CVDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVDataCell.swift; sourceTree = "<group>"; };
 		B2B1BD771FF84A1700B1F9CC /* CVDataCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVDataCellView.swift; sourceTree = "<group>"; };
+		B2B1BD791FF85DDB00B1F9CC /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
 		B2BAE2891FF7076E0029107A /* QRCodeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeRepository.swift; sourceTree = "<group>"; };
 		B2BAE28B1FF708260029107A /* CVSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSerializer.swift; sourceTree = "<group>"; };
 		B2BAE28D1FF7090A0029107A /* ContactSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSerializer.swift; sourceTree = "<group>"; };
@@ -554,6 +556,7 @@
 				B25B815B1FD3404F0041D0A9 /* UIViewController+ChengeRoot.swift */,
 				B20F12681FE67AC200F82F0F /* DateFormaterHelper.swift */,
 				B2BAE2A11FF7C3DE0029107A /* BasePresentationView.swift */,
+				B2B1BD791FF85DDB00B1F9CC /* Collection+Safe.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1967,6 +1970,7 @@
 				B21BB4441FEF19D10043C997 /* AddSkillsNetworking.swift in Sources */,
 				B25B81621FD347890041D0A9 /* QRReaderViewController.swift in Sources */,
 				B2E6324D1FAF66C6009D837E /* AddEducationViewController.swift in Sources */,
+				B2B1BD7A1FF85DDB00B1F9CC /* Collection+Safe.swift in Sources */,
 				B22DE7A41FDC373A0007838C /* AddEducationDetailViewModel.swift in Sources */,
 				3572CF321F1DEAF9004FC883 /* OSOM_app.xcdatamodeld in Sources */,
 				3572CF641F1DFD7B004FC883 /* ViewControllerContainer.swift in Sources */,
