@@ -144,6 +144,11 @@
 		B2B1BD9D1FF8FF3D00B1F9CC /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B1BD9C1FF8FF3D00B1F9CC /* ContactViewModel.swift */; };
 		B2B1BD9F1FF8FF4900B1F9CC /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B1BD9E1FF8FF4900B1F9CC /* ContactViewController.swift */; };
 		B2B1BDA11FF8FF5400B1F9CC /* ContactCellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B1BDA01FF8FF5400B1F9CC /* ContactCellManager.swift */; };
+		B2B2E3C01FFB698200C6373B /* SkillsSectionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B2E3BF1FFB698200C6373B /* SkillsSectionCellView.swift */; };
+		B2B2E3C21FFB698E00C6373B /* SkillSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B2E3C11FFB698E00C6373B /* SkillSectionCell.swift */; };
+		B2B2E3C41FFB6B3C00C6373B /* SkillsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B2E3C31FFB6B3C00C6373B /* SkillsStackView.swift */; };
+		B2B2E3C61FFB6C1000C6373B /* SkillElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B2E3C51FFB6C1000C6373B /* SkillElement.swift */; };
+		B2B2E3C81FFB78EE00C6373B /* SkillsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B2E3C71FFB78EE00C6373B /* SkillsSectionView.swift */; };
 		B2BAE28A1FF7076E0029107A /* QRCodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE2891FF7076E0029107A /* QRCodeRepository.swift */; };
 		B2BAE28C1FF708260029107A /* CVSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE28B1FF708260029107A /* CVSerializer.swift */; };
 		B2BAE28E1FF7090A0029107A /* ContactSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BAE28D1FF7090A0029107A /* ContactSerializer.swift */; };
@@ -351,6 +356,11 @@
 		B2B1BD9C1FF8FF3D00B1F9CC /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
 		B2B1BD9E1FF8FF4900B1F9CC /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		B2B1BDA01FF8FF5400B1F9CC /* ContactCellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCellManager.swift; sourceTree = "<group>"; };
+		B2B2E3BF1FFB698200C6373B /* SkillsSectionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsSectionCellView.swift; sourceTree = "<group>"; };
+		B2B2E3C11FFB698E00C6373B /* SkillSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillSectionCell.swift; sourceTree = "<group>"; };
+		B2B2E3C31FFB6B3C00C6373B /* SkillsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsStackView.swift; sourceTree = "<group>"; };
+		B2B2E3C51FFB6C1000C6373B /* SkillElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillElement.swift; sourceTree = "<group>"; };
+		B2B2E3C71FFB78EE00C6373B /* SkillsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsSectionView.swift; sourceTree = "<group>"; };
 		B2BAE2891FF7076E0029107A /* QRCodeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeRepository.swift; sourceTree = "<group>"; };
 		B2BAE28B1FF708260029107A /* CVSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSerializer.swift; sourceTree = "<group>"; };
 		B2BAE28D1FF7090A0029107A /* ContactSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSerializer.swift; sourceTree = "<group>"; };
@@ -1473,6 +1483,7 @@
 		B2B1BD891FF8FCAD00B1F9CC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B2B2E3BE1FFB696A00C6373B /* Cell */,
 				B2B1BD8A1FF8FCB600B1F9CC /* SkillsVIew.swift */,
 			);
 			path = View;
@@ -1543,6 +1554,18 @@
 				B2B1BDA01FF8FF5400B1F9CC /* ContactCellManager.swift */,
 			);
 			path = ViewManagment;
+			sourceTree = "<group>";
+		};
+		B2B2E3BE1FFB696A00C6373B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B2B2E3BF1FFB698200C6373B /* SkillsSectionCellView.swift */,
+				B2B2E3C11FFB698E00C6373B /* SkillSectionCell.swift */,
+				B2B2E3C31FFB6B3C00C6373B /* SkillsStackView.swift */,
+				B2B2E3C51FFB6C1000C6373B /* SkillElement.swift */,
+				B2B2E3C71FFB78EE00C6373B /* SkillsSectionView.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		B2BAE2881FF707400029107A /* QRCodeRepository */ = {
@@ -2116,6 +2139,7 @@
 			files = (
 				B24B9F341FBF833D00810ED6 /* AddWorkplaceCellManager.swift in Sources */,
 				B25B815A1FD339C50041D0A9 /* LoginRepository.swift in Sources */,
+				B2B2E3C61FFB6C1000C6373B /* SkillElement.swift in Sources */,
 				3577D8081F1F35B6001BCD63 /* ColorSchameHelper.swift in Sources */,
 				B2E6324F1FAF678F009D837E /* AddEducationView.swift in Sources */,
 				B26631DD1FE1D209004D7327 /* CreateAboutNetworking.swift in Sources */,
@@ -2147,6 +2171,7 @@
 				B2B1BD9B1FF8FF2300B1F9CC /* ContactView.swift in Sources */,
 				B2E632351FAF410E009D837E /* UIImage+resize.swift in Sources */,
 				B2C48FF01F936A9F00DFECA4 /* BaseEditField.swift in Sources */,
+				B2B2E3C81FFB78EE00C6373B /* SkillsSectionView.swift in Sources */,
 				B24B9F221FBF60F800810ED6 /* AddEducationDetailViewController.swift in Sources */,
 				B2C48FED1F9367F600DFECA4 /* UIColor+extension.swift in Sources */,
 				B21BB43F1FEF0CF40043C997 /* AddSkillsDetailViewModel.swift in Sources */,
@@ -2225,6 +2250,7 @@
 				B2E632571FAF6B67009D837E /* AddEducationCell.swift in Sources */,
 				B2BAE28C1FF708260029107A /* CVSerializer.swift in Sources */,
 				B2F029CB1F9C8DEC0006A5A0 /* UIDevice+extension.swift in Sources */,
+				B2B2E3C41FFB6B3C00C6373B /* SkillsStackView.swift in Sources */,
 				B2024F781F9365B10083B813 /* BaseSignUpView.swift in Sources */,
 				3572CF661F1DFD89004FC883 /* ViewModelContainer.swift in Sources */,
 				B23C0A171FD2240800C62426 /* PersonalNetworking.swift in Sources */,
@@ -2242,8 +2268,10 @@
 				B22DE7A01FDBFBA90007838C /* SchoolDBRepository.swift in Sources */,
 				B23C0A131FD223B100C62426 /* CreateAboutViewModel.swift in Sources */,
 				B2F029D01F9CA60E0006A5A0 /* NavigationController.swift in Sources */,
+				B2B2E3C21FFB698E00C6373B /* SkillSectionCell.swift in Sources */,
 				B24E43911FCAAAE900ADD404 /* AuthorizateUser.swift in Sources */,
 				B2024F761F93652E0083B813 /* SignUpNameView.swift in Sources */,
+				B2B2E3C01FFB698200C6373B /* SkillsSectionCellView.swift in Sources */,
 				B24E43931FCAAB1200ADD404 /* UserDefaultsHelper.swift in Sources */,
 				B23C0A1B1FD2261600C62426 /* UIImage+Base64.swift in Sources */,
 				B29F41A81FF45B13002A004F /* AboutViewController.swift in Sources */,

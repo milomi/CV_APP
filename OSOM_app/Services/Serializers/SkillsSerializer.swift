@@ -15,7 +15,7 @@ struct SkillsSerializerParameters {
     static let skills = "skills"
     static let experienceValue = "experienceValue"
     static let sectionId = "sectionId"
-    static let skillsSections = "skillsSections"
+    static let skillsSections = "skillSections"
     static let skillSectionId = "skillSectionId"
 }
 
@@ -61,8 +61,10 @@ final class SkillsSerializerImpl: SkillsSerializer {
                 skillsJson.forEach({ (skillJson) in
                     let skill = Skill()
                     skill.sectionId = section.id
+                    skill.name = skillJson[parameters.name].string ?? ""
+                    skill.experienceValue = skillJson[parameters.experienceValue].int ?? 0
+                    skill.id = skillJson[parameters.id].int ?? -1
                     section.skills.append(skill)
-                    sections.append(section)
                 })
                 
             }

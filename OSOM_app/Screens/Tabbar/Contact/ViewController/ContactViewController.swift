@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 fileprivate struct LocalizedStrings {
-    static let title = "contact.nav.title"
+    static let title = "contacts.nav.title"
 }
 
 class ContactViewController: UIViewController {

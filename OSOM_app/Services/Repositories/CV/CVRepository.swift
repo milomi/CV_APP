@@ -38,7 +38,7 @@ class CVRepositoryImpl: CVRepository {
         }
         
         if let skillSections = skillsSerializer.unserialize(json: json) {
-            
+            SkillsSectionDBRepositoryImpl().addSkillsSections(SkillsSections: skillSections)
         }
         
 

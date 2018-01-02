@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 fileprivate struct LocalizedStrings {
-    static let title = "Skillsplace.nav.title"
+    static let title = "skills.nav.title"
 }
 
 class SkillsViewController: UIViewController {

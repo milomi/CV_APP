@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.5.1)
   - Cache (4.1.2)
+  - GTProgressBar (0.2.3)
   - Hue (3.0.0)
   - Imaginary (3.0.2):
     - Cache (~> 4.0)
@@ -28,6 +29,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - GTProgressBar
   - IQKeyboardManager
   - Lightbox (~> 2.0.0)
   - PKHUD
@@ -53,6 +55,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   Cache: bd0233fc688b5e83a27bcd87807db7e6f23adcc5
+  GTProgressBar: ecfa9f2dfaca1b9b35811925f5bd53516ee591ae
   Hue: b8fe1e43eef13631331eebecb2198b68e2622f95
   Imaginary: d675200546110e305d6a26db6267c0622ffe5e6b
   IQKeyboardManager: 077b7f691dfa9d69db9cff66f2bed68ebfc02d9b
@@ -69,6 +72,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
 
-PODFILE CHECKSUM: 20e3245fee2e49b0ff59abab544c36a547cac62c
+PODFILE CHECKSUM: 6b30d18c2dd797a0c7def16f53c61a9829619425
 
 COCOAPODS: 1.2.0

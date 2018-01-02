@@ -32,19 +32,21 @@ final class SkillsCellManagerImpl: SkillsCellManager {
     }
     
     fileprivate func registerCells() {
-        tableView.registerCell(CVDataCell.self)
+        tableView.registerCell(SkillSectionCell.self)
     }
     
     func buildCell(indexPath: IndexPath, _ skillsSection: SkillsSection? = nil) -> UITableViewCell {
         
-        guard let cell = tableView.getCell(CVDataCell.self) else {
+        guard let cell = tableView.getCell(SkillSectionCell.self) else {
             return UITableViewCell()
         }
         
-        cell.mainView.headerLabel.text  = skillsSection?.name ?? ""
-//        cell.mainView.dateRangeLabel.text = "Oct. 2010 - Aug. 2012"
-//        cell.mainView.infoLabel.text = Skills?.jobTitle ?? ""
-//        cell.mainView.descriptionLabel.text = Skills?.description ?? ""
+        cell.mainView.headerLabel.text = skillsSection?.name ?? ""
+        
+        if let skills = skillsSection?.skills {
+            cell.mainView.elementsView.addSkills(skills: Array(skills))
+        }
+        
         return cell
         
     }

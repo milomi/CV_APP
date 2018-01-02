@@ -14,6 +14,7 @@ def ux_design
     pod 'Lightbox', '~> 2.0.0'
     pod 'SwiftValidator', :git => "https://github.com/milomi/SwiftValidator.git", :commit => '96061eca93f5016681679fbb2af84949c1e11d19'
     pod 'PKHUD'
+    pod 'GTProgressBar'
 end
 
 def rxSwift
