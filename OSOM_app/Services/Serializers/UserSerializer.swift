@@ -42,9 +42,13 @@ class UserSerializerImpl: UserSerializer {
         user.personalStatement = json[parameters.personalStatement].string ?? ""
         user.photoUrl = json[parameters.profilePhotoUrl].string ?? ""
         user.profileQrCodeUrl = json[parameters.profileQrCodeUrl].string ?? ""
-        user.publicMail = json[parameters.publicMail].string ?? ""
+        user.publicMail = "miloszbugla@gmail.com"
         user.city = json[parameters.city].string ?? ""
         user.phoneNumber = json[parameters.phoneNumber].string ?? ""
+        user.facebookAccountUrl = json[parameters.facebook].string ?? ""
+        user.linkedInAccountUrl = json[parameters.linkedin].string ?? ""
+        user.potfolioUrl = json[parameters.potfolioUrl].string ?? ""
+        
         
         
         return user

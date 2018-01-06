@@ -28,7 +28,7 @@ fileprivate struct Constants {
     
     struct ProfileImage {
         struct Constraints {
-            static let size = 136
+            static let size = 120
         }
     }
     

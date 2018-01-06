@@ -65,10 +65,12 @@ extension ContactViewController: UITableViewDataSource, UITableViewDelegate {
     fileprivate func setupDataSource() {
         mainView.tableView.dataSource = self
         mainView.tableView.delegate = self
+        mainView.tableView.tableHeaderView = cellManager.getHeaderView()
+        mainView.tableView.contentInset = UIEdgeInsetsMake(75, 0.0, 0.0, 0.0)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 7
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -76,8 +78,5 @@ extension ContactViewController: UITableViewDataSource, UITableViewDelegate {
         return cellManager.buildCell(indexPath: indexPath, user)
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return cellManager.getHeaderView()
-    }
     
 }

@@ -42,7 +42,7 @@ class CVRepositoryImpl: CVRepository {
         }
         
 
-        UserDBRepositoryImpl().addObject(object: userSerializer.unserialize(json: json))
+        UserDBRepositoryImpl().addUser(user: userSerializer.unserialize(json: json))
         
     }
 }

@@ -27,7 +27,6 @@ class ContactView: BasePresentationView {
         tableView.backgroundView = nil
         tableView.estimatedRowHeight = 80
         tableView.showsVerticalScrollIndicator = false
-        tableView.sectionHeaderHeight = 163
         return tableView
     }()
     

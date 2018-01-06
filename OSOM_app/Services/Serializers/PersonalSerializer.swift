@@ -12,11 +12,13 @@ import UIKit
 struct PersonalSerializerParameters {
     static let profilePhoto = "profilePhoto"
     static let personalStatement = "personalStatement"
+    static let picture = "picture"
 }
 
 protocol PersonalSerializer: class {
     func serialize(_ photo: UIImage, _ personalStatement: String) -> [String: Any]
-    func unserializeData(json: JSON) -> (UIImage?, String?) 
+    func unserializeData(json: JSON) -> (UIImage?, String?)
+    func unserializePhoto(json: JSON) -> UIImage? 
 }
 
 final class PersonalSerializerImpl: PersonalSerializer {
@@ -43,6 +45,16 @@ final class PersonalSerializerImpl: PersonalSerializer {
         personalData = json[parameters.personalStatement].string
         
         return (photo, personalData)
+    }
+    
+    func unserializePhoto(json: JSON) -> UIImage? {
+        var photo: UIImage?
+        if let base64String = json[parameters.picture].string {
+            if let imageData = Data(base64Encoded: base64String) {
+                photo = UIImage(data: imageData)
+            }
+        }
+        return photo
     }
     
 }

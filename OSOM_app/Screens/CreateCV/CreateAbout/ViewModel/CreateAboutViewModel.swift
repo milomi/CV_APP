@@ -37,7 +37,6 @@ final class CreateAboutViewModelImpl: CreateAboutViewModel {
     
     init(repository: CreateAboutRepository) {
         self.repository = repository
-        
         repository.delegate = self
     }
     

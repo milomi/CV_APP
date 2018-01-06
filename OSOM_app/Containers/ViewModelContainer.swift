@@ -10,6 +10,8 @@ import Foundation
 
 class ViewModelContainer {
     
+    static let shared = ViewModelContainer()
+
     func getWelcome() -> WelcomeScreenViewModel {
         return WelcomeScreenViewModelImpl()
     }

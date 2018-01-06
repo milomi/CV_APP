@@ -46,7 +46,7 @@ class ViewControllerContainer {
     
     func getCreateAbout() -> CreateAboutViewController {
         let view = ViewContainer.shared.createAbout()
-        let viewModel = viewModelContainer.getCreateAbout()
+        let viewModel = ViewModelContainer.shared.getCreateAbout()
         return CreateAboutViewController(view: view, viewModel: viewModel)
     }
     

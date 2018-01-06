@@ -41,6 +41,7 @@ final class AuthorizationSerializerImpl: AuthorizationSerializer {
         UserDefaults.Authorization.set(accessToken, forKey: .accessToken)
         UserDefaults.Authorization.set(refreshToken, forKey: .refreshToken)
         UserDefaults.AccountStatus.set(.logged, forKey: .currentStatus)
+        
         return true
     }
     

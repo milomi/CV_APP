@@ -40,6 +40,7 @@ final class AboutViewController: UIViewController {
         mainView = view
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        viewModel.delegate = self
         
     }
     
@@ -51,6 +52,7 @@ final class AboutViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         navigationController?.isNavigationBarHidden = true
+        viewModel.fetchUserPhoto()
     }
 
     
@@ -62,5 +64,11 @@ final class AboutViewController: UIViewController {
     }
 }
 
-
+extension AboutViewController: AboutViewModelDelegate {
+    func userPhotoFetched(photo: UIImage) {
+        mainView.header.profileImage.image = photo
+    }
+    
+    
+}
 

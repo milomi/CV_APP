@@ -79,15 +79,13 @@ class BaseNetworking: Networking {
         }
     }
     
+    // MARK: Request
     private func makeDataRequest(request: HTTPRequest) {
-        if request.headers == nil {
-            request.headers = getHeaders()
-        }
-        if request.numberOfUnauthorizedResponses >= Constants.maxNumberOfUnauthorizedRequests {
-            self.handleUnknownError()
-            return
-        }
-        manager.request(request.url, method: request.method, parameters: request.parameters, encoding: request.encoding, headers: request.headers).responseJSON {
+        manager.request(request.url,
+                        method: request.method,
+                        parameters: request.parameters,
+                        encoding: request.encoding,
+                        headers: request.headers).responseJSON {
             response in
             self.handleResponse(request: request, response: response)
         }

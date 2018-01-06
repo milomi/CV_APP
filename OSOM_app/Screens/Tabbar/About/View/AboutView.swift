@@ -45,10 +45,10 @@ fileprivate struct Constants {
 
 class AboutView: BaseView {
 
-    private let header: ProfileHeaderView = {
+    let header: ProfileHeaderView = {
         let header = ProfileHeaderView()
         header.setupView()
-        header.profileImage.image = #imageLiteral(resourceName: "mia")
+        header.profileImage.image = #imageLiteral(resourceName: "picturePlaceholder")
         return header
     }()
     

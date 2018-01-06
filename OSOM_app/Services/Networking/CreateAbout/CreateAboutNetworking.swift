@@ -9,18 +9,17 @@ import Foundation
 import SwiftyJSON
 import Alamofire
 
-protocol CreateAboutNetworking: class {
-    
-    weak var delegate: CreateAboutNetworkingDelegate? { get set }
-    
-    func postPersonalData(parameters: [String: Any])
-    
-}
 
 protocol CreateAboutNetworkingDelegate: class {
     func unknownErrorOccured()
     func noInternetConnection()
     func createdSuccess(_ json: JSON)
+}
+
+protocol CreateAboutNetworking: class {
+    weak var delegate: CreateAboutNetworkingDelegate? { get set }
+
+    func postPersonalData(parameters: [String: Any])
 }
 
 final class CreateAboutNetworkingImpl: BaseNetworking {

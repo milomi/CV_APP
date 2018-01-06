@@ -38,14 +38,20 @@ class SkillsElementsView: UIView {
         
         numberOfElements = skills.count
         
-        for index in 0..<numberOfElements {
-            addSkillElementToView(skill: skills[index], index: index)
+        if skills.count == 1 {
+             let view = SkillElement()
+            view.setupView(header: skills[0].name, progress: skills[0].experienceValue)
+            setupOneElement(view: view)
+        } else {
+            for index in 0..<numberOfElements {
+                addSkillElementToView(skill: skills[index], index: index)
+            }
         }
     }
     
     private func addSkillElementToView(skill: Skill, index: Int) {
         let view = SkillElement()
-        view.setupView(header: skill.name, progress: 75)
+        view.setupView(header: skill.name, progress: skill.experienceValue)
         setupElementView(view, index: index)
     }
     
@@ -81,8 +87,17 @@ class SkillsElementsView: UIView {
         addSubview(newElement)
         newElement.snp.makeConstraints { make in
             make.leading.trailing.equalTo(0)
-            make.bottom.equalTo(0)
-            make.top.equalTo(lastElement.snp.top)
+            make.bottom.equalTo(-10)
+            make.top.equalTo(lastElement.snp.bottom)
+        }
+    }
+    
+    fileprivate func setupOneElement(view: UIView) {
+        addSubview(view)
+        
+        view.snp.makeConstraints { make in
+            make.leading.trailing.top.equalToSuperview()
+            make.bottom.equalTo(-10)
         }
     }
 }
